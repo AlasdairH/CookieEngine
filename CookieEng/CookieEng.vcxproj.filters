@@ -13,10 +13,151 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Services">
+      <UniqueIdentifier>{ac940bc6-8e42-4d66-9131-ff80ab7fed9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Services">
+      <UniqueIdentifier>{99e12283-2dd0-4a17-b909-abab23c71bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Services\Managers">
+      <UniqueIdentifier>{7900d326-1265-4580-8ae2-ff4001be4761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Services\Managers">
+      <UniqueIdentifier>{f7cbd565-3a6a-4dec-97ed-b4af22ebdc0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGL">
+      <UniqueIdentifier>{03f0dd5c-5cda-445d-8630-5e7a8e3536ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGL">
+      <UniqueIdentifier>{7a92df4a-a3e9-4eeb-a138-3d59711607e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGL\Buffers">
+      <UniqueIdentifier>{a950019e-0117-43ea-bc5e-afda569a0f07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGL\Buffers">
+      <UniqueIdentifier>{edc01e7e-de89-4e47-b342-787f81ad3b20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data">
+      <UniqueIdentifier>{f75badb9-58d8-410d-8da0-6177325ae81b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data">
+      <UniqueIdentifier>{be790d67-ced9-44ba-8ff3-62c2a407605a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Doxygen">
+      <UniqueIdentifier>{999a91c6-aac5-430f-9dad-f87c3ed4c046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{84dd6ddd-7337-4d94-8b47-15de0a673c92}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Initialiser.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ServiceLocator.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ServiceContainer.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileManager.cpp">
+      <Filter>Source Files\Services\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shader.cpp">
+      <Filter>Source Files\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Program.cpp">
+      <Filter>Source Files\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VertexArray.cpp">
+      <Filter>Source Files\OpenGL\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VertexBuffer.cpp">
+      <Filter>Source Files\OpenGL\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VertexBufferLayout.cpp">
+      <Filter>Source Files\OpenGL\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mesh.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vertex.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer.cpp">
+      <Filter>Source Files\OpenGL</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ServiceLocator.h">
+      <Filter>Header Files\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Initialiser.h">
+      <Filter>Header Files\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ServiceContainer.h">
+      <Filter>Header Files\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FileManager.h">
+      <Filter>Header Files\Services\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Shader.h">
+      <Filter>Header Files\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Program.h">
+      <Filter>Header Files\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Macro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VertexArray.h">
+      <Filter>Header Files\OpenGL\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VertexBuffer.h">
+      <Filter>Header Files\OpenGL\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VertexBufferLayout.h">
+      <Filter>Header Files\OpenGL\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Renderer.h">
+      <Filter>Header Files\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Vertex.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Mesh.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\DoxygenRef.txt">
+      <Filter>Resource Files\Doxygen</Filter>
+    </Text>
+    <Text Include="resources\shaders\vert.txt">
+      <Filter>Resource Files\Shaders</Filter>
+    </Text>
+    <Text Include="resources\shaders\frag.txt">
+      <Filter>Resource Files\Shaders</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\DoxygenMain.dox">
+      <Filter>Resource Files\Doxygen</Filter>
+    </None>
+    <None Include="resources\doxygen\DoxygenMain.doxtxt">
+      <Filter>Resource Files\Doxygen</Filter>
+    </None>
+    <None Include="resources\doxygen\home.dox">
+      <Filter>Resource Files\Doxygen</Filter>
+    </None>
   </ItemGroup>
 </Project>

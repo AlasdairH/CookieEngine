@@ -1,0 +1,94 @@
+\section{Cookie\+Eng\+:\+:Services\+:\+:File\+Manager Class Reference}
+\label{class_cookie_eng_1_1_services_1_1_file_manager}\index{Cookie\+Eng\+::\+Services\+::\+File\+Manager@{Cookie\+Eng\+::\+Services\+::\+File\+Manager}}
+
+
+A Manager Class that handles the loading of files either synchronously or asynchronously.  
+
+
+
+
+{\ttfamily \#include $<$File\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ File\+Manager} ()
+\begin{DoxyCompactList}\small\item\em The \doxyref{File\+Manager}{p.}{class_cookie_eng_1_1_services_1_1_file_manager} Constructor. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+File\+Manager} ()
+\begin{DoxyCompactList}\small\item\em The \doxyref{File\+Manager}{p.}{class_cookie_eng_1_1_services_1_1_file_manager} Destructor. \end{DoxyCompactList}\item 
+std\+::string \textbf{ load\+Text\+File} (std\+::string \+\_\+filepath)
+\begin{DoxyCompactList}\small\item\em Synchronous loading of text files. \end{DoxyCompactList}\item 
+std\+::string \textbf{ load\+Text\+File\+A\+Sync} (std\+::string \+\_\+filepath)
+\begin{DoxyCompactList}\small\item\em Asynchronous loading of text files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Manager Class that handles the loading of files either synchronously or asynchronously. 
+
+This class uses the stdlib to load files into the engine. This could be for text files, shaders, images or models. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_cookie_eng_1_1_services_1_1_file_manager_a3ff15b868df81ba7d9964382f6474ef5}} 
+\index{Cookie\+Eng\+::\+Services\+::\+File\+Manager@{Cookie\+Eng\+::\+Services\+::\+File\+Manager}!File\+Manager@{File\+Manager}}
+\index{File\+Manager@{File\+Manager}!Cookie\+Eng\+::\+Services\+::\+File\+Manager@{Cookie\+Eng\+::\+Services\+::\+File\+Manager}}
+\subsubsection{File\+Manager()}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Services\+::\+File\+Manager\+::\+File\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The \doxyref{File\+Manager}{p.}{class_cookie_eng_1_1_services_1_1_file_manager} Constructor. 
+
+Sets up the File Manager \mbox{\label{class_cookie_eng_1_1_services_1_1_file_manager_a51e133f4fd86a874129a63be191b91ba}} 
+\index{Cookie\+Eng\+::\+Services\+::\+File\+Manager@{Cookie\+Eng\+::\+Services\+::\+File\+Manager}!````~File\+Manager@{$\sim$\+File\+Manager}}
+\index{````~File\+Manager@{$\sim$\+File\+Manager}!Cookie\+Eng\+::\+Services\+::\+File\+Manager@{Cookie\+Eng\+::\+Services\+::\+File\+Manager}}
+\subsubsection{$\sim$\+File\+Manager()}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Services\+::\+File\+Manager\+::$\sim$\+File\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The \doxyref{File\+Manager}{p.}{class_cookie_eng_1_1_services_1_1_file_manager} Destructor. 
+
+Closes the File Manager 
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_cookie_eng_1_1_services_1_1_file_manager_a744bde422e66fcfbfcc379a21ae90500}} 
+\index{Cookie\+Eng\+::\+Services\+::\+File\+Manager@{Cookie\+Eng\+::\+Services\+::\+File\+Manager}!load\+Text\+File@{load\+Text\+File}}
+\index{load\+Text\+File@{load\+Text\+File}!Cookie\+Eng\+::\+Services\+::\+File\+Manager@{Cookie\+Eng\+::\+Services\+::\+File\+Manager}}
+\subsubsection{load\+Text\+File()}
+{\footnotesize\ttfamily std\+::string Cookie\+Eng\+::\+Services\+::\+File\+Manager\+::load\+Text\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+filepath }\end{DoxyParamCaption})}
+
+
+
+Synchronous loading of text files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+filepath} & The path to the Text File to be loaded \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An std\+::string containing the contents of the text file.
+\end{DoxyReturn}
+Loads a text file into an std\+::string. \mbox{\label{class_cookie_eng_1_1_services_1_1_file_manager_abf50a7b6eb9fa88a9557254acbd2d9cc}} 
+\index{Cookie\+Eng\+::\+Services\+::\+File\+Manager@{Cookie\+Eng\+::\+Services\+::\+File\+Manager}!load\+Text\+File\+A\+Sync@{load\+Text\+File\+A\+Sync}}
+\index{load\+Text\+File\+A\+Sync@{load\+Text\+File\+A\+Sync}!Cookie\+Eng\+::\+Services\+::\+File\+Manager@{Cookie\+Eng\+::\+Services\+::\+File\+Manager}}
+\subsubsection{load\+Text\+File\+A\+Sync()}
+{\footnotesize\ttfamily std\+::string Cookie\+Eng\+::\+Services\+::\+File\+Manager\+::load\+Text\+File\+A\+Sync (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Asynchronous loading of text files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+filepath} & The path to the Text File to be loaded \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An std\+::string containing the contents of the text file.
+\end{DoxyReturn}
+Loads a text file into an std\+::string. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/File\+Manager.\+h\end{DoxyCompactItemize}

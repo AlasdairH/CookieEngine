@@ -1,0 +1,157 @@
+\section{Cookie\+Eng\+:\+:Services\+:\+:Service\+Locator Class Reference}
+\label{class_cookie_eng_1_1_services_1_1_service_locator}\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+
+
+Works as an interface to the managers and services provided by the engine.  
+
+
+
+
+{\ttfamily \#include $<$Service\+Locator.\+h$>$}
+
+
+
+Collaboration diagram for Cookie\+Eng\+:\+:Services\+:\+:Service\+Locator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_cookie_eng_1_1_services_1_1_service_locator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ Initialiser} \& \textbf{ get\+Initialiser} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the initialiser. \end{DoxyCompactList}\item 
+static void \textbf{ set\+Initialiser} (\textbf{ Initialiser} $\ast$\+\_\+initialiser)
+\begin{DoxyCompactList}\small\item\em Sets the \doxyref{Initialiser}{p.}{class_cookie_eng_1_1_services_1_1_initialiser}. \end{DoxyCompactList}\item 
+static void \textbf{ clear\+Initialiser} ()
+\begin{DoxyCompactList}\small\item\em Clears the \doxyref{Initialiser}{p.}{class_cookie_eng_1_1_services_1_1_initialiser}. \end{DoxyCompactList}\item 
+static \textbf{ File\+Manager} \& \textbf{ get\+File\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the File Manager. \end{DoxyCompactList}\item 
+static void \textbf{ set\+File\+Manager} (\textbf{ File\+Manager} $\ast$\+\_\+file\+Manager)
+\begin{DoxyCompactList}\small\item\em Sets the \doxyref{File\+Manager}{p.}{class_cookie_eng_1_1_services_1_1_file_manager}. \end{DoxyCompactList}\item 
+static void \textbf{ clear\+File\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Clears the \doxyref{File\+Manager}{p.}{class_cookie_eng_1_1_services_1_1_file_manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ Initialiser} $\ast$ \textbf{ s\+\_\+initialiser}
+\item 
+static \textbf{ File\+Manager} $\ast$ \textbf{ s\+\_\+file\+Manager}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Works as an interface to the managers and services provided by the engine. 
+
+This class provides access to services and managers. These are static to follow a singleton pattern that can be accessed anywhere in the engine.
+
+Different managers and services can be applied to the locator to make multiple versions of the same manager possible if differing settings were required. 
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_cookie_eng_1_1_services_1_1_service_locator_a648c75987f9d4380475b3c2056f6d963}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!clear\+File\+Manager@{clear\+File\+Manager}}
+\index{clear\+File\+Manager@{clear\+File\+Manager}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{clear\+File\+Manager()}
+{\footnotesize\ttfamily static void Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::clear\+File\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Clears the \doxyref{File\+Manager}{p.}{class_cookie_eng_1_1_services_1_1_file_manager}. 
+
+Sets the File Manager to a nullptr \mbox{\label{class_cookie_eng_1_1_services_1_1_service_locator_a1603a231c16663c30ed40afd49dffb72}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!clear\+Initialiser@{clear\+Initialiser}}
+\index{clear\+Initialiser@{clear\+Initialiser}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{clear\+Initialiser()}
+{\footnotesize\ttfamily static void Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::clear\+Initialiser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Clears the \doxyref{Initialiser}{p.}{class_cookie_eng_1_1_services_1_1_initialiser}. 
+
+Sets the \doxyref{Initialiser}{p.}{class_cookie_eng_1_1_services_1_1_initialiser} to a nullptr Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cookie_eng_1_1_services_1_1_service_locator_a1603a231c16663c30ed40afd49dffb72_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_cookie_eng_1_1_services_1_1_service_locator_a964340ed78281fdd04f499c80f7ce01d}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!get\+File\+Manager@{get\+File\+Manager}}
+\index{get\+File\+Manager@{get\+File\+Manager}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{get\+File\+Manager()}
+{\footnotesize\ttfamily static \textbf{ File\+Manager}\& Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::get\+File\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a reference to the File Manager. 
+
+\begin{DoxyReturn}{Returns}
+The File Manager
+\end{DoxyReturn}
+Returns a reference to the File Manager \mbox{\label{class_cookie_eng_1_1_services_1_1_service_locator_af235353d13e544fe474d6908ef4f96fb}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!get\+Initialiser@{get\+Initialiser}}
+\index{get\+Initialiser@{get\+Initialiser}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{get\+Initialiser()}
+{\footnotesize\ttfamily static \textbf{ Initialiser}\& Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::get\+Initialiser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a reference to the initialiser. 
+
+\begin{DoxyReturn}{Returns}
+The \doxyref{Initialiser}{p.}{class_cookie_eng_1_1_services_1_1_initialiser}
+\end{DoxyReturn}
+Returns a reference to the initialiser. \mbox{\label{class_cookie_eng_1_1_services_1_1_service_locator_a8a58e7b22845b4bf688cd98d2d78a72d}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!set\+File\+Manager@{set\+File\+Manager}}
+\index{set\+File\+Manager@{set\+File\+Manager}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{set\+File\+Manager()}
+{\footnotesize\ttfamily static void Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::set\+File\+Manager (\begin{DoxyParamCaption}\item[{\textbf{ File\+Manager} $\ast$}]{\+\_\+file\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the \doxyref{File\+Manager}{p.}{class_cookie_eng_1_1_services_1_1_file_manager}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+file\+Manager} & The File Manager to be used by the Service Locator\\
+\hline
+\end{DoxyParams}
+Sets the \doxyref{File\+Manager}{p.}{class_cookie_eng_1_1_services_1_1_file_manager} that will be accessesd through the Service Locator \mbox{\label{class_cookie_eng_1_1_services_1_1_service_locator_a49766d5e7cdca3f2384feb4258c9a155}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!set\+Initialiser@{set\+Initialiser}}
+\index{set\+Initialiser@{set\+Initialiser}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{set\+Initialiser()}
+{\footnotesize\ttfamily static void Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::set\+Initialiser (\begin{DoxyParamCaption}\item[{\textbf{ Initialiser} $\ast$}]{\+\_\+initialiser }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the \doxyref{Initialiser}{p.}{class_cookie_eng_1_1_services_1_1_initialiser}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+initialiser} & The initialiser to be used by the Service Locator\\
+\hline
+\end{DoxyParams}
+Sets the initialiser that will be accessesd through the Service Locator 
+
+\subsection{Member Data Documentation}
+\mbox{\label{class_cookie_eng_1_1_services_1_1_service_locator_a98841ef7f94fae563997ce5bc2d6e507}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!s\+\_\+file\+Manager@{s\+\_\+file\+Manager}}
+\index{s\+\_\+file\+Manager@{s\+\_\+file\+Manager}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{s\+\_\+file\+Manager}
+{\footnotesize\ttfamily \textbf{ File\+Manager}$\ast$ Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::s\+\_\+file\+Manager\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Static Pointer to the File Mananger. \mbox{\label{class_cookie_eng_1_1_services_1_1_service_locator_a4016a14884b5701e26047bd9e9404c20}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!s\+\_\+initialiser@{s\+\_\+initialiser}}
+\index{s\+\_\+initialiser@{s\+\_\+initialiser}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{s\+\_\+initialiser}
+{\footnotesize\ttfamily \textbf{ Initialiser}$\ast$ Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::s\+\_\+initialiser\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Static Pointer to the \doxyref{Initialiser}{p.}{class_cookie_eng_1_1_services_1_1_initialiser}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Service\+Locator.\+h\end{DoxyCompactItemize}

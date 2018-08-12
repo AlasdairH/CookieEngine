@@ -1,0 +1,105 @@
+\section{Cookie\+Eng\+:\+:Window Class Reference}
+\label{class_cookie_eng_1_1_window}\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+
+
+An abstraction of the S\+DL \doxyref{Window}{p.}{class_cookie_eng_1_1_window} class which can be used to create a window for Open\+GL rendering.  
+
+
+
+
+{\ttfamily \#include $<$Window.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Window} (const std\+::string \+\_\+title=\char`\"{}Default\char`\"{}, const int \+\_\+width=1280, const int \+\_\+height=720)
+\begin{DoxyCompactList}\small\item\em The \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Constructor. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Window} ()
+\begin{DoxyCompactList}\small\item\em The \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Destructor. \end{DoxyCompactList}\item 
+void \textbf{ swap\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Buffer Swap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Window $\ast$ \textbf{ m\+\_\+window}
+\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \textbf{ m\+\_\+renderer}
+\item 
+S\+D\+L\+\_\+\+G\+L\+Context \textbf{ m\+\_\+open\+G\+L\+Context}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstraction of the S\+DL \doxyref{Window}{p.}{class_cookie_eng_1_1_window} class which can be used to create a window for Open\+GL rendering. 
+
+This class uses the S\+DL \doxyref{Window}{p.}{class_cookie_eng_1_1_window} class to create a window in the constructor. By use of default parameters, a default window can be created by passing no arguments to the constructor or various settings can be applied. An Open\+GL Context is created with the window for rendering. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_cookie_eng_1_1_window_ada0459ccc0ba0254bb9517cce1cf94bb}} 
+\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!Window@{Window}}
+\index{Window@{Window}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+\subsubsection{Window()}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const std\+::string}]{\+\_\+title = {\ttfamily \char`\"{}Default\char`\"{}},  }\item[{const int}]{\+\_\+width = {\ttfamily 1280},  }\item[{const int}]{\+\_\+height = {\ttfamily 720} }\end{DoxyParamCaption})}
+
+
+
+The \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+title} & The \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Title that will be displayed in the OS \\
+\hline
+{\em \+\_\+width} & The default width of the window \\
+\hline
+{\em \+\_\+height} & The default height of the window\\
+\hline
+\end{DoxyParams}
+The constructor takes default arguments for a standard window but title, width and height can be set by overwriting these provided values. The constructor creates an S\+DL \doxyref{Window}{p.}{class_cookie_eng_1_1_window}, S\+DL Renderer and an accompanying GL Context. \mbox{\label{class_cookie_eng_1_1_window_af81149525fe716874b5637cbef63c78f}} 
+\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!````~Window@{$\sim$\+Window}}
+\index{````~Window@{$\sim$\+Window}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+\subsubsection{$\sim$\+Window()}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Destructor. 
+
+This Destructor simply destorys the S\+DL \doxyref{Window}{p.}{class_cookie_eng_1_1_window} and Renderer. 
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_cookie_eng_1_1_window_aebe5875df57a0ab57f3cc9da256dd439}} 
+\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!swap\+Buffer@{swap\+Buffer}}
+\index{swap\+Buffer@{swap\+Buffer}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+\subsubsection{swap\+Buffer()}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Window\+::swap\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxyref{Window}{p.}{class_cookie_eng_1_1_window} Buffer Swap. 
+
+This method simply swaps the window buffer. Should be called per frame. 
+
+\subsection{Member Data Documentation}
+\mbox{\label{class_cookie_eng_1_1_window_aa4fb697e5f3fb9890da293c6c19d2db4}} 
+\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!m\+\_\+open\+G\+L\+Context@{m\+\_\+open\+G\+L\+Context}}
+\index{m\+\_\+open\+G\+L\+Context@{m\+\_\+open\+G\+L\+Context}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+\subsubsection{m\+\_\+open\+G\+L\+Context}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+G\+L\+Context Cookie\+Eng\+::\+Window\+::m\+\_\+open\+G\+L\+Context\hspace{0.3cm}{\ttfamily [protected]}}
+
+The GL Context for Open\+GL Rendering. \mbox{\label{class_cookie_eng_1_1_window_a9d6af268af7ac8c9dc6ce368d3d34e39}} 
+\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!m\+\_\+renderer@{m\+\_\+renderer}}
+\index{m\+\_\+renderer@{m\+\_\+renderer}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+\subsubsection{m\+\_\+renderer}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ Cookie\+Eng\+::\+Window\+::m\+\_\+renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+A pointer to the S\+D\+L\+\_\+\+Renderer. \mbox{\label{class_cookie_eng_1_1_window_a34a72976d2a24ceee23b88e3751a76bd}} 
+\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!m\+\_\+window@{m\+\_\+window}}
+\index{m\+\_\+window@{m\+\_\+window}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+\subsubsection{m\+\_\+window}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Window$\ast$ Cookie\+Eng\+::\+Window\+::m\+\_\+window\hspace{0.3cm}{\ttfamily [protected]}}
+
+A pointer to the S\+D\+L\+\_\+\+Window. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Window.\+h\end{DoxyCompactItemize}

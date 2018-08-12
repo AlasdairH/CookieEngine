@@ -1,0 +1,117 @@
+\section{Cookie\+Eng\+:\+:Graphics\+:\+:Program Class Reference}
+\label{class_cookie_eng_1_1_graphics_1_1_program}\index{Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}}
+
+
+Abstracted Open\+GL \doxyref{Program}{p.}{class_cookie_eng_1_1_graphics_1_1_program}.  
+
+
+
+
+{\ttfamily \#include $<$Program.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Program} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Program}{p.}{class_cookie_eng_1_1_graphics_1_1_program} Ctor. \end{DoxyCompactList}\item 
+void \textbf{ attach\+Shader} (\textbf{ Shader} \&\+\_\+shader)
+\begin{DoxyCompactList}\small\item\em Attaches a \doxyref{Shader}{p.}{class_cookie_eng_1_1_graphics_1_1_shader} to the \doxyref{Program}{p.}{class_cookie_eng_1_1_graphics_1_1_program}. \end{DoxyCompactList}\item 
+void \textbf{ link} ()
+\begin{DoxyCompactList}\small\item\em Links the \doxyref{Shader}{p.}{class_cookie_eng_1_1_graphics_1_1_shader} \doxyref{Program}{p.}{class_cookie_eng_1_1_graphics_1_1_program}. \end{DoxyCompactList}\item 
+bool \textbf{ verify} ()
+\begin{DoxyCompactList}\small\item\em Verifys the \doxyref{Shader}{p.}{class_cookie_eng_1_1_graphics_1_1_shader} \doxyref{Program}{p.}{class_cookie_eng_1_1_graphics_1_1_program}. \end{DoxyCompactList}\item 
+void \textbf{ bind} ()
+\begin{DoxyCompactList}\small\item\em Binds the shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \textbf{ m\+\_\+program\+ID}
+\item 
+bool \textbf{ m\+\_\+verified}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstracted Open\+GL \doxyref{Program}{p.}{class_cookie_eng_1_1_graphics_1_1_program}. 
+
+Abstracts and provides simple utilities for an Open\+GL \doxyref{Shader}{p.}{class_cookie_eng_1_1_graphics_1_1_shader} \doxyref{Program}{p.}{class_cookie_eng_1_1_graphics_1_1_program}. The program M\+U\+ST be verified before it can be bound. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_program_a603a60c068f1d6f9a8dc123994cb7e42}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}!Program@{Program}}
+\index{Program@{Program}!Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}}
+\subsubsection{Program()}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Graphics\+::\+Program\+::\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxyref{Program}{p.}{class_cookie_eng_1_1_graphics_1_1_program} Ctor. 
+
+Creates a shader program and sets the verified status to false. 
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_program_a047db1a5a18be6a9ecd7caff8dbed884}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}!attach\+Shader@{attach\+Shader}}
+\index{attach\+Shader@{attach\+Shader}!Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}}
+\subsubsection{attach\+Shader()}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Program\+::attach\+Shader (\begin{DoxyParamCaption}\item[{\textbf{ Shader} \&}]{\+\_\+shader }\end{DoxyParamCaption})}
+
+
+
+Attaches a \doxyref{Shader}{p.}{class_cookie_eng_1_1_graphics_1_1_shader} to the \doxyref{Program}{p.}{class_cookie_eng_1_1_graphics_1_1_program}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+shader} & The shader to be attached\\
+\hline
+\end{DoxyParams}
+Attaches a shader to the program. \mbox{\label{class_cookie_eng_1_1_graphics_1_1_program_aaf32c20b81ded7b46b4aef3a71e4850e}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}!bind@{bind}}
+\index{bind@{bind}!Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}}
+\subsubsection{bind()}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Program\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Binds the shader. 
+
+Binds the shader. For this to sucseed, the shader must be verified. \mbox{\label{class_cookie_eng_1_1_graphics_1_1_program_a72b268c9087919115bef2632c25b9d47}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}!link@{link}}
+\index{link@{link}!Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}}
+\subsubsection{link()}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Program\+::link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Links the \doxyref{Shader}{p.}{class_cookie_eng_1_1_graphics_1_1_shader} \doxyref{Program}{p.}{class_cookie_eng_1_1_graphics_1_1_program}. 
+
+Links the shader program. \mbox{\label{class_cookie_eng_1_1_graphics_1_1_program_a0375be237e3eee65c9debbc13a7547d5}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}!verify@{verify}}
+\index{verify@{verify}!Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}}
+\subsubsection{verify()}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Graphics\+::\+Program\+::verify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifys the \doxyref{Shader}{p.}{class_cookie_eng_1_1_graphics_1_1_shader} \doxyref{Program}{p.}{class_cookie_eng_1_1_graphics_1_1_program}. 
+
+Verifies the shader program and ensures it can run. 
+
+\subsection{Member Data Documentation}
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_program_ac07277e3a97ab28e17f83e04920374a7}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}!m\+\_\+program\+ID@{m\+\_\+program\+ID}}
+\index{m\+\_\+program\+ID@{m\+\_\+program\+ID}!Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}}
+\subsubsection{m\+\_\+program\+ID}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Program\+::m\+\_\+program\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Open\+GL ID \mbox{\label{class_cookie_eng_1_1_graphics_1_1_program_aadb91d13a8c12e4633985e7ff912528b}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}!m\+\_\+verified@{m\+\_\+verified}}
+\index{m\+\_\+verified@{m\+\_\+verified}!Cookie\+Eng\+::\+Graphics\+::\+Program@{Cookie\+Eng\+::\+Graphics\+::\+Program}}
+\subsubsection{m\+\_\+verified}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Graphics\+::\+Program\+::m\+\_\+verified\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag for the shaders verified status. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Program.\+h\end{DoxyCompactItemize}

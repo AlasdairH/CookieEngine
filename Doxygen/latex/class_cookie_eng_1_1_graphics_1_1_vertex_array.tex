@@ -1,0 +1,111 @@
+\section{Cookie\+Eng\+:\+:Graphics\+:\+:Vertex\+Array Class Reference}
+\label{class_cookie_eng_1_1_graphics_1_1_vertex_array}\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}}
+
+
+Absraction of an Open\+GL Vertex Array Object (V\+AO)  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Array.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Vertex\+Array} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Vertex\+Array}{p.}{class_cookie_eng_1_1_graphics_1_1_vertex_array} Ctor. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Vertex\+Array} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Vertex\+Array}{p.}{class_cookie_eng_1_1_graphics_1_1_vertex_array} Dtor. \end{DoxyCompactList}\item 
+void \textbf{ add\+Buffer} (const \textbf{ Vertex\+Buffer} \&\+\_\+vertex\+Buffer, const \textbf{ Vertex\+Buffer\+Layout} \&\+\_\+layout)
+\begin{DoxyCompactList}\small\item\em Adds a buffer to the V\+AO. \end{DoxyCompactList}\item 
+void \textbf{ bind} () const
+\begin{DoxyCompactList}\small\item\em \doxyref{Vertex\+Array}{p.}{class_cookie_eng_1_1_graphics_1_1_vertex_array} Dtor. \end{DoxyCompactList}\item 
+void \textbf{ un\+Bind} () const
+\begin{DoxyCompactList}\small\item\em \doxyref{Vertex\+Array}{p.}{class_cookie_eng_1_1_graphics_1_1_vertex_array} Dtor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \textbf{ m\+\_\+vertex\+Array\+ID}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Absraction of an Open\+GL Vertex Array Object (V\+AO) 
+
+This class handles the creation and managment of V\+A\+Os in Open\+GL. It works by assigning Vertex Buffers with a corresponding layout to an array attribute. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_array_a9ca1229bf83878acd80e947487b2a9ac}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}!Vertex\+Array@{Vertex\+Array}}
+\index{Vertex\+Array@{Vertex\+Array}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}}
+\subsubsection{Vertex\+Array()}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array\+::\+Vertex\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxyref{Vertex\+Array}{p.}{class_cookie_eng_1_1_graphics_1_1_vertex_array} Ctor. 
+
+Generates a Vertex Array and stores the ID in m\+\_\+vertex\+Array\+ID. \mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_array_a114da6690772eaa07108e2dccaa8e93d}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}!````~Vertex\+Array@{$\sim$\+Vertex\+Array}}
+\index{````~Vertex\+Array@{$\sim$\+Vertex\+Array}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}}
+\subsubsection{$\sim$\+Vertex\+Array()}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array\+::$\sim$\+Vertex\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxyref{Vertex\+Array}{p.}{class_cookie_eng_1_1_graphics_1_1_vertex_array} Dtor. 
+
+Deletes the Vertex Array 
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_array_aacb98fcc69be4c0ca1a4d8deb38b053e}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}!add\+Buffer@{add\+Buffer}}
+\index{add\+Buffer@{add\+Buffer}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}}
+\subsubsection{add\+Buffer()}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array\+::add\+Buffer (\begin{DoxyParamCaption}\item[{const \textbf{ Vertex\+Buffer} \&}]{\+\_\+vertex\+Buffer,  }\item[{const \textbf{ Vertex\+Buffer\+Layout} \&}]{\+\_\+layout }\end{DoxyParamCaption})}
+
+
+
+Adds a buffer to the V\+AO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vertex\+Buffer} & The vertex buffer to be added to the array. \\
+\hline
+{\em \+\_\+layout} & The layout of the corresponding buffer.\\
+\hline
+\end{DoxyParams}
+Takes a V\+BO, binds it to the V\+AO and sets up the gl\+Vertex\+Attrib\+Pointer based on the layout provided. \mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_array_afaa952a05a501cb487831cb6e9e052bf}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}!bind@{bind}}
+\index{bind@{bind}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}}
+\subsubsection{bind()}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxyref{Vertex\+Array}{p.}{class_cookie_eng_1_1_graphics_1_1_vertex_array} Dtor. 
+
+Binds the Vertex Array Object (V\+AO) \mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_array_acd3511d77ec22d63984e365e05ef9bcb}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}!un\+Bind@{un\+Bind}}
+\index{un\+Bind@{un\+Bind}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}}
+\subsubsection{un\+Bind()}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array\+::un\+Bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxyref{Vertex\+Array}{p.}{class_cookie_eng_1_1_graphics_1_1_vertex_array} Dtor. 
+
+Unbinds the Vertex Array Object (V\+AO) 
+
+\subsection{Member Data Documentation}
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_array_ad4ee57cc45e85deb47a9f2e6a91211a9}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}!m\+\_\+vertex\+Array\+ID@{m\+\_\+vertex\+Array\+ID}}
+\index{m\+\_\+vertex\+Array\+ID@{m\+\_\+vertex\+Array\+ID}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array}}
+\subsubsection{m\+\_\+vertex\+Array\+ID}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Array\+::m\+\_\+vertex\+Array\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Open\+GL ID of the V\+AO 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Vertex\+Array.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,130 @@
+\section{Cookie\+Eng\+:\+:Graphics\+:\+:Vertex\+Buffer Class Reference}
+\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}}
+
+
+An abstraction of an Open\+GL Vertex Bufer Object (V\+BO).  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Buffer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Vertex\+Buffer} (const Vertex\+Buffer\+Type \+\_\+type)
+\begin{DoxyCompactList}\small\item\em Vertex Buffer Ctor. \end{DoxyCompactList}\item 
+\textbf{ Vertex\+Buffer} (const Vertex\+Buffer\+Type \+\_\+type, const void $\ast$\+\_\+data, G\+Luint \+\_\+size)
+\begin{DoxyCompactList}\small\item\em Vertex Buffer Ctor. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Vertex\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Vertex Buffer Dtor. \end{DoxyCompactList}\item 
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a67b3089f2822a48fe31c84e94d087d68}} 
+void \textbf{ init} ()
+\begin{DoxyCompactList}\small\item\em Generates the V\+BO. This is done through this method to avoid issues of using Open\+GL calls in constructors. \end{DoxyCompactList}\item 
+void \textbf{ load\+Data} (const void $\ast$\+\_\+data, G\+Luint \+\_\+size)
+\begin{DoxyCompactList}\small\item\em Loads data to the V\+BO. \end{DoxyCompactList}\item 
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a6fbaa64c5edeb00d4f5770587eb7b369}} 
+void \textbf{ bind} () const
+\begin{DoxyCompactList}\small\item\em Binds the V\+BO. \end{DoxyCompactList}\item 
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a8fbc3f39762c511438bc13e8c405926c}} 
+void \textbf{ un\+Bind} () const
+\begin{DoxyCompactList}\small\item\em Unbinds the V\+BO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vertex\+Buffer\+Type \textbf{ m\+\_\+vertex\+Buffer\+Type}
+\item 
+G\+Luint \textbf{ m\+\_\+vertex\+Buffer\+ID}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstraction of an Open\+GL Vertex Bufer Object (V\+BO). 
+
+An anstraction of the Open\+GL Vertex Buffer Object (V\+BO). This is used by the \doxyref{Vertex\+Array}{p.}{class_cookie_eng_1_1_graphics_1_1_vertex_array} class along with a \doxyref{Vertex\+Buffer\+Layout}{p.}{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout} for drawing objects. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_ac877c409fdb8a09947bb13664b78a335}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}!Vertex\+Buffer@{Vertex\+Buffer}}
+\index{Vertex\+Buffer@{Vertex\+Buffer}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}}
+\subsubsection{Vertex\+Buffer()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+::\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{const Vertex\+Buffer\+Type}]{\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Vertex Buffer Ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+type} & The V\+BO type to create\\
+\hline
+\end{DoxyParams}
+Generates a Vertex Buffer Object (V\+BO) for use by Open\+GL of the specified type. \mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a599f1cd18e2b7b12212b97a4c60b583b}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}!Vertex\+Buffer@{Vertex\+Buffer}}
+\index{Vertex\+Buffer@{Vertex\+Buffer}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}}
+\subsubsection{Vertex\+Buffer()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+::\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{const Vertex\+Buffer\+Type}]{\+\_\+type,  }\item[{const void $\ast$}]{\+\_\+data,  }\item[{G\+Luint}]{\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Vertex Buffer Ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+type} & The V\+BO type to create \\
+\hline
+{\em \+\_\+data} & The data to send to the V\+BO \\
+\hline
+{\em \+\_\+size} & The size of the data in bytes\\
+\hline
+\end{DoxyParams}
+Generates a Vertex Buffer Object (V\+BO) through the \doxyref{init()}{p.}{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a67b3089f2822a48fe31c84e94d087d68} method for use by Open\+GL of the specified type. Also sends the specified data to the V\+BO with the size provided. \mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a7c664866737550113380e8f08feca778}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}!````~Vertex\+Buffer@{$\sim$\+Vertex\+Buffer}}
+\index{````~Vertex\+Buffer@{$\sim$\+Vertex\+Buffer}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}}
+\subsubsection{$\sim$\+Vertex\+Buffer()}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+::$\sim$\+Vertex\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vertex Buffer Dtor. 
+
+Deletes the Vertex Buffer 
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_ad0d5860b53f16ab33461df7da5d2839f}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}!load\+Data@{load\+Data}}
+\index{load\+Data@{load\+Data}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}}
+\subsubsection{load\+Data()}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+::load\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{\+\_\+data,  }\item[{G\+Luint}]{\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Loads data to the V\+BO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data} & he data to send to the V\+BO \\
+\hline
+{\em \+\_\+size} & The size of the data in bytes\\
+\hline
+\end{DoxyParams}
+Loads data to the V\+BO. 
+
+\subsection{Member Data Documentation}
+\mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_af4c00fbd9352dd8a0b5952c007037e2e}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}!m\+\_\+vertex\+Buffer\+ID@{m\+\_\+vertex\+Buffer\+ID}}
+\index{m\+\_\+vertex\+Buffer\+ID@{m\+\_\+vertex\+Buffer\+ID}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}}
+\subsubsection{m\+\_\+vertex\+Buffer\+ID}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+::m\+\_\+vertex\+Buffer\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Vertex Buffer ID \mbox{\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a37d75d306f50db1b63c22b51912402cc}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}!m\+\_\+vertex\+Buffer\+Type@{m\+\_\+vertex\+Buffer\+Type}}
+\index{m\+\_\+vertex\+Buffer\+Type@{m\+\_\+vertex\+Buffer\+Type}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}}
+\subsubsection{m\+\_\+vertex\+Buffer\+Type}
+{\footnotesize\ttfamily Vertex\+Buffer\+Type Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+::m\+\_\+vertex\+Buffer\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+The type of Vertex Buffer (B\+U\+F\+F\+E\+R\+\_\+\+A\+R\+R\+AY, B\+U\+F\+F\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+A\+R\+R\+AY, etc) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Vertex\+Buffer.\+h\end{DoxyCompactItemize}

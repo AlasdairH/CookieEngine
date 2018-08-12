@@ -1,0 +1,19 @@
+/*! \mainpage Games Programming Level 6 - Game Engine Programming (Cookie Engine)
+
+\section sec_intro Introduction
+
+This documentation covers the setup to build the project from the source for running on a Windows 10 PC as well as documentation for
+all classes.
+
+\section sec_running Install
+
+1. Load the solution in Microsoft Visual Studio 2017 or later.
+2. Select the x86 Solution Platform.
+3. Select the Release Solution Configuration.
+4. Build and run the project.
+
+\section sec_use Use
+
+Use
+ 
+*/

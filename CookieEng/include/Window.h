@@ -54,6 +54,10 @@ namespace CookieEng
 		*/
 		void resize(int _width, int _height);
 
+		// TODO: Doxygen
+		inline int getWidth() { int w; int h; SDL_GetWindowSize(m_window, &w, &h); return w; }
+		inline int getHeight() { int w; int h; SDL_GetWindowSize(m_window, &w, &h); return h; }
+
 	protected:
 		SDL_Window* m_window;				/**< A pointer to the SDL_Window. */
 		SDL_Renderer* m_renderer;			/**< A pointer to the SDL_Renderer. */

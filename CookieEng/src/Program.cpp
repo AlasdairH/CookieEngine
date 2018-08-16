@@ -64,5 +64,40 @@ namespace Graphics
 	{
 		glUseProgram(0);
 	}
+	int Program::getUniformLocation(const std::string & _name)
+	{
+		if (m_uniformLocationCache.find(_name) != m_uniformLocationCache.end())
+			return m_uniformLocationCache[_name];
+
+		int location = glGetUniformLocation(m_programID, _name.c_str());
+		if (location == -1)
+		{
+			LOG_WARNING("Uniform name " << _name << " does not exist!");
+		}
+
+		m_uniformLocationCache[_name] = location;
+
+		return location;
+	}
+
+	void Program::setUniform1f(const std::string & _name, float _value)
+	{
+		glUniform1f(getUniformLocation(_name), _value);
+	}
+
+	void Program::setUniform4f(const std::string &_name, float _value1, float _value2, float _value3, float _value4)
+	{
+		glUniform4f(getUniformLocation(_name), _value1, _value2, _value3, _value4);
+	}
+
+	void Program::setUniform1i(const std::string & _name, int _value)
+	{
+		glUniform1f(getUniformLocation(_name), _value);
+	}
+
+	void Program::setUniformMat4f(const std::string & _name, const glm::mat4 &_value)
+	{
+		glUniformMatrix4fv(getUniformLocation(_name), 1, GL_FALSE, &_value[0][0]);
+	}
 }
 }

@@ -154,6 +154,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\external\stb_image\stb_image.cpp" />
     <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\Program.cpp" />
     <ClCompile Include="src\Application.cpp" />
@@ -163,6 +164,7 @@
     <ClCompile Include="src\ServiceContainer.cpp" />
     <ClCompile Include="src\ServiceLocator.cpp" />
     <ClCompile Include="src\Shader.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
     <ClCompile Include="src\Vertex.cpp" />
     <ClCompile Include="src\VertexArray.cpp" />
     <ClCompile Include="src\VertexBuffer.cpp" />
@@ -170,6 +172,7 @@
     <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\external\stb_image\stb_image.h" />
     <ClInclude Include="include\FileManager.h" />
     <ClInclude Include="include\Initialiser.h" />
     <ClInclude Include="include\Macro.h" />
@@ -178,6 +181,7 @@
     <ClInclude Include="include\ServiceContainer.h" />
     <ClInclude Include="include\ServiceLocator.h" />
     <ClInclude Include="include\Shader.h" />
+    <ClInclude Include="include\Texture.h" />
     <ClInclude Include="include\Vertex.h" />
     <ClInclude Include="include\VertexArray.h" />
     <ClInclude Include="include\VertexBuffer.h" />

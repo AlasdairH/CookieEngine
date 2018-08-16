@@ -5,17 +5,27 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <unordered_map>
 
 // external libs
 
 // program
-#include "Mesh.h"
 #include "Macro.h"
+#include "Mesh.h"
+
+
 
 namespace CookieEng
 {
 namespace Services
 {
+	struct ObjVertex
+	{
+		int f;
+		int vt;
+		int vn;
+	};
+
 	/*! @class FileManager
 	*	@brief A Manager Class that handles the loading of files either synchronously or asynchronously.
 	*
@@ -54,7 +64,7 @@ namespace Services
 		std::string loadTextFileASync(std::string _filepath) { } 
 
 		/** @brief Loads a .obj file to a Mesh
-		*	@param _filepath The path to the Text File to be loaded
+		*	@param _filepath The path to the .Obj to be loaded
 		*	@return A mesh containing the vertex and index data from the .obj file
 		*
 		*	WARNING: ALL LOADED MESHES MUST BE TRIANGULATED
@@ -62,6 +72,27 @@ namespace Services
 		*	This could definietly be more efficient but it's completely written by me and thats how I like it!
 		*/
 		Data::Mesh loadMesh(const std::string _filepath);
+
+		/** @brief Loads an Image
+		*	@param _filepath The path to the Image to be loaded
+		*	@return The loaded image
+		*
+		*	
+		*/
+		Data::Mesh loadImage(const std::string _filepath);
+
+		// TODO: Move this
+		std::vector<std::string> split(const std::string& s, char delimiter)
+		{
+			std::vector<std::string> tokens;
+			std::string token;
+			std::istringstream tokenStream(s);
+			while (std::getline(tokenStream, token, delimiter))
+			{
+				tokens.push_back(token);
+			}
+			return tokens;
+		}
 
 	protected:
 

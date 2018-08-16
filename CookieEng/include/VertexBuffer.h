@@ -35,6 +35,7 @@ namespace Graphics
 		/** @brief Vertex Buffer Ctor
 		*	@param _type The VBO type to create
 		*	@param _data The data to send to the VBO
+		*	@param _count The number of items of data
 		*	@param _size The size of the data in bytes
 		*
 		*	Generates a Vertex Buffer Object (VBO) through the init() method for use by OpenGL of the specified type. Also sends the specified data to the VBO with the size provided.
@@ -54,6 +55,7 @@ namespace Graphics
 
 		/** @brief Loads data to the VBO.
 		*	@param _data he data to send to the VBO
+		*	@param _count The number of items of data
 		*	@param _size The size of the data in bytes
 		*
 		*	Loads data to the VBO.

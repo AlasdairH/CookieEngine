@@ -154,9 +154,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\external\stb_image\stb_image.cpp" />
+    <ClCompile Include="src\FrameBuffer.cpp" />
     <ClCompile Include="src\Mesh.cpp" />
-    <ClCompile Include="src\Program.cpp" />
+    <ClCompile Include="src\Message.cpp" />
+    <ClCompile Include="src\ShaderProgram.cpp" />
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\FileManager.cpp" />
     <ClCompile Include="src\Initialiser.cpp" />
@@ -165,6 +168,7 @@
     <ClCompile Include="src\ServiceLocator.cpp" />
     <ClCompile Include="src\Shader.cpp" />
     <ClCompile Include="src\Texture.cpp" />
+    <ClCompile Include="src\Transform.cpp" />
     <ClCompile Include="src\Vertex.cpp" />
     <ClCompile Include="src\VertexArray.cpp" />
     <ClCompile Include="src\VertexBuffer.cpp" />
@@ -172,7 +176,11 @@
     <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="include\Message.h" />
     <ClInclude Include="include\external\stb_image\stb_image.h" />
+    <ClInclude Include="include\FrameBuffer.h" />
+    <ClInclude Include="include\Transform.h" />
     <ClInclude Include="include\FileManager.h" />
     <ClInclude Include="include\Initialiser.h" />
     <ClInclude Include="include\Macro.h" />
@@ -187,12 +195,14 @@
     <ClInclude Include="include\VertexBuffer.h" />
     <ClInclude Include="include\VertexBufferLayout.h" />
     <ClInclude Include="include\Window.h" />
-    <ClInclude Include="include\Program.h" />
+    <ClInclude Include="include\ShaderProgram.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\DoxygenRef.txt" />
-    <Text Include="resources\shaders\frag.txt" />
-    <Text Include="resources\shaders\vert.txt" />
+    <Text Include="resources\shaders\frag.glsl" />
+    <Text Include="resources\shaders\PostProcFrag.glsl" />
+    <Text Include="resources\shaders\PostProcVert.glsl" />
+    <Text Include="resources\shaders\vert.glsl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\DoxygenMain.dox" />

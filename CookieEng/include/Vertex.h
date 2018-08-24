@@ -8,8 +8,6 @@
 
 // program
 
-// TODO: Doxygen
-
 namespace CookieEng
 {
 namespace Data

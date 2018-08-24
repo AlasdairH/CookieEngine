@@ -1,11 +1,11 @@
-#include "Program.h"
+#include "ShaderProgram.h"
 
 namespace CookieEng
 {
 namespace Graphics
 {
 
-	Program::Program()
+	ShaderProgram::ShaderProgram()
 	{
 		// create the program to store the shaders
 		m_programID = glCreateProgram();
@@ -14,19 +14,40 @@ namespace Graphics
 		m_verified = false;
 	}
 
-	void Program::attachShader(Shader &_shader)
+	ShaderProgram::ShaderProgram(const std::string & _vertShaderPath, const std::string & _fragShaderPath)
+	{
+		// create the program to store the shaders
+		m_programID = glCreateProgram();
+		LOG_MESSAGE("Created Shader Program with ID " << m_programID);
+
+		m_verified = false;
+
+		// create vertex shader
+		Graphics::Shader vertShader(Graphics::SHADER_VERTEX);
+		vertShader.load(_vertShaderPath);
+
+		// create fragment shader
+		Graphics::Shader fragShader(Graphics::SHADER_FRAGMENT);
+		fragShader.load(_fragShaderPath);
+
+		attachShader(vertShader);
+		attachShader(fragShader);
+		link();
+	}
+
+	void ShaderProgram::attachShader(Shader &_shader)
 	{
 		glAttachShader(m_programID, _shader.getShaderID());
 	}
 
-	void Program::link()
+	void ShaderProgram::link()
 	{
 		glLinkProgram(m_programID);
 
 		verify();
 	}
 
-	bool Program::verify()
+	bool ShaderProgram::verify()
 	{
 		GLint result = GL_FALSE;
 		int infoLogLength;
@@ -49,7 +70,7 @@ namespace Graphics
 		return true;
 	}
 
-	void Program::bind() const
+	void ShaderProgram::bind() const
 	{
 		if (m_verified)
 		{
@@ -60,11 +81,11 @@ namespace Graphics
 			LOG_ERROR("Bind Failed, Shader Program not Verified");
 		}
 	}
-	void Program::unBind() const
+	void ShaderProgram::unBind() const
 	{
 		glUseProgram(0);
 	}
-	int Program::getUniformLocation(const std::string & _name)
+	int ShaderProgram::getUniformLocation(const std::string & _name)
 	{
 		if (m_uniformLocationCache.find(_name) != m_uniformLocationCache.end())
 			return m_uniformLocationCache[_name];
@@ -80,22 +101,22 @@ namespace Graphics
 		return location;
 	}
 
-	void Program::setUniform1f(const std::string & _name, float _value)
+	void ShaderProgram::setUniform1f(const std::string & _name, float _value)
 	{
 		glUniform1f(getUniformLocation(_name), _value);
 	}
 
-	void Program::setUniform4f(const std::string &_name, float _value1, float _value2, float _value3, float _value4)
+	void ShaderProgram::setUniform4f(const std::string &_name, float _value1, float _value2, float _value3, float _value4)
 	{
 		glUniform4f(getUniformLocation(_name), _value1, _value2, _value3, _value4);
 	}
 
-	void Program::setUniform1i(const std::string & _name, int _value)
+	void ShaderProgram::setUniform1i(const std::string & _name, int _value)
 	{
 		glUniform1f(getUniformLocation(_name), _value);
 	}
 
-	void Program::setUniformMat4f(const std::string & _name, const glm::mat4 &_value)
+	void ShaderProgram::setUniformMat4f(const std::string & _name, const glm::mat4 &_value)
 	{
 		glUniformMatrix4fv(getUniformLocation(_name), 1, GL_FALSE, &_value[0][0]);
 	}

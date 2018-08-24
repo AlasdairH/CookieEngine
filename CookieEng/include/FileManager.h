@@ -19,6 +19,7 @@ namespace CookieEng
 {
 namespace Services
 {
+	// TODO: Move this
 	struct ObjVertex
 	{
 		int f;
@@ -73,13 +74,14 @@ namespace Services
 		*/
 		Data::Mesh loadMesh(const std::string _filepath);
 
+		// TODO: Implement
 		/** @brief Loads an Image
 		*	@param _filepath The path to the Image to be loaded
 		*	@return The loaded image
 		*
 		*	
 		*/
-		Data::Mesh loadImage(const std::string _filepath);
+		Data::Mesh loadImage(const std::string _filepath) { }
 
 		// TODO: Move this
 		std::vector<std::string> split(const std::string& s, char delimiter)

@@ -34,6 +34,12 @@ namespace Graphics
 		*/
 		Shader(ShaderType _shaderType);
 
+		/** @brief Shader Dtor
+		*
+		*	Destorys the shader
+		*/
+		~Shader() { glDeleteShader(m_shaderID); LOG_MESSAGE("Deleted Shader: " << m_shaderID); }
+
 		/** @brief Loads a text file into the Shader
 		*	@param _filepath The path to the Text File to be loaded
 		*	@return the result of the load. True for sucessful, false for error.

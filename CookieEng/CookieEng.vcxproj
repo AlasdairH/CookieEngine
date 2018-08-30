@@ -157,8 +157,11 @@
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\external\stb_image\stb_image.cpp" />
     <ClCompile Include="src\FrameBuffer.cpp" />
+    <ClCompile Include="src\GameObject.cpp" />
+    <ClCompile Include="src\IMessageHandler.cpp" />
     <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\Message.cpp" />
+    <ClCompile Include="src\MessageQueue.cpp" />
     <ClCompile Include="src\ShaderProgram.cpp" />
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\FileManager.cpp" />
@@ -177,9 +180,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="include\GameObject.h" />
+    <ClInclude Include="include\IMessageHandler.h" />
     <ClInclude Include="include\Message.h" />
     <ClInclude Include="include\external\stb_image\stb_image.h" />
     <ClInclude Include="include\FrameBuffer.h" />
+    <ClInclude Include="include\MessageQueue.h" />
     <ClInclude Include="include\Transform.h" />
     <ClInclude Include="include\FileManager.h" />
     <ClInclude Include="include\Initialiser.h" />

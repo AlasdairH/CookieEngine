@@ -32,6 +32,7 @@ namespace Graphics
 		*/
 		Renderer();
 
+		// TODO: Do I need this? / Doxygen
 		inline void setFrameBuffer(FrameBuffer *_frameBuffer) { m_frameBuffer = _frameBuffer; }
 
 		// TODO: Update to Material
@@ -44,7 +45,7 @@ namespace Graphics
 		*/
 		void drawToFrameBuffer(const FrameBuffer &_fbo, const VertexArray &_vao, const VertexBuffer &_indexBuffer, const ShaderProgram &_shaderProgram);
 	protected:
-		FrameBuffer *m_frameBuffer;
+		FrameBuffer *m_frameBuffer; // TODO: Doxygen
 	};
 
 }

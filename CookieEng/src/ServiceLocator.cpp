@@ -6,6 +6,7 @@ namespace Services
 {
 	Initialiser* ServiceLocator::s_initialiser = nullptr;
 	FileManager* ServiceLocator::s_fileManager = nullptr;
+	MessageQueue* ServiceLocator::s_messageQueue = nullptr;
 
 
 	// ------------------------ INITIALISER ------------------------
@@ -57,6 +58,32 @@ namespace Services
 		else
 		{
 			s_fileManager = _fileManager;
+		}
+	}
+
+	// ------------------------ MESSAGE QUEUE ------------------------
+	MessageQueue& ServiceLocator::getMessageQueue()
+	{
+		if (s_messageQueue == nullptr)
+		{
+			std::cout << "WARNING: Service (MessageQueue) set to NULLPTR" << std::endl;
+			return *s_messageQueue;
+		}
+		// return reference to the message queue
+		return *s_messageQueue;
+	}
+
+	void ServiceLocator::setMessageQueue(MessageQueue* _messageQueue)
+	{
+		// if the initialiser being set is null
+		if (_messageQueue == nullptr)
+		{
+			std::cout << "ERROR: Initialiser NULL" << std::endl;
+		}
+		// if it is a valid message queue
+		else
+		{
+			s_messageQueue = _messageQueue;
 		}
 	}
 }

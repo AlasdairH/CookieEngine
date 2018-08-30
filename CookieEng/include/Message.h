@@ -9,31 +9,28 @@
 
 // program
 #include "Macro.h"
-
-// TODO: Doxygen
+#include "IMessageHandler.h"
 
 namespace CookieEng
 {
 namespace Messaging
 {
-	enum MessageType { MsgKeyDown, MsgKeyUp, MsgMouse };
+	enum MessageType { MSG_UNKNOWN, MSG_KEY_DOWN, MSG_KEY_UP, MSG_MOUSE };
 
+	// forward declaration
+	class IMessageHandler;
+
+	/*! @class Message
+	*	@brief A Message for passing around the engine
+	*
+	*	Messages contain a type and data that can be used by classes that inherit from IMessageHandler.
+	*/
 	class Message
 	{
 	public:
-		MessageType type;
-	};
+		MessageType type = MSG_UNKNOWN;						/**< The Message Type */
 
-	class KeyMessage : public Message
-	{
-	public:
-		std::string character;
-	};
-
-	class MouseMessage : public Message
-	{
-	public:
-		glm::vec2 position;
+		// TODO: Add Data
 	};
 }
 }

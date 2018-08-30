@@ -123,6 +123,15 @@
     <ClCompile Include="src\Message.cpp">
       <Filter>Source Files\Messaging</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IMessageHandler.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MessageQueue.cpp">
+      <Filter>Source Files\Messaging</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ServiceLocator.h">
@@ -185,17 +194,30 @@
     <ClInclude Include="include\Message.h">
       <Filter>Header Files\Messaging</Filter>
     </ClInclude>
+    <ClInclude Include="include\GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IMessageHandler.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MessageQueue.h">
+      <Filter>Header Files\Messaging</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\DoxygenRef.txt">
       <Filter>Resource Files\Doxygen</Filter>
     </Text>
-    <Text Include="resources\shaders\PostProcFrag.glsl" />
-    <Text Include="resources\shaders\PostProcVert.glsl" />
     <Text Include="resources\shaders\vert.glsl">
       <Filter>Resource Files\Shaders</Filter>
     </Text>
     <Text Include="resources\shaders\frag.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </Text>
+    <Text Include="resources\shaders\PostProcFrag.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </Text>
+    <Text Include="resources\shaders\PostProcVert.glsl">
       <Filter>Resource Files\Shaders</Filter>
     </Text>
   </ItemGroup>

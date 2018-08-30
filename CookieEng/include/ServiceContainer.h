@@ -10,6 +10,7 @@
 #include "ServiceLocator.h"
 #include "Initialiser.h"
 #include "FileManager.h"
+#include "MessageQueue.h"
 
 namespace CookieEng
 {
@@ -44,8 +45,8 @@ namespace Services
 
 	protected:
 		Initialiser* m_svsInitialiser;		/**< A pointer to the Initialiser. */
-
 		FileManager* m_svsFileManager;		/**< A pointer to the File Manager. */
+		MessageQueue* m_svsMessageQueue;	/**< A pointer to the Message Queue. */
 	};
 
 }

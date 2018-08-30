@@ -5,7 +5,7 @@ namespace CookieEng
 	Window::Window(const std::string _title, const int _width, const int _height)
 	{
 		m_window = SDL_CreateWindow(_title.c_str(), 
-			100, 100, 
+			0, 0, 
 			_width, _height, 
 			SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
 

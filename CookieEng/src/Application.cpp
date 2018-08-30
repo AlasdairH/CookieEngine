@@ -22,6 +22,11 @@
 
 #include "FrameBuffer.h"
 
+#include "GameObject.h"
+
+#include "MessageQueue.h"
+#include "Message.h"
+
 #define DEBUG
 
 
@@ -41,7 +46,7 @@ int main()
 
 	// initialise the Engine
 	Services::ServiceLocator::getInitialiser().initSDL();
-	Window *window = new Window("CookieEng", 1280, 720);
+	Window *window = new Window("CookieEng", 1920, 1080);
 	Services::ServiceLocator::getInitialiser().initOpenGL();
 
 	// create shader program
@@ -92,9 +97,16 @@ int main()
 	Graphics::FrameBuffer testFrameBuffer(window->getWidth(), window->getHeight());
 
 	Graphics::Renderer renderer;
-	//renderer.setFrameBuffer(&testFrameBuffer);
 
-	
+	Core::GameObject testGameObject;
+
+	Services::ServiceLocator::getMessageQueue().addObserver(Messaging::MSG_KEY_DOWN, &testGameObject);
+
+	Messaging::Message msg;
+	msg.type = Messaging::MSG_KEY_DOWN;
+	Services::ServiceLocator::getMessageQueue().pushMessage(msg);
+
+	testShader.setUniform3f("u_cameraPosition", testCamera.transform.getPositionVec3().x, testCamera.transform.getPositionVec3().y, testCamera.transform.getPositionVec3().z);
 
 	LOG_MESSAGE("Starting Game Loop");
 
@@ -120,10 +132,21 @@ int main()
 					break;
 				}
 			}
+
+			if (incomingEvent.type == SDL_KEYDOWN)
+			{
+				if (incomingEvent.key.keysym.sym == SDLK_ESCAPE)
+				{
+					shouldQuit = true;
+				}
+			}
 		}
 
+		// update message queue
+		Services::ServiceLocator::getMessageQueue().update();
+
 		// modify
-		 model.rotate(0.5f, glm::vec3(1, 1, 1));
+		model.rotate(0.5f, glm::vec3(1, 1, 1));
 
 		// calculate the MVP
 		glm::mat4 MVP = testCamera.getProjectionMatrix() * glm::inverse(testCamera.transform.getMatrix()) * model.getMatrix();
@@ -131,6 +154,7 @@ int main()
 		testShader.bind();
 		// set the MVP Matrix on the GPU
 		testShader.setUniformMat4f("u_MVP", MVP);
+		testShader.setUniformMat4f("u_model", model.getMatrix());
 		// bind the texture
 		testTexture.bind();
 		

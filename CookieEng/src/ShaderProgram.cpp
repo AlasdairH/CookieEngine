@@ -79,6 +79,7 @@ namespace Graphics
 		else
 		{
 			LOG_ERROR("Bind Failed, Shader Program not Verified");
+			assert(m_verified);
 		}
 	}
 	void ShaderProgram::unBind() const
@@ -106,6 +107,11 @@ namespace Graphics
 		glUniform1f(getUniformLocation(_name), _value);
 	}
 
+	void ShaderProgram::setUniform3f(const std::string & _name, float _value1, float _value2, float _value3)
+	{
+		glUniform3f(getUniformLocation(_name), _value1, _value2, _value3);
+	}
+
 	void ShaderProgram::setUniform4f(const std::string &_name, float _value1, float _value2, float _value3, float _value4)
 	{
 		glUniform4f(getUniformLocation(_name), _value1, _value2, _value3, _value4);
@@ -113,7 +119,7 @@ namespace Graphics
 
 	void ShaderProgram::setUniform1i(const std::string & _name, int _value)
 	{
-		glUniform1f(getUniformLocation(_name), _value);
+		glUniform1i(getUniformLocation(_name), _value);
 	}
 
 	void ShaderProgram::setUniformMat4f(const std::string & _name, const glm::mat4 &_value)

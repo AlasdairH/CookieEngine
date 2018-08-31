@@ -66,10 +66,10 @@ namespace Object
 		*/
 		void cleanProjectionMatrix() { m_projectionMatrix = glm::perspective(m_fov, m_aspect, 0.1f, 100.0f); }
 		
-		float m_fov;					/**< The current FoV */
-		float m_aspect;					/**< The current Aspect Ratio */
+		float		m_fov;					/**< The current FoV */
+		float		m_aspect;				/**< The current Aspect Ratio */
 
-		glm::mat4 m_projectionMatrix;	/**< The Projection Matrix */
+		glm::mat4	m_projectionMatrix;		/**< The Projection Matrix */
 	};
 }
 }

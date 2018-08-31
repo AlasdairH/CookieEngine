@@ -76,11 +76,10 @@ namespace Graphics
 		*/
 		void init();
 
-		bool m_verified;				/**< Flag to indiciate the verification state of the shader */
+		bool		m_verified;			/**< Flag to indiciate the verification state of the shader */
 
-		ShaderType m_shaderType;		/**< The Shader Type */
-
-		GLuint m_shaderID;				/**< The OpenGL ID */
+		ShaderType	m_shaderType;		/**< The Shader Type */
+		GLuint		m_shaderID;			/**< The OpenGL ID */
 	};
 
 }

@@ -83,9 +83,9 @@ namespace Services
 		inline static void clearMessageQueue() { s_messageQueue = nullptr; }
 
 	protected:
-		static Initialiser* s_initialiser;	/**< Static Pointer to the Initialiser. */
-		static FileManager* s_fileManager;	/**< Static Pointer to the File Mananger. */
-		static MessageQueue* s_messageQueue;	/**< Static Pointer to the Message Queue. */
+		static Initialiser		*s_initialiser;		/**< Static Pointer to the Initialiser. */
+		static FileManager		*s_fileManager;		/**< Static Pointer to the File Mananger. */
+		static MessageQueue		*s_messageQueue;	/**< Static Pointer to the Message Queue. */
 	};
 
 }

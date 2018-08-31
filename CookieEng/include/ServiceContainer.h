@@ -44,9 +44,9 @@ namespace Services
 		void assignServices();
 
 	protected:
-		Initialiser* m_svsInitialiser;		/**< A pointer to the Initialiser. */
-		FileManager* m_svsFileManager;		/**< A pointer to the File Manager. */
-		MessageQueue* m_svsMessageQueue;	/**< A pointer to the Message Queue. */
+		Initialiser		*m_svsInitialiser;		/**< A pointer to the Initialiser. */
+		FileManager		*m_svsFileManager;		/**< A pointer to the File Manager. */
+		MessageQueue	*m_svsMessageQueue;		/**< A pointer to the Message Queue. */
 	};
 
 }

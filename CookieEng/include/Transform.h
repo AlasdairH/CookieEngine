@@ -81,15 +81,15 @@ namespace Attribute
 		void rotate(const float _rotation, const glm::vec3 _axis);
 
 	protected:
-		glm::vec3 m_position;				/**< The current position */
-		glm::vec3 m_rotation;				/**< The current rotation */
+		glm::vec3	m_position;				/**< The current position */
+		glm::vec3	m_rotation;				/**< The current rotation */
 
-		glm::mat4 m_modelMatrix;			/**< The model matrix */
-		glm::mat4 m_modelMatrixNS;			/**< The model matrix without scale */
+		glm::mat4	m_modelMatrix;			/**< The model matrix */
+		glm::mat4	m_modelMatrixNS;		/**< The model matrix without scale */
 
-		glm::mat4 m_translationMatrix;		/**< The translation matrix */
-		glm::mat4 m_rotationMatrix;			/**< The rotation matrix */
-		glm::mat4 m_scaleMatrix;			/**< The scale matrix */
+		glm::mat4	m_translationMatrix;	/**< The translation matrix */
+		glm::mat4	m_rotationMatrix;		/**< The rotation matrix */
+		glm::mat4	m_scaleMatrix;			/**< The scale matrix */
 	};
 }
 }

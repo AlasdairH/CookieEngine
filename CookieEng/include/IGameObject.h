@@ -19,11 +19,11 @@ namespace CookieEng
 {
 namespace Core
 {
-	class GameObject : public Messaging::IMessageHandler
+	class IGameObject : public Messaging::IMessageHandler
 	{
 	public:
-		GameObject() {}
-		~GameObject() {}
+		IGameObject() {}
+		~IGameObject() {}
 
 		void handleMessage(const Messaging::Message &_msg);
 	};

@@ -69,8 +69,8 @@ namespace CookieEng
 		inline int getHeight() { int w; int h; SDL_GetWindowSize(m_window, &w, &h); return int(h); }
 
 	protected:
-		SDL_Window* m_window;				/**< A pointer to the SDL_Window. */
-		SDL_Renderer* m_renderer;			/**< A pointer to the SDL_Renderer. */
-		SDL_GLContext m_openGLContext;		/**< The GL Context for OpenGL Rendering. */
+		SDL_Window		*m_window;				/**< A pointer to the SDL_Window. */
+		SDL_Renderer	*m_renderer;			/**< A pointer to the SDL_Renderer. */
+		SDL_GLContext	 m_openGLContext;		/**< The GL Context for OpenGL Rendering. */
 	};
 }

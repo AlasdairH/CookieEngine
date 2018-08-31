@@ -37,8 +37,8 @@ namespace Services
 		void initOpenGL();
 
 	protected:
-		static bool s_isSDLInitialised;			/**< A flag for the current SDL initialisation state */
-		static bool s_isOpenGLInitialised;		/**< A flag for the current OpenGL (GLEW) initialisation state */
+		static bool		s_isSDLInitialised;			/**< A flag for the current SDL initialisation state */
+		static bool		s_isOpenGLInitialised;		/**< A flag for the current OpenGL (GLEW) initialisation state */
 	};
 
 }

@@ -80,9 +80,9 @@ namespace Graphics
 		void unBind() const;
 
 	protected:
-		VertexBufferType m_vertexBufferType;	/**< The type of Vertex Buffer (BUFFER_ARRAY, BUFFER_ELEMENT_ARRAY, etc)  */
-		GLuint m_count;							/**< The number of items of data there is in the buffer */
-		GLuint m_vertexBufferID;				/**< The Vertex Buffer ID */
+		VertexBufferType	m_vertexBufferType;		/**< The type of Vertex Buffer (BUFFER_ARRAY, BUFFER_ELEMENT_ARRAY, etc)  */
+		GLuint				m_count;				/**< The number of items of data there is in the buffer */
+		GLuint				m_vertexBufferID;		/**< The Vertex Buffer ID */
 	};
 
 }

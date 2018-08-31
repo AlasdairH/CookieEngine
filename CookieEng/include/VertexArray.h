@@ -52,7 +52,7 @@ namespace Graphics
 		inline void unBind() const { glBindVertexArray(0); }
 
 	protected:
-		GLuint m_vertexArrayID;		/**< The OpenGL ID of the VAO */
+		GLuint	m_vertexArrayID;		/**< The OpenGL ID of the VAO */
 	};
 
 }

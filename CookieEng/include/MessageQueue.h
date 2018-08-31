@@ -47,12 +47,12 @@ namespace Services
 		void addObserver(const Messaging::MessageType _msgType, Messaging::IMessageHandler *_obj);
 
 	protected:
-		std::queue<Messaging::Message> m_messageQueue;					/**< The Message Queue */
+		std::queue<Messaging::Message>				m_messageQueue;			/**< The Message Queue */
 
-		std::vector<Messaging::IMessageHandler *> m_obs_MSG_UNKNOWN;	/**< The observer list for Uknown Messages */
-		std::vector<Messaging::IMessageHandler *> m_obs_MSG_KEY_DOWN;	/**< The observer list for Key Down Messages */
-		std::vector<Messaging::IMessageHandler *> m_obs_MSG_KEY_UP;		/**< The observer list for Key Uo Messages */
-		std::vector<Messaging::IMessageHandler *> m_obs_MSG_MOUSE;		/**< The observer list for Mouse Messages */
+		std::vector<Messaging::IMessageHandler *>	m_obs_MSG_UNKNOWN;		/**< The observer list for Uknown Messages */
+		std::vector<Messaging::IMessageHandler *>	m_obs_MSG_KEY_DOWN;		/**< The observer list for Key Down Messages */
+		std::vector<Messaging::IMessageHandler *>	m_obs_MSG_KEY_UP;		/**< The observer list for Key Uo Messages */
+		std::vector<Messaging::IMessageHandler *>	m_obs_MSG_MOUSE;		/**< The observer list for Mouse Messages */
 	};
 }
 }

@@ -10,10 +10,10 @@ namespace Graphics
 		LOG_MESSAGE("Renderer Created");
 	}
 
-	void Renderer::drawToFrameBuffer(const FrameBuffer &_fbo, const VertexArray & _vao, const VertexBuffer & _indexBuffer, const ShaderProgram & _shaderProgram)
+	void Renderer::drawToFrameBuffer(const FrameBuffer &_fbo, const VertexArray & _vao, const VertexBuffer & _indexBuffer, const Core::Material & _material)
 	{
 		_fbo.bind();
-		_shaderProgram.bind();
+		_material.use();
 		_vao.bind();
 		_indexBuffer.bind();
 
@@ -24,7 +24,7 @@ namespace Graphics
 		// if the program is in debug mode...
 		// this is to enhance performance on release builds
 #ifdef DEBUG
-		_shaderProgram.unBind();
+		_material.unUse();
 		_vao.unBind();
 		_indexBuffer.unBind();
 #endif

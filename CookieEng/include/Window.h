@@ -3,6 +3,7 @@
 // cstdlib
 #include <iostream>
 #include <string>
+#include <memory>
 
 // external libs
 #include "GL\glew.h"
@@ -54,23 +55,25 @@ namespace CookieEng
 		*/
 		void resize(int _width, int _height);
 
-		// TODO: Optimise
 		/** @brief Get the window width
 		*	@return An integar containing the window width
 		*
-		*	Returns the window width using the SDL function
+		*	Returns the window width.
 		*/
-		inline int getWidth() { int w; int h; SDL_GetWindowSize(m_window, &w, &h); return int(w); }
+		inline int getWidth() { return m_width; }
 		/** @brief Get the window Height
 		*	@return An integar containing the window height
 		*
-		*	Returns the window height using the SDL function
-		*/
-		inline int getHeight() { int w; int h; SDL_GetWindowSize(m_window, &w, &h); return int(h); }
+		*	Returns the window height.
+		*/ 
+		inline int getHeight() { return m_height; }
 
 	protected:
 		SDL_Window		*m_window;				/**< A pointer to the SDL_Window. */
 		SDL_Renderer	*m_renderer;			/**< A pointer to the SDL_Renderer. */
 		SDL_GLContext	 m_openGLContext;		/**< The GL Context for OpenGL Rendering. */
+
+		int				 m_width;				/**< The Window Width */
+		int				 m_height;				/**< The Window Width */
 	};
 }

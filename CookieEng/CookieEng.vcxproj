@@ -163,6 +163,8 @@
     <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\Message.cpp" />
     <ClCompile Include="src\MessageQueue.cpp" />
+    <ClCompile Include="src\ResourceLoader.cpp" />
+    <ClCompile Include="src\ResourceManager.cpp" />
     <ClCompile Include="src\ShaderProgram.cpp" />
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\FileManager.cpp" />
@@ -171,6 +173,7 @@
     <ClCompile Include="src\ServiceContainer.cpp" />
     <ClCompile Include="src\ServiceLocator.cpp" />
     <ClCompile Include="src\Shader.cpp" />
+    <ClCompile Include="src\TestEntity.cpp" />
     <ClCompile Include="src\Texture.cpp" />
     <ClCompile Include="src\Transform.cpp" />
     <ClCompile Include="src\Vertex.cpp" />
@@ -188,6 +191,9 @@
     <ClInclude Include="include\external\stb_image\stb_image.h" />
     <ClInclude Include="include\FrameBuffer.h" />
     <ClInclude Include="include\MessageQueue.h" />
+    <ClInclude Include="include\ResourceLoader.h" />
+    <ClInclude Include="include\ResourceManager.h" />
+    <ClInclude Include="include\TestEntity.h" />
     <ClInclude Include="include\Transform.h" />
     <ClInclude Include="include\FileManager.h" />
     <ClInclude Include="include\Initialiser.h" />

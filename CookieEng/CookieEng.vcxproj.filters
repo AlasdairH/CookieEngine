@@ -13,53 +13,71 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Services">
-      <UniqueIdentifier>{ac940bc6-8e42-4d66-9131-ff80ab7fed9c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Services">
-      <UniqueIdentifier>{99e12283-2dd0-4a17-b909-abab23c71bbe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Services\Managers">
-      <UniqueIdentifier>{7900d326-1265-4580-8ae2-ff4001be4761}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Services\Managers">
-      <UniqueIdentifier>{f7cbd565-3a6a-4dec-97ed-b4af22ebdc0f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\OpenGL">
-      <UniqueIdentifier>{03f0dd5c-5cda-445d-8630-5e7a8e3536ca}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\OpenGL">
-      <UniqueIdentifier>{7a92df4a-a3e9-4eeb-a138-3d59711607e6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\OpenGL\Buffers">
-      <UniqueIdentifier>{a950019e-0117-43ea-bc5e-afda569a0f07}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\OpenGL\Buffers">
-      <UniqueIdentifier>{edc01e7e-de89-4e47-b342-787f81ad3b20}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Data">
-      <UniqueIdentifier>{f75badb9-58d8-410d-8da0-6177325ae81b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Data">
-      <UniqueIdentifier>{be790d67-ced9-44ba-8ff3-62c2a407605a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files\Doxygen">
       <UniqueIdentifier>{999a91c6-aac5-430f-9dad-f87c3ed4c046}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\Shaders">
       <UniqueIdentifier>{84dd6ddd-7337-4d94-8b47-15de0a673c92}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\OpenGL\Rendering">
-      <UniqueIdentifier>{0a0b04d7-ac15-401d-ac89-331a7dbed6ee}</UniqueIdentifier>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{72474954-00d1-41d3-aca1-50c8c3078fb5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\OpenGL\Rendering">
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{1579dc4d-e30f-45ba-86e2-37c2a8e35156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Backend">
+      <UniqueIdentifier>{311b8c53-2347-4351-802e-b1265ddecbed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Backend\Services">
+      <UniqueIdentifier>{ac940bc6-8e42-4d66-9131-ff80ab7fed9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Backend\Services\Managers">
+      <UniqueIdentifier>{f7cbd565-3a6a-4dec-97ed-b4af22ebdc0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Backend\Services\SDL">
+      <UniqueIdentifier>{b5ce176c-0d07-43e3-9ea7-025c4bafe0bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Backend\OpenGL">
+      <UniqueIdentifier>{03f0dd5c-5cda-445d-8630-5e7a8e3536ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Backend\OpenGL\Buffers">
+      <UniqueIdentifier>{edc01e7e-de89-4e47-b342-787f81ad3b20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Backend\OpenGL\Rendering">
       <UniqueIdentifier>{8331b57c-7e87-4797-9030-c88e2a94fb0a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Messaging">
+    <Filter Include="Header Files\Backend\Messaging">
       <UniqueIdentifier>{01f296b3-2fdc-412b-b14d-3b3d8d5a4239}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Messaging">
+    <Filter Include="Header Files\Backend\Data">
+      <UniqueIdentifier>{f75badb9-58d8-410d-8da0-6177325ae81b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backend">
+      <UniqueIdentifier>{2547a825-e084-4a1a-a4a1-f2d8f700ee06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backend\OpenGL">
+      <UniqueIdentifier>{7a92df4a-a3e9-4eeb-a138-3d59711607e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backend\OpenGL\Buffers">
+      <UniqueIdentifier>{a950019e-0117-43ea-bc5e-afda569a0f07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backend\OpenGL\Rendering">
+      <UniqueIdentifier>{0a0b04d7-ac15-401d-ac89-331a7dbed6ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backend\Services">
+      <UniqueIdentifier>{99e12283-2dd0-4a17-b909-abab23c71bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backend\Services\Managers">
+      <UniqueIdentifier>{7900d326-1265-4580-8ae2-ff4001be4761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backend\SDL">
+      <UniqueIdentifier>{31641f22-61d5-47c0-8cf2-b9375b171253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backend\Messaging">
       <UniqueIdentifier>{e816a826-b7c9-4b26-b582-4042b8a6aac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backend\Data">
+      <UniqueIdentifier>{be790d67-ced9-44ba-8ff3-62c2a407605a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -67,146 +85,164 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Initialiser.cpp">
-      <Filter>Source Files\Services</Filter>
+      <Filter>Source Files\Backend\Services</Filter>
     </ClCompile>
     <ClCompile Include="src\ServiceLocator.cpp">
-      <Filter>Source Files\Services</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Window.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Backend\Services</Filter>
     </ClCompile>
     <ClCompile Include="src\ServiceContainer.cpp">
-      <Filter>Source Files\Services</Filter>
+      <Filter>Source Files\Backend\Services</Filter>
     </ClCompile>
     <ClCompile Include="src\FileManager.cpp">
-      <Filter>Source Files\Services\Managers</Filter>
+      <Filter>Source Files\Backend\Services\Managers</Filter>
     </ClCompile>
     <ClCompile Include="src\VertexArray.cpp">
-      <Filter>Source Files\OpenGL\Buffers</Filter>
+      <Filter>Source Files\Backend\OpenGL\Buffers</Filter>
     </ClCompile>
     <ClCompile Include="src\VertexBuffer.cpp">
-      <Filter>Source Files\OpenGL\Buffers</Filter>
+      <Filter>Source Files\Backend\OpenGL\Buffers</Filter>
     </ClCompile>
     <ClCompile Include="src\VertexBufferLayout.cpp">
-      <Filter>Source Files\OpenGL\Buffers</Filter>
+      <Filter>Source Files\Backend\OpenGL\Buffers</Filter>
     </ClCompile>
     <ClCompile Include="src\Mesh.cpp">
-      <Filter>Source Files\Data</Filter>
+      <Filter>Source Files\Backend\Data</Filter>
     </ClCompile>
     <ClCompile Include="src\Vertex.cpp">
-      <Filter>Source Files\Data</Filter>
+      <Filter>Source Files\Backend\Data</Filter>
     </ClCompile>
     <ClCompile Include="src\Shader.cpp">
-      <Filter>Source Files\OpenGL\Rendering</Filter>
+      <Filter>Source Files\Backend\OpenGL\Rendering</Filter>
     </ClCompile>
     <ClCompile Include="src\Renderer.cpp">
-      <Filter>Source Files\OpenGL\Rendering</Filter>
+      <Filter>Source Files\Backend\OpenGL\Rendering</Filter>
     </ClCompile>
     <ClCompile Include="src\external\stb_image\stb_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Texture.cpp">
-      <Filter>Source Files\OpenGL</Filter>
+      <Filter>Source Files\Backend\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\ShaderProgram.cpp">
-      <Filter>Source Files\OpenGL\Rendering</Filter>
+      <Filter>Source Files\Backend\OpenGL\Rendering</Filter>
     </ClCompile>
     <ClCompile Include="src\FrameBuffer.cpp">
-      <Filter>Source Files\OpenGL</Filter>
+      <Filter>Source Files\Backend\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Transform.cpp">
-      <Filter>Source Files\Data</Filter>
+      <Filter>Source Files\Backend\Data</Filter>
     </ClCompile>
     <ClCompile Include="src\Message.cpp">
-      <Filter>Source Files\Messaging</Filter>
+      <Filter>Source Files\Backend\Messaging</Filter>
     </ClCompile>
     <ClCompile Include="src\IMessageHandler.cpp">
-      <Filter>Source Files\Messaging</Filter>
+      <Filter>Source Files\Backend\Messaging</Filter>
     </ClCompile>
     <ClCompile Include="src\MessageQueue.cpp">
-      <Filter>Source Files\Messaging</Filter>
+      <Filter>Source Files\Backend\Messaging</Filter>
     </ClCompile>
-    <ClCompile Include="src\Material.cpp">
+    <ClCompile Include="src\TestEntity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\ResourceManager.cpp">
+      <Filter>Source Files\Backend\Services\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Window.cpp">
+      <Filter>Source Files\Backend\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Material.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
     <ClCompile Include="src\IGameObject.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ServiceLocator.h">
-      <Filter>Header Files\Services</Filter>
+      <Filter>Header Files\Backend\Services</Filter>
     </ClInclude>
     <ClInclude Include="include\Initialiser.h">
-      <Filter>Header Files\Services</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Window.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Backend\Services</Filter>
     </ClInclude>
     <ClInclude Include="include\ServiceContainer.h">
-      <Filter>Header Files\Services</Filter>
+      <Filter>Header Files\Backend\Services</Filter>
     </ClInclude>
     <ClInclude Include="include\FileManager.h">
-      <Filter>Header Files\Services\Managers</Filter>
+      <Filter>Header Files\Backend\Services\Managers</Filter>
     </ClInclude>
     <ClInclude Include="include\Macro.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\VertexArray.h">
-      <Filter>Header Files\OpenGL\Buffers</Filter>
+      <Filter>Header Files\Backend\OpenGL\Buffers</Filter>
     </ClInclude>
     <ClInclude Include="include\VertexBuffer.h">
-      <Filter>Header Files\OpenGL\Buffers</Filter>
+      <Filter>Header Files\Backend\OpenGL\Buffers</Filter>
     </ClInclude>
     <ClInclude Include="include\VertexBufferLayout.h">
-      <Filter>Header Files\OpenGL\Buffers</Filter>
+      <Filter>Header Files\Backend\OpenGL\Buffers</Filter>
     </ClInclude>
     <ClInclude Include="include\Vertex.h">
-      <Filter>Header Files\Data</Filter>
+      <Filter>Header Files\Backend\Data</Filter>
     </ClInclude>
     <ClInclude Include="include\Mesh.h">
-      <Filter>Header Files\Data</Filter>
+      <Filter>Header Files\Backend\Data</Filter>
     </ClInclude>
     <ClInclude Include="include\Renderer.h">
-      <Filter>Header Files\OpenGL\Rendering</Filter>
+      <Filter>Header Files\Backend\OpenGL\Rendering</Filter>
     </ClInclude>
     <ClInclude Include="include\external\stb_image\stb_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Texture.h">
-      <Filter>Header Files\OpenGL</Filter>
+      <Filter>Header Files\Backend\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="include\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Shader.h">
-      <Filter>Header Files\OpenGL\Rendering</Filter>
+      <Filter>Header Files\Backend\OpenGL\Rendering</Filter>
     </ClInclude>
     <ClInclude Include="include\ShaderProgram.h">
-      <Filter>Header Files\OpenGL\Rendering</Filter>
+      <Filter>Header Files\Backend\OpenGL\Rendering</Filter>
     </ClInclude>
     <ClInclude Include="include\FrameBuffer.h">
-      <Filter>Header Files\OpenGL</Filter>
+      <Filter>Header Files\Backend\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="include\Transform.h">
-      <Filter>Header Files\Data</Filter>
+      <Filter>Header Files\Backend\Data</Filter>
     </ClInclude>
     <ClInclude Include="include\Message.h">
-      <Filter>Header Files\Messaging</Filter>
+      <Filter>Header Files\Backend\Messaging</Filter>
     </ClInclude>
     <ClInclude Include="include\IMessageHandler.h">
-      <Filter>Header Files\Messaging</Filter>
+      <Filter>Header Files\Backend\Messaging</Filter>
     </ClInclude>
     <ClInclude Include="include\MessageQueue.h">
-      <Filter>Header Files\Messaging</Filter>
+      <Filter>Header Files\Backend\Messaging</Filter>
     </ClInclude>
-    <ClInclude Include="include\Material.h">
+    <ClInclude Include="include\TestEntity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\ResourceManager.h">
+      <Filter>Header Files\Backend\Services\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Window.h">
+      <Filter>Header Files\Backend\Services\SDL</Filter>
+    </ClInclude>
     <ClInclude Include="include\IGameObject.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Material.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ResourceLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

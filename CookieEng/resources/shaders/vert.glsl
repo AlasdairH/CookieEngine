@@ -8,12 +8,15 @@ out vec2 frag_texCoord;
 out vec3 frag_vert;
 out vec3 frag_normal;
 
-uniform mat4 u_MVP;
+uniform mat4 u_m;
+uniform mat4 u_v;
+uniform mat4 u_p;
 
 void main()
 {
 	frag_texCoord = texCoord;
 	frag_vert = position;
 	frag_normal = normal;
-    gl_Position = u_MVP * vec4(position.x, position.y, position.z, 1.0);
+	mat4 MVP = u_p * u_v * u_m;
+    gl_Position = MVP * vec4(position.x, position.y, position.z, 1.0);
 }

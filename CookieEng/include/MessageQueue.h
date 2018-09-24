@@ -7,7 +7,7 @@
 
 
 // program
-#include "GameObject.h"
+#include "IGameObject.h"
 #include "IMessageHandler.h"
 #include "Message.h"
 

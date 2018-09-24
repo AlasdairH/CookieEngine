@@ -11,6 +11,7 @@ namespace Graphics
 		// load the image
 		stbi_set_flip_vertically_on_load(true);
 		m_localBuffer = stbi_load(_filepath.c_str(), &m_width, &m_height, &m_BPP, 4);
+		LOG_MESSAGE("Loaded File: " << _filepath);
 
 		glGenTextures(1, &m_textureID);
 		glBindTexture(GL_TEXTURE_2D, m_textureID);
@@ -33,11 +34,12 @@ namespace Graphics
 			stbi_image_free(m_localBuffer);
 		}
 
-		//LOG_MESSAGE("Created Texture with ID: " << m_textureID);
+		LOG_MESSAGE("Created Texture with ID: " << m_textureID);
 	}
 
 	Texture::~Texture()
 	{
+		LOG_MESSAGE("Destroyed Texture with ID: " << m_textureID);
 		glDeleteTextures(1, &m_textureID);
 	}
 

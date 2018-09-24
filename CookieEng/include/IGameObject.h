@@ -9,7 +9,7 @@
 
 // program
 #include "Macro.h"
-
+#include "Transform.h"
 #include "IMessageHandler.h"
 
 // TODO: Doxygen
@@ -25,7 +25,11 @@ namespace Core
 		IGameObject() {}
 		~IGameObject() {}
 
+		Attribute::Transform transform;
+
 		void handleMessage(const Messaging::Message &_msg);
+
+	protected:
 	};
 }
 }

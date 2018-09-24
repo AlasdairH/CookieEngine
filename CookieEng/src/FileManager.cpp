@@ -163,7 +163,12 @@ namespace Services
 			// move the next start point to the end of the last line
 			i = eol;
 		}
-		
+		// push 3 floats for the position (x, y, z)
+		mesh.layout.push<float>(3);
+		// push 2 floats for the texture coords (x, y)
+		mesh.layout.push<float>(2);
+		// push 3 floats for the normals (x, y, z)
+		mesh.layout.push<float>(3);
 		// return the mesh
 		return mesh;
 	}

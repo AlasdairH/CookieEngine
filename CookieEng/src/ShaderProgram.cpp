@@ -126,5 +126,10 @@ namespace Graphics
 	{
 		glUniformMatrix4fv(getUniformLocation(_name), 1, GL_FALSE, &_value[0][0]);
 	}
+
+	void ShaderProgram::setUniformBool(const std::string & _name, const bool _value)
+	{
+		setUniform1i(_name, _value);
+	}
 }
 }

@@ -131,6 +131,14 @@ namespace Graphics
 		*/
 		void setUniformMat4f(const std::string &_name, const glm::mat4 &_value);
 
+		/** @brief Sets a boolean uniform
+		*	@param _name The name of the uniform to modify
+		*	@param _value The value to set the uniform to
+		*
+		*	Uses the getUniformLocation method to get the uniform location and set it to the given value.
+		*/
+		void setUniformBool(const std::string &_name, const bool _value);
+
 
 	protected:
 

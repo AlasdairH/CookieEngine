@@ -1,13 +1,15 @@
 #version 430 core
 
 uniform sampler2D u_texture;
-uniform vec3 u_cameraPosition;
-uniform mat4 u_model;
+uniform vec4 u_diffuse = { 1.0f, 0.78f, 0.91f, 1.0f };
+uniform bool u_useTexture = false;
+//uniform vec3 u_cameraPosition;
+uniform mat4 u_m;
 
 uniform float u_materialShininess = 0.1f;
 uniform vec3 u_materialSpecularCol = { 1.0f, 1.0f, 1.0f };
 
-uniform vec3 u_lightPosition = { 0, 2, 0 };
+uniform vec3 u_lightPosition = { 0, 0, 2 };
 
 layout(location = 0) out vec4 color;
 
@@ -17,20 +19,29 @@ in vec3 frag_normal;
 
 void main()
 {
-	float ambientCoefficient	= 0.1f;
+	float ambientCoefficient	= 0.05f;
 	float intensities			= 0.9f;
 	float lightAttenuation		= 1.0f;
 
-	vec4 surfaceColor = texture(u_texture, frag_texCoord);
+	vec4 surfaceColor;
+	if(u_useTexture)
+	{
+		surfaceColor = texture(u_texture, frag_texCoord);
+	}
+	else
+	{
+		surfaceColor = u_diffuse;
+	}
 
+	
 	vec3 ambient = ambientCoefficient * surfaceColor.rgb * intensities;
 
 	//calculate normal in world coordinates
-    mat3 normalMatrix = transpose(inverse(mat3(u_model)));
+    mat3 normalMatrix = transpose(inverse(mat3(u_m)));
     vec3 normal = normalize(normalMatrix * frag_normal);
     
     //calculate the location of this fragment (pixel) in world coordinates
-    vec3 fragPosition = vec3(u_model * vec4(frag_vert, 1));
+    vec3 fragPosition = vec3(u_m * vec4(frag_vert, 1));
     
     //calculate the vector from this pixels surface to the light source
     vec3 surfaceToLight = u_lightPosition - fragPosition;

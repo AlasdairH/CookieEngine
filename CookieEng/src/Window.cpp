@@ -5,7 +5,7 @@ namespace CookieEng
 	Window::Window(const std::string _title, const int _width, const int _height)
 	{
 		m_window = SDL_CreateWindow(_title.c_str(), 
-			0, 0, 
+			50, 50, 
 			_width, _height, 
 			SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
 
@@ -28,18 +28,22 @@ namespace CookieEng
 
 	void Window::resize(int _width, int _height)
 	{
-		LOG_MESSAGE("Window Resised to " << _width << ", " << _height);
+		m_width = _width;
+		m_height = _height;
 
-		float aspect = (float)_width / (float)_height;
-		glViewport(0, 0, _width, _height);
+		LOG_MESSAGE("Window resised to: " << m_width << ", " << m_height);
+
+		float aspect = (float)m_width / (float)m_height;
+		glViewport(0, 0, m_width, m_height);
 		glEnable(GL_TEXTURE_2D);
 		glEnable(GL_BLEND); //Enable alpha blending
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
-		gluPerspective(60, (float)_width / (float)_height, 0.01f, 100.0f);
-		gluOrtho2D(0.0, _width, _height * aspect, 0.0);
+		gluPerspective(60, (float)m_width / (float)m_height, 0.01f, 100.0f);
+		gluOrtho2D(0.0, m_width, m_height * aspect, 0.0);
 		glMatrixMode(GL_MODELVIEW);
+
 	}
 
 	

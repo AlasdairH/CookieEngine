@@ -22,7 +22,7 @@ namespace Data
 	{
 		glm::vec3 position;				/**< The position of the Vertex */
 		glm::vec2 textureCoordinate;	/**< The texture coordinates */
-		glm::vec3 normal;			/**< The normal coordinates */
+		glm::vec3 normal;				/**< The normal coordinates */
 
 		/** @brief Operator Overload of ==
 		*	@param _other The Vertex to compare against

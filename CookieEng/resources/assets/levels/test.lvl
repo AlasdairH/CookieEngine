@@ -1,0 +1,12 @@
+RESLVL 0
+LOAD TEXTURE resources/textures/texture.png NumberCube
+LOAD SHADER resources/shaders/vert.glsl resources/shaders/frag.glsl BasicShader
+
+RESLVL 1
+CREATE MATERIAL BasicShader BasicMaterial
+
+RESLVL 2
+SET MATERIAL DIFFUSETEXTURE NumberCube BasicMaterial
+
+RESLVL 3
+

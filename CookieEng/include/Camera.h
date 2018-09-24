@@ -51,7 +51,7 @@ namespace Object
 		*	Sets the Aspect Ratio and cleans the projection matrix
 		*/
 		inline void setAspectRatio(const float _aspect) { m_aspect = _aspect; cleanProjectionMatrix(); }
-
+		 
 		/** @brief Return the Projection Matrix
 		*	@return The Projection Matrix
 		*

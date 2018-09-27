@@ -13,6 +13,7 @@ namespace Services
 	{
 		while (!m_messageQueue.empty())
 		{
+			LOG_MESSAGE("TEST");
 			Messaging::Message &msg = m_messageQueue.front();
 
 			// handle type: MSG_UNKNOWN

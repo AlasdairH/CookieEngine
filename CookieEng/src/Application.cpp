@@ -27,8 +27,9 @@
 #include "ResourceManager.h"
 #include "ResourceLoader.h"
 
-#define DEBUG
+#include "ThreadPool.h"
 
+#define DEBUG
 
 #undef main;
 
@@ -94,6 +95,11 @@ int main()
 	msg.type = Messaging::MSG_KEY_DOWN;
 	Services::ServiceLocator::getMessageQueue().pushMessage(msg);
 
+	// thread test
+	Threads::ThreadPool testThreadPool(6);
+
+
+
 	LOG_MESSAGE("Starting Game Loop");
 
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -127,9 +133,14 @@ int main()
 				}
 			}
 		}
-
+		/*
 		// update message queue
-		Services::ServiceLocator::getMessageQueue().update();
+		testThreadPool.enqueue([=] 
+		{
+			//Services::ServiceLocator::getMessageQueue().update();
+		});
+		*/
+		//Services::ServiceLocator::getMessageQueue().update();
 
 		// modify
 		testGameObject.transform.rotate(0.5f, glm::vec3(1, 1, 1));

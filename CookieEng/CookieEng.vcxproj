@@ -175,6 +175,7 @@
     <ClCompile Include="src\Shader.cpp" />
     <ClCompile Include="src\TestEntity.cpp" />
     <ClCompile Include="src\Texture.cpp" />
+    <ClCompile Include="src\ThreadPool.cpp" />
     <ClCompile Include="src\Transform.cpp" />
     <ClCompile Include="src\Vertex.cpp" />
     <ClCompile Include="src\VertexArray.cpp" />
@@ -194,6 +195,7 @@
     <ClInclude Include="include\ResourceLoader.h" />
     <ClInclude Include="include\ResourceManager.h" />
     <ClInclude Include="include\TestEntity.h" />
+    <ClInclude Include="include\ThreadPool.h" />
     <ClInclude Include="include\Transform.h" />
     <ClInclude Include="include\FileManager.h" />
     <ClInclude Include="include\Initialiser.h" />

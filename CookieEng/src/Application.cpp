@@ -54,6 +54,7 @@ int main()
 	Services::ServiceLocator::getInitialiser().initOpenGL();
 
 	Core::ResourceLoader &resourceLoader = Core::ResourceLoader::getInstance();
+	// load shaders and textures from file
 	resourceLoader.fromFile("resources/assets/levels/test.lvl");
 
 	Core::ResourceManager &resourceManager = Core::ResourceManager::getInstance();
@@ -73,7 +74,7 @@ int main()
 	// add the buffer to the VAO
 	testVAO.addBuffer(testVBO, testMesh.layout);
 	// load data into the vertex VBO
-	testVBO.loadData(testMesh.vertices.data(), 0, (sizeof(glm::vec3) + sizeof(glm::vec2) + sizeof(glm::vec3)) * testMesh.vertices.size());
+	testVBO.loadData(testMesh.vertices.data(), 0, testMesh.layout.getStride() * testMesh.vertices.size());
 
 	// create a VBO for the index data
 	Graphics::VertexBuffer testIBO(Graphics::BUFFER_ELEMENT_ARRAY);
@@ -98,11 +99,13 @@ int main()
 	// thread test
 	Threads::ThreadPool testThreadPool(6);
 
-
-
 	LOG_MESSAGE("Starting Game Loop");
 
+	resourceManager.removeTexture("NumberCube");
+
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
+	const int targetFPS = 20;
 
 	bool shouldQuit = false;
 	while (!shouldQuit)
@@ -133,14 +136,13 @@ int main()
 				}
 			}
 		}
-		/*
-		// update message queue
-		testThreadPool.enqueue([=] 
+		
+		// update message queue on seperate thread
+		testThreadPool.enqueue([] 
 		{
-			//Services::ServiceLocator::getMessageQueue().update();
+			Services::ServiceLocator::getMessageQueue().update();
 		});
-		*/
-		//Services::ServiceLocator::getMessageQueue().update();
+		
 
 		// modify
 		testGameObject.transform.rotate(0.5f, glm::vec3(1, 1, 1));

@@ -56,10 +56,16 @@ namespace Core
 
 	void ResourceManager::removeTexture(const std::string _name)
 	{
-		// check if texture name is unique
+		// check if texture exists
 		if (textureExists(_name))
 		{
-			LOG_ERROR("Removing Texutre " << _name << " from Resource Manager");
+			LOG_MESSAGE("Removing Texutre " << _name << " from Resource Manager");
+			if (!m_textureMap[_name].unique())
+			{
+				int uses = m_textureMap[_name].use_count();
+				LOG_WARNING("Unable to completely remove texture at this time, it is currently in use by another object. Use count: " << uses - 1);
+			}
+			m_textureMap[_name].reset();
 			m_textureMap.erase(_name);
 		}
 		// if texture name not found in map
@@ -111,6 +117,27 @@ namespace Core
 		}
 	}
 
+	void ResourceManager::removeShaderProgram(const std::string _name)
+	{
+		// check if Shader Program exists
+		if (shaderExists(_name))
+		{
+			LOG_MESSAGE("Removing Shader Program " << _name << " from Resource Manager");
+			if (!m_shaderProgramMap[_name].unique())
+			{
+				int uses = m_shaderProgramMap[_name].use_count();
+				LOG_WARNING("Unable to completely remove Shader at this time, it is currently in use by another object. Use count: " << uses - 1);
+			}
+			m_shaderProgramMap[_name].reset();
+			m_shaderProgramMap.erase(_name);
+		}
+		// if Shader Program name not found in map
+		else
+		{
+			LOG_MESSAGE("Unable to remove Shader Program " << _name << " from Resource Manager, it does not exist");
+		}
+	}
+
 	std::shared_ptr<Graphics::ShaderProgram> ResourceManager::getShaderProgram(std::string _name)
 	{
 		if (shaderExists(_name))
@@ -154,6 +181,27 @@ namespace Core
 			m_materialMap[_name]->setShader(_shaderProgram);
 		}
 		LOG_MESSAGE("Loaded Material: " << _name << " to Resource Manager");
+	}
+
+	void ResourceManager::removeMaterial(const std::string _name)
+	{
+		// check if material exists
+		if (materialExists(_name))
+		{
+			LOG_MESSAGE("Removing Material " << _name << " from Resource Manager");
+			if (!m_materialMap[_name].unique())
+			{
+				int uses = m_materialMap[_name].use_count();
+				LOG_WARNING("Unable to completely remove Material at this time, it is currently in use by another object. Use count: " << uses - 1);
+			}
+			m_materialMap[_name].reset();
+			m_materialMap.erase(_name);
+		}
+		// if Material name not found in map
+		else
+		{
+			LOG_MESSAGE("Unable to remove Material " << _name << " from Resource Manager, it does not exist");
+		}
 	}
 
 	std::shared_ptr<Core::Material> ResourceManager::getMaterial(std::string _name)

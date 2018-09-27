@@ -112,8 +112,8 @@ namespace Graphics
 		inline GLuint getStride() const { return m_stride; }
 
 	protected:
-		std::vector<VertexBufferElement>	m_elements;		/**< The vector containing the elements that make up the layout */
-		GLuint								m_stride;		/**< The stride between data in the layout */
+		std::vector<VertexBufferElement>	m_elements;			/**< The vector containing the elements that make up the layout */
+		GLuint								m_stride;			/**< The stride between data in the layout */
 	};
 
 }

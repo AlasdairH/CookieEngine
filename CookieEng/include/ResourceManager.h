@@ -26,7 +26,8 @@ namespace Core
 	*	@brief A Singleton for handling the storage of resources
 	*
 	*	This class handles the storage of resources for use by elements of the game engine. This allows the same Texture, ShaderProgram, etc to
-	*	be used by multiple entities or services. 
+	*	be used by multiple entities or services. The resources are stored in a map and access is checked before operations on the stored resources is allowed.
+	*	This class may need a bit of refactoring, seems like I'm writing a lot of semi-duplicate code.
 	*/
 	class ResourceManager
 	{
@@ -79,6 +80,12 @@ namespace Core
 		*	Loads a shader to the ResourceManager, verifying its compile status.
 		*/
 		void loadShaderProgram(const std::string _filepathVert, const std::string _filepathFrag, const std::string _name);
+		/** @brief Remove a Shader Program from the Resource Manager
+		*	@param _name The ShaderProgram to remove
+		*
+		*	Unloads and removes a Shader Program from the Resource Manager
+		*/
+		void removeShaderProgram(const std::string _name);
 		/** @brief Provides a shared pointer to the requested ShaderProgram.
 		*	@param _name The name of the Resource requested
 		*
@@ -100,6 +107,12 @@ namespace Core
 		*	Creates a Material on the ResourceManager.
 		*/
 		void createMaterial(const std::string _shaderProgram, const std::string _name);
+		/** @brief Remove a Material from the Resource Manager
+		*	@param _name The Material to remove
+		*
+		*	Unloads and removes a Material from the Resource Manager
+		*/
+		void removeMaterial(const std::string _name);
 		/** @brief Provides a shared pointer to the requested Material.
 		*	@param _name The name of the Resource requested
 		*

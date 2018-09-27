@@ -36,7 +36,7 @@ namespace Threads
 			// scope for mutex lock
 			{
 				std::unique_lock<std::mutex> lock(m_eventMutex);
-				m_tasks.emplace([]
+				m_tasks.emplace([=]
 				{
 					(*wrapper)();
 				});

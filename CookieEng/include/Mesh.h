@@ -13,7 +13,6 @@ namespace CookieEng
 {
 namespace Data
 {
-	// TODO: Consider making this contain a layout of the vertices
 
 	/*! @class Mesh
 	*	@brief Data required for a raw Mesh

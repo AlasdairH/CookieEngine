@@ -204,6 +204,7 @@
     <ClInclude Include="include\ServiceLocator.h" />
     <ClInclude Include="include\Shader.h" />
     <ClInclude Include="include\Texture.h" />
+    <ClInclude Include="include\Utils.h" />
     <ClInclude Include="include\Vertex.h" />
     <ClInclude Include="include\VertexArray.h" />
     <ClInclude Include="include\VertexBuffer.h" />

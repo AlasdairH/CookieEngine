@@ -19,7 +19,7 @@ namespace Services
 	*	@brief A queue for distributing messages to Observers
 	*
 	*	Message handlers can register as observers to a specific message type and the message queue will distribute
-	*	messages of tha type to the observers as they are handled by the queue. TODO: Expand
+	*	messages of tha type to the observers as they are handled by the queue. TODO: Msg Expand
 	*/
 	class MessageQueue : public Messaging::IMessageHandler
 	{

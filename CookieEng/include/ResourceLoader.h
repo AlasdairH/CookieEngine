@@ -8,6 +8,7 @@
 
 // program
 #include "Macro.h"
+#include "Utils.h"
 #include "ResourceManager.h"
 #include "ServiceLocator.h"
 
@@ -41,19 +42,6 @@ namespace Core
 		*	This is called on the first time the ResourceManager instance is grabbed.
 		*/
 		ResourceLoader();
-
-		// TODO: Move this
-		std::vector<std::string> split(const std::string& s, char delimiter)
-		{
-			std::vector<std::string> tokens;
-			std::string token;
-			std::istringstream tokenStream(s);
-			while (std::getline(tokenStream, token, delimiter))
-			{
-				tokens.push_back(token);
-			}
-			return tokens;
-		}
 	};
 }
 }

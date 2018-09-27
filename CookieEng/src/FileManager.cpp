@@ -110,7 +110,7 @@ namespace Services
 			if (line.find("f ") != std::string::npos)
 			{
 				// split the face line
-				std::vector<std::string> splitLine = split(line, ' ');
+				std::vector<std::string> splitLine = Utilities::UtilsStr::split(line, ' ');
 				// remove the "f"
 				splitLine.erase(splitLine.begin());
 
@@ -122,7 +122,7 @@ namespace Services
 				for (unsigned int j = 0; j < splitLine.size(); ++j)
 				{
 					// split the face components by the slash delimiter
-					std::vector<std::string> splitBlock = split(splitLine[j], '/');
+					std::vector<std::string> splitBlock = Utilities::UtilsStr::split(splitLine[j], '/');
 					// get the vertex index
 					vIncides.push_back(std::stoi(splitBlock[0]));
 					// get the vertex texture index

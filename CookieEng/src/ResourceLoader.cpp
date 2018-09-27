@@ -26,7 +26,7 @@ namespace Core
 			std::string line = text.substr(i, eol - i);
 
 			// split the current line by the ' ' delimiter
-			std::vector<std::string> splitString = split(line, ' ');
+			std::vector<std::string> splitString = Utilities::UtilsStr::split(line, ' ');
 
 			if (splitString.size() == 0) continue;
 

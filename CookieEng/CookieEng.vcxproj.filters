@@ -79,6 +79,12 @@
     <Filter Include="Source Files\Backend\Data">
       <UniqueIdentifier>{be790d67-ced9-44ba-8ff3-62c2a407605a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Backend\Utils">
+      <UniqueIdentifier>{f78c0c19-644d-453e-9063-cad5fdf84eef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Backend\Utils">
+      <UniqueIdentifier>{77be1840-b2df-4deb-8808-0541f08379f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp">
@@ -123,9 +129,6 @@
     <ClCompile Include="src\Texture.cpp">
       <Filter>Source Files\Backend\OpenGL</Filter>
     </ClCompile>
-    <ClCompile Include="src\Camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\ShaderProgram.cpp">
       <Filter>Source Files\Backend\OpenGL\Rendering</Filter>
     </ClCompile>
@@ -160,7 +163,10 @@
       <Filter>Source Files\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\ResourceLoader.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Backend\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera.cpp">
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -175,9 +181,6 @@
     </ClInclude>
     <ClInclude Include="include\FileManager.h">
       <Filter>Header Files\Backend\Services\Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Macro.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\VertexArray.h">
       <Filter>Header Files\Backend\OpenGL\Buffers</Filter>
@@ -202,9 +205,6 @@
     </ClInclude>
     <ClInclude Include="include\Texture.h">
       <Filter>Header Files\Backend\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Camera.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Shader.h">
       <Filter>Header Files\Backend\OpenGL\Rendering</Filter>
@@ -242,8 +242,17 @@
     <ClInclude Include="include\Material.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
+    <ClInclude Include="include\Utils.h">
+      <Filter>Header Files\Backend\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Macro.h">
+      <Filter>Header Files\Backend\Utils</Filter>
+    </ClInclude>
     <ClInclude Include="include\ResourceLoader.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Backend\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Camera.h">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -46,7 +46,7 @@ namespace Core
 		// -------------------------------------------------------------------- TEXTURE --------------------------------------------------------------------
 		/** @brief Loads a texture to the resource manager
 		*	@param _filepath The path to the Image File to be loaded
-		*	@param _name The unique name to give the texture TODO: Check name is unqiue
+		*	@param _name The unique name to give the texture
 		*
 		*	Uses the image loader to load a texture and save it to the ResourceManager.
 		*/
@@ -74,7 +74,7 @@ namespace Core
 		/** @brief Loads a ShaderProgram to the resource manager
 		*	@param _filepathVert The path to the GLSL Vertex Shader File to be loaded
 		*	@param _filepathFrag The path to the GLSL Fragment Shader File to be loaded
-		*	@param _name The unique name to give the ShaderProgram TODO: Check name is unqiue
+		*	@param _name The unique name to give the ShaderProgram
 		*
 		*	Loads a shader to the ResourceManager, verifying its compile status.
 		*/
@@ -95,7 +95,7 @@ namespace Core
 		// -------------------------------------------------------------------- MATERIAL --------------------------------------------------------------------
 		/** @brief Loads a Material to the resource manager
 		*	@param _shaderProgram the shader to assign to the material
-		*	@param _name The unique name to give the Material TODO: Check name is unqiue
+		*	@param _name The unique name to give the Material
 		*
 		*	Creates a Material on the ResourceManager.
 		*/

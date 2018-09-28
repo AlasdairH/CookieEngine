@@ -265,16 +265,16 @@
     <Text Include="resources\DoxygenRef.txt">
       <Filter>Resource Files\Doxygen</Filter>
     </Text>
-    <Text Include="resources\shaders\vert.glsl">
+    <Text Include="resources\shaders\post_processing\PostProcFrag.glsl">
       <Filter>Resource Files\Shaders</Filter>
     </Text>
-    <Text Include="resources\shaders\frag.glsl">
+    <Text Include="resources\shaders\post_processing\PostProcVert.glsl">
       <Filter>Resource Files\Shaders</Filter>
     </Text>
-    <Text Include="resources\shaders\PostProcFrag.glsl">
+    <Text Include="resources\shaders\object\frag.glsl">
       <Filter>Resource Files\Shaders</Filter>
     </Text>
-    <Text Include="resources\shaders\PostProcVert.glsl">
+    <Text Include="resources\shaders\object\vert.glsl">
       <Filter>Resource Files\Shaders</Filter>
     </Text>
   </ItemGroup>

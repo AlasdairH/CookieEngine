@@ -63,7 +63,7 @@ int main()
 	// camera
 	Object::Camera testCamera;
 	testCamera.setAspectRatio(window->getWidth() / (float)window->getHeight());
-	testCamera.transform.translate(glm::vec3(0, 0, 10));
+	testCamera.transform.translate(glm::vec3(0, 0, 8));
 
 	Data::Mesh testMesh = Services::ServiceLocator::getFileManager().loadMesh("resources/models/cube.obj");
 

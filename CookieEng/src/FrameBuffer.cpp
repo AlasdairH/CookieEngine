@@ -34,7 +34,7 @@ namespace Graphics
 		m_arrayBuffer->addBuffer(*m_vertexBuffer, layout1);
 		m_vertexBuffer->loadData(&fbo_vertices, 0, sizeof(fbo_vertices));
 
-		m_shaderProgram = new ShaderProgram("resources/shaders/PostProcVert.glsl", "resources/shaders/PostProcFrag.glsl");
+		m_shaderProgram = new ShaderProgram("resources/shaders/post_processing/PostProcVert.glsl", "resources/shaders/post_processing/PostProcFrag.glsl");
 
 		glGenFramebuffers(1, &m_frameBufferID);
 		bind();

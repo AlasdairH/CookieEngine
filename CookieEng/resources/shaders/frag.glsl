@@ -19,7 +19,7 @@ in vec3 frag_normal;
 
 void main()
 {
-	float ambientCoefficient	= 0.05f;
+	float ambientCoefficient	= 0.5f;
 	float intensities			= 0.9f;
 	float lightAttenuation		= 1.0f;
 

@@ -1,6 +1,6 @@
 RESLVL 0 // Textures and Shaders
-LOAD TEXTURE resources/textures/texture.png NumberCube
-LOAD SHADER resources/shaders/object/vert.glsl resources/shaders/object/frag.glsl BasicShader
+LOAD TEXTURE resources/textures/Default.png NumberCube
+LOAD SHADER resources/shaders/vert.glsl resources/shaders/frag.glsl BasicShader
 
 RESLVL 1 // Materials
 CREATE MATERIAL BasicShader BasicMaterial

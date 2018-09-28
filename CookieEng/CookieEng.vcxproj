@@ -154,6 +154,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Component.cpp" />
+    <ClCompile Include="src\Entity.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\external\stb_image\stb_image.cpp" />
     <ClCompile Include="src\FrameBuffer.cpp" />
@@ -185,6 +187,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="include\Component.h" />
+    <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\IGameObject.h" />
     <ClInclude Include="include\IMessageHandler.h" />
     <ClInclude Include="include\Material.h" />
@@ -225,6 +229,8 @@
     <None Include="resources\DoxygenMain.dox" />
     <None Include="resources\doxygen\DoxygenMain.doxtxt" />
     <None Include="resources\doxygen\home.dox" />
+    <None Include="resources\shaders\frag.glsl" />
+    <None Include="resources\shaders\vert.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -171,6 +171,12 @@
     <ClCompile Include="src\ThreadPool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ServiceLocator.h">
@@ -260,6 +266,12 @@
     <ClInclude Include="include\ThreadPool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\DoxygenRef.txt">
@@ -288,5 +300,7 @@
     <None Include="resources\doxygen\home.dox">
       <Filter>Resource Files\Doxygen</Filter>
     </None>
+    <None Include="resources\shaders\frag.glsl" />
+    <None Include="resources\shaders\vert.glsl" />
   </ItemGroup>
 </Project>

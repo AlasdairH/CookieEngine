@@ -65,10 +65,10 @@ namespace Services
 			// vertex line
 			if (line.find("v ") != std::string::npos)
 			{
-				unsigned int firstSpaceIndex = line.find(" ", 0);
-				unsigned int secondSpaceIndex = line.find(" ", firstSpaceIndex + 1);
-				unsigned int thirdSpaceIndex = line.find(" ", secondSpaceIndex + 1);
-				unsigned int eolIndex = line.find("\n", i);
+				size_t firstSpaceIndex = line.find(" ", 0);
+				size_t secondSpaceIndex = line.find(" ", firstSpaceIndex + 1);
+				size_t thirdSpaceIndex = line.find(" ", secondSpaceIndex + 1);
+				size_t eolIndex = line.find("\n", i);
 
 				std::string xVal = line.substr(firstSpaceIndex + 1, secondSpaceIndex - firstSpaceIndex - 1);
 				std::string yVal = line.substr(secondSpaceIndex + 1, thirdSpaceIndex - secondSpaceIndex - 1);
@@ -80,9 +80,9 @@ namespace Services
 			// texture coord line
 			if (line.find("vt ") != std::string::npos)
 			{
-				unsigned int firstSpaceIndex = line.find(" ", 0);
-				unsigned int secondSpaceIndex = line.find(" ", firstSpaceIndex + 1);
-				unsigned int eolIndex = line.find("\n", i);
+				size_t firstSpaceIndex = line.find(" ", 0);
+				size_t secondSpaceIndex = line.find(" ", firstSpaceIndex + 1);
+				size_t eolIndex = line.find("\n", i);
 
 				std::string xVal = line.substr(firstSpaceIndex + 1, secondSpaceIndex - firstSpaceIndex - 1);
 				std::string yVal = line.substr(secondSpaceIndex + 1, eolIndex - secondSpaceIndex - 1);

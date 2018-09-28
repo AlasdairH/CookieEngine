@@ -101,8 +101,6 @@ int main()
 
 	LOG_MESSAGE("Starting Game Loop");
 
-	resourceManager.removeTexture("NumberCube");
-
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 	const int targetFPS = 20;

@@ -17,6 +17,7 @@ namespace Core
 		Entity();
 		~Entity();
 
+
 	protected:
 
 	};

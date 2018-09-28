@@ -3,7 +3,6 @@
 #include <iostream>
 
 #define DEBUG
-
 //#define TEST
 //#define RELEASE
 

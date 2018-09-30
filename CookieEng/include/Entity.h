@@ -9,17 +9,12 @@
 
 namespace CookieEng
 {
-namespace Core
+namespace ECS
 {
-	class Entity
+	struct Entity
 	{
-	public:
 		Entity();
 		~Entity();
-
-
-	protected:
-
 	};
 }
 };

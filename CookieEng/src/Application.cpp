@@ -138,7 +138,7 @@ int main()
 		// update message queue on seperate thread
 		testThreadPool.enqueue([] 
 		{
-			Services::ServiceLocator::getMessageQueue().update();
+			//Services::ServiceLocator::getMessageQueue().update();
 		});
 		
 

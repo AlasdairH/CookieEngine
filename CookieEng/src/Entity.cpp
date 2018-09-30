@@ -2,7 +2,7 @@
 
 namespace CookieEng
 {
-namespace Core
+namespace ECS
 {
 	Entity::Entity()
 	{

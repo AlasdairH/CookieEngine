@@ -188,6 +188,7 @@
   <ItemGroup>
     <ClInclude Include="include\Camera.h" />
     <ClInclude Include="include\Component.h" />
+    <ClInclude Include="include\ECS.h" />
     <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\IGameObject.h" />
     <ClInclude Include="include\IMessageHandler.h" />

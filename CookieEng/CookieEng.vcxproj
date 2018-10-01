@@ -165,6 +165,7 @@
     <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\Message.cpp" />
     <ClCompile Include="src\MessageQueue.cpp" />
+    <ClCompile Include="src\Resource.cpp" />
     <ClCompile Include="src\ResourceLoader.cpp" />
     <ClCompile Include="src\ResourceManager.cpp" />
     <ClCompile Include="src\ShaderProgram.cpp" />
@@ -196,6 +197,7 @@
     <ClInclude Include="include\external\stb_image\stb_image.h" />
     <ClInclude Include="include\FrameBuffer.h" />
     <ClInclude Include="include\MessageQueue.h" />
+    <ClInclude Include="include\Resource.h" />
     <ClInclude Include="include\ResourceLoader.h" />
     <ClInclude Include="include\ResourceManager.h" />
     <ClInclude Include="include\TestEntity.h" />

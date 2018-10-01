@@ -53,12 +53,11 @@ int main()
 	// init GLEW (OpenGL)
 	Services::ServiceLocator::getInitialiser().initOpenGL();
 
-	Core::ResourceLoader &resourceLoader = Core::ResourceLoader::getInstance();
+	//Core::ResourceLoader &resourceLoader = Core::ResourceLoader::getInstance();
 	// load shaders and textures from file
-	resourceLoader.fromFile("resources/assets/levels/test.lvl");
+	//resourceLoader.fromFile("resources/assets/levels/test.lvl");
 
-	Core::ResourceManager &resourceManager = Core::ResourceManager::getInstance();
-
+	ResMgmt::ResourceManager &resourceManager = ResMgmt::ResourceManager::getInstance();
 
 	// camera
 	Object::Camera testCamera;
@@ -138,7 +137,7 @@ int main()
 		// update message queue on seperate thread
 		testThreadPool.enqueue([] 
 		{
-			Services::ServiceLocator::getMessageQueue().update();
+			//Services::ServiceLocator::getMessageQueue().update();
 		});
 		
 

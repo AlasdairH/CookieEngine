@@ -17,8 +17,8 @@ namespace Components
 		Component();
 		~Component();
 
-		virtual void onStart();
-		virtual void onUpdate();
+		virtual void onStart() = 0;
+		virtual void onUpdate() = 0;
 
 	protected:
 

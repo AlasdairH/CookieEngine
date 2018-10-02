@@ -29,7 +29,7 @@ namespace Core
 
 	void Material::setShader(const std::string _resMgr_shaderName)
 	{
-		ResourceManager &resMgr = ResourceManager::getInstance();
+		ResMgmt::ResourceManager &resMgr = ResMgmt::ResourceManager::getInstance();
 		m_shaderProgram = resMgr.getShaderProgram(_resMgr_shaderName);
 	}
 
@@ -41,7 +41,7 @@ namespace Core
 			return;
 		}
 		// get the diffuse texture from the resource manager and set the material texture
-		ResourceManager &resMgr = ResourceManager::getInstance();
+		ResMgmt::ResourceManager &resMgr = ResMgmt::ResourceManager::getInstance();
 		m_textureDiffuse = resMgr.getTexture(_resMgr_textureName);
 		m_shaderProgram->bind();
 		// set up the uniforms on the shader

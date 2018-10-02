@@ -12,7 +12,8 @@ namespace Core
 
 	void ResourceLoader::fromFile(const std::string _filepath)
 	{
-		Core::ResourceManager &resourceManager = Core::ResourceManager::getInstance();
+		LOG_MESSAGE("Resource Loader: Starting Load");
+		ResMgmt::ResourceManager &resourceManager = ResMgmt::ResourceManager::getInstance();
 
 		std::string text = Services::ServiceLocator::getFileManager().loadTextFile(_filepath);
 		int lineNumber = 0;
@@ -82,6 +83,8 @@ namespace Core
 			// move the cursor on to the next line
 			i = eol;
 		}
+
+		LOG_MESSAGE("Resource Loader: Finished Load");
 	}
 }
 }

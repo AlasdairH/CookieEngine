@@ -47,7 +47,7 @@ namespace Graphics
 		*
 		*	Takes a frame buffer and the required objects for rendering and renders using the provided material to the framebuffer. 
 		*/
-		void drawToFrameBuffer(const FrameBuffer &_fbo, const VertexArray &_vao, const VertexBuffer &_indexBuffer, const Core::Material &_material);
+		void drawToFrameBuffer(const FrameBuffer &_fbo, const VertexArray &_vao, const VertexBuffer &_indexBuffer, const Resource::Material &_material);
 
 	protected:
 		FrameBuffer *m_frameBuffer; /**< The framebuffer to render to by default */ // TODO: Implement default framebuffer rendering

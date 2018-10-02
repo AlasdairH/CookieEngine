@@ -38,13 +38,15 @@ namespace Core
 				if (splitString[1] == "TEXTURE")
 				{
 					LOG_MESSAGE("Resource Loader: Loading Texture | " << splitString[2] << " | " << splitString[3]);
-					resourceManager.loadTexture(splitString[2], splitString[3]);
+					// TODO: IMP
+					//resourceManager.load<Resource::Texture>(splitString[3], splitString[2]);
 				}
 				// LOAD SHADER vert frag name
 				else if (splitString[1] == "SHADER")
 				{
 					LOG_MESSAGE("Resource Loader: Loading Shader | " << splitString[2] << " | " << splitString[3] << " | " << splitString[4]);
-					resourceManager.loadShaderProgram(splitString[2], splitString[3], splitString[4]);
+					// TODO: IMP
+					//resourceManager.loadShaderProgram(splitString[2], splitString[3], splitString[4]);
 				}
 			}
 			// CREATE
@@ -54,7 +56,8 @@ namespace Core
 				if (splitString[1] == "MATERIAL")
 				{
 					LOG_MESSAGE("Resource Loader: Creating Material | " << splitString[2] << " | " << splitString[3]);
-					resourceManager.createMaterial(splitString[2], splitString[3]);
+					// TODO: IMP
+					//resourceManager.createMaterial(splitString[2], splitString[3]);
 				}
 			}
 			// SET
@@ -67,9 +70,10 @@ namespace Core
 					if (splitString[2] == "DIFFUSETEXTURE")
 					{
 						// check texture and material exist
-						if (resourceManager.textureExists(splitString[3]) && resourceManager.materialExists(splitString[4]))
+						if (resourceManager.exists(splitString[3]) && resourceManager.exists(splitString[4]))
 						{
-							resourceManager.getMaterial(splitString[4])->setDiffuse(splitString[3]);
+							// TODO: IMP
+							//resourceManager.getMaterial(splitString[4])->setDiffuse(splitString[3]);
 							LOG_MESSAGE("Resource Loader: Set Material " << splitString[4] << " diffuse texture to " << splitString[3]);
 						}
 						else

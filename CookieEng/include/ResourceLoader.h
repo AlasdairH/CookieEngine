@@ -12,6 +12,8 @@
 #include "ResourceManager.h"
 #include "ServiceLocator.h"
 
+#include "Texture.h"
+
 namespace CookieEng
 {
 namespace Core

@@ -1,0 +1,4 @@
+FILETYPE shaderprogram
+VERTEX resources/shaders/vert.glsl
+FRAGMENT resources/shaders/frag.glsl
+LINK

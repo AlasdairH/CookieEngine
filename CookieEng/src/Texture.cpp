@@ -2,17 +2,35 @@
 
 namespace CookieEng
 {
-namespace Graphics
+namespace Resource
 {
 
-	Texture::Texture(const std::string & _filepath)
+	Texture::Texture()
+		: m_textureID(0), m_localBuffer(nullptr), m_width(0), m_height(0), m_BPP(0)
+	{
+
+	}
+
+	Texture::Texture(const std::string &_name, const std::string &_filepath)
 		: m_textureID(0), m_filepath(_filepath), m_localBuffer(nullptr), m_width(0), m_height(0), m_BPP(0)
+	{
+		load(_name, _filepath);
+	}
+
+	Texture::~Texture()
+	{
+		LOG_MESSAGE("Destroyed Texture with ID: " << m_textureID);
+		glDeleteTextures(1, &m_textureID);
+	}
+
+	void Texture::load(const std::string &_name, const std::string &_filepath)
 	{
 		// load the image
 		stbi_set_flip_vertically_on_load(true);
 		m_localBuffer = stbi_load(_filepath.c_str(), &m_width, &m_height, &m_BPP, 4);
 		LOG_MESSAGE("Loaded File: " << _filepath);
 
+		// TODO: Move to Ctor to stop double gen
 		glGenTextures(1, &m_textureID);
 		glBindTexture(GL_TEXTURE_2D, m_textureID);
 
@@ -35,12 +53,6 @@ namespace Graphics
 		}
 
 		LOG_MESSAGE("Created Texture with ID: " << m_textureID);
-	}
-
-	Texture::~Texture()
-	{
-		LOG_MESSAGE("Destroyed Texture with ID: " << m_textureID);
-		glDeleteTextures(1, &m_textureID);
 	}
 
 	void Texture::bind(GLuint _slot) const

@@ -10,9 +10,10 @@
 //#define D3D
 
 #ifdef DEBUG
-	#define LOG_MESSAGE(text) std::cout << "MESSAGE: " << text << std::endl
-	#define LOG_WARNING(text) std::cout << "WARNING: " << text << std::endl
-	#define LOG_ERROR(text) std::cout << "ERROR: " << text << std::endl
+	#define LOG_MESSAGE(_text) std::cout << "MESSAGE: " << _text << std::endl
+	#define LOG_WARNING(_text) std::cout << "WARNING: " << _text << std::endl
+	//#define LOG_WARNING(_file, _line, _text) std::cout << "WARNING: " << _text << std::endl
+	#define LOG_ERROR(_text) std::cout << "ERROR: " << _text << std::endl
 #endif
 
 #ifdef TEST

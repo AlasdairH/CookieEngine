@@ -12,19 +12,20 @@
 #include "GLM/ext.hpp"
 
 // program
+#include "Resource.h"
 #include "ServiceLocator.h"
 #include "Shader.h"
 
 namespace CookieEng
 {
-namespace Graphics
+namespace Resource
 {
 	/*! @class ShaderProgram
 	*	@brief Abstracted OpenGL Program
 	*
 	*	Abstracts and provides simple utilities for an OpenGL Shader Program. The program MUST be verified before it can be bound.
 	*/
-	class ShaderProgram
+	class ShaderProgram : public Resource
 	{
 	public:
 		/** @brief Program Ctor
@@ -33,13 +34,8 @@ namespace Graphics
 		*/
 		ShaderProgram();
 
-		/** @brief Program Ctor
-		*	@param _vertShaderPath The path to the Vertex Shader file
-		*	@param _fragShaderPath The path to the Fragment Shader file
-		*
-		*	Creates a shader program and adds a vertex + fragment shader
-		*/
-		ShaderProgram(const std::string &_vertShaderPath, const std::string &_fragShaderPath);
+		// TODO: Doxygen
+		void load(const std::string &_name, const std::string &_filepath) override;
 
 		/** @brief Program Ctor
 		*
@@ -52,7 +48,7 @@ namespace Graphics
 		*
 		*	Attaches a shader to the program.
 		*/
-		void attachShader(Shader &_shader);
+		void attachShader(Graphics::Shader &_shader);
 
 		/** @brief Links the Shader Program
 		*

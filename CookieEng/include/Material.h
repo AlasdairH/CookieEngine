@@ -17,7 +17,7 @@
 
 namespace CookieEng
 {
-namespace Core
+namespace Resource
 {
 	// Resource Manager forward decleration
 	class ResourceManager;
@@ -28,19 +28,19 @@ namespace Core
 	*	Abstracts a shader to allow for different materials to use the same shader. This class will hold (TODO: Uniform Buffer) uniform
 	*	settings that will be applied when the material us used.
 	*/
-	class Material
+	class Material : public Resource
 	{
 	public:
 		/** @brief Material Ctor
 		*
 		*	Does Nothing
 		*/
-		Material();
+		Material() { }
 		/** @brief Material Dtor
 		*
 		*	Does Nothing
 		*/
-		~Material() {}
+		~Material() { }
 
 		/** @brief Uses the Material (Binds)
 		*
@@ -83,8 +83,8 @@ namespace Core
 		void setMVP(const glm::mat4 &_m, const glm::mat4 &_v, const glm::mat4 &_p);
 
 	protected:
-		std::shared_ptr<Graphics::ShaderProgram>	m_shaderProgram;		/**< The Material's Shader */
-		std::shared_ptr<Graphics::Texture>			m_textureDiffuse;		/**< The Material's Diffuse Texture (if used) */
+		std::shared_ptr<ShaderProgram>	m_shaderProgram;		/**< The Material's Shader */
+		std::shared_ptr<Texture>					m_textureDiffuse;		/**< The Material's Diffuse Texture (if used) */
 		glm::vec4									m_diffuseColour;		/**< The Material's Diffuse Colour (if used) */
 	};
 }

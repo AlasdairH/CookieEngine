@@ -1,13 +1,8 @@
 #include "Material.h"
 namespace CookieEng
 {
-namespace Core
+namespace Resource
 {
-	CookieEng::Core::Material::Material()
-	{
-		//setDiffuse(glm::vec4(1.0f, 0.039f, 0.878f, 1.0f));
-	}
-
 	void Material::use() const
 	{
 		m_shaderProgram->bind();
@@ -30,7 +25,7 @@ namespace Core
 	void Material::setShader(const std::string _resMgr_shaderName)
 	{
 		ResMgmt::ResourceManager &resMgr = ResMgmt::ResourceManager::getInstance();
-		m_shaderProgram = resMgr.getShaderProgram(_resMgr_shaderName);
+		m_shaderProgram = resMgr.get<ShaderProgram>(_resMgr_shaderName);
 	}
 
 	void Material::setDiffuse(const std::string _resMgr_textureName)
@@ -42,7 +37,7 @@ namespace Core
 		}
 		// get the diffuse texture from the resource manager and set the material texture
 		ResMgmt::ResourceManager &resMgr = ResMgmt::ResourceManager::getInstance();
-		m_textureDiffuse = resMgr.getTexture(_resMgr_textureName);
+		m_textureDiffuse = resMgr.get<Texture>(_resMgr_textureName);
 		m_shaderProgram->bind();
 		// set up the uniforms on the shader
 		m_shaderProgram->setUniform1i("u_texture", 0);

@@ -85,6 +85,18 @@
     <Filter Include="Source Files\Backend\Utils">
       <UniqueIdentifier>{77be1840-b2df-4deb-8808-0541f08379f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Resource Managment">
+      <UniqueIdentifier>{0fd54096-d929-4f4c-a66e-f75e57c513ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resource Managment">
+      <UniqueIdentifier>{280d1858-0344-47ae-a826-66ad32cbe23e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ECS">
+      <UniqueIdentifier>{192a20ae-344d-4325-bbba-b48f3e8bb762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ECS">
+      <UniqueIdentifier>{39186b2c-6bd6-4f13-ad16-e9a669af609a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp">
@@ -150,9 +162,6 @@
     <ClCompile Include="src\TestEntity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ResourceManager.cpp">
-      <Filter>Source Files\Backend\Services\Managers</Filter>
-    </ClCompile>
     <ClCompile Include="src\Window.cpp">
       <Filter>Source Files\Backend\SDL</Filter>
     </ClCompile>
@@ -162,23 +171,26 @@
     <ClCompile Include="src\IGameObject.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\ResourceLoader.cpp">
-      <Filter>Source Files\Backend\Services</Filter>
-    </ClCompile>
     <ClCompile Include="src\Camera.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\ThreadPool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Entity.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Resource.cpp">
+      <Filter>Source Files\Resource Managment</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceLoader.cpp">
+      <Filter>Source Files\Resource Managment</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceManager.cpp">
+      <Filter>Source Files\Resource Managment</Filter>
     </ClCompile>
     <ClCompile Include="src\Component.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="src\Resource.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Entity.cpp">
+      <Filter>Source Files\ECS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -239,12 +251,6 @@
     <ClInclude Include="include\MessageQueue.h">
       <Filter>Header Files\Backend\Messaging</Filter>
     </ClInclude>
-    <ClInclude Include="include\TestEntity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ResourceManager.h">
-      <Filter>Header Files\Backend\Services\Managers</Filter>
-    </ClInclude>
     <ClInclude Include="include\Window.h">
       <Filter>Header Files\Backend\Services\SDL</Filter>
     </ClInclude>
@@ -260,23 +266,32 @@
     <ClInclude Include="include\Macro.h">
       <Filter>Header Files\Backend\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="include\ResourceLoader.h">
-      <Filter>Header Files\Backend\Services</Filter>
-    </ClInclude>
     <ClInclude Include="include\Camera.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
     <ClInclude Include="include\ThreadPool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Entity.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\Resource.h">
+      <Filter>Header Files\Resource Managment</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ResourceLoader.h">
+      <Filter>Header Files\Resource Managment</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ResourceManager.h">
+      <Filter>Header Files\Resource Managment</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TestEntity.h">
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ECS.h">
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="include\Component.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
-    <ClInclude Include="include\Resource.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\Entity.h">
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

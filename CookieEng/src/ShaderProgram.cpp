@@ -2,7 +2,7 @@
 
 namespace CookieEng
 {
-namespace Graphics
+namespace Resource
 {
 
 	ShaderProgram::ShaderProgram()
@@ -14,28 +14,59 @@ namespace Graphics
 		m_verified = false;
 	}
 
-	ShaderProgram::ShaderProgram(const std::string & _vertShaderPath, const std::string & _fragShaderPath)
+	void ShaderProgram::load(const std::string &_name, const std::string &_filepath)
 	{
-		// create the program to store the shaders
-		m_programID = glCreateProgram();
-		LOG_MESSAGE("Created Shader Program with ID " << m_programID);
+		std::string text = Services::ServiceLocator::getFileManager().loadTextFile(_filepath);
+		int lineNumber = 0;
 
-		m_verified = false;
+		for (unsigned int i = 0; i < text.size(); ++i)
+		{
+			++lineNumber;
+			// find the index of the next end of line char, starting from i
+			unsigned int eol = text.find("\n", i);
+			// get a substring from i, for end of line - i chars
+			std::string line = text.substr(i, eol - i);
 
-		// create vertex shader
-		Graphics::Shader vertShader(Graphics::SHADER_VERTEX);
-		vertShader.load(_vertShaderPath);
+			// split the current line by the ' ' delimiter
+			std::vector<std::string> splitString = Utilities::UtilsStr::split(line, ' ');
 
-		// create fragment shader
-		Graphics::Shader fragShader(Graphics::SHADER_FRAGMENT);
-		fragShader.load(_fragShaderPath);
+			if (splitString.size() == 0) continue;
 
-		attachShader(vertShader);
-		attachShader(fragShader);
-		link();
+			// FILETYPE
+			if (splitString[0] == "FILETYPE")
+			{
+				// FILETYPE type
+				if (splitString[1] != "shaderprogram")
+				{
+					LOG_ERROR("Tried to load ShaderProgram from a file that isn't a ShaderProgram");
+				}
+			}
+			// VERTEX
+			else if (splitString[0] == "VERTEX")
+			{
+				Graphics::Shader shader(Graphics::SHADER_VERTEX);
+				shader.load(splitString[1]);
+				attachShader(shader);
+			}
+			// FRAGMENT
+			else if (splitString[0] == "FRAGMENT")
+			{
+				Graphics::Shader shader(Graphics::SHADER_FRAGMENT);
+				shader.load(splitString[1]);
+				attachShader(shader);
+			}
+			// LINK
+			else if (splitString[0] == "LINK")
+			{
+				link();
+			}
+
+			// move the cursor on to the next line
+			i = eol;
+		}
 	}
 
-	void ShaderProgram::attachShader(Shader &_shader)
+	void ShaderProgram::attachShader(Graphics::Shader &_shader)
 	{
 		glAttachShader(m_programID, _shader.getShaderID());
 	}

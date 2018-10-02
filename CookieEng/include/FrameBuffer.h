@@ -68,16 +68,16 @@ namespace Graphics
 		*/
 		void createDepthRenderBufferAttachment();
 
-		VertexArray		*m_arrayBuffer;				/**< The VertexArray for the full screen mesh */
-		VertexBuffer	*m_vertexBuffer;			/**< The VertexBuffer for the full screen mesh */
-		ShaderProgram	*m_shaderProgram;			/**< The Shader that holds the Post Processing effects */
+		VertexArray					*m_arrayBuffer;				/**< The VertexArray for the full screen mesh */
+		VertexBuffer				*m_vertexBuffer;			/**< The VertexBuffer for the full screen mesh */
+		Resource::ShaderProgram		*m_shaderProgram;			/**< The Shader that holds the Post Processing effects */
 			
-		int				m_width, m_height;			/**< The width and height of the FrameBuffer and Accompanying Textures */
+		int							m_width, m_height;			/**< The width and height of the FrameBuffer and Accompanying Textures */
 
-		GLuint			m_frameBufferID;			/**< The OpenGL ID of the FrameBuffer */
+		GLuint						m_frameBufferID;			/**< The OpenGL ID of the FrameBuffer */
 			
-		GLuint			m_textureID;				/**< The OpenGL ID of the FrameBuffer Texture Attachment */
-		GLuint			m_depthRenderBufferID;		/**< The OpenGL ID of the FrameBuffer Depth RenderBuffer Attachment */
+		GLuint						m_textureID;				/**< The OpenGL ID of the FrameBuffer Texture Attachment */
+		GLuint						m_depthRenderBufferID;		/**< The OpenGL ID of the FrameBuffer Depth RenderBuffer Attachment */
 	};
 
 }

@@ -2,8 +2,8 @@
 
 // cstdlib
 #include <memory>
-#include <map>
 #include <string>
+#include <unordered_map>
 
 // external libs
 
@@ -11,7 +11,7 @@
 #include "Macro.h"
 #include "Resource.h"
 
-
+// TODO: Doxygen
 
 namespace CookieEng
 {
@@ -41,11 +41,30 @@ namespace ResMgmt
 			return instance;
 		}
 
-		template<typename T>
-		std::shared_ptr<T> getResource(std::string _name)
+		template <typename T>
+		void load(const std::string &_name, const std::string &_filepath)
 		{
+			static_assert(std::is_base_of<Resource::Resource, T>::value, "T must inherit from Resource");
 
+			if(exists(_name))
+			{ 
+				LOG_ERROR("Unable to add resource " << _name << " to ResourceManager, it already exists");
+				return;
+			}
+
+			m_resources[_name] = std::make_shared<T>();
+			m_resources[_name]->setName(_name);
+			m_resources[_name]->setFilepath(_filepath);
+			m_resources[_name]->load(_name, _filepath);
 		}
+
+		template<typename T>
+		std::shared_ptr<T> get(std::string _name)
+		{ 
+			return std::dynamic_pointer_cast<T>(m_resources[_name]);
+		}
+
+		bool exists(const std::string &_name);
 		
 
 		// ------------------------------------------------
@@ -60,7 +79,7 @@ namespace ResMgmt
 		ResourceManager();
 		~ResourceManager();
 
-		std::map<std::string, std::shared_ptr<Resource>> m_resources;
+		std::unordered_map<std::string, std::shared_ptr<Resource::Resource>> m_resources;
 	};
 }
 }

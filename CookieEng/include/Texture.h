@@ -9,17 +9,18 @@
 
 // program
 #include "Macro.h"
+#include "Resource.h"
 
 namespace CookieEng
 {
-namespace Graphics
+namespace Resource
 {
 	/*! @class Texture
 	*	@brief An abstraction of an OpenGL Texture
 	*
 	*	This class handles the loading (move this) and assignment of an OpenGL texture.
 	*/
-	class Texture
+	class Texture : public Resource
 	{
 	public:
 		/** @brief Texture Ctor
@@ -27,12 +28,25 @@ namespace Graphics
 		*
 		*	Loads an image file using stb_image and loads it into OpenGL
 		*/
-		Texture(const std::string &_filepath);
+		Texture();
+		/** @brief Texture Ctor
+		*	@param _filepath The path to the image to be loaded
+		*
+		*	Loads an image file using stb_image and loads it into OpenGL
+		*/
+		Texture(const std::string &_name, const std::string &_filepath);
 		/** @brief Texture Dtor
 		*
 		*	Frees the OpenGL Texture
 		*/
 		~Texture();
+
+		/** @brief Load Texture
+		*	@param _filepath The path to the image to be loaded
+		*
+		*	Loads an image file using stb_image and loads it into OpenGL
+		*/
+		void load(const std::string &_name, const std::string &_filepath) override;
 
 		/** @brief Binds the Texture
 		*	@param _slot The texture slot to bind the texture to
@@ -60,11 +74,11 @@ namespace Graphics
 		inline int getHeight() const { return m_height; }
 
 	protected:
-		GLuint			 m_textureID;				/**< The OpenGL Texture ID */
+		GLuint			 m_textureID;			/**< The OpenGL Texture ID */
 		std::string		 m_filepath;			/**< The filepath to the texture */
-		unsigned char	*m_localBuffer;	/**< The local buffer for the loaded image */
+		unsigned char	*m_localBuffer;			/**< The local buffer for the loaded image */
 
-		int m_width, m_height, m_BPP;	/**< The width, height and bpp */
+		int m_width, m_height, m_BPP;			/**< The width, height and bpp */
 	};
 }
 }

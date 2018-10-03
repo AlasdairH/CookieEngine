@@ -30,6 +30,7 @@
 #include "ThreadPool.h"
 
 #include "ECS.h"
+#include "Renderable.h"
 
 #define DEBUG
 
@@ -58,57 +59,40 @@ int main()
 	//Core::ResourceLoader &resourceLoader = Core::ResourceLoader::getInstance();
 	// load shaders and textures from file
 	//resourceLoader.fromFile("resources/assets/levels/test.lvl");
-
-	ECS::Manager ecsManager;
-	ecsManager.addEntity();
-
 	ResMgmt::ResourceManager &resourceManager = ResMgmt::ResourceManager::getInstance();
-	//resourceManager.load<Graphics::ShaderProgram>("BasicShader", "resources/shaders/BasicShader.cngShader");
+
+	// load meshs
+	resourceManager.load<Resources::Mesh>("BasicMesh", "resources/models/Default.obj");
+
+	// load textures
 	resourceManager.load<Resources::Texture>("BasicTexture", "resources/textures/Default.png");
 
+	// load shaders
 	resourceManager.load<Resources::ShaderProgram>("BasicShader", "resources/shaders/BasicShader.cngShader");
 
+	// load materials
 	resourceManager.load<Resources::Material>("BasicMaterial", "");
 	resourceManager.get<Resources::Material>("BasicMaterial")->setShader("BasicShader");
 	resourceManager.get<Resources::Material>("BasicMaterial")->setDiffuse("BasicTexture");
 
-	resourceManager.load<Resources::Mesh>("BasicMesh", "resources/models/Default.obj");
+	ECS::Manager ecsManager;
+	auto &entity(ecsManager.addEntity());
+	entity.addComponent<Components::Transform>();
+	entity.addComponent<Components::Renderable>();
+	entity.getComponent<Components::Renderable>().setMesh("BasicMesh");
+	entity.getComponent<Components::Renderable>().setMaterial("BasicMaterial");
+	
 
 	// camera
 	Object::Camera testCamera;
 	testCamera.setAspectRatio(window->getWidth() / (float)window->getHeight());
 	testCamera.transform.translate(glm::vec3(0, 0, 8));
 
-	Resources::Mesh testMesh = *resourceManager.get<Resources::Mesh>("BasicMesh");
-
-	// create a VAO for the vertex data
-	Graphics::VertexArray testVAO;
-	// create a VBO for the vertex data
-	Graphics::VertexBuffer testVBO(Graphics::BUFFER_ARRAY);
-	// add the buffer to the VAO
-	testVAO.addBuffer(testVBO, testMesh.layout);
-	// load data into the vertex VBO
-	testVBO.loadData(testMesh.vertices.data(), 0, testMesh.layout.getStride() * testMesh.vertices.size());
-
-	// create a VBO for the index data
-	Graphics::VertexBuffer testIBO(Graphics::BUFFER_ELEMENT_ARRAY);
-	// load data into the index VBO
-	testIBO.loadData(testMesh.indices.data(), testMesh.indices.size(), sizeof(unsigned int) * testMesh.indices.size());
-
 	// create framebuffer
 	Graphics::FrameBuffer testFrameBuffer(window->getWidth(), window->getHeight());
 
 	// create renderer
 	Graphics::Renderer renderer;
-
-	// create gameobject
-	Core::IGameObject testGameObject;
-
-	// test msg
-	Services::ServiceLocator::getMessageQueue().addObserver(Messaging::MSG_KEY_DOWN, &testGameObject);
-	Messaging::Message msg;
-	msg.type = Messaging::MSG_KEY_DOWN;
-	Services::ServiceLocator::getMessageQueue().pushMessage(msg);
 
 	// thread test
 	Threads::ThreadPool testThreadPool(6);
@@ -168,12 +152,15 @@ int main()
 		ecsManager.refresh();
 
 		// modify
-		testGameObject.transform.rotate(0.5f, glm::vec3(1, 1, 1));
+		entity.getComponent<Components::Transform>().rotate(0.5f, glm::vec3(1, 1, 1));
 
-		resourceManager.get<Resources::Material>("BasicMaterial")->setMVP(testGameObject.transform.getMatrix(), glm::inverse(testCamera.transform.getMatrix()), testCamera.getProjectionMatrix());
+		resourceManager.get<Resources::Material>("BasicMaterial")->setMVP(entity.getComponent<Components::Transform>().getMatrix(), glm::inverse(testCamera.transform.getMatrix()), testCamera.getProjectionMatrix());
 		
 		// draw to the framebuffer
-		renderer.drawToFrameBuffer(testFrameBuffer, testVAO, testIBO, *resourceManager.get<Resources::Material>("BasicMaterial"));
+		//renderer.drawToFrameBuffer(testFrameBuffer, testVAO, testIBO, *resourceManager.get<Resources::Material>("BasicMaterial"));
+		renderer.drawToFrameBuffer(
+			testFrameBuffer,
+			entity);
 
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

@@ -37,7 +37,7 @@ namespace Object
 		*/
 		~Camera() { }
 
-		Attribute::Transform transform;		/**< The transform attribute of the Camera, used for moving it around the world */
+		Components::Transform transform;		/**< The transform attribute of the Camera, used for moving it around the world */
 
 		/** @brief Sets the Field of View
 		*	@param _fov The desired Field of View

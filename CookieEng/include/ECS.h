@@ -5,12 +5,11 @@
 #include <array>
 #include <bitset>
 #include <algorithm>
+#include <vector>
 
 // external libs
 
 // program
-#include "Entity.h"
-#include "Component.h"
 
 // TODO: Doxygen
 
@@ -48,7 +47,7 @@ namespace CookieEng
 		{
 		public:
 			Component() {};
-			virtual ~Component() {};
+			virtual ~Component() { };
 
 			Entity *parentEntity;
 
@@ -63,6 +62,9 @@ namespace CookieEng
 		class Entity
 		{
 		public:
+			Entity() { m_active = true; }
+			~Entity() { }
+
 			void start()
 			{
 				for (auto &c : m_components)
@@ -103,7 +105,7 @@ namespace CookieEng
 			template<typename T>
 			bool hasComponent() const
 			{
-				return m_componentBitset[getComponentTypeID<T>];
+				return m_componentBitset[getComponentTypeID<T>()];
 			}
 
 		protected:
@@ -123,6 +125,7 @@ namespace CookieEng
 			{
 				Entity *e = new Entity;
 				std::unique_ptr<Entity> uPtr{ e };
+				//uPtr->addComponent<
 				m_entities.emplace_back(std::move(uPtr));
 				return *e;
 			}

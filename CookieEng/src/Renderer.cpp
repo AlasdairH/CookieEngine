@@ -29,6 +29,23 @@ namespace Graphics
 		_indexBuffer.unBind();
 #endif
 	}
+
+	void Renderer::drawToFrameBuffer(const FrameBuffer & _fbo, ECS::Entity & _entity)
+	{
+		if (!_entity.hasComponent<Components::Renderable>())
+		{
+			LOG_WARNING("Unable to draw, no renderable component found");
+		}
+
+		_fbo.bind();
+		_entity.getComponent<Components::Renderable>().getMaterial()->use();
+		_entity.getComponent<Components::Renderable>().getVAO()->bind();
+		_entity.getComponent<Components::Renderable>().getIBO()->bind();
+
+		glDrawElements(GL_TRIANGLES, _entity.getComponent<Components::Renderable>().getIBO()->getCount(), GL_UNSIGNED_INT, 0);
+
+		_fbo.unBind();
+	}
 	
 }
 }

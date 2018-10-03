@@ -2,7 +2,7 @@
 
 namespace CookieEng
 {
-namespace Attribute
+namespace Components
 {
 
 	Transform::Transform()

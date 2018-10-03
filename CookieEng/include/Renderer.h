@@ -9,6 +9,8 @@
 #include "GL/glew.h"
 
 // program
+#include "ECS.h"
+#include "Renderable.h"
 #include "VertexArray.h"
 #include "VertexBuffer.h"
 #include "Material.h"
@@ -48,6 +50,14 @@ namespace Graphics
 		*	Takes a frame buffer and the required objects for rendering and renders using the provided material to the framebuffer. 
 		*/
 		void drawToFrameBuffer(const FrameBuffer &_fbo, const VertexArray &_vao, const VertexBuffer &_indexBuffer, const Resources::Material &_material);
+
+		/** @brief Draw to a framebuffer
+		*	@param _fbo The framebuffer to draw to
+		*	@param _entity The Entity to draw
+		*
+		*	Takes a frame buffer and the required objects for rendering and renders using the provided material to the framebuffer.
+		*/
+		void drawToFrameBuffer(const FrameBuffer &_fbo, ECS::Entity &_entity);
 
 	protected:
 		FrameBuffer *m_frameBuffer; /**< The framebuffer to render to by default */ // TODO: Implement default framebuffer rendering

@@ -25,10 +25,6 @@ namespace Core
 		IGameObject() {}
 		~IGameObject() {}
 
-		Attribute::Transform transform;
-
-		void handleMessage(const Messaging::Message &_msg);
-
 	protected:
 	};
 }

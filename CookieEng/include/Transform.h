@@ -9,19 +9,20 @@
 
 // program
 #include "Macro.h"
+#include "ECS.h"
 
 // TODO: Scale Implementation
 
 namespace CookieEng
 {
-namespace Attribute
+namespace Components
 {
 	/*! @class Transform
-	*	@brief A Transform Attribute
+	*	@brief A Transform Component
 	*
 	*	Tracks a position / rotation and scale in 3D space using the GLM library
 	*/
-	class Transform
+	class Transform : public ECS::Component
 	{
 	public:
 		/** @brief Transform Ctor

@@ -186,11 +186,8 @@
     <ClCompile Include="src\ResourceManager.cpp">
       <Filter>Source Files\Resource Managment</Filter>
     </ClCompile>
-    <ClCompile Include="src\Component.cpp">
-      <Filter>Source Files\ECS</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Entity.cpp">
-      <Filter>Source Files\ECS</Filter>
+    <ClCompile Include="src\Renderable.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -287,11 +284,8 @@
     <ClInclude Include="include\ECS.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
-    <ClInclude Include="include\Component.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Entity.h">
-      <Filter>Header Files\ECS</Filter>
+    <ClInclude Include="include\Renderable.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

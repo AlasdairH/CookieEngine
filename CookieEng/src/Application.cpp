@@ -59,20 +59,22 @@ int main()
 
 	ResMgmt::ResourceManager &resourceManager = ResMgmt::ResourceManager::getInstance();
 	//resourceManager.load<Graphics::ShaderProgram>("BasicShader", "resources/shaders/BasicShader.cngShader");
-	resourceManager.load<Resource::Texture>("BasicTexture", "resources/textures/Default.png");
+	resourceManager.load<Resources::Texture>("BasicTexture", "resources/textures/Default.png");
 
-	resourceManager.load<Resource::ShaderProgram>("BasicShader", "resources/shaders/BasicShader.cngShader");
+	resourceManager.load<Resources::ShaderProgram>("BasicShader", "resources/shaders/BasicShader.cngShader");
 
-	resourceManager.load<Resource::Material>("BasicMaterial", "");
-	resourceManager.get<Resource::Material>("BasicMaterial")->setShader("BasicShader");
-	resourceManager.get<Resource::Material>("BasicMaterial")->setDiffuse("BasicTexture");
+	resourceManager.load<Resources::Material>("BasicMaterial", "");
+	resourceManager.get<Resources::Material>("BasicMaterial")->setShader("BasicShader");
+	resourceManager.get<Resources::Material>("BasicMaterial")->setDiffuse("BasicTexture");
+
+	resourceManager.load<Resources::Mesh>("BasicMesh", "resources/models/Default.obj");
 
 	// camera
 	Object::Camera testCamera;
 	testCamera.setAspectRatio(window->getWidth() / (float)window->getHeight());
 	testCamera.transform.translate(glm::vec3(0, 0, 8));
 
-	Data::Mesh testMesh = Services::ServiceLocator::getFileManager().loadMesh("resources/models/Default.obj");
+	Resources::Mesh testMesh = *resourceManager.get<Resources::Mesh>("BasicMesh");
 
 	// create a VAO for the vertex data
 	Graphics::VertexArray testVAO;
@@ -152,10 +154,10 @@ int main()
 		// modify
 		testGameObject.transform.rotate(0.5f, glm::vec3(1, 1, 1));
 
-		resourceManager.get<Resource::Material>("BasicMaterial")->setMVP(testGameObject.transform.getMatrix(), glm::inverse(testCamera.transform.getMatrix()), testCamera.getProjectionMatrix());
+		resourceManager.get<Resources::Material>("BasicMaterial")->setMVP(testGameObject.transform.getMatrix(), glm::inverse(testCamera.transform.getMatrix()), testCamera.getProjectionMatrix());
 		
 		// draw to the framebuffer
-		renderer.drawToFrameBuffer(testFrameBuffer, testVAO, testIBO, *resourceManager.get<Resource::Material>("BasicMaterial"));
+		renderer.drawToFrameBuffer(testFrameBuffer, testVAO, testIBO, *resourceManager.get<Resources::Material>("BasicMaterial"));
 
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

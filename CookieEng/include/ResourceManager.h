@@ -44,7 +44,7 @@ namespace ResMgmt
 		template <typename T>
 		void load(const std::string &_name, const std::string &_filepath)
 		{
-			static_assert(std::is_base_of<Resource::Resource, T>::value, "T must inherit from Resource");
+			static_assert(std::is_base_of<Resources::Resource, T>::value, "T must inherit from Resource");
 
 			if(exists(_name))
 			{ 
@@ -79,7 +79,7 @@ namespace ResMgmt
 		ResourceManager();
 		~ResourceManager();
 
-		std::unordered_map<std::string, std::shared_ptr<Resource::Resource>> m_resources;
+		std::unordered_map<std::string, std::shared_ptr<Resources::Resource>> m_resources;
 	};
 }
 }

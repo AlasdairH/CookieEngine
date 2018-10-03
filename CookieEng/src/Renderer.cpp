@@ -10,7 +10,7 @@ namespace Graphics
 		LOG_MESSAGE("Renderer Created");
 	}
 
-	void Renderer::drawToFrameBuffer(const FrameBuffer &_fbo, const VertexArray & _vao, const VertexBuffer & _indexBuffer, const Resource::Material & _material)
+	void Renderer::drawToFrameBuffer(const FrameBuffer &_fbo, const VertexArray & _vao, const VertexBuffer & _indexBuffer, const Resources::Material & _material)
 	{
 		_fbo.bind();
 		_material.use();

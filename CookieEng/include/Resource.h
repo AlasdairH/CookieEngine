@@ -6,11 +6,10 @@
 // external libs
 
 // program
-#include "ServiceLocator.h"
 
 namespace CookieEng
 {
-namespace Resource
+namespace Resources
 {
 	enum ResourceType { RESOURCE_DEFAULT, RESOURCE_SHADER, RESOURCE_TEXTURE, RESOURCE_MATERIAL };
 

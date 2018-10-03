@@ -2,7 +2,7 @@
 
 namespace CookieEng
 {
-namespace Resource
+namespace Resources
 {
 
 	ShaderProgram::ShaderProgram()

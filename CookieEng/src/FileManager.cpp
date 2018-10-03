@@ -39,9 +39,10 @@ namespace Services
 		return str;
 	}
 
-	Data::Mesh FileManager::loadMesh(std::string _filepath)
+	/*
+	Resources::Mesh FileManager::loadMesh(std::string _filepath)
 	{
-		Data::Mesh mesh;
+		Resources::Mesh mesh;
 
 		std::string objFile = loadTextFile(_filepath);
 
@@ -172,6 +173,7 @@ namespace Services
 		// return the mesh
 		return mesh;
 	}
+	*/
 }
 }
 

@@ -1,7 +1,7 @@
 #include "Material.h"
 namespace CookieEng
 {
-namespace Resource
+namespace Resources
 {
 	void Material::use() const
 	{

@@ -12,9 +12,6 @@
 // program
 #include "Macro.h"
 #include "Utils.h"
-#include "Mesh.h"
-
-
 
 namespace CookieEng
 {
@@ -64,16 +61,6 @@ namespace Services
 		*	Loads a text file into an std::string.
 		*/
 		std::string loadTextFileASync(std::string _filepath) { } 
-
-		/** @brief Loads a .obj file to a Mesh
-		*	@param _filepath The path to the .Obj to be loaded
-		*	@return A mesh containing the vertex and index data from the .obj file
-		*
-		*	WARNING: ALL LOADED MESHES MUST BE TRIANGULATED
-		*	Uses the loadTextFile method to load the .obj as a string and then parses the file for the different attributes for storing in a mesh.
-		*	This could definietly be more efficient but it's completely written by me and thats how I like it!
-		*/
-		Data::Mesh loadMesh(const std::string _filepath);
 
 	protected:
 

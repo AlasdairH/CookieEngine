@@ -34,7 +34,7 @@ namespace Graphics
 		m_arrayBuffer->addBuffer(*m_vertexBuffer, layout1);
 		m_vertexBuffer->loadData(&fbo_vertices, 0, sizeof(fbo_vertices));
 
-		m_shaderProgram = new Resource::ShaderProgram();
+		m_shaderProgram = new Resources::ShaderProgram();
 		m_shaderProgram->load("BasicPPShader", "resources/shaders/BasicPP.cngShader");
 
 		glGenFramebuffers(1, &m_frameBufferID);

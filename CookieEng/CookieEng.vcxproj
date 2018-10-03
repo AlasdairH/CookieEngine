@@ -229,11 +229,20 @@
     <Text Include="resources\shaders\object\vert.glsl" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\assets\levels\test.lvl" />
     <None Include="resources\DoxygenMain.dox" />
     <None Include="resources\doxygen\DoxygenMain.doxtxt" />
     <None Include="resources\doxygen\home.dox" />
+    <None Include="resources\materials\BasicMaterial.mat" />
+    <None Include="resources\shaders\BasicPP.cngShader" />
+    <None Include="resources\shaders\BasicShader.cngShader" />
     <None Include="resources\shaders\frag.glsl" />
+    <None Include="resources\shaders\PostProcFrag.glsl" />
+    <None Include="resources\shaders\PostProcVert.glsl" />
     <None Include="resources\shaders\vert.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\textures\Default.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

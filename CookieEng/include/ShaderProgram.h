@@ -18,7 +18,7 @@
 
 namespace CookieEng
 {
-namespace Resource
+namespace Resources
 {
 	/*! @class ShaderProgram
 	*	@brief Abstracted OpenGL Program

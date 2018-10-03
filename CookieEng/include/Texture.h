@@ -13,7 +13,7 @@
 
 namespace CookieEng
 {
-namespace Resource
+namespace Resources
 {
 	/*! @class Texture
 	*	@brief An abstraction of an OpenGL Texture

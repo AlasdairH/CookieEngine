@@ -323,5 +323,16 @@
     </None>
     <None Include="resources\shaders\frag.glsl" />
     <None Include="resources\shaders\vert.glsl" />
+    <None Include="resources\shaders\PostProcFrag.glsl" />
+    <None Include="resources\shaders\PostProcVert.glsl" />
+    <None Include="resources\shaders\BasicShader.cngShader" />
+    <None Include="resources\shaders\BasicPP.cngShader" />
+    <None Include="resources\assets\levels\test.lvl" />
+    <None Include="resources\materials\BasicMaterial.mat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\textures\Default.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

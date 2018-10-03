@@ -39,7 +39,7 @@ namespace Core
 				{
 					LOG_MESSAGE("Resource Loader: Loading Texture | " << splitString[2] << " | " << splitString[3]);
 					// TODO: IMP
-					//resourceManager.load<Resource::Texture>(splitString[3], splitString[2]);
+					//resourceManager.load<Resources::Texture>(splitString[3], splitString[2]);
 				}
 				// LOAD SHADER vert frag name
 				else if (splitString[1] == "SHADER")

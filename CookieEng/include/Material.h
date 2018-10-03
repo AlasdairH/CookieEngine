@@ -17,7 +17,7 @@
 
 namespace CookieEng
 {
-namespace Resource
+namespace Resources
 {
 	// Resource Manager forward decleration
 	class ResourceManager;

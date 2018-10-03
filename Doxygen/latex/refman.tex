@@ -90,6 +90,20 @@
 \setcounter{secnumdepth}{5}
 \makeindex
 
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
 % Custom commands
 \newcommand{\clearemptydoublepage}{%
   \newpage{\pagestyle{empty}\cleardoublepage}%
@@ -103,6 +117,10 @@
 \begin{document}
 
 % Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
 \pagenumbering{alph}
 \begin{titlepage}
 \vspace*{7cm}
@@ -117,19 +135,43 @@
 \tableofcontents
 \clearemptydoublepage
 \pagenumbering{arabic}
+\hypersetup{pageanchor=true}
 
 %--- Begin generated contents ---
-\chapter{Games Programming Level 6 -\/ Game Engine Programming (Cookie Engine)}
-\label{index}\input{index}
+\chapter{Games Programming Level 6 -\/ Individual Project}
+\label{index}\hypertarget{index}{}\input{index}
+\chapter{Hierarchical Index}
+\input{hierarchy}
 \chapter{Class Index}
 \input{annotated}
 \chapter{Class Documentation}
+\input{class_cookie_eng_1_1_object_1_1_camera}
+\input{class_cookie_eng_1_1_components_1_1_component}
+\input{struct_cookie_eng_1_1_e_c_s_1_1_entity}
 \input{class_cookie_eng_1_1_services_1_1_file_manager}
+\input{class_cookie_eng_1_1_graphics_1_1_frame_buffer}
+\input{class_cookie_eng_1_1_core_1_1_i_game_object}
+\input{class_cookie_eng_1_1_messaging_1_1_i_message_handler}
 \input{class_cookie_eng_1_1_services_1_1_initialiser}
-\input{class_cookie_eng_1_1_graphics_1_1_program}
+\input{class_cookie_eng_1_1_resources_1_1_material}
+\input{struct_cookie_eng_1_1_resources_1_1_mesh}
+\input{class_cookie_eng_1_1_messaging_1_1_message}
+\input{class_cookie_eng_1_1_services_1_1_message_queue}
+\input{struct_cookie_eng_1_1_services_1_1_obj_vertex}
+\input{class_cookie_eng_1_1_graphics_1_1_renderer}
+\input{class_cookie_eng_1_1_resources_1_1_resource}
+\input{class_cookie_eng_1_1_core_1_1_resource_loader}
+\input{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}
 \input{class_cookie_eng_1_1_services_1_1_service_container}
 \input{class_cookie_eng_1_1_services_1_1_service_locator}
 \input{class_cookie_eng_1_1_graphics_1_1_shader}
+\input{class_cookie_eng_1_1_resources_1_1_shader_program}
+\input{class_test_entity}
+\input{class_cookie_eng_1_1_resources_1_1_texture}
+\input{class_cookie_eng_1_1_threads_1_1_thread_pool}
+\input{class_cookie_eng_1_1_attribute_1_1_transform}
+\input{class_cookie_eng_1_1_utilities_1_1_utils_str}
+\input{struct_cookie_eng_1_1_data_1_1_vertex}
 \input{class_cookie_eng_1_1_graphics_1_1_vertex_array}
 \input{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}
 \input{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element}

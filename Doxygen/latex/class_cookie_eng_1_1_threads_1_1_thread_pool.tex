@@ -1,0 +1,49 @@
+\hypertarget{class_cookie_eng_1_1_threads_1_1_thread_pool}{}\section{Cookie\+Eng\+:\+:Threads\+:\+:Thread\+Pool Class Reference}
+\label{class_cookie_eng_1_1_threads_1_1_thread_pool}\index{Cookie\+Eng\+::\+Threads\+::\+Thread\+Pool@{Cookie\+Eng\+::\+Threads\+::\+Thread\+Pool}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_threads_1_1_thread_pool_a3ec0c6482d6e8acd4bb3f49a976afbd4}\label{class_cookie_eng_1_1_threads_1_1_thread_pool_a3ec0c6482d6e8acd4bb3f49a976afbd4}} 
+using {\bfseries Task} = std\+::function$<$ void()$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_threads_1_1_thread_pool_a45d9e0c04c6ed38e994219591b62e775}\label{class_cookie_eng_1_1_threads_1_1_thread_pool_a45d9e0c04c6ed38e994219591b62e775}} 
+{\bfseries Thread\+Pool} (const int \+\_\+num\+Threads)
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_threads_1_1_thread_pool_aa89bc838d587ed5c949a7b87a4f78c67}\label{class_cookie_eng_1_1_threads_1_1_thread_pool_aa89bc838d587ed5c949a7b87a4f78c67}} 
+{\footnotesize template$<$class T $>$ }\\auto {\bfseries enqueue} (T \+\_\+task) -\/$>$ std\+::future$<$ decltype(\+\_\+task())$>$
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_threads_1_1_thread_pool_aa1ec49665f4cef513dc11efd7bbf3ac6}\label{class_cookie_eng_1_1_threads_1_1_thread_pool_aa1ec49665f4cef513dc11efd7bbf3ac6}} 
+void {\bfseries start} (const int \+\_\+num\+Threads)
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_threads_1_1_thread_pool_a2260d3d26f58843f9b87997aec916649}\label{class_cookie_eng_1_1_threads_1_1_thread_pool_a2260d3d26f58843f9b87997aec916649}} 
+void {\bfseries stop} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_threads_1_1_thread_pool_a4b2cc794349d82e9b75963d514eacdca}\label{class_cookie_eng_1_1_threads_1_1_thread_pool_a4b2cc794349d82e9b75963d514eacdca}} 
+std\+::queue$<$ Task $>$ {\bfseries m\+\_\+tasks}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_threads_1_1_thread_pool_ab8b101bddef80c83f481718a81a43945}\label{class_cookie_eng_1_1_threads_1_1_thread_pool_ab8b101bddef80c83f481718a81a43945}} 
+std\+::vector$<$ std\+::thread $>$ {\bfseries m\+\_\+threads}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_threads_1_1_thread_pool_a8aa7f0e105013ccb141031d5f11cd640}\label{class_cookie_eng_1_1_threads_1_1_thread_pool_a8aa7f0e105013ccb141031d5f11cd640}} 
+std\+::condition\+\_\+variable {\bfseries m\+\_\+cond\+\_\+event}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_threads_1_1_thread_pool_ac3206f1c04bd54fbac38134b105ec2b3}\label{class_cookie_eng_1_1_threads_1_1_thread_pool_ac3206f1c04bd54fbac38134b105ec2b3}} 
+std\+::mutex {\bfseries m\+\_\+event\+Mutex}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_threads_1_1_thread_pool_aee95f4d4dd35bb62b7bb1cf05bc8802b}\label{class_cookie_eng_1_1_threads_1_1_thread_pool_aee95f4d4dd35bb62b7bb1cf05bc8802b}} 
+bool {\bfseries m\+\_\+stopping} = false
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Thread\+Pool.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,320 @@
+\hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program}{}\section{Cookie\+Eng\+:\+:Resources\+:\+:Shader\+Program Class Reference}
+\label{class_cookie_eng_1_1_resources_1_1_shader_program}\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+
+
+Abstracted Open\+GL Program.  
+
+
+
+
+{\ttfamily \#include $<$Shader\+Program.\+h$>$}
+
+
+
+Inherits \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Cookie\+Eng\+::\+Resources\+::\+Resource}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a2de1a879247aa4ee38fc2c37408c5285}{Shader\+Program} ()
+\begin{DoxyCompactList}\small\item\em Program Ctor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_aef29916bad667d1f820053fd891d9e58}{load} (const std\+::string \&\+\_\+name, const std\+::string \&\+\_\+filepath) override
+\begin{DoxyCompactList}\small\item\em Loads the \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program}{Shader\+Program} from a file. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a453b80b995d1b352c73fbac672d4dbc5}{$\sim$\+Shader\+Program} ()
+\begin{DoxyCompactList}\small\item\em Program Ctor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a951108feded567e573928dbb1d8caeca}{attach\+Shader} (\hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Graphics\+::\+Shader} \&\+\_\+shader)
+\begin{DoxyCompactList}\small\item\em Attaches a Shader to the Program. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_ac1c103a1f174c4053a94b65e4f32ccfc}{link} ()
+\begin{DoxyCompactList}\small\item\em Links the Shader Program. \end{DoxyCompactList}\item 
+bool \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_aaf510d906b80d93a10e90fa0fea26bb2}{verify} ()
+\begin{DoxyCompactList}\small\item\em Verifys the Shader Program. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a4824333f2e0ee0e7cfc91cb0de92e065}{bind} () const
+\begin{DoxyCompactList}\small\item\em Binds the shader. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a3fad7ebcee80d0cae25dfcca62c70e63}{un\+Bind} () const
+\begin{DoxyCompactList}\small\item\em un\+Binds the shader \end{DoxyCompactList}\item 
+int \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_ae2fb823b3e8da3cf7154e0a8ffe25c85}{get\+Uniform\+Location} (const std\+::string \&\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Gets the location of the specified Uniform in a shader. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a6029828eaecc40f6a68779b86f5baf6d}{set\+Uniform1f} (const std\+::string \&\+\_\+name, float \+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets a single float uniform. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_ad13eabf4105d4d484d72c16696143254}{set\+Uniform3f} (const std\+::string \&\+\_\+name, float \+\_\+value1, float \+\_\+value2, float \+\_\+value3)
+\begin{DoxyCompactList}\small\item\em Sets a vec3 uniform. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a7f584c7eb32c97424d2e08e0a0c90bef}{set\+Uniform4f} (const std\+::string \&\+\_\+name, float \+\_\+value1, float \+\_\+value2, float \+\_\+value3, float \+\_\+value4)
+\begin{DoxyCompactList}\small\item\em Sets a vec4 uniform. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a328b09fef2d715e25f9dc3993b060b99}{set\+Uniform1i} (const std\+::string \&\+\_\+name, int \+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets a single integar uniform. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a172752bb917cb141b1a3a1cc44b6a645}{set\+Uniform\+Mat4f} (const std\+::string \&\+\_\+name, const glm\+::mat4 \&\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets a matrix(4x4) uniform. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_aea57a6a608fe57a1057d3a038bac16dd}{set\+Uniform\+Bool} (const std\+::string \&\+\_\+name, const bool \+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets a boolean uniform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a78e4cd26f128e78c0949476a79ff1c45}{m\+\_\+program\+ID}
+\item 
+bool \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a826816da20d45149ac950ed64daeda50}{m\+\_\+verified}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, int $>$ \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_aba82e0d018c8086308c0cda41e268735}{m\+\_\+uniform\+Location\+Cache}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstracted Open\+GL Program. 
+
+Abstracts and provides simple utilities for an Open\+GL Shader Program. The program M\+U\+ST be verified before it can be bound. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a2de1a879247aa4ee38fc2c37408c5285}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a2de1a879247aa4ee38fc2c37408c5285}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!Shader\+Program@{Shader\+Program}}
+\index{Shader\+Program@{Shader\+Program}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{Shader\+Program()}{ShaderProgram()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::\+Shader\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Program Ctor. 
+
+Creates a shader program and sets the verified status to false. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a453b80b995d1b352c73fbac672d4dbc5}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a453b80b995d1b352c73fbac672d4dbc5}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!````~Shader\+Program@{$\sim$\+Shader\+Program}}
+\index{````~Shader\+Program@{$\sim$\+Shader\+Program}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{$\sim$\+Shader\+Program()}{~ShaderProgram()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::$\sim$\+Shader\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Program Ctor. 
+
+Deletes the shader program and frees the G\+PU memory 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a951108feded567e573928dbb1d8caeca}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a951108feded567e573928dbb1d8caeca}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!attach\+Shader@{attach\+Shader}}
+\index{attach\+Shader@{attach\+Shader}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{attach\+Shader()}{attachShader()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::attach\+Shader (\begin{DoxyParamCaption}\item[{\hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Graphics\+::\+Shader} \&}]{\+\_\+shader }\end{DoxyParamCaption})}
+
+
+
+Attaches a Shader to the Program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+shader} & The shader to be attached\\
+\hline
+\end{DoxyParams}
+Attaches a shader to the program. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a4824333f2e0ee0e7cfc91cb0de92e065}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a4824333f2e0ee0e7cfc91cb0de92e065}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!bind@{bind}}
+\index{bind@{bind}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Binds the shader. 
+
+Binds the shader. For this to sucseed, the shader must be verified. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_ae2fb823b3e8da3cf7154e0a8ffe25c85}\label{class_cookie_eng_1_1_resources_1_1_shader_program_ae2fb823b3e8da3cf7154e0a8ffe25c85}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!get\+Uniform\+Location@{get\+Uniform\+Location}}
+\index{get\+Uniform\+Location@{get\+Uniform\+Location}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{get\+Uniform\+Location()}{getUniformLocation()}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::get\+Uniform\+Location (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Gets the location of the specified Uniform in a shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The uniform to retrive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The uniform location
+\end{DoxyReturn}
+Gets the location of a uniform in a shader based on its name. If the shader uniform location has not been requested before, it is cached so that future requests do not incur an Open\+GL call. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_ac1c103a1f174c4053a94b65e4f32ccfc}\label{class_cookie_eng_1_1_resources_1_1_shader_program_ac1c103a1f174c4053a94b65e4f32ccfc}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!link@{link}}
+\index{link@{link}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{link()}{link()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Links the Shader Program. 
+
+Links the shader program. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_aef29916bad667d1f820053fd891d9e58}\label{class_cookie_eng_1_1_resources_1_1_shader_program_aef29916bad667d1f820053fd891d9e58}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!load@{load}}
+\index{load@{load}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const std\+::string \&}]{\+\_\+filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Loads the \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program}{Shader\+Program} from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name to assign the shader \\
+\hline
+{\em \+\_\+filepath} & The filepath to load from\\
+\hline
+\end{DoxyParams}
+Overrides the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resource} load to allow loading from a .cng\+Shader file 
+
+Reimplemented from \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a75648b8f2e442bebc90d6eb4ea3a2f6e}{Cookie\+Eng\+::\+Resources\+::\+Resource}.
+
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a6029828eaecc40f6a68779b86f5baf6d}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a6029828eaecc40f6a68779b86f5baf6d}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!set\+Uniform1f@{set\+Uniform1f}}
+\index{set\+Uniform1f@{set\+Uniform1f}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{set\+Uniform1f()}{setUniform1f()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::set\+Uniform1f (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{float}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets a single float uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name of the uniform to modify \\
+\hline
+{\em \+\_\+value} & The value to set the uniform to\\
+\hline
+\end{DoxyParams}
+Uses the get\+Uniform\+Location method to get the uniform location and set it to the given value. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a328b09fef2d715e25f9dc3993b060b99}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a328b09fef2d715e25f9dc3993b060b99}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!set\+Uniform1i@{set\+Uniform1i}}
+\index{set\+Uniform1i@{set\+Uniform1i}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{set\+Uniform1i()}{setUniform1i()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::set\+Uniform1i (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{int}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets a single integar uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name of the uniform to modify \\
+\hline
+{\em \+\_\+value} & The value to set the uniform to\\
+\hline
+\end{DoxyParams}
+Uses the get\+Uniform\+Location method to get the uniform location and set it to the given value. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_ad13eabf4105d4d484d72c16696143254}\label{class_cookie_eng_1_1_resources_1_1_shader_program_ad13eabf4105d4d484d72c16696143254}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!set\+Uniform3f@{set\+Uniform3f}}
+\index{set\+Uniform3f@{set\+Uniform3f}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{set\+Uniform3f()}{setUniform3f()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::set\+Uniform3f (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{float}]{\+\_\+value1,  }\item[{float}]{\+\_\+value2,  }\item[{float}]{\+\_\+value3 }\end{DoxyParamCaption})}
+
+
+
+Sets a vec3 uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name of the uniform to modify \\
+\hline
+{\em \+\_\+value1} & The x value of the Vec4 \\
+\hline
+{\em \+\_\+value2} & The y value of the Vec4 \\
+\hline
+{\em \+\_\+value3} & The z value of the Vec4\\
+\hline
+\end{DoxyParams}
+Uses the get\+Uniform\+Location method to get the uniform location and set it to the given values. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a7f584c7eb32c97424d2e08e0a0c90bef}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a7f584c7eb32c97424d2e08e0a0c90bef}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!set\+Uniform4f@{set\+Uniform4f}}
+\index{set\+Uniform4f@{set\+Uniform4f}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{set\+Uniform4f()}{setUniform4f()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::set\+Uniform4f (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{float}]{\+\_\+value1,  }\item[{float}]{\+\_\+value2,  }\item[{float}]{\+\_\+value3,  }\item[{float}]{\+\_\+value4 }\end{DoxyParamCaption})}
+
+
+
+Sets a vec4 uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name of the uniform to modify \\
+\hline
+{\em \+\_\+value1} & The x value of the Vec4 \\
+\hline
+{\em \+\_\+value2} & The y value of the Vec4 \\
+\hline
+{\em \+\_\+value3} & The z value of the Vec4 \\
+\hline
+{\em \+\_\+value4} & The w value of the Vec4\\
+\hline
+\end{DoxyParams}
+Uses the get\+Uniform\+Location method to get the uniform location and set it to the given values. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_aea57a6a608fe57a1057d3a038bac16dd}\label{class_cookie_eng_1_1_resources_1_1_shader_program_aea57a6a608fe57a1057d3a038bac16dd}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!set\+Uniform\+Bool@{set\+Uniform\+Bool}}
+\index{set\+Uniform\+Bool@{set\+Uniform\+Bool}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{set\+Uniform\+Bool()}{setUniformBool()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::set\+Uniform\+Bool (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const bool}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets a boolean uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name of the uniform to modify \\
+\hline
+{\em \+\_\+value} & The value to set the uniform to\\
+\hline
+\end{DoxyParams}
+Uses the get\+Uniform\+Location method to get the uniform location and set it to the given value. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a172752bb917cb141b1a3a1cc44b6a645}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a172752bb917cb141b1a3a1cc44b6a645}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!set\+Uniform\+Mat4f@{set\+Uniform\+Mat4f}}
+\index{set\+Uniform\+Mat4f@{set\+Uniform\+Mat4f}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{set\+Uniform\+Mat4f()}{setUniformMat4f()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::set\+Uniform\+Mat4f (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const glm\+::mat4 \&}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets a matrix(4x4) uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name of the uniform to modify \\
+\hline
+{\em \+\_\+value} & The value to set the uniform to\\
+\hline
+\end{DoxyParams}
+Uses the get\+Uniform\+Location method to get the uniform location and set it to the given value. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a3fad7ebcee80d0cae25dfcca62c70e63}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a3fad7ebcee80d0cae25dfcca62c70e63}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!un\+Bind@{un\+Bind}}
+\index{un\+Bind@{un\+Bind}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{un\+Bind()}{unBind()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::un\+Bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+un\+Binds the shader 
+
+un\+Binds the shader. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_aaf510d906b80d93a10e90fa0fea26bb2}\label{class_cookie_eng_1_1_resources_1_1_shader_program_aaf510d906b80d93a10e90fa0fea26bb2}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!verify@{verify}}
+\index{verify@{verify}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::verify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifys the Shader Program. 
+
+Verifies the shader program and ensures it can run. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a78e4cd26f128e78c0949476a79ff1c45}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a78e4cd26f128e78c0949476a79ff1c45}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!m\+\_\+program\+ID@{m\+\_\+program\+ID}}
+\index{m\+\_\+program\+ID@{m\+\_\+program\+ID}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{m\+\_\+program\+ID}{m\_programID}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::m\+\_\+program\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Open\+GL ID \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_aba82e0d018c8086308c0cda41e268735}\label{class_cookie_eng_1_1_resources_1_1_shader_program_aba82e0d018c8086308c0cda41e268735}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!m\+\_\+uniform\+Location\+Cache@{m\+\_\+uniform\+Location\+Cache}}
+\index{m\+\_\+uniform\+Location\+Cache@{m\+\_\+uniform\+Location\+Cache}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{m\+\_\+uniform\+Location\+Cache}{m\_uniformLocationCache}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, int$>$ Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::m\+\_\+uniform\+Location\+Cache\hspace{0.3cm}{\ttfamily [protected]}}
+
+The cache of uniform names to locations \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a826816da20d45149ac950ed64daeda50}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a826816da20d45149ac950ed64daeda50}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!m\+\_\+verified@{m\+\_\+verified}}
+\index{m\+\_\+verified@{m\+\_\+verified}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{m\+\_\+verified}{m\_verified}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::m\+\_\+verified\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag for the shaders verified status 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Shader\+Program.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,157 @@
+\hypertarget{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{}\section{Cookie\+Eng\+:\+:Res\+Mgmt\+:\+:Resource\+Manager Class Reference}
+\label{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}\index{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}}
+
+
+A Singleton for handling the storage of resources.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_abd8a726364757dbc45c6aed47dd8ba00}{load} (const std\+::string \&\+\_\+name, const std\+::string \&\+\_\+filepath)
+\begin{DoxyCompactList}\small\item\em Loads a resource to the manager. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_adac3f1571c17315a1dc40d2f86425763}{get} (std\+::string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em gets a shared pointer to the requested resource \end{DoxyCompactList}\item 
+bool \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a8622e0f345edf02dc21c5e460049f130}{exists} (const std\+::string \&\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Tests to see if the resource map contains a key. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_aeeceeb2d2cc146aaf746b521f997d8f8}\label{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_aeeceeb2d2cc146aaf746b521f997d8f8}} 
+{\bfseries Resource\+Manager} (\hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager} const \&)=delete
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a3fe753cfd1948e98639320efc50d1d64}\label{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a3fe753cfd1948e98639320efc50d1d64}} 
+void {\bfseries operator=} (\hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager} const \&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager} \& \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a3ffc6fb81b9e9562d9c702b9e02c9f13}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Gets the static instance of the \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_abfe4d3430237d9faddf0e4d77050728b}{Resource\+Manager} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a39c067aab5b12a48673b3b8c1fd0e442}{$\sim$\+Resource\+Manager} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager} Dtor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resources\+::\+Resource} $>$ $>$ \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a0d7fb8ad7d37c75d3d364e4382467b2f}{m\+\_\+resources}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Singleton for handling the storage of resources. 
+
+This class handles the storage of resources for use by elements of the game engine. This allows the same Texture, Shader\+Program, etc to be used by multiple entities or services. The resources are stored in a map and access is checked before operations on the stored resources is allowed. This class may need a bit of refactoring, seems like I\textquotesingle{}m writing a lot of semi-\/duplicate code. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_abfe4d3430237d9faddf0e4d77050728b}\label{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_abfe4d3430237d9faddf0e4d77050728b}} 
+\index{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}!Resource\+Manager@{Resource\+Manager}}
+\index{Resource\+Manager@{Resource\+Manager}!Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{Resource\+Manager()}{ResourceManager()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager\+::\+Resource\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager} Ctor. 
+
+This is called on the first time the \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager} instance is grabbed. \mbox{\Hypertarget{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a39c067aab5b12a48673b3b8c1fd0e442}\label{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a39c067aab5b12a48673b3b8c1fd0e442}} 
+\index{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}!````~Resource\+Manager@{$\sim$\+Resource\+Manager}}
+\index{````~Resource\+Manager@{$\sim$\+Resource\+Manager}!Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Resource\+Manager()}{~ResourceManager()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager\+::$\sim$\+Resource\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager} Dtor. 
+
+Called on program close 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a8622e0f345edf02dc21c5e460049f130}\label{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a8622e0f345edf02dc21c5e460049f130}} 
+\index{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}!exists@{exists}}
+\index{exists@{exists}!Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager\+::exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Tests to see if the resource map contains a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The key to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if it exists in the map, false otherwise
+\end{DoxyReturn}
+Attempts to find the given key in the map and returns the resulting boolean \mbox{\Hypertarget{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_adac3f1571c17315a1dc40d2f86425763}\label{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_adac3f1571c17315a1dc40d2f86425763}} 
+\index{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}!get@{get}}
+\index{get@{get}!Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager\+::get (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gets a shared pointer to the requested resource 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & The type to get \\
+\hline
+{\em \+\_\+name} & The name of the resource \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the requested resource
+\end{DoxyReturn}
+Takes a resource type through a template and a name argument. The method then casts the resource from the map member to the desired type and returns it as a shared pointer. \mbox{\Hypertarget{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a3ffc6fb81b9e9562d9c702b9e02c9f13}\label{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a3ffc6fb81b9e9562d9c702b9e02c9f13}} 
+\index{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily static \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager}\& Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets the static instance of the \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager}. 
+
+Gets the static instance of the \hyperlink{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager}{Resource\+Manager}. \mbox{\Hypertarget{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_abd8a726364757dbc45c6aed47dd8ba00}\label{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_abd8a726364757dbc45c6aed47dd8ba00}} 
+\index{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}!load@{load}}
+\index{load@{load}!Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const std\+::string \&}]{\+\_\+filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads a resource to the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & The type to load \\
+\hline
+{\em \+\_\+name} & The name to assign the loaded resource \\
+\hline
+{\em \+\_\+filepath} & The filepath to the resource file\\
+\hline
+\end{DoxyParams}
+Takes the template of the resource to load and checks it is first a derived class of Resource. The method then loads the resource to the manager with the name and path specified. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a0d7fb8ad7d37c75d3d364e4382467b2f}\label{class_cookie_eng_1_1_res_mgmt_1_1_resource_manager_a0d7fb8ad7d37c75d3d364e4382467b2f}} 
+\index{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}!m\+\_\+resources@{m\+\_\+resources}}
+\index{m\+\_\+resources@{m\+\_\+resources}!Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager@{Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager}}
+\subsubsection{\texorpdfstring{m\+\_\+resources}{m\_resources}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resources\+::\+Resource}$>$ $>$ Cookie\+Eng\+::\+Res\+Mgmt\+::\+Resource\+Manager\+::m\+\_\+resources\hspace{0.3cm}{\ttfamily [protected]}}
+
+The resource map containing the base Resource class 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Resource\+Manager.\+h\end{DoxyCompactItemize}

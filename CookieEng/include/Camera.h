@@ -46,7 +46,7 @@ namespace Object
 		*/
 		inline void setFOV(const float _fov) { m_fov = _fov; cleanProjectionMatrix(); }
 		/** @brief Sets the Aspect Ratio ( width / height )
-		*	@param _fov The desired Aspect Ratio
+		*	@param _aspect The desired Aspect Ratio
 		*
 		*	Sets the Aspect Ratio and cleans the projection matrix
 		*/

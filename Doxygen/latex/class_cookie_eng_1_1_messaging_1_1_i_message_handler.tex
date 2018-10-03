@@ -1,0 +1,52 @@
+\hypertarget{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{}\section{Cookie\+Eng\+:\+:Messaging\+:\+:I\+Message\+Handler Class Reference}
+\label{class_cookie_eng_1_1_messaging_1_1_i_message_handler}\index{Cookie\+Eng\+::\+Messaging\+::\+I\+Message\+Handler@{Cookie\+Eng\+::\+Messaging\+::\+I\+Message\+Handler}}
+
+
+The base class for engine objects that require the ability to receive messages.  
+
+
+
+
+{\ttfamily \#include $<$I\+Message\+Handler.\+h$>$}
+
+
+
+Inherited by \hyperlink{class_cookie_eng_1_1_core_1_1_i_game_object}{Cookie\+Eng\+::\+Core\+::\+I\+Game\+Object}, and \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler_a4da863b449970f8195d3c60c83c6d183}{handle\+Message} (const \hyperlink{class_cookie_eng_1_1_messaging_1_1_message}{Message} \&\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em Asynchronous loading of text files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The base class for engine objects that require the ability to receive messages. 
+
+This class is inherited from to allow overloading of the handle\+Message method. This allows objects to receive messages from the Message\+Queue or from other objects directly. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_messaging_1_1_i_message_handler_a4da863b449970f8195d3c60c83c6d183}\label{class_cookie_eng_1_1_messaging_1_1_i_message_handler_a4da863b449970f8195d3c60c83c6d183}} 
+\index{Cookie\+Eng\+::\+Messaging\+::\+I\+Message\+Handler@{Cookie\+Eng\+::\+Messaging\+::\+I\+Message\+Handler}!handle\+Message@{handle\+Message}}
+\index{handle\+Message@{handle\+Message}!Cookie\+Eng\+::\+Messaging\+::\+I\+Message\+Handler@{Cookie\+Eng\+::\+Messaging\+::\+I\+Message\+Handler}}
+\subsubsection{\texorpdfstring{handle\+Message()}{handleMessage()}}
+{\footnotesize\ttfamily virtual void Cookie\+Eng\+::\+Messaging\+::\+I\+Message\+Handler\+::handle\+Message (\begin{DoxyParamCaption}\item[{const \hyperlink{class_cookie_eng_1_1_messaging_1_1_message}{Message} \&}]{\+\_\+msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Asynchronous loading of text files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+msg} & The message to be sent\\
+\hline
+\end{DoxyParams}
+The method to be overloaded by the derived class for handling the received message. 
+
+Reimplemented in \hyperlink{class_cookie_eng_1_1_core_1_1_i_game_object_a84648d30ac6fc65183a6f6f49f939eb2}{Cookie\+Eng\+::\+Core\+::\+I\+Game\+Object}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/I\+Message\+Handler.\+h\end{DoxyCompactItemize}

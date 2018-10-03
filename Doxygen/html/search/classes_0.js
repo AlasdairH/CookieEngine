@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['filemanager',['FileManager',['../class_cookie_eng_1_1_services_1_1_file_manager.html',1,'CookieEng::Services']]]
+  ['camera',['Camera',['../class_cookie_eng_1_1_object_1_1_camera.html',1,'CookieEng::Object']]],
+  ['component',['Component',['../class_cookie_eng_1_1_components_1_1_component.html',1,'CookieEng::Components']]]
 ];

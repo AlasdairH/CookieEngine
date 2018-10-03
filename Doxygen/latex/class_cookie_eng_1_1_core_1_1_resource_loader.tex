@@ -1,0 +1,83 @@
+\hypertarget{class_cookie_eng_1_1_core_1_1_resource_loader}{}\section{Cookie\+Eng\+:\+:Core\+:\+:Resource\+Loader Class Reference}
+\label{class_cookie_eng_1_1_core_1_1_resource_loader}\index{Cookie\+Eng\+::\+Core\+::\+Resource\+Loader@{Cookie\+Eng\+::\+Core\+::\+Resource\+Loader}}
+
+
+Loads a list of resources from a .lvl file.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Loader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_cookie_eng_1_1_core_1_1_resource_loader_aaa1dfd99e22dd76e5c53783afc9a0b0f}{from\+File} (const std\+::string \+\_\+filepath)
+\begin{DoxyCompactList}\small\item\em Loads a .lvl file for resource loading. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_core_1_1_resource_loader_a60341b1bdc7a5a49905cbdca4697ca38}\label{class_cookie_eng_1_1_core_1_1_resource_loader_a60341b1bdc7a5a49905cbdca4697ca38}} 
+{\bfseries Resource\+Loader} (\hyperlink{class_cookie_eng_1_1_core_1_1_resource_loader}{Resource\+Loader} const \&)=delete
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_core_1_1_resource_loader_a7e23879937a6f5f750651d4cf227a436}\label{class_cookie_eng_1_1_core_1_1_resource_loader_a7e23879937a6f5f750651d4cf227a436}} 
+void {\bfseries operator=} (\hyperlink{class_cookie_eng_1_1_core_1_1_resource_loader}{Resource\+Loader} const \&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_cookie_eng_1_1_core_1_1_resource_loader}{Resource\+Loader} \& \hyperlink{class_cookie_eng_1_1_core_1_1_resource_loader_a6830c862ac1d34c4a4f9c9e4299003a8}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Gets the static instance of the \hyperlink{class_cookie_eng_1_1_core_1_1_resource_loader}{Resource\+Loader}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_core_1_1_resource_loader_aebcd3776b276c8af971f3c338ca13870}{Resource\+Loader} ()
+\begin{DoxyCompactList}\small\item\em Resource\+Manager Ctor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Loads a list of resources from a .lvl file. 
+
+Takes a .lvl file and parses it for the loading of resources to the Resource\+Manager singleton. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_core_1_1_resource_loader_aebcd3776b276c8af971f3c338ca13870}\label{class_cookie_eng_1_1_core_1_1_resource_loader_aebcd3776b276c8af971f3c338ca13870}} 
+\index{Cookie\+Eng\+::\+Core\+::\+Resource\+Loader@{Cookie\+Eng\+::\+Core\+::\+Resource\+Loader}!Resource\+Loader@{Resource\+Loader}}
+\index{Resource\+Loader@{Resource\+Loader}!Cookie\+Eng\+::\+Core\+::\+Resource\+Loader@{Cookie\+Eng\+::\+Core\+::\+Resource\+Loader}}
+\subsubsection{\texorpdfstring{Resource\+Loader()}{ResourceLoader()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Core\+::\+Resource\+Loader\+::\+Resource\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Resource\+Manager Ctor. 
+
+This is called on the first time the Resource\+Manager instance is grabbed. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_core_1_1_resource_loader_aaa1dfd99e22dd76e5c53783afc9a0b0f}\label{class_cookie_eng_1_1_core_1_1_resource_loader_aaa1dfd99e22dd76e5c53783afc9a0b0f}} 
+\index{Cookie\+Eng\+::\+Core\+::\+Resource\+Loader@{Cookie\+Eng\+::\+Core\+::\+Resource\+Loader}!from\+File@{from\+File}}
+\index{from\+File@{from\+File}!Cookie\+Eng\+::\+Core\+::\+Resource\+Loader@{Cookie\+Eng\+::\+Core\+::\+Resource\+Loader}}
+\subsubsection{\texorpdfstring{from\+File()}{fromFile()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Core\+::\+Resource\+Loader\+::from\+File (\begin{DoxyParamCaption}\item[{const std\+::string}]{\+\_\+filepath }\end{DoxyParamCaption})}
+
+
+
+Loads a .lvl file for resource loading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+filepath} & The filepath to load from\\
+\hline
+\end{DoxyParams}
+This loads a file (.lvl) to get the load instructions from \mbox{\Hypertarget{class_cookie_eng_1_1_core_1_1_resource_loader_a6830c862ac1d34c4a4f9c9e4299003a8}\label{class_cookie_eng_1_1_core_1_1_resource_loader_a6830c862ac1d34c4a4f9c9e4299003a8}} 
+\index{Cookie\+Eng\+::\+Core\+::\+Resource\+Loader@{Cookie\+Eng\+::\+Core\+::\+Resource\+Loader}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Cookie\+Eng\+::\+Core\+::\+Resource\+Loader@{Cookie\+Eng\+::\+Core\+::\+Resource\+Loader}}
+\subsubsection{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily static \hyperlink{class_cookie_eng_1_1_core_1_1_resource_loader}{Resource\+Loader}\& Cookie\+Eng\+::\+Core\+::\+Resource\+Loader\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets the static instance of the \hyperlink{class_cookie_eng_1_1_core_1_1_resource_loader}{Resource\+Loader}. 
+
+Gets the static instance of the \hyperlink{class_cookie_eng_1_1_core_1_1_resource_loader}{Resource\+Loader}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Resource\+Loader.\+h\end{DoxyCompactItemize}

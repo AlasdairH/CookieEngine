@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -31,7 +24,6 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cookie Engine
    </div>
-   <div id="projectbrief">An engine designed for the Bournemouth University Games Programming Level 6 assignment.</div>
   </td>
  </tr>
  </tbody>
@@ -52,20 +44,6 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('functions_vars.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,24 +59,137 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </div>
 
 <div class="contents">
-&#160;<ul>
+&#160;
+
+<h3><a id="index_c"></a>- c -</h3><ul>
 <li>count
 : <a class="el" href="struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element.html#a5c5d5a5861ed76486f0ea36e8db6ed4c">CookieEng::Graphics::VertexBufferElement</a>
+</li>
+</ul>
+
+
+<h3><a id="index_i"></a>- i -</h3><ul>
+<li>indices
+: <a class="el" href="struct_cookie_eng_1_1_resources_1_1_mesh.html#a78ad4658bc848293472999b4708b85ab">CookieEng::Resources::Mesh</a>
+</li>
+</ul>
+
+
+<h3><a id="index_l"></a>- l -</h3><ul>
+<li>layout
+: <a class="el" href="struct_cookie_eng_1_1_resources_1_1_mesh.html#a7d60f959cc5a9cadbc59299e207032f2">CookieEng::Resources::Mesh</a>
+</li>
+</ul>
+
+
+<h3><a id="index_m"></a>- m -</h3><ul>
+<li>m_arrayBuffer
+: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html#aeeda746eb63aecba700a50a92efd37ef">CookieEng::Graphics::FrameBuffer</a>
+</li>
+<li>m_aspect
+: <a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a86c6f04a4f39bfa931493b1f6b9c013c">CookieEng::Object::Camera</a>
+</li>
+<li>m_BPP
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_texture.html#ac873fd6475f9059603f79e389089ad48">CookieEng::Resources::Texture</a>
+</li>
+<li>m_count
+: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a280a08a319717cf425435efd9b912ef3">CookieEng::Graphics::VertexBuffer</a>
+</li>
+<li>m_depthRenderBufferID
+: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html#a2b5c44481b74bc7f82a12b0977c9b356">CookieEng::Graphics::FrameBuffer</a>
+</li>
+<li>m_diffuseColour
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html#abbf6212e6e8c5e341f20628cd2c3aea2">CookieEng::Resources::Material</a>
 </li>
 <li>m_elements
 : <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout.html#a7986bf1ce59d1ffa1dc31613014aa2e7">CookieEng::Graphics::VertexBufferLayout</a>
 </li>
+<li>m_filepath
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_resource.html#aa7b58e5677b621033ac46b8577b8f48e">CookieEng::Resources::Resource</a>
+, <a class="el" href="class_cookie_eng_1_1_resources_1_1_texture.html#ae67553523fd6d4c29ec23ef180d18bd8">CookieEng::Resources::Texture</a>
+</li>
+<li>m_fov
+: <a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a8ec41f98d646a5c9dd733157ee41f435">CookieEng::Object::Camera</a>
+</li>
+<li>m_frameBuffer
+: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#a64f992d6d2476fe2ea641f31a46f006e">CookieEng::Graphics::Renderer</a>
+</li>
+<li>m_frameBufferID
+: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html#a64227f6632d34e67d3f5d4b4f7e3efe9">CookieEng::Graphics::FrameBuffer</a>
+</li>
+<li>m_height
+: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html#abdbb577ba114e681f7536d2927f46a3b">CookieEng::Graphics::FrameBuffer</a>
+, <a class="el" href="class_cookie_eng_1_1_window.html#a08c89037c6226ccc826da3c06092dc18">CookieEng::Window</a>
+</li>
+<li>m_isLoaded
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_resource.html#a96c5a11b55f0e497ea0b38e2a1dbf175">CookieEng::Resources::Resource</a>
+</li>
+<li>m_localBuffer
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_texture.html#ab52f89f4a8a5dc91e2581e53857036bf">CookieEng::Resources::Texture</a>
+</li>
+<li>m_messageQueue
+: <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html#a78777e2abfdd974561b81a3c06d185bf">CookieEng::Services::MessageQueue</a>
+</li>
+<li>m_modelMatrix
+: <a class="el" href="class_cookie_eng_1_1_attribute_1_1_transform.html#a9db58c0810064ed6a5976e5fc6089608">CookieEng::Attribute::Transform</a>
+</li>
+<li>m_modelMatrixNS
+: <a class="el" href="class_cookie_eng_1_1_attribute_1_1_transform.html#a51ac04f4d2b5cf7f229f98a26aff1089">CookieEng::Attribute::Transform</a>
+</li>
+<li>m_name
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_resource.html#ae00a6a02ffb92b14dd72801c5df4d98f">CookieEng::Resources::Resource</a>
+</li>
+<li>m_obs_MSG_KEY_DOWN
+: <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html#acff4df9b3d2164173c1aad88fd894c87">CookieEng::Services::MessageQueue</a>
+</li>
+<li>m_obs_MSG_KEY_UP
+: <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html#adadeff05bbf5d9260948094904a9b611">CookieEng::Services::MessageQueue</a>
+</li>
+<li>m_obs_MSG_MOUSE
+: <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html#a0fe2077166687dff340472158b85af06">CookieEng::Services::MessageQueue</a>
+</li>
+<li>m_obs_MSG_UNKNOWN
+: <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html#a377d77776078730deac58602ab35bf6c">CookieEng::Services::MessageQueue</a>
+</li>
 <li>m_openGLContext
 : <a class="el" href="class_cookie_eng_1_1_window.html#aa4fb697e5f3fb9890da293c6c19d2db4">CookieEng::Window</a>
 </li>
+<li>m_position
+: <a class="el" href="class_cookie_eng_1_1_attribute_1_1_transform.html#af0ca3482e5be36591a15c32ec782e2e6">CookieEng::Attribute::Transform</a>
+</li>
 <li>m_programID
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_program.html#ac07277e3a97ab28e17f83e04920374a7">CookieEng::Graphics::Program</a>
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_shader_program.html#a78e4cd26f128e78c0949476a79ff1c45">CookieEng::Resources::ShaderProgram</a>
+</li>
+<li>m_projectionMatrix
+: <a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a6a5152fd8fbd92c4cbcc73d14511e584">CookieEng::Object::Camera</a>
 </li>
 <li>m_renderer
 : <a class="el" href="class_cookie_eng_1_1_window.html#a9d6af268af7ac8c9dc6ce368d3d34e39">CookieEng::Window</a>
 </li>
+<li>m_resourceID
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_resource.html#a03ca114563713cc8e9965e71fa895da3">CookieEng::Resources::Resource</a>
+</li>
+<li>m_resources
+: <a class="el" href="class_cookie_eng_1_1_res_mgmt_1_1_resource_manager.html#a0d7fb8ad7d37c75d3d364e4382467b2f">CookieEng::ResMgmt::ResourceManager</a>
+</li>
+<li>m_resourceType
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_resource.html#a3740fe0571f4d65ddf71c36df0d8490c">CookieEng::Resources::Resource</a>
+</li>
+<li>m_rotation
+: <a class="el" href="class_cookie_eng_1_1_attribute_1_1_transform.html#af77f0d8246cb5983ef8058f7bb3d3f42">CookieEng::Attribute::Transform</a>
+</li>
+<li>m_rotationMatrix
+: <a class="el" href="class_cookie_eng_1_1_attribute_1_1_transform.html#a2e1b75c0a191b33a81582a6a3fb2ff35">CookieEng::Attribute::Transform</a>
+</li>
+<li>m_scaleMatrix
+: <a class="el" href="class_cookie_eng_1_1_attribute_1_1_transform.html#a3eff6904a194b9b1a0cebe23cf45d98a">CookieEng::Attribute::Transform</a>
+</li>
 <li>m_shaderID
 : <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#a3c2b2bf0f97b9367c3871de99378bbbf">CookieEng::Graphics::Shader</a>
+</li>
+<li>m_shaderProgram
+: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html#a0f2e548b0dd918b358f1ba42308d275e">CookieEng::Graphics::FrameBuffer</a>
+, <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html#acb45c40912ababa7776c666af13b1f3f">CookieEng::Resources::Material</a>
 </li>
 <li>m_shaderType
 : <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#a50b512033ec7bd695dcd4daa2d971c22">CookieEng::Graphics::Shader</a>
@@ -112,12 +203,31 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_svsInitialiser
 : <a class="el" href="class_cookie_eng_1_1_services_1_1_service_container.html#ae775cf624dc67f6f22e33c2437a2356e">CookieEng::Services::ServiceContainer</a>
 </li>
+<li>m_svsMessageQueue
+: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_container.html#a5c4f37d595fdaeb210fba253a9dbc101">CookieEng::Services::ServiceContainer</a>
+</li>
+<li>m_textureDiffuse
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html#adf7fcbb59dcfbad47d48052522414791">CookieEng::Resources::Material</a>
+</li>
+<li>m_textureID
+: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html#a609afe09f88a1c9a928813d8b89c27cd">CookieEng::Graphics::FrameBuffer</a>
+, <a class="el" href="class_cookie_eng_1_1_resources_1_1_texture.html#af0b6161b941846749407ba504e68ef5a">CookieEng::Resources::Texture</a>
+</li>
+<li>m_translationMatrix
+: <a class="el" href="class_cookie_eng_1_1_attribute_1_1_transform.html#afcc22a217351ce018b14d4216012c3a6">CookieEng::Attribute::Transform</a>
+</li>
+<li>m_uniformLocationCache
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_shader_program.html#aba82e0d018c8086308c0cda41e268735">CookieEng::Resources::ShaderProgram</a>
+</li>
 <li>m_verified
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_program.html#aadb91d13a8c12e4633985e7ff912528b">CookieEng::Graphics::Program</a>
-, <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#acfa364395f90fdea34e5365221b3b564">CookieEng::Graphics::Shader</a>
+: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#acfa364395f90fdea34e5365221b3b564">CookieEng::Graphics::Shader</a>
+, <a class="el" href="class_cookie_eng_1_1_resources_1_1_shader_program.html#a826816da20d45149ac950ed64daeda50">CookieEng::Resources::ShaderProgram</a>
 </li>
 <li>m_vertexArrayID
 : <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html#ad4ee57cc45e85deb47a9f2e6a91211a9">CookieEng::Graphics::VertexArray</a>
+</li>
+<li>m_vertexBuffer
+: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html#aa24abca002f6a2c2bdc97e71cf0e737f">CookieEng::Graphics::FrameBuffer</a>
 </li>
 <li>m_vertexBufferID
 : <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#af4c00fbd9352dd8a0b5952c007037e2e">CookieEng::Graphics::VertexBuffer</a>
@@ -125,12 +235,34 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_vertexBufferType
 : <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a37d75d306f50db1b63c22b51912402cc">CookieEng::Graphics::VertexBuffer</a>
 </li>
+<li>m_width
+: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html#ac91635b3617b4d7c8bef5a24eafdd7ae">CookieEng::Graphics::FrameBuffer</a>
+, <a class="el" href="class_cookie_eng_1_1_window.html#a82302880d6f0fa6771a38cae96c86644">CookieEng::Window</a>
+</li>
 <li>m_window
 : <a class="el" href="class_cookie_eng_1_1_window.html#a34a72976d2a24ceee23b88e3751a76bd">CookieEng::Window</a>
+</li>
+</ul>
+
+
+<h3><a id="index_n"></a>- n -</h3><ul>
+<li>normal
+: <a class="el" href="struct_cookie_eng_1_1_data_1_1_vertex.html#a8bc3a87d6213bba88c6f095b149aba8a">CookieEng::Data::Vertex</a>
 </li>
 <li>normalised
 : <a class="el" href="struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element.html#a1a50c45bd6f7e11f158b142ec20552ba">CookieEng::Graphics::VertexBufferElement</a>
 </li>
+</ul>
+
+
+<h3><a id="index_p"></a>- p -</h3><ul>
+<li>position
+: <a class="el" href="struct_cookie_eng_1_1_data_1_1_vertex.html#aa199133d6ee0571a67dfdcccfb59ffeb">CookieEng::Data::Vertex</a>
+</li>
+</ul>
+
+
+<h3><a id="index_s"></a>- s -</h3><ul>
 <li>s_fileManager
 : <a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a98841ef7f94fae563997ce5bc2d6e507">CookieEng::Services::ServiceLocator</a>
 </li>
@@ -143,19 +275,37 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>s_isSDLInitialised
 : <a class="el" href="class_cookie_eng_1_1_services_1_1_initialiser.html#a5bbc123e5e61c2fd3d1f088c6d8ac147">CookieEng::Services::Initialiser</a>
 </li>
+<li>s_messageQueue
+: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a69ae2c1a6385322f36009b87c90cc0de">CookieEng::Services::ServiceLocator</a>
+</li>
+</ul>
+
+
+<h3><a id="index_t"></a>- t -</h3><ul>
+<li>textureCoordinate
+: <a class="el" href="struct_cookie_eng_1_1_data_1_1_vertex.html#aed17d27b7219642e7937808547f18adf">CookieEng::Data::Vertex</a>
+</li>
+<li>transform
+: <a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#ae991b0b27c6be58d11f44dbfd3092956">CookieEng::Object::Camera</a>
+</li>
 <li>type
 : <a class="el" href="struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element.html#abba091f340c618809735781f80ccee6b">CookieEng::Graphics::VertexBufferElement</a>
+, <a class="el" href="class_cookie_eng_1_1_messaging_1_1_message.html#a84ceed50d5b23841c9ab49aa623207c1">CookieEng::Messaging::Message</a>
+</li>
+</ul>
+
+
+<h3><a id="index_v"></a>- v -</h3><ul>
+<li>vertices
+: <a class="el" href="struct_cookie_eng_1_1_resources_1_1_mesh.html#aa2d9365b3bb9855de51053a1bbde84a1">CookieEng::Resources::Mesh</a>
 </li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

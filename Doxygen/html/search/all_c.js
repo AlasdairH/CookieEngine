@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unbind',['unBind',['../class_cookie_eng_1_1_graphics_1_1_vertex_array.html#acd3511d77ec22d63984e365e05ef9bcb',1,'CookieEng::Graphics::VertexArray::unBind()'],['../class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a8fbc3f39762c511438bc13e8c405926c',1,'CookieEng::Graphics::VertexBuffer::unBind()']]]
+  ['objvertex',['ObjVertex',['../struct_cookie_eng_1_1_services_1_1_obj_vertex.html',1,'CookieEng::Services']]],
+  ['operator_3d_3d',['operator==',['../struct_cookie_eng_1_1_data_1_1_vertex.html#a59217b6844d411d5d0aeebc310e9e3fa',1,'CookieEng::Data::Vertex']]]
 ];

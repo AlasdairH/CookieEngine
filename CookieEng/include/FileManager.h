@@ -17,14 +17,6 @@ namespace CookieEng
 {
 namespace Services
 {
-	// TODO: Create ObjLoader Class
-	struct ObjVertex
-	{
-		int f;
-		int vt;
-		int vn;
-	};
-
 	/*! @class FileManager
 	*	@brief A Manager Class that handles the loading of files either synchronously or asynchronously.
 	*

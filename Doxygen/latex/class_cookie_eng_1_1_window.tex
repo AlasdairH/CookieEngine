@@ -1,8 +1,8 @@
-\section{Cookie\+Eng\+:\+:Window Class Reference}
+\hypertarget{class_cookie_eng_1_1_window}{}\section{Cookie\+Eng\+:\+:Window Class Reference}
 \label{class_cookie_eng_1_1_window}\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
 
 
-An abstraction of the S\+DL \doxyref{Window}{p.}{class_cookie_eng_1_1_window} class which can be used to create a window for Open\+GL rendering.  
+An abstraction of the S\+DL \hyperlink{class_cookie_eng_1_1_window}{Window} class which can be used to create a window for Open\+GL rendering.  
 
 
 
@@ -12,94 +12,159 @@ An abstraction of the S\+DL \doxyref{Window}{p.}{class_cookie_eng_1_1_window} cl
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Window} (const std\+::string \+\_\+title=\char`\"{}Default\char`\"{}, const int \+\_\+width=1280, const int \+\_\+height=720)
-\begin{DoxyCompactList}\small\item\em The \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Constructor. \end{DoxyCompactList}\item 
-\textbf{ $\sim$\+Window} ()
-\begin{DoxyCompactList}\small\item\em The \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Destructor. \end{DoxyCompactList}\item 
-void \textbf{ swap\+Buffer} ()
-\begin{DoxyCompactList}\small\item\em \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Buffer Swap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_cookie_eng_1_1_window_ada0459ccc0ba0254bb9517cce1cf94bb}{Window} (const std\+::string \+\_\+title=\char`\"{}Default\char`\"{}, const int \+\_\+width=1280, const int \+\_\+height=720)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_cookie_eng_1_1_window}{Window} Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_window_af81149525fe716874b5637cbef63c78f}{$\sim$\+Window} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_cookie_eng_1_1_window}{Window} Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_window_aebe5875df57a0ab57f3cc9da256dd439}{swap\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_window}{Window} Buffer Swap. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_window_a6fccbbff3e4efa69e6b94a57f7f99b31}{resize} (int \+\_\+width, int \+\_\+height)
+\begin{DoxyCompactList}\small\item\em Sets a new window size. \end{DoxyCompactList}\item 
+int \hyperlink{class_cookie_eng_1_1_window_a41425d62b39dea360e3618425cbb12f0}{get\+Width} ()
+\begin{DoxyCompactList}\small\item\em Get the window width. \end{DoxyCompactList}\item 
+int \hyperlink{class_cookie_eng_1_1_window_a5c4c31ce29ff60da053ea44138ba2882}{get\+Height} ()
+\begin{DoxyCompactList}\small\item\em Get the window Height. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-S\+D\+L\+\_\+\+Window $\ast$ \textbf{ m\+\_\+window}
+S\+D\+L\+\_\+\+Window $\ast$ \hyperlink{class_cookie_eng_1_1_window_a34a72976d2a24ceee23b88e3751a76bd}{m\+\_\+window}
 \item 
-S\+D\+L\+\_\+\+Renderer $\ast$ \textbf{ m\+\_\+renderer}
+S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{class_cookie_eng_1_1_window_a9d6af268af7ac8c9dc6ce368d3d34e39}{m\+\_\+renderer}
 \item 
-S\+D\+L\+\_\+\+G\+L\+Context \textbf{ m\+\_\+open\+G\+L\+Context}
+S\+D\+L\+\_\+\+G\+L\+Context \hyperlink{class_cookie_eng_1_1_window_aa4fb697e5f3fb9890da293c6c19d2db4}{m\+\_\+open\+G\+L\+Context}
+\item 
+int \hyperlink{class_cookie_eng_1_1_window_a82302880d6f0fa6771a38cae96c86644}{m\+\_\+width}
+\item 
+int \hyperlink{class_cookie_eng_1_1_window_a08c89037c6226ccc826da3c06092dc18}{m\+\_\+height}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-An abstraction of the S\+DL \doxyref{Window}{p.}{class_cookie_eng_1_1_window} class which can be used to create a window for Open\+GL rendering. 
+An abstraction of the S\+DL \hyperlink{class_cookie_eng_1_1_window}{Window} class which can be used to create a window for Open\+GL rendering. 
 
-This class uses the S\+DL \doxyref{Window}{p.}{class_cookie_eng_1_1_window} class to create a window in the constructor. By use of default parameters, a default window can be created by passing no arguments to the constructor or various settings can be applied. An Open\+GL Context is created with the window for rendering. 
+This class uses the S\+DL \hyperlink{class_cookie_eng_1_1_window}{Window} class to create a window in the constructor. By use of default parameters, a default window can be created by passing no arguments to the constructor or various settings can be applied. An Open\+GL Context is created with the window for rendering. 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\label{class_cookie_eng_1_1_window_ada0459ccc0ba0254bb9517cce1cf94bb}} 
+\mbox{\Hypertarget{class_cookie_eng_1_1_window_ada0459ccc0ba0254bb9517cce1cf94bb}\label{class_cookie_eng_1_1_window_ada0459ccc0ba0254bb9517cce1cf94bb}} 
 \index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!Window@{Window}}
 \index{Window@{Window}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
-\subsubsection{Window()}
+\subsubsection{\texorpdfstring{Window()}{Window()}}
 {\footnotesize\ttfamily Cookie\+Eng\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const std\+::string}]{\+\_\+title = {\ttfamily \char`\"{}Default\char`\"{}},  }\item[{const int}]{\+\_\+width = {\ttfamily 1280},  }\item[{const int}]{\+\_\+height = {\ttfamily 720} }\end{DoxyParamCaption})}
 
 
 
-The \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Constructor. 
+The \hyperlink{class_cookie_eng_1_1_window}{Window} Constructor. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \+\_\+title} & The \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Title that will be displayed in the OS \\
+{\em \+\_\+title} & The \hyperlink{class_cookie_eng_1_1_window}{Window} Title that will be displayed in the OS \\
 \hline
 {\em \+\_\+width} & The default width of the window \\
 \hline
 {\em \+\_\+height} & The default height of the window\\
 \hline
 \end{DoxyParams}
-The constructor takes default arguments for a standard window but title, width and height can be set by overwriting these provided values. The constructor creates an S\+DL \doxyref{Window}{p.}{class_cookie_eng_1_1_window}, S\+DL Renderer and an accompanying GL Context. \mbox{\label{class_cookie_eng_1_1_window_af81149525fe716874b5637cbef63c78f}} 
+The constructor takes default arguments for a standard window but title, width and height can be set by overwriting these provided values. The constructor creates an S\+DL \hyperlink{class_cookie_eng_1_1_window}{Window}, S\+DL Renderer and an accompanying GL Context. \mbox{\Hypertarget{class_cookie_eng_1_1_window_af81149525fe716874b5637cbef63c78f}\label{class_cookie_eng_1_1_window_af81149525fe716874b5637cbef63c78f}} 
 \index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!````~Window@{$\sim$\+Window}}
 \index{````~Window@{$\sim$\+Window}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
-\subsubsection{$\sim$\+Window()}
+\subsubsection{\texorpdfstring{$\sim$\+Window()}{~Window()}}
 {\footnotesize\ttfamily Cookie\+Eng\+::\+Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-The \doxyref{Window}{p.}{class_cookie_eng_1_1_window} Destructor. 
+The \hyperlink{class_cookie_eng_1_1_window}{Window} Destructor. 
 
-This Destructor simply destorys the S\+DL \doxyref{Window}{p.}{class_cookie_eng_1_1_window} and Renderer. 
+This Destructor simply destorys the S\+DL \hyperlink{class_cookie_eng_1_1_window}{Window} and Renderer. 
 
 \subsection{Member Function Documentation}
-\mbox{\label{class_cookie_eng_1_1_window_aebe5875df57a0ab57f3cc9da256dd439}} 
+\mbox{\Hypertarget{class_cookie_eng_1_1_window_a5c4c31ce29ff60da053ea44138ba2882}\label{class_cookie_eng_1_1_window_a5c4c31ce29ff60da053ea44138ba2882}} 
+\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Window\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the window Height. 
+
+\begin{DoxyReturn}{Returns}
+An integar containing the window height
+\end{DoxyReturn}
+Returns the window height. \mbox{\Hypertarget{class_cookie_eng_1_1_window_a41425d62b39dea360e3618425cbb12f0}\label{class_cookie_eng_1_1_window_a41425d62b39dea360e3618425cbb12f0}} 
+\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Window\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the window width. 
+
+\begin{DoxyReturn}{Returns}
+An integar containing the window width
+\end{DoxyReturn}
+Returns the window width. \mbox{\Hypertarget{class_cookie_eng_1_1_window_a6fccbbff3e4efa69e6b94a57f7f99b31}\label{class_cookie_eng_1_1_window_a6fccbbff3e4efa69e6b94a57f7f99b31}} 
+\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!resize@{resize}}
+\index{resize@{resize}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Window\+::resize (\begin{DoxyParamCaption}\item[{int}]{\+\_\+width,  }\item[{int}]{\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Sets a new window size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+width} & The new width of the window \\
+\hline
+{\em \+\_\+height} & The new height of the window\\
+\hline
+\end{DoxyParams}
+Resizes the window and applies the info to Open\+GL \mbox{\Hypertarget{class_cookie_eng_1_1_window_aebe5875df57a0ab57f3cc9da256dd439}\label{class_cookie_eng_1_1_window_aebe5875df57a0ab57f3cc9da256dd439}} 
 \index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!swap\+Buffer@{swap\+Buffer}}
 \index{swap\+Buffer@{swap\+Buffer}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
-\subsubsection{swap\+Buffer()}
+\subsubsection{\texorpdfstring{swap\+Buffer()}{swapBuffer()}}
 {\footnotesize\ttfamily void Cookie\+Eng\+::\+Window\+::swap\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-\doxyref{Window}{p.}{class_cookie_eng_1_1_window} Buffer Swap. 
+\hyperlink{class_cookie_eng_1_1_window}{Window} Buffer Swap. 
 
 This method simply swaps the window buffer. Should be called per frame. 
 
 \subsection{Member Data Documentation}
-\mbox{\label{class_cookie_eng_1_1_window_aa4fb697e5f3fb9890da293c6c19d2db4}} 
+\mbox{\Hypertarget{class_cookie_eng_1_1_window_a08c89037c6226ccc826da3c06092dc18}\label{class_cookie_eng_1_1_window_a08c89037c6226ccc826da3c06092dc18}} 
+\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!m\+\_\+height@{m\+\_\+height}}
+\index{m\+\_\+height@{m\+\_\+height}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+height}{m\_height}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Window\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [protected]}}
+
+The \hyperlink{class_cookie_eng_1_1_window}{Window} Width \mbox{\Hypertarget{class_cookie_eng_1_1_window_aa4fb697e5f3fb9890da293c6c19d2db4}\label{class_cookie_eng_1_1_window_aa4fb697e5f3fb9890da293c6c19d2db4}} 
 \index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!m\+\_\+open\+G\+L\+Context@{m\+\_\+open\+G\+L\+Context}}
 \index{m\+\_\+open\+G\+L\+Context@{m\+\_\+open\+G\+L\+Context}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
-\subsubsection{m\+\_\+open\+G\+L\+Context}
+\subsubsection{\texorpdfstring{m\+\_\+open\+G\+L\+Context}{m\_openGLContext}}
 {\footnotesize\ttfamily S\+D\+L\+\_\+\+G\+L\+Context Cookie\+Eng\+::\+Window\+::m\+\_\+open\+G\+L\+Context\hspace{0.3cm}{\ttfamily [protected]}}
 
-The GL Context for Open\+GL Rendering. \mbox{\label{class_cookie_eng_1_1_window_a9d6af268af7ac8c9dc6ce368d3d34e39}} 
+The GL Context for Open\+GL Rendering. \mbox{\Hypertarget{class_cookie_eng_1_1_window_a9d6af268af7ac8c9dc6ce368d3d34e39}\label{class_cookie_eng_1_1_window_a9d6af268af7ac8c9dc6ce368d3d34e39}} 
 \index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!m\+\_\+renderer@{m\+\_\+renderer}}
 \index{m\+\_\+renderer@{m\+\_\+renderer}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
-\subsubsection{m\+\_\+renderer}
+\subsubsection{\texorpdfstring{m\+\_\+renderer}{m\_renderer}}
 {\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ Cookie\+Eng\+::\+Window\+::m\+\_\+renderer\hspace{0.3cm}{\ttfamily [protected]}}
 
-A pointer to the S\+D\+L\+\_\+\+Renderer. \mbox{\label{class_cookie_eng_1_1_window_a34a72976d2a24ceee23b88e3751a76bd}} 
+A pointer to the S\+D\+L\+\_\+\+Renderer. \mbox{\Hypertarget{class_cookie_eng_1_1_window_a82302880d6f0fa6771a38cae96c86644}\label{class_cookie_eng_1_1_window_a82302880d6f0fa6771a38cae96c86644}} 
+\index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!m\+\_\+width@{m\+\_\+width}}
+\index{m\+\_\+width@{m\+\_\+width}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+width}{m\_width}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Window\+::m\+\_\+width\hspace{0.3cm}{\ttfamily [protected]}}
+
+The \hyperlink{class_cookie_eng_1_1_window}{Window} Width \mbox{\Hypertarget{class_cookie_eng_1_1_window_a34a72976d2a24ceee23b88e3751a76bd}\label{class_cookie_eng_1_1_window_a34a72976d2a24ceee23b88e3751a76bd}} 
 \index{Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}!m\+\_\+window@{m\+\_\+window}}
 \index{m\+\_\+window@{m\+\_\+window}!Cookie\+Eng\+::\+Window@{Cookie\+Eng\+::\+Window}}
-\subsubsection{m\+\_\+window}
+\subsubsection{\texorpdfstring{m\+\_\+window}{m\_window}}
 {\footnotesize\ttfamily S\+D\+L\+\_\+\+Window$\ast$ Cookie\+Eng\+::\+Window\+::m\+\_\+window\hspace{0.3cm}{\ttfamily [protected]}}
 
 A pointer to the S\+D\+L\+\_\+\+Window. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/Window.\+h\end{DoxyCompactItemize}
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Window.\+h\end{DoxyCompactItemize}

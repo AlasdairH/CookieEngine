@@ -7,6 +7,8 @@ namespace Resources
 	
 	void Mesh::load(const std::string & _name, const std::string & _filepath)
 	{
+		vertices.clear();
+		indices.clear();
 		std::string objFile = Services::ServiceLocator::getFileManager().loadTextFile(_filepath);
 
 		unsigned int cursor = 0;
@@ -14,8 +16,6 @@ namespace Resources
 		std::unordered_map<int, glm::vec3> verticesMap;
 		std::unordered_map<int, glm::vec3> normals;
 		std::unordered_map<int, glm::vec2> textureCoords;
-
-		//std::vector
 
 		for (unsigned int i = 0; i < objFile.size(); ++i)
 		{

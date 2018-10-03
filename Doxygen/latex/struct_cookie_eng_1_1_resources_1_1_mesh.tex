@@ -1,0 +1,85 @@
+\hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh}{}\section{Cookie\+Eng\+:\+:Resources\+:\+:Mesh Class Reference}
+\label{struct_cookie_eng_1_1_resources_1_1_mesh}\index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
+
+
+Data required for a raw \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Mesh}.  
+
+
+
+
+{\ttfamily \#include $<$Mesh.\+h$>$}
+
+
+
+Inherits \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Cookie\+Eng\+::\+Resources\+::\+Resource}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_ae31053c6edaf0e735d85350bfa6093fb}{load} (const std\+::string \&\+\_\+name, const std\+::string \&\+\_\+filepath) override
+\begin{DoxyCompactList}\small\item\em Loads the \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Mesh} from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{struct_cookie_eng_1_1_data_1_1_vertex}{Data\+::\+Vertex} $>$ \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_aa2d9365b3bb9855de51053a1bbde84a1}{vertices}
+\item 
+std\+::vector$<$ unsigned int $>$ \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_a78ad4658bc848293472999b4708b85ab}{indices}
+\item 
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout}{Graphics\+::\+Vertex\+Buffer\+Layout} \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_a7d60f959cc5a9cadbc59299e207032f2}{layout}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Data required for a raw \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Mesh}. 
+
+Contains the data required for a mesh that can be loaded into a Vertex\+Buffer. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_ae31053c6edaf0e735d85350bfa6093fb}\label{struct_cookie_eng_1_1_resources_1_1_mesh_ae31053c6edaf0e735d85350bfa6093fb}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!load@{load}}
+\index{load@{load}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Mesh\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const std\+::string \&}]{\+\_\+filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Loads the \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Mesh} from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name to assign the mesh \\
+\hline
+{\em \+\_\+filepath} & The filepath to load from\\
+\hline
+\end{DoxyParams}
+Overrides the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resource} load to allow loading from a .obj file 
+
+Reimplemented from \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a75648b8f2e442bebc90d6eb4ea3a2f6e}{Cookie\+Eng\+::\+Resources\+::\+Resource}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_a78ad4658bc848293472999b4708b85ab}\label{struct_cookie_eng_1_1_resources_1_1_mesh_a78ad4658bc848293472999b4708b85ab}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!indices@{indices}}
+\index{indices@{indices}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
+\subsubsection{\texorpdfstring{indices}{indices}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned int$>$ Cookie\+Eng\+::\+Resources\+::\+Mesh\+::indices}
+
+The indices for the index buffer that ties all the vertex data together \mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_a7d60f959cc5a9cadbc59299e207032f2}\label{struct_cookie_eng_1_1_resources_1_1_mesh_a7d60f959cc5a9cadbc59299e207032f2}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!layout@{layout}}
+\index{layout@{layout}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
+\subsubsection{\texorpdfstring{layout}{layout}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout}{Graphics\+::\+Vertex\+Buffer\+Layout} Cookie\+Eng\+::\+Resources\+::\+Mesh\+::layout}
+
+The layout of the vertices member \mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_aa2d9365b3bb9855de51053a1bbde84a1}\label{struct_cookie_eng_1_1_resources_1_1_mesh_aa2d9365b3bb9855de51053a1bbde84a1}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!vertices@{vertices}}
+\index{vertices@{vertices}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
+\subsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{struct_cookie_eng_1_1_data_1_1_vertex}{Data\+::\+Vertex}$>$ Cookie\+Eng\+::\+Resources\+::\+Mesh\+::vertices}
+
+A vector of vertices that stores all the positions, UV data, etc of each vertex 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Mesh.\+h\end{DoxyCompactItemize}

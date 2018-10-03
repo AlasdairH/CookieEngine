@@ -41,11 +41,21 @@ namespace ResMgmt
 			return instance;
 		}
 
+		/** @brief Loads a resource to the manager
+		*	@param T The type to load
+		*	@param _name The name to assign the loaded resource
+		*	@param _filepath The filepath to the resource file
+		*
+		*	Takes the template of the resource to load and checks it is first a derived class of Resource.
+		*	The method then loads the resource to the manager with the name and path specified.
+		*/
 		template <typename T>
 		void load(const std::string &_name, const std::string &_filepath)
 		{
+			// assert the resource is a derivative of Resource
 			static_assert(std::is_base_of<Resources::Resource, T>::value, "T must inherit from Resource");
 
+			// if the resource already exists
 			if(exists(_name))
 			{ 
 				LOG_ERROR("Unable to add resource " << _name << " to ResourceManager, it already exists");
@@ -58,12 +68,26 @@ namespace ResMgmt
 			m_resources[_name]->load(_name, _filepath);
 		}
 
+		/** @brief gets a shared pointer to the requested resource
+		*	@param T The type to get
+		*	@param _name The name of the resource
+		*	@return A shared pointer to the requested resource
+		*
+		*	Takes a resource type through a template and a name argument. The method then casts the resource from the map member to the desired
+		*	type and returns it as a shared pointer.
+		*/
 		template<typename T>
 		std::shared_ptr<T> get(std::string _name)
 		{ 
 			return std::dynamic_pointer_cast<T>(m_resources[_name]);
 		}
 
+		/** @brief Tests to see if the resource map contains a key
+		*	@param _name The key to test
+		*	@return True if it exists in the map, false otherwise
+		*
+		*	Attempts to find the given key in the map and returns the resulting boolean
+		*/
 		bool exists(const std::string &_name);
 		
 
@@ -77,9 +101,13 @@ namespace ResMgmt
 		*	This is called on the first time the ResourceManager instance is grabbed.
 		*/
 		ResourceManager();
+		/** @brief ResourceManager Dtor
+		*
+		*	Called on program close
+		*/
 		~ResourceManager();
 
-		std::unordered_map<std::string, std::shared_ptr<Resources::Resource>> m_resources;
+		std::unordered_map<std::string, std::shared_ptr<Resources::Resource>> m_resources;	/**< The resource map containing the base Resource class */
 	};
 }
 }

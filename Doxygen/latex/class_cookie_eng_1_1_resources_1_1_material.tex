@@ -1,0 +1,184 @@
+\hypertarget{class_cookie_eng_1_1_resources_1_1_material}{}\section{Cookie\+Eng\+:\+:Resources\+:\+:Material Class Reference}
+\label{class_cookie_eng_1_1_resources_1_1_material}\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+
+
+A material that can be used for rendering.  
+
+
+
+
+{\ttfamily \#include $<$Material.\+h$>$}
+
+
+
+Inherits \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Cookie\+Eng\+::\+Resources\+::\+Resource}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_resources_1_1_material_a20a77072223e5948a5842aa71cf04eff}{Material} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_resources_1_1_material_aa2fb7a1c6a22e6e3a4271ad4aca8f0a6}{$\sim$\+Material} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material} Dtor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_material_aeafea03fdfdaef5fb7be763e8948f416}{use} () const
+\begin{DoxyCompactList}\small\item\em Uses the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material} (Binds) \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_material_a7316b5a9dcc1b71b5090b5d54c7ac222}{un\+Use} () const
+\begin{DoxyCompactList}\small\item\em Stops Using the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material} (Unbinds) \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_material_a55455e741fb79ffd11be29967097709c}{set\+Shader} (const std\+::string \+\_\+res\+Mgr\+\_\+shader\+Name)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s Shader. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_material_a833ddee7037c0cef8c8c389e64f3d76b}{set\+Diffuse} (const std\+::string \+\_\+res\+Mgr\+\_\+texture\+Name)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s Diffuse Colour to a \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture}. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_material_abd2e0f6b5a0ea9987cc545859d8cc14e}{set\+Diffuse} (const glm\+::vec4 \&\+\_\+colour)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s Diffuse Colour to a solid colour. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_material_a68279187d2c08bd49a7ee1994c1f2c5d}{set\+M\+VP} (const glm\+::mat4 \&\+\_\+m, const glm\+::mat4 \&\+\_\+v, const glm\+::mat4 \&\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Sets the Materials M\+VP uniforms $\vert$ T\+O\+DO\+: Uniform Buffer Implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program}{Shader\+Program} $>$ \hyperlink{class_cookie_eng_1_1_resources_1_1_material_acb45c40912ababa7776c666af13b1f3f}{m\+\_\+shader\+Program}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture} $>$ \hyperlink{class_cookie_eng_1_1_resources_1_1_material_adf7fcbb59dcfbad47d48052522414791}{m\+\_\+texture\+Diffuse}
+\item 
+glm\+::vec4 \hyperlink{class_cookie_eng_1_1_resources_1_1_material_abbf6212e6e8c5e341f20628cd2c3aea2}{m\+\_\+diffuse\+Colour}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A material that can be used for rendering. 
+
+Abstracts a shader to allow for different materials to use the same shader. This class will hold (T\+O\+DO\+: Uniform Buffer) uniform settings that will be applied when the material us used. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_material_a20a77072223e5948a5842aa71cf04eff}\label{class_cookie_eng_1_1_resources_1_1_material_a20a77072223e5948a5842aa71cf04eff}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}!Material@{Material}}
+\index{Material@{Material}!Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+\subsubsection{\texorpdfstring{Material()}{Material()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Resources\+::\+Material\+::\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material} Ctor. 
+
+Does Nothing \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_material_aa2fb7a1c6a22e6e3a4271ad4aca8f0a6}\label{class_cookie_eng_1_1_resources_1_1_material_aa2fb7a1c6a22e6e3a4271ad4aca8f0a6}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}!````~Material@{$\sim$\+Material}}
+\index{````~Material@{$\sim$\+Material}!Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+\subsubsection{\texorpdfstring{$\sim$\+Material()}{~Material()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Resources\+::\+Material\+::$\sim$\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material} Dtor. 
+
+Does Nothing 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_material_a833ddee7037c0cef8c8c389e64f3d76b}\label{class_cookie_eng_1_1_resources_1_1_material_a833ddee7037c0cef8c8c389e64f3d76b}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}!set\+Diffuse@{set\+Diffuse}}
+\index{set\+Diffuse@{set\+Diffuse}!Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+\subsubsection{\texorpdfstring{set\+Diffuse()}{setDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Material\+::set\+Diffuse (\begin{DoxyParamCaption}\item[{const std\+::string}]{\+\_\+res\+Mgr\+\_\+texture\+Name }\end{DoxyParamCaption})}
+
+
+
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s Diffuse Colour to a \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+res\+Mgr\+\_\+texture\+Name} & The name (in the resource mananger) of the texture that is to be used\\
+\hline
+\end{DoxyParams}
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture} that will be used when rendering the diffuse of the object this \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material} is assigned to. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_material_abd2e0f6b5a0ea9987cc545859d8cc14e}\label{class_cookie_eng_1_1_resources_1_1_material_abd2e0f6b5a0ea9987cc545859d8cc14e}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}!set\+Diffuse@{set\+Diffuse}}
+\index{set\+Diffuse@{set\+Diffuse}!Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+\subsubsection{\texorpdfstring{set\+Diffuse()}{setDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Material\+::set\+Diffuse (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{\+\_\+colour }\end{DoxyParamCaption})}
+
+
+
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s Diffuse Colour to a solid colour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+colour} & The solid colour to use in normalised R\+G\+BA.\\
+\hline
+\end{DoxyParams}
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s Diffuse colour that will be used when rendering the diffuse of the object this \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material} is assigned to. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_material_a68279187d2c08bd49a7ee1994c1f2c5d}\label{class_cookie_eng_1_1_resources_1_1_material_a68279187d2c08bd49a7ee1994c1f2c5d}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}!set\+M\+VP@{set\+M\+VP}}
+\index{set\+M\+VP@{set\+M\+VP}!Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+\subsubsection{\texorpdfstring{set\+M\+V\+P()}{setMVP()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Material\+::set\+M\+VP (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{\+\_\+m,  }\item[{const glm\+::mat4 \&}]{\+\_\+v,  }\item[{const glm\+::mat4 \&}]{\+\_\+p }\end{DoxyParamCaption})}
+
+
+
+Sets the Materials M\+VP uniforms $\vert$ T\+O\+DO\+: Uniform Buffer Implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+m} & The model matrix \\
+\hline
+{\em \+\_\+v} & The view matrix \\
+\hline
+{\em \+\_\+p} & The projection matrix\\
+\hline
+\end{DoxyParams}
+Sets the M\+VP to be calculated in the shader. This is kept seperate because individual elements are required for lighting. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_material_a55455e741fb79ffd11be29967097709c}\label{class_cookie_eng_1_1_resources_1_1_material_a55455e741fb79ffd11be29967097709c}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}!set\+Shader@{set\+Shader}}
+\index{set\+Shader@{set\+Shader}!Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+\subsubsection{\texorpdfstring{set\+Shader()}{setShader()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Material\+::set\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string}]{\+\_\+res\+Mgr\+\_\+shader\+Name }\end{DoxyParamCaption})}
+
+
+
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s Shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+res\+Mgr\+\_\+shader\+Name} & The name (in the resource mananger) of the shader that is to be used\\
+\hline
+\end{DoxyParams}
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s shader that will be used when rendering. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_material_a7316b5a9dcc1b71b5090b5d54c7ac222}\label{class_cookie_eng_1_1_resources_1_1_material_a7316b5a9dcc1b71b5090b5d54c7ac222}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}!un\+Use@{un\+Use}}
+\index{un\+Use@{un\+Use}!Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+\subsubsection{\texorpdfstring{un\+Use()}{unUse()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Material\+::un\+Use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Stops Using the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material} (Unbinds) 
+
+Unbinds the shader and texture members. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_material_aeafea03fdfdaef5fb7be763e8948f416}\label{class_cookie_eng_1_1_resources_1_1_material_aeafea03fdfdaef5fb7be763e8948f416}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}!use@{use}}
+\index{use@{use}!Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+\subsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Material\+::use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Uses the \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material} (Binds) 
+
+Binds the shader and texture members. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_material_abbf6212e6e8c5e341f20628cd2c3aea2}\label{class_cookie_eng_1_1_resources_1_1_material_abbf6212e6e8c5e341f20628cd2c3aea2}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}!m\+\_\+diffuse\+Colour@{m\+\_\+diffuse\+Colour}}
+\index{m\+\_\+diffuse\+Colour@{m\+\_\+diffuse\+Colour}!Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+\subsubsection{\texorpdfstring{m\+\_\+diffuse\+Colour}{m\_diffuseColour}}
+{\footnotesize\ttfamily glm\+::vec4 Cookie\+Eng\+::\+Resources\+::\+Material\+::m\+\_\+diffuse\+Colour\hspace{0.3cm}{\ttfamily [protected]}}
+
+The \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s Diffuse Colour (if used) \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_material_acb45c40912ababa7776c666af13b1f3f}\label{class_cookie_eng_1_1_resources_1_1_material_acb45c40912ababa7776c666af13b1f3f}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}!m\+\_\+shader\+Program@{m\+\_\+shader\+Program}}
+\index{m\+\_\+shader\+Program@{m\+\_\+shader\+Program}!Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+\subsubsection{\texorpdfstring{m\+\_\+shader\+Program}{m\_shaderProgram}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program}{Shader\+Program}$>$ Cookie\+Eng\+::\+Resources\+::\+Material\+::m\+\_\+shader\+Program\hspace{0.3cm}{\ttfamily [protected]}}
+
+The \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s Shader \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_material_adf7fcbb59dcfbad47d48052522414791}\label{class_cookie_eng_1_1_resources_1_1_material_adf7fcbb59dcfbad47d48052522414791}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}!m\+\_\+texture\+Diffuse@{m\+\_\+texture\+Diffuse}}
+\index{m\+\_\+texture\+Diffuse@{m\+\_\+texture\+Diffuse}!Cookie\+Eng\+::\+Resources\+::\+Material@{Cookie\+Eng\+::\+Resources\+::\+Material}}
+\subsubsection{\texorpdfstring{m\+\_\+texture\+Diffuse}{m\_textureDiffuse}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture}$>$ Cookie\+Eng\+::\+Resources\+::\+Material\+::m\+\_\+texture\+Diffuse\hspace{0.3cm}{\ttfamily [protected]}}
+
+The \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Material}\textquotesingle{}s Diffuse \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture} (if used) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Material.\+h\end{DoxyCompactItemize}

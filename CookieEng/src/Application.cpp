@@ -141,6 +141,14 @@ int main()
 				{
 					shouldQuit = true;
 				}
+				if (incomingEvent.key.keysym.sym == SDLK_w)
+				{
+					testCamera.transform.translate(glm::vec3(0, 0, -1));
+				}
+				if (incomingEvent.key.keysym.sym == SDLK_s)
+				{
+					testCamera.transform.translate(glm::vec3(0, 0, 1));
+				}
 			}
 		}
 		

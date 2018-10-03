@@ -41,6 +41,11 @@ namespace Attribute
 		*/
 		void setModelMatrix();
 
+		/** @brief Gets the model matrix
+		*	@return The model matrix
+		*
+		*	Returns the model matrix of the transform
+		*/
 		inline glm::mat4 getMatrix() { return m_modelMatrix; }
 
 		// position
@@ -68,13 +73,15 @@ namespace Attribute
 		// rotation
 		// modify
 		/** @brief Sets the absolute rotation
-		*	@param _position The new rotation
+		*	@param	_rotation	The new rotation
+		*	@param	_axis		The axis to rotate on
 		*
 		*	Sets the new rotation of the transform, disregarding its old rotation
 		*/
 		void setRotation(const float _rotation, const glm::vec3 &_axis);
 		/** @brief Rotates the transform to a new rotation relative to its old rotation
-		*	@param _rotation The difference in rotation to apply
+		*	@param	_rotation	The difference in rotation to apply
+		*	@param	_axis		The axis to rotate on
 		*
 		*	Changes the rotation of the transform by the given vector 3D.
 		*/

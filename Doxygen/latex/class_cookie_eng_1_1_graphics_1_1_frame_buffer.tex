@@ -1,0 +1,194 @@
+\hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{}\section{Cookie\+Eng\+:\+:Graphics\+:\+:Frame\+Buffer Class Reference}
+\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer}\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+
+
+Abstraction of an Open\+GL \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer}.  
+
+
+
+
+{\ttfamily \#include $<$Frame\+Buffer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aebfd6fefe83f74d3b776f83a22a69477}{Frame\+Buffer} (const int \+\_\+width, const int \+\_\+height)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a51742a4a0c6beeaeb4c2f14c7c97c79a}{$\sim$\+Frame\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} Dtor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_ab2fb31d8a065cc53e95233a388fd2d09}{bind} () const
+\begin{DoxyCompactList}\small\item\em Binds the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer}. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a4c859cb199e5a770b1532a83d4b39af5}{un\+Bind} () const
+\begin{DoxyCompactList}\small\item\em Unbinds the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer}. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_ad206df318f47af664391600585249171}{draw\+To\+Screen} ()
+\begin{DoxyCompactList}\small\item\em Draws the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to the fullscreen vertices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a7ebc5f799dddcaa97bf514b06d110cb1}{create\+Texture\+Attachment} ()
+\begin{DoxyCompactList}\small\item\em Create a Texture Attachment. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aa0b8e867cb21fee1d79d6f48026e7c0b}{create\+Depth\+Render\+Buffer\+Attachment} ()
+\begin{DoxyCompactList}\small\item\em Create a Depth Render\+Buffer Attachment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Vertex\+Array} $\ast$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aeeda746eb63aecba700a50a92efd37ef}{m\+\_\+array\+Buffer}
+\item 
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Vertex\+Buffer} $\ast$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aa24abca002f6a2c2bdc97e71cf0e737f}{m\+\_\+vertex\+Buffer}
+\item 
+\hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program}{Resources\+::\+Shader\+Program} $\ast$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a0f2e548b0dd918b358f1ba42308d275e}{m\+\_\+shader\+Program}
+\item 
+int \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_ac91635b3617b4d7c8bef5a24eafdd7ae}{m\+\_\+width}
+\item 
+int \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_abdbb577ba114e681f7536d2927f46a3b}{m\+\_\+height}
+\item 
+G\+Luint \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a64227f6632d34e67d3f5d4b4f7e3efe9}{m\+\_\+frame\+Buffer\+ID}
+\item 
+G\+Luint \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a609afe09f88a1c9a928813d8b89c27cd}{m\+\_\+texture\+ID}
+\item 
+G\+Luint \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a2b5c44481b74bc7f82a12b0977c9b356}{m\+\_\+depth\+Render\+Buffer\+ID}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstraction of an Open\+GL \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer}. 
+
+This class abstracts an Open\+GL \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} for drawing to and then displaying on the screen if required. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aebfd6fefe83f74d3b776f83a22a69477}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aebfd6fefe83f74d3b776f83a22a69477}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!Frame\+Buffer@{Frame\+Buffer}}
+\index{Frame\+Buffer@{Frame\+Buffer}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{Frame\+Buffer()}{FrameBuffer()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{const int}]{\+\_\+width,  }\item[{const int}]{\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} Ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+width} & The width of the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} \\
+\hline
+{\em \+\_\+height} & The height of the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer}\\
+\hline
+\end{DoxyParams}
+Generates a \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} with the specified width and height. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a51742a4a0c6beeaeb4c2f14c7c97c79a}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a51742a4a0c6beeaeb4c2f14c7c97c79a}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!````~Frame\+Buffer@{$\sim$\+Frame\+Buffer}}
+\index{````~Frame\+Buffer@{$\sim$\+Frame\+Buffer}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{$\sim$\+Frame\+Buffer()}{~FrameBuffer()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::$\sim$\+Frame\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} Dtor. 
+
+Deletes the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} from memory along with all accompanying objects. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_ab2fb31d8a065cc53e95233a388fd2d09}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_ab2fb31d8a065cc53e95233a388fd2d09}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!bind@{bind}}
+\index{bind@{bind}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Binds the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer}. 
+
+Binds the framebuffer for drawing to \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aa0b8e867cb21fee1d79d6f48026e7c0b}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aa0b8e867cb21fee1d79d6f48026e7c0b}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!create\+Depth\+Render\+Buffer\+Attachment@{create\+Depth\+Render\+Buffer\+Attachment}}
+\index{create\+Depth\+Render\+Buffer\+Attachment@{create\+Depth\+Render\+Buffer\+Attachment}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{create\+Depth\+Render\+Buffer\+Attachment()}{createDepthRenderBufferAttachment()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::create\+Depth\+Render\+Buffer\+Attachment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Create a Depth Render\+Buffer Attachment. 
+
+This creates a depth render buffer for sampling the depth of the drawn scene. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a7ebc5f799dddcaa97bf514b06d110cb1}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a7ebc5f799dddcaa97bf514b06d110cb1}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!create\+Texture\+Attachment@{create\+Texture\+Attachment}}
+\index{create\+Texture\+Attachment@{create\+Texture\+Attachment}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{create\+Texture\+Attachment()}{createTextureAttachment()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::create\+Texture\+Attachment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Create a Texture Attachment. 
+
+Creates an Open\+GL Texture for the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to draw the colours to. This can be used anywhere in the program. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_ad206df318f47af664391600585249171}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_ad206df318f47af664391600585249171}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!draw\+To\+Screen@{draw\+To\+Screen}}
+\index{draw\+To\+Screen@{draw\+To\+Screen}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{draw\+To\+Screen()}{drawToScreen()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::draw\+To\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to the fullscreen vertices. 
+
+Unbinds the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a4c859cb199e5a770b1532a83d4b39af5}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a4c859cb199e5a770b1532a83d4b39af5}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!un\+Bind@{un\+Bind}}
+\index{un\+Bind@{un\+Bind}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{un\+Bind()}{unBind()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::un\+Bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Unbinds the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer}. 
+
+Unbinds the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aeeda746eb63aecba700a50a92efd37ef}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aeeda746eb63aecba700a50a92efd37ef}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!m\+\_\+array\+Buffer@{m\+\_\+array\+Buffer}}
+\index{m\+\_\+array\+Buffer@{m\+\_\+array\+Buffer}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+array\+Buffer}{m\_arrayBuffer}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Vertex\+Array}$\ast$ Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::m\+\_\+array\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+The \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Vertex\+Array} for the full screen mesh \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a2b5c44481b74bc7f82a12b0977c9b356}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a2b5c44481b74bc7f82a12b0977c9b356}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!m\+\_\+depth\+Render\+Buffer\+ID@{m\+\_\+depth\+Render\+Buffer\+ID}}
+\index{m\+\_\+depth\+Render\+Buffer\+ID@{m\+\_\+depth\+Render\+Buffer\+ID}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+depth\+Render\+Buffer\+ID}{m\_depthRenderBufferID}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::m\+\_\+depth\+Render\+Buffer\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Open\+GL ID of the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} Depth Render\+Buffer Attachment \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a64227f6632d34e67d3f5d4b4f7e3efe9}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a64227f6632d34e67d3f5d4b4f7e3efe9}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!m\+\_\+frame\+Buffer\+ID@{m\+\_\+frame\+Buffer\+ID}}
+\index{m\+\_\+frame\+Buffer\+ID@{m\+\_\+frame\+Buffer\+ID}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+frame\+Buffer\+ID}{m\_frameBufferID}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::m\+\_\+frame\+Buffer\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Open\+GL ID of the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_abdbb577ba114e681f7536d2927f46a3b}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_abdbb577ba114e681f7536d2927f46a3b}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!m\+\_\+height@{m\+\_\+height}}
+\index{m\+\_\+height@{m\+\_\+height}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+height}{m\_height}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [protected]}}
+
+The height of the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} and Accompanying Textures \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a0f2e548b0dd918b358f1ba42308d275e}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a0f2e548b0dd918b358f1ba42308d275e}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!m\+\_\+shader\+Program@{m\+\_\+shader\+Program}}
+\index{m\+\_\+shader\+Program@{m\+\_\+shader\+Program}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+shader\+Program}{m\_shaderProgram}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program}{Resources\+::\+Shader\+Program}$\ast$ Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::m\+\_\+shader\+Program\hspace{0.3cm}{\ttfamily [protected]}}
+
+The \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader} that holds the Post Processing effects \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a609afe09f88a1c9a928813d8b89c27cd}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_a609afe09f88a1c9a928813d8b89c27cd}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!m\+\_\+texture\+ID@{m\+\_\+texture\+ID}}
+\index{m\+\_\+texture\+ID@{m\+\_\+texture\+ID}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+texture\+ID}{m\_textureID}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::m\+\_\+texture\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Open\+GL ID of the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} Texture Attachment \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aa24abca002f6a2c2bdc97e71cf0e737f}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_aa24abca002f6a2c2bdc97e71cf0e737f}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!m\+\_\+vertex\+Buffer@{m\+\_\+vertex\+Buffer}}
+\index{m\+\_\+vertex\+Buffer@{m\+\_\+vertex\+Buffer}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+vertex\+Buffer}{m\_vertexBuffer}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Vertex\+Buffer}$\ast$ Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::m\+\_\+vertex\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+The \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Vertex\+Buffer} for the full screen mesh \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_frame_buffer_ac91635b3617b4d7c8bef5a24eafdd7ae}\label{class_cookie_eng_1_1_graphics_1_1_frame_buffer_ac91635b3617b4d7c8bef5a24eafdd7ae}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}!m\+\_\+width@{m\+\_\+width}}
+\index{m\+\_\+width@{m\+\_\+width}!Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer}}
+\subsubsection{\texorpdfstring{m\+\_\+width}{m\_width}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Graphics\+::\+Frame\+Buffer\+::m\+\_\+width\hspace{0.3cm}{\ttfamily [protected]}}
+
+The width of the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} and Accompanying Textures 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Frame\+Buffer.\+h\end{DoxyCompactItemize}

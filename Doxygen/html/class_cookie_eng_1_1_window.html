@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -31,7 +24,6 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cookie Engine
    </div>
-   <div id="projectbrief">An engine designed for the Bournemouth University Games Programming Level 6 assignment.</div>
   </td>
  </tr>
  </tbody>
@@ -51,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_cookie_eng_1_1_window.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,6 +57,11 @@ $(document).ready(function(){initNavTree('class_cookie_eng_1_1_window.html','');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>CookieEng</b></li><li class="navelem"><a class="el" href="class_cookie_eng_1_1_window.html">Window</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -106,6 +88,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aebe5875df57a0ab57f3cc9da256dd439"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_window.html#aebe5875df57a0ab57f3cc9da256dd439">swapBuffer</a> ()</td></tr>
 <tr class="memdesc:aebe5875df57a0ab57f3cc9da256dd439"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_cookie_eng_1_1_window.html" title="An abstraction of the SDL Window class which can be used to create a window for OpenGL rendering...">Window</a> Buffer Swap.  <a href="#aebe5875df57a0ab57f3cc9da256dd439">More...</a><br /></td></tr>
 <tr class="separator:aebe5875df57a0ab57f3cc9da256dd439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fccbbff3e4efa69e6b94a57f7f99b31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_window.html#a6fccbbff3e4efa69e6b94a57f7f99b31">resize</a> (int _width, int _height)</td></tr>
+<tr class="memdesc:a6fccbbff3e4efa69e6b94a57f7f99b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a new window size.  <a href="#a6fccbbff3e4efa69e6b94a57f7f99b31">More...</a><br /></td></tr>
+<tr class="separator:a6fccbbff3e4efa69e6b94a57f7f99b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41425d62b39dea360e3618425cbb12f0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_window.html#a41425d62b39dea360e3618425cbb12f0">getWidth</a> ()</td></tr>
+<tr class="memdesc:a41425d62b39dea360e3618425cbb12f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the window width.  <a href="#a41425d62b39dea360e3618425cbb12f0">More...</a><br /></td></tr>
+<tr class="separator:a41425d62b39dea360e3618425cbb12f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4c31ce29ff60da053ea44138ba2882"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_window.html#a5c4c31ce29ff60da053ea44138ba2882">getHeight</a> ()</td></tr>
+<tr class="memdesc:a5c4c31ce29ff60da053ea44138ba2882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the window Height.  <a href="#a5c4c31ce29ff60da053ea44138ba2882">More...</a><br /></td></tr>
+<tr class="separator:a5c4c31ce29ff60da053ea44138ba2882"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -115,6 +106,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a9d6af268af7ac8c9dc6ce368d3d34e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4fb697e5f3fb9890da293c6c19d2db4"><td class="memItemLeft" align="right" valign="top">SDL_GLContext&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_window.html#aa4fb697e5f3fb9890da293c6c19d2db4">m_openGLContext</a></td></tr>
 <tr class="separator:aa4fb697e5f3fb9890da293c6c19d2db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82302880d6f0fa6771a38cae96c86644"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_window.html#a82302880d6f0fa6771a38cae96c86644">m_width</a></td></tr>
+<tr class="separator:a82302880d6f0fa6771a38cae96c86644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c89037c6226ccc826da3c06092dc18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_window.html#a08c89037c6226ccc826da3c06092dc18">m_height</a></td></tr>
+<tr class="separator:a08c89037c6226ccc826da3c06092dc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An abstraction of the SDL <a class="el" href="class_cookie_eng_1_1_window.html" title="An abstraction of the SDL Window class which can be used to create a window for OpenGL rendering...">Window</a> class which can be used to create a window for OpenGL rendering. </p>
@@ -186,6 +181,102 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5c4c31ce29ff60da053ea44138ba2882"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c4c31ce29ff60da053ea44138ba2882">&#9670;&nbsp;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CookieEng::Window::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the window Height. </p>
+<dl class="section return"><dt>Returns</dt><dd>An integar containing the window height</dd></dl>
+<p>Returns the window height. </p>
+
+</div>
+</div>
+<a id="a41425d62b39dea360e3618425cbb12f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41425d62b39dea360e3618425cbb12f0">&#9670;&nbsp;</a></span>getWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CookieEng::Window::getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the window width. </p>
+<dl class="section return"><dt>Returns</dt><dd>An integar containing the window width</dd></dl>
+<p>Returns the window width. </p>
+
+</div>
+</div>
+<a id="a6fccbbff3e4efa69e6b94a57f7f99b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fccbbff3e4efa69e6b94a57f7f99b31">&#9670;&nbsp;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::Window::resize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a new window size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_width</td><td>The new width of the window </td></tr>
+    <tr><td class="paramname">_height</td><td>The new height of the window</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Resizes the window and applies the info to OpenGL </p>
+
+</div>
+</div>
 <a id="aebe5875df57a0ab57f3cc9da256dd439"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aebe5875df57a0ab57f3cc9da256dd439">&#9670;&nbsp;</a></span>swapBuffer()</h2>
 
@@ -207,6 +298,29 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a08c89037c6226ccc826da3c06092dc18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08c89037c6226ccc826da3c06092dc18">&#9670;&nbsp;</a></span>m_height</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CookieEng::Window::m_height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The <a class="el" href="class_cookie_eng_1_1_window.html" title="An abstraction of the SDL Window class which can be used to create a window for OpenGL rendering...">Window</a> Width </p>
+
+</div>
+</div>
 <a id="aa4fb697e5f3fb9890da293c6c19d2db4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4fb697e5f3fb9890da293c6c19d2db4">&#9670;&nbsp;</a></span>m_openGLContext</h2>
 
@@ -253,6 +367,29 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a82302880d6f0fa6771a38cae96c86644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82302880d6f0fa6771a38cae96c86644">&#9670;&nbsp;</a></span>m_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CookieEng::Window::m_width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The <a class="el" href="class_cookie_eng_1_1_window.html" title="An abstraction of the SDL Window class which can be used to create a window for OpenGL rendering...">Window</a> Width </p>
+
+</div>
+</div>
 <a id="a34a72976d2a24ceee23b88e3751a76bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34a72976d2a24ceee23b88e3751a76bd">&#9670;&nbsp;</a></span>m_window</h2>
 
@@ -277,18 +414,14 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/<a class="el" href="_window_8h_source.html">Window.h</a></li>
+<li>D:/Programming/Engine Development/CookieEng/CookieEng/include/<a class="el" href="_window_8h_source.html">Window.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>CookieEng</b></li><li class="navelem"><a class="el" href="class_cookie_eng_1_1_window.html">Window</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

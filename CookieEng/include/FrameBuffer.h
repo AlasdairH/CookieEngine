@@ -70,9 +70,10 @@ namespace Graphics
 
 		VertexArray					*m_arrayBuffer;				/**< The VertexArray for the full screen mesh */
 		VertexBuffer				*m_vertexBuffer;			/**< The VertexBuffer for the full screen mesh */
-		Resources::ShaderProgram		*m_shaderProgram;			/**< The Shader that holds the Post Processing effects */
+		Resources::ShaderProgram	*m_shaderProgram;			/**< The Shader that holds the Post Processing effects */
 			
-		int							m_width, m_height;			/**< The width and height of the FrameBuffer and Accompanying Textures */
+		int							m_width;					/**< The width of the FrameBuffer and Accompanying Textures */
+		int							m_height;					/**< The height of the FrameBuffer and Accompanying Textures */
 
 		GLuint						m_frameBufferID;			/**< The OpenGL ID of the FrameBuffer */
 			

@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -31,7 +24,6 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cookie Engine
    </div>
-   <div id="projectbrief">An engine designed for the Bournemouth University Games Programming Level 6 assignment.</div>
   </td>
  </tr>
  </tbody>
@@ -52,20 +44,6 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('functions.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -87,259 +65,22 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>addBuffer()
 : <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html#aacb98fcc69be4c0ca1a4d8deb38b053e">CookieEng::Graphics::VertexArray</a>
 </li>
+<li>addObserver()
+: <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html#a33acc39b1189fd0ced268ee68e3eba7a">CookieEng::Services::MessageQueue</a>
+</li>
 <li>assignServices()
 : <a class="el" href="class_cookie_eng_1_1_services_1_1_service_container.html#a97ec731de9af553fd503f3d9c81522a0">CookieEng::Services::ServiceContainer</a>
 </li>
 <li>attachShader()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_program.html#a047db1a5a18be6a9ecd7caff8dbed884">CookieEng::Graphics::Program</a>
-</li>
-</ul>
-
-
-<h3><a id="index_b"></a>- b -</h3><ul>
-<li>bind()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_program.html#aaf32c20b81ded7b46b4aef3a71e4850e">CookieEng::Graphics::Program</a>
-, <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html#afaa952a05a501cb487831cb6e9e052bf">CookieEng::Graphics::VertexArray</a>
-, <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a6fbaa64c5edeb00d4f5770587eb7b369">CookieEng::Graphics::VertexBuffer</a>
-</li>
-</ul>
-
-
-<h3><a id="index_c"></a>- c -</h3><ul>
-<li>clearFileManager()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a648c75987f9d4380475b3c2056f6d963">CookieEng::Services::ServiceLocator</a>
-</li>
-<li>clearInitialiser()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a1603a231c16663c30ed40afd49dffb72">CookieEng::Services::ServiceLocator</a>
-</li>
-<li>count
-: <a class="el" href="struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element.html#a5c5d5a5861ed76486f0ea36e8db6ed4c">CookieEng::Graphics::VertexBufferElement</a>
-</li>
-</ul>
-
-
-<h3><a id="index_f"></a>- f -</h3><ul>
-<li>FileManager()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_file_manager.html#a3ff15b868df81ba7d9964382f6474ef5">CookieEng::Services::FileManager</a>
-</li>
-</ul>
-
-
-<h3><a id="index_g"></a>- g -</h3><ul>
-<li>getElements()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout.html#a082cc08b182cabe19998ae522c0466be">CookieEng::Graphics::VertexBufferLayout</a>
-</li>
-<li>getFileManager()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a964340ed78281fdd04f499c80f7ce01d">CookieEng::Services::ServiceLocator</a>
-</li>
-<li>getInitialiser()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#af235353d13e544fe474d6908ef4f96fb">CookieEng::Services::ServiceLocator</a>
-</li>
-<li>getShaderID()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#a4d3333267a9bbdaf9157a59120cf8b51">CookieEng::Graphics::Shader</a>
-</li>
-<li>getShaderType()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#adde0294c86137d22a247bd011b8e40c8">CookieEng::Graphics::Shader</a>
-</li>
-<li>getSizeOfType()
-: <a class="el" href="struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element.html#a2041f09a7eb0714959f1be6f67fb111b">CookieEng::Graphics::VertexBufferElement</a>
-</li>
-<li>getStride()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout.html#a4c771d06898767d1a92237b03a53e887">CookieEng::Graphics::VertexBufferLayout</a>
-</li>
-</ul>
-
-
-<h3><a id="index_i"></a>- i -</h3><ul>
-<li>init()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#ae591a7107e04f835f1f8dbc42e0035c6">CookieEng::Graphics::Shader</a>
-, <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a67b3089f2822a48fe31c84e94d087d68">CookieEng::Graphics::VertexBuffer</a>
-</li>
-<li>initOpenGL()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_initialiser.html#ae58fde55a85e7d2dfe3c1396aa64cad2">CookieEng::Services::Initialiser</a>
-</li>
-<li>initSDL()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_initialiser.html#afec78a371e6345982eda8b928065e5fa">CookieEng::Services::Initialiser</a>
-</li>
-</ul>
-
-
-<h3><a id="index_l"></a>- l -</h3><ul>
-<li>link()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_program.html#a72b268c9087919115bef2632c25b9d47">CookieEng::Graphics::Program</a>
-</li>
-<li>load()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#aa11548ffaa72d77521576044a122af43">CookieEng::Graphics::Shader</a>
-</li>
-<li>loadData()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#ad0d5860b53f16ab33461df7da5d2839f">CookieEng::Graphics::VertexBuffer</a>
-</li>
-<li>loadTextFile()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_file_manager.html#a744bde422e66fcfbfcc379a21ae90500">CookieEng::Services::FileManager</a>
-</li>
-<li>loadTextFileASync()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_file_manager.html#abf50a7b6eb9fa88a9557254acbd2d9cc">CookieEng::Services::FileManager</a>
-</li>
-</ul>
-
-
-<h3><a id="index_m"></a>- m -</h3><ul>
-<li>m_elements
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout.html#a7986bf1ce59d1ffa1dc31613014aa2e7">CookieEng::Graphics::VertexBufferLayout</a>
-</li>
-<li>m_openGLContext
-: <a class="el" href="class_cookie_eng_1_1_window.html#aa4fb697e5f3fb9890da293c6c19d2db4">CookieEng::Window</a>
-</li>
-<li>m_programID
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_program.html#ac07277e3a97ab28e17f83e04920374a7">CookieEng::Graphics::Program</a>
-</li>
-<li>m_renderer
-: <a class="el" href="class_cookie_eng_1_1_window.html#a9d6af268af7ac8c9dc6ce368d3d34e39">CookieEng::Window</a>
-</li>
-<li>m_shaderID
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#a3c2b2bf0f97b9367c3871de99378bbbf">CookieEng::Graphics::Shader</a>
-</li>
-<li>m_shaderType
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#a50b512033ec7bd695dcd4daa2d971c22">CookieEng::Graphics::Shader</a>
-</li>
-<li>m_stride
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout.html#a972f0e9224f28b13be7d959449423308">CookieEng::Graphics::VertexBufferLayout</a>
-</li>
-<li>m_svsFileManager
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_container.html#abf0baf79c971ef5edc4be3c950fb7cda">CookieEng::Services::ServiceContainer</a>
-</li>
-<li>m_svsInitialiser
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_container.html#ae775cf624dc67f6f22e33c2437a2356e">CookieEng::Services::ServiceContainer</a>
-</li>
-<li>m_verified
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_program.html#aadb91d13a8c12e4633985e7ff912528b">CookieEng::Graphics::Program</a>
-, <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#acfa364395f90fdea34e5365221b3b564">CookieEng::Graphics::Shader</a>
-</li>
-<li>m_vertexArrayID
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html#ad4ee57cc45e85deb47a9f2e6a91211a9">CookieEng::Graphics::VertexArray</a>
-</li>
-<li>m_vertexBufferID
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#af4c00fbd9352dd8a0b5952c007037e2e">CookieEng::Graphics::VertexBuffer</a>
-</li>
-<li>m_vertexBufferType
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a37d75d306f50db1b63c22b51912402cc">CookieEng::Graphics::VertexBuffer</a>
-</li>
-<li>m_window
-: <a class="el" href="class_cookie_eng_1_1_window.html#a34a72976d2a24ceee23b88e3751a76bd">CookieEng::Window</a>
-</li>
-</ul>
-
-
-<h3><a id="index_n"></a>- n -</h3><ul>
-<li>normalised
-: <a class="el" href="struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element.html#a1a50c45bd6f7e11f158b142ec20552ba">CookieEng::Graphics::VertexBufferElement</a>
-</li>
-</ul>
-
-
-<h3><a id="index_p"></a>- p -</h3><ul>
-<li>Program()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_program.html#a603a60c068f1d6f9a8dc123994cb7e42">CookieEng::Graphics::Program</a>
-</li>
-<li>push()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout.html#a8d9958c85411d75d7f412b2d3f7b566a">CookieEng::Graphics::VertexBufferLayout</a>
-</li>
-</ul>
-
-
-<h3><a id="index_s"></a>- s -</h3><ul>
-<li>s_fileManager
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a98841ef7f94fae563997ce5bc2d6e507">CookieEng::Services::ServiceLocator</a>
-</li>
-<li>s_initialiser
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a4016a14884b5701e26047bd9e9404c20">CookieEng::Services::ServiceLocator</a>
-</li>
-<li>s_isOpenGLInitialised
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_initialiser.html#ab699d2b64648af5ab728f76b23038d1d">CookieEng::Services::Initialiser</a>
-</li>
-<li>s_isSDLInitialised
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_initialiser.html#a5bbc123e5e61c2fd3d1f088c6d8ac147">CookieEng::Services::Initialiser</a>
-</li>
-<li>ServiceContainer()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_container.html#a6d91b2942fd8e169641b5e723ec0e999">CookieEng::Services::ServiceContainer</a>
-</li>
-<li>setFileManager()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a8a58e7b22845b4bf688cd98d2d78a72d">CookieEng::Services::ServiceLocator</a>
-</li>
-<li>setInitialiser()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a49766d5e7cdca3f2384feb4258c9a155">CookieEng::Services::ServiceLocator</a>
-</li>
-<li>Shader()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#a98dc593bccbf90a50cadf035b3382374">CookieEng::Graphics::Shader</a>
-</li>
-<li>swapBuffer()
-: <a class="el" href="class_cookie_eng_1_1_window.html#aebe5875df57a0ab57f3cc9da256dd439">CookieEng::Window</a>
-</li>
-</ul>
-
-
-<h3><a id="index_t"></a>- t -</h3><ul>
-<li>type
-: <a class="el" href="struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element.html#abba091f340c618809735781f80ccee6b">CookieEng::Graphics::VertexBufferElement</a>
-</li>
-</ul>
-
-
-<h3><a id="index_u"></a>- u -</h3><ul>
-<li>unBind()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html#acd3511d77ec22d63984e365e05ef9bcb">CookieEng::Graphics::VertexArray</a>
-, <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a8fbc3f39762c511438bc13e8c405926c">CookieEng::Graphics::VertexBuffer</a>
-</li>
-</ul>
-
-
-<h3><a id="index_v"></a>- v -</h3><ul>
-<li>verify()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_program.html#a0375be237e3eee65c9debbc13a7547d5">CookieEng::Graphics::Program</a>
-, <a class="el" href="class_cookie_eng_1_1_graphics_1_1_shader.html#a28abd2dba4a183cb810b196af2e1d5a3">CookieEng::Graphics::Shader</a>
-</li>
-<li>VertexArray()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html#a9ca1229bf83878acd80e947487b2a9ac">CookieEng::Graphics::VertexArray</a>
-</li>
-<li>VertexBuffer()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#ac877c409fdb8a09947bb13664b78a335">CookieEng::Graphics::VertexBuffer</a>
-</li>
-</ul>
-
-
-<h3><a id="index_w"></a>- w -</h3><ul>
-<li>Window()
-: <a class="el" href="class_cookie_eng_1_1_window.html#ada0459ccc0ba0254bb9517cce1cf94bb">CookieEng::Window</a>
-</li>
-</ul>
-
-
-<h3><a id="index_0x7e"></a>- ~ -</h3><ul>
-<li>~FileManager()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_file_manager.html#a51e133f4fd86a874129a63be191b91ba">CookieEng::Services::FileManager</a>
-</li>
-<li>~ServiceContainer()
-: <a class="el" href="class_cookie_eng_1_1_services_1_1_service_container.html#aee981da4b22b806f868cc6df3e2762af">CookieEng::Services::ServiceContainer</a>
-</li>
-<li>~VertexArray()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html#a114da6690772eaa07108e2dccaa8e93d">CookieEng::Graphics::VertexArray</a>
-</li>
-<li>~VertexBuffer()
-: <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a7c664866737550113380e8f08feca778">CookieEng::Graphics::VertexBuffer</a>
-</li>
-<li>~Window()
-: <a class="el" href="class_cookie_eng_1_1_window.html#af81149525fe716874b5637cbef63c78f">CookieEng::Window</a>
+: <a class="el" href="class_cookie_eng_1_1_resources_1_1_shader_program.html#a951108feded567e573928dbb1d8caeca">CookieEng::Resources::ShaderProgram</a>
 </li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

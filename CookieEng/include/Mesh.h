@@ -28,6 +28,12 @@ namespace Resources
 		
 		Graphics::VertexBufferLayout	layout;		/**< The layout of the vertices member */
 
+		/** @brief Loads the Mesh from a file
+		*	@param _name The name to assign the mesh
+		*	@param _filepath The filepath to load from
+		*
+		*	Overrides the Resource load to allow loading from a .obj file
+		*/
 		void load(const std::string &_name, const std::string &_filepath) override;
 	};
 

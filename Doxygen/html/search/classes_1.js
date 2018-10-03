@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialiser',['Initialiser',['../class_cookie_eng_1_1_services_1_1_initialiser.html',1,'CookieEng::Services']]]
+  ['entity',['Entity',['../struct_cookie_eng_1_1_e_c_s_1_1_entity.html',1,'CookieEng::ECS']]]
 ];

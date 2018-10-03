@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -31,7 +24,6 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cookie Engine
    </div>
-   <div id="projectbrief">An engine designed for the Bournemouth University Games Programming Level 6 assignment.</div>
   </td>
  </tr>
  </tbody>
@@ -51,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,6 +57,11 @@ $(document).ready(function(){initNavTree('class_cookie_eng_1_1_graphics_1_1_vert
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>CookieEng</b></li><li class="navelem"><b>Graphics</b></li><li class="navelem"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">VertexBuffer</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">CookieEng::Graphics::VertexBuffer Member List</div>  </div>
@@ -89,23 +71,22 @@ $(document).ready(function(){initNavTree('class_cookie_eng_1_1_graphics_1_1_vert
 <p>This is the complete list of members for <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a6fbaa64c5edeb00d4f5770587eb7b369">bind</a>() const</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a67b3089f2822a48fe31c84e94d087d68">init</a>()</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#ad0d5860b53f16ab33461df7da5d2839f">loadData</a>(const void *_data, GLuint _size)</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a667b81c15525bd5f76d979e0c8b02be0">getCount</a>() const</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a67b3089f2822a48fe31c84e94d087d68">init</a>()</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#ac3db6a2571101d1836fab492971c75fa">loadData</a>(const void *_data, GLuint _count, GLuint _size)</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a280a08a319717cf425435efd9b912ef3">m_count</a></td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#af4c00fbd9352dd8a0b5952c007037e2e">m_vertexBufferID</a></td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a37d75d306f50db1b63c22b51912402cc">m_vertexBufferType</a></td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a8fbc3f39762c511438bc13e8c405926c">unBind</a>() const</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#ac877c409fdb8a09947bb13664b78a335">VertexBuffer</a>(const VertexBufferType _type)</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a599f1cd18e2b7b12212b97a4c60b583b">VertexBuffer</a>(const VertexBufferType _type, const void *_data, GLuint _size)</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#af4ceb32a35ff5747f2f80c8cec1e7800">VertexBuffer</a>(const VertexBufferType _type, const void *_data, GLuint _count, GLuint _size)</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#a7c664866737550113380e8f08feca778">~VertexBuffer</a>()</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">CookieEng::Graphics::VertexBuffer</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

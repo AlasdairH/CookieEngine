@@ -34,7 +34,12 @@ namespace Resources
 		*/
 		ShaderProgram();
 
-		// TODO: Doxygen
+		/** @brief Loads the ShaderProgram from a file
+		*	@param _name The name to assign the shader
+		*	@param _filepath The filepath to load from
+		*
+		*	Overrides the Resource load to allow loading from a .cngShader file
+		*/
 		void load(const std::string &_name, const std::string &_filepath) override;
 
 		/** @brief Program Ctor

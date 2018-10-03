@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -31,7 +24,6 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cookie Engine
    </div>
-   <div id="projectbrief">An engine designed for the Bournemouth University Games Programming Level 6 assignment.</div>
   </td>
  </tr>
  </tbody>
@@ -51,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_cookie_eng_1_1_services_1_1_service_locator.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,6 +57,11 @@ $(document).ready(function(){initNavTree('class_cookie_eng_1_1_services_1_1_serv
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>CookieEng</b></li><li class="navelem"><b>Services</b></li><li class="navelem"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">ServiceLocator</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
@@ -94,15 +76,6 @@ $(document).ready(function(){initNavTree('class_cookie_eng_1_1_services_1_1_serv
  <a href="class_cookie_eng_1_1_services_1_1_service_locator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_service_locator_8h_source.html">ServiceLocator.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for CookieEng::Services::ServiceLocator:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_cookie_eng_1_1_services_1_1_service_locator__coll__graph.png" border="0" usemap="#_cookie_eng_1_1_services_1_1_service_locator_coll__map" alt="Collaboration graph"/></div>
-<map name="_cookie_eng_1_1_services_1_1_service_locator_coll__map" id="_cookie_eng_1_1_services_1_1_service_locator_coll__map">
-<area shape="rect" id="node2" href="class_cookie_eng_1_1_services_1_1_file_manager.html" title="A Manager Class that handles the loading of files either synchronously or asynchronously. " alt="" coords="5,5,148,47"/>
-<area shape="rect" id="node3" href="class_cookie_eng_1_1_services_1_1_initialiser.html" title="Initialisation for external libraries. " alt="" coords="172,5,315,47"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -124,6 +97,15 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a648c75987f9d4380475b3c2056f6d963"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a648c75987f9d4380475b3c2056f6d963">clearFileManager</a> ()</td></tr>
 <tr class="memdesc:a648c75987f9d4380475b3c2056f6d963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the <a class="el" href="class_cookie_eng_1_1_services_1_1_file_manager.html" title="A Manager Class that handles the loading of files either synchronously or asynchronously. ">FileManager</a>.  <a href="#a648c75987f9d4380475b3c2056f6d963">More...</a><br /></td></tr>
 <tr class="separator:a648c75987f9d4380475b3c2056f6d963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3acc403cde719caada08b5cf9327ad24"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html">MessageQueue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a3acc403cde719caada08b5cf9327ad24">getMessageQueue</a> ()</td></tr>
+<tr class="memdesc:a3acc403cde719caada08b5cf9327ad24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the Message Queue.  <a href="#a3acc403cde719caada08b5cf9327ad24">More...</a><br /></td></tr>
+<tr class="separator:a3acc403cde719caada08b5cf9327ad24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa67e5c104a89681d41937b4deaad9d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#aafa67e5c104a89681d41937b4deaad9d">setMessageQueue</a> (<a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html">MessageQueue</a> *_messageQueue)</td></tr>
+<tr class="memdesc:aafa67e5c104a89681d41937b4deaad9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html" title="A queue for distributing messages to Observers. ">MessageQueue</a>.  <a href="#aafa67e5c104a89681d41937b4deaad9d">More...</a><br /></td></tr>
+<tr class="separator:aafa67e5c104a89681d41937b4deaad9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1354419abaf9ead394541a24f64bb5fa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a1354419abaf9ead394541a24f64bb5fa">clearMessageQueue</a> ()</td></tr>
+<tr class="memdesc:a1354419abaf9ead394541a24f64bb5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html" title="A queue for distributing messages to Observers. ">MessageQueue</a>.  <a href="#a1354419abaf9ead394541a24f64bb5fa">More...</a><br /></td></tr>
+<tr class="separator:a1354419abaf9ead394541a24f64bb5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
@@ -131,6 +113,8 @@ Static Protected Attributes</h2></td></tr>
 <tr class="separator:a4016a14884b5701e26047bd9e9404c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98841ef7f94fae563997ce5bc2d6e507"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_cookie_eng_1_1_services_1_1_file_manager.html">FileManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a98841ef7f94fae563997ce5bc2d6e507">s_fileManager</a></td></tr>
 <tr class="separator:a98841ef7f94fae563997ce5bc2d6e507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ae2c1a6385322f36009b87c90cc0de"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html">MessageQueue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a69ae2c1a6385322f36009b87c90cc0de">s_messageQueue</a></td></tr>
+<tr class="separator:a69ae2c1a6385322f36009b87c90cc0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Works as an interface to the managers and services provided by the engine. </p>
@@ -190,15 +174,34 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Clears the <a class="el" href="class_cookie_eng_1_1_services_1_1_initialiser.html" title="Initialisation for external libraries. ">Initialiser</a>. </p>
 <p>Sets the <a class="el" href="class_cookie_eng_1_1_services_1_1_initialiser.html" title="Initialisation for external libraries. ">Initialiser</a> to a nullptr </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_cookie_eng_1_1_services_1_1_service_locator_a1603a231c16663c30ed40afd49dffb72_cgraph.png" border="0" usemap="#class_cookie_eng_1_1_services_1_1_service_locator_a1603a231c16663c30ed40afd49dffb72_cgraph" alt=""/></div>
-<map name="class_cookie_eng_1_1_services_1_1_service_locator_a1603a231c16663c30ed40afd49dffb72_cgraph" id="class_cookie_eng_1_1_services_1_1_service_locator_a1603a231c16663c30ed40afd49dffb72_cgraph">
-<area shape="rect" id="node2" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a964340ed78281fdd04f499c80f7ce01d" title="Returns a reference to the File Manager. " alt="" coords="256,5,468,47"/>
-<area shape="rect" id="node3" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a8a58e7b22845b4bf688cd98d2d78a72d" title="Sets the FileManager. " alt="" coords="256,71,468,112"/>
-</map>
+
 </div>
+</div>
+<a id="a1354419abaf9ead394541a24f64bb5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1354419abaf9ead394541a24f64bb5fa">&#9670;&nbsp;</a></span>clearMessageQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void CookieEng::Services::ServiceLocator::clearMessageQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clears the <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html" title="A queue for distributing messages to Observers. ">MessageQueue</a>. </p>
+<p>Sets the Message Queue to a nullptr </p>
 
 </div>
 </div>
@@ -257,6 +260,35 @@ Here is the call graph for this function:</div>
 <p>Returns a reference to the initialiser. </p>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_cookie_eng_1_1_services_1_1_initialiser.html" title="Initialisation for external libraries. ">Initialiser</a></dd></dl>
 <p>Returns a reference to the initialiser. </p>
+
+</div>
+</div>
+<a id="a3acc403cde719caada08b5cf9327ad24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3acc403cde719caada08b5cf9327ad24">&#9670;&nbsp;</a></span>getMessageQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html">MessageQueue</a>&amp; CookieEng::Services::ServiceLocator::getMessageQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the Message Queue. </p>
+<dl class="section return"><dt>Returns</dt><dd>The Message Queue</dd></dl>
+<p>Returns a reference to the Message Queue </p>
 
 </div>
 </div>
@@ -330,6 +362,41 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="aafa67e5c104a89681d41937b4deaad9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa67e5c104a89681d41937b4deaad9d">&#9670;&nbsp;</a></span>setMessageQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void CookieEng::Services::ServiceLocator::setMessageQueue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html">MessageQueue</a> *&#160;</td>
+          <td class="paramname"><em>_messageQueue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the <a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html" title="A queue for distributing messages to Observers. ">MessageQueue</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_messageQueue</td><td>The File Manager to be used by the Service Locator</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Sets the Message Queue that will be accessesd through the Service Locator </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a98841ef7f94fae563997ce5bc2d6e507"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98841ef7f94fae563997ce5bc2d6e507">&#9670;&nbsp;</a></span>s_fileManager</h2>
@@ -377,19 +444,38 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a69ae2c1a6385322f36009b87c90cc0de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ae2c1a6385322f36009b87c90cc0de">&#9670;&nbsp;</a></span>s_messageQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cookie_eng_1_1_services_1_1_message_queue.html">MessageQueue</a>* CookieEng::Services::ServiceLocator::s_messageQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Static Pointer to the Message Queue. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/<a class="el" href="_service_locator_8h_source.html">ServiceLocator.h</a></li>
+<li>D:/Programming/Engine Development/CookieEng/CookieEng/include/<a class="el" href="_service_locator_8h_source.html">ServiceLocator.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>CookieEng</b></li><li class="navelem"><b>Services</b></li><li class="navelem"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">ServiceLocator</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

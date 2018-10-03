@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -31,7 +24,6 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cookie Engine
    </div>
-   <div id="projectbrief">An engine designed for the Bournemouth University Games Programming Level 6 assignment.</div>
   </td>
  </tr>
  </tbody>
@@ -51,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_cookie_eng_1_1_services_1_1_service_locator.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,6 +57,11 @@ $(document).ready(function(){initNavTree('class_cookie_eng_1_1_services_1_1_serv
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>CookieEng</b></li><li class="navelem"><b>Services</b></li><li class="navelem"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">ServiceLocator</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">CookieEng::Services::ServiceLocator Member List</div>  </div>
@@ -90,21 +72,22 @@ $(document).ready(function(){initNavTree('class_cookie_eng_1_1_services_1_1_serv
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a648c75987f9d4380475b3c2056f6d963">clearFileManager</a>()</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a1603a231c16663c30ed40afd49dffb72">clearInitialiser</a>()</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a964340ed78281fdd04f499c80f7ce01d">getFileManager</a>()</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#af235353d13e544fe474d6908ef4f96fb">getInitialiser</a>()</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a1354419abaf9ead394541a24f64bb5fa">clearMessageQueue</a>()</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a964340ed78281fdd04f499c80f7ce01d">getFileManager</a>()</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#af235353d13e544fe474d6908ef4f96fb">getInitialiser</a>()</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a3acc403cde719caada08b5cf9327ad24">getMessageQueue</a>()</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a98841ef7f94fae563997ce5bc2d6e507">s_fileManager</a></td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a4016a14884b5701e26047bd9e9404c20">s_initialiser</a></td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a8a58e7b22845b4bf688cd98d2d78a72d">setFileManager</a>(FileManager *_fileManager)</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a49766d5e7cdca3f2384feb4258c9a155">setInitialiser</a>(Initialiser *_initialiser)</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a69ae2c1a6385322f36009b87c90cc0de">s_messageQueue</a></td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a8a58e7b22845b4bf688cd98d2d78a72d">setFileManager</a>(FileManager *_fileManager)</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#a49766d5e7cdca3f2384feb4258c9a155">setInitialiser</a>(Initialiser *_initialiser)</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html#aafa67e5c104a89681d41937b4deaad9d">setMessageQueue</a>(MessageQueue *_messageQueue)</td><td class="entry"><a class="el" href="class_cookie_eng_1_1_services_1_1_service_locator.html">CookieEng::Services::ServiceLocator</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

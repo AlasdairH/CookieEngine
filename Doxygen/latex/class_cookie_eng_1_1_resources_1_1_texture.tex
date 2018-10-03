@@ -1,0 +1,204 @@
+\hypertarget{class_cookie_eng_1_1_resources_1_1_texture}{}\section{Cookie\+Eng\+:\+:Resources\+:\+:Texture Class Reference}
+\label{class_cookie_eng_1_1_resources_1_1_texture}\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+
+
+An abstraction of an Open\+GL \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture}.  
+
+
+
+
+{\ttfamily \#include $<$Texture.\+h$>$}
+
+
+
+Inherits \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Cookie\+Eng\+::\+Resources\+::\+Resource}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_resources_1_1_texture_ae7d09944ac0d60a971de919b2fd7108d}{Texture} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_resources_1_1_texture_a8bcbd117b436060b0540c3c80dc88b54}{Texture} (const std\+::string \&\+\_\+name, const std\+::string \&\+\_\+filepath)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_resources_1_1_texture_ac5830da00fa12695714d1ed03d03a591}{$\sim$\+Texture} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture} Dtor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_a1f2d72c781dba6262ac5ca6e8898fc8d}{load} (const std\+::string \&\+\_\+name, const std\+::string \&\+\_\+filepath) override
+\begin{DoxyCompactList}\small\item\em Load \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture}. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_a19f26d4ff9f73e05562e00532466f4df}{bind} (G\+Luint \+\_\+slot=0) const
+\begin{DoxyCompactList}\small\item\em Binds the \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture}. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_a1af11a58e5dc08fa18baeba8cee62109}{un\+Bind} ()
+\begin{DoxyCompactList}\small\item\em Uninds the \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture}. \end{DoxyCompactList}\item 
+int \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_a8f7b83fbbd885d0380100975fe9f5831}{get\+Width} () const
+\begin{DoxyCompactList}\small\item\em Gets the with of the texture. \end{DoxyCompactList}\item 
+int \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_ac030b164a876de42ad141e9aab422a1c}{get\+Height} () const
+\begin{DoxyCompactList}\small\item\em Gets the with of the texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_af0b6161b941846749407ba504e68ef5a}{m\+\_\+texture\+ID}
+\item 
+std\+::string \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_ae67553523fd6d4c29ec23ef180d18bd8}{m\+\_\+filepath}
+\item 
+unsigned char $\ast$ \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_ab52f89f4a8a5dc91e2581e53857036bf}{m\+\_\+local\+Buffer}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_ab7a7ce9f87006faa0e921084b0885ce8}\label{class_cookie_eng_1_1_resources_1_1_texture_ab7a7ce9f87006faa0e921084b0885ce8}} 
+int {\bfseries m\+\_\+width}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_a27412b3f96850a2fa4aabde00741cac5}\label{class_cookie_eng_1_1_resources_1_1_texture_a27412b3f96850a2fa4aabde00741cac5}} 
+int {\bfseries m\+\_\+height}
+\item 
+int \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_ac873fd6475f9059603f79e389089ad48}{m\+\_\+\+B\+PP}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstraction of an Open\+GL \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture}. 
+
+This class handles the loading (move this) and assignment of an Open\+GL texture. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_ae7d09944ac0d60a971de919b2fd7108d}\label{class_cookie_eng_1_1_resources_1_1_texture_ae7d09944ac0d60a971de919b2fd7108d}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Resources\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture} Ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+filepath} & The path to the image to be loaded\\
+\hline
+\end{DoxyParams}
+Loads an image file using stb\+\_\+image and loads it into Open\+GL \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_a8bcbd117b436060b0540c3c80dc88b54}\label{class_cookie_eng_1_1_resources_1_1_texture_a8bcbd117b436060b0540c3c80dc88b54}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Resources\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const std\+::string \&}]{\+\_\+filepath }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture} Ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+filepath} & The path to the image to be loaded\\
+\hline
+\end{DoxyParams}
+Loads an image file using stb\+\_\+image and loads it into Open\+GL \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_ac5830da00fa12695714d1ed03d03a591}\label{class_cookie_eng_1_1_resources_1_1_texture_ac5830da00fa12695714d1ed03d03a591}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!````~Texture@{$\sim$\+Texture}}
+\index{````~Texture@{$\sim$\+Texture}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{$\sim$\+Texture()}{~Texture()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Resources\+::\+Texture\+::$\sim$\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture} Dtor. 
+
+Frees the Open\+GL \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_a19f26d4ff9f73e05562e00532466f4df}\label{class_cookie_eng_1_1_resources_1_1_texture_a19f26d4ff9f73e05562e00532466f4df}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!bind@{bind}}
+\index{bind@{bind}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Texture\+::bind (\begin{DoxyParamCaption}\item[{G\+Luint}]{\+\_\+slot = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Binds the \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+slot} & The texture slot to bind the texture to\\
+\hline
+\end{DoxyParams}
+Binds the texture to a specific slot in the Open\+GL texture slot array \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_ac030b164a876de42ad141e9aab422a1c}\label{class_cookie_eng_1_1_resources_1_1_texture_ac030b164a876de42ad141e9aab422a1c}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Resources\+::\+Texture\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the with of the texture. 
+
+\begin{DoxyReturn}{Returns}
+The texture height
+\end{DoxyReturn}
+Gets the height of the texture \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_a8f7b83fbbd885d0380100975fe9f5831}\label{class_cookie_eng_1_1_resources_1_1_texture_a8f7b83fbbd885d0380100975fe9f5831}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Resources\+::\+Texture\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the with of the texture. 
+
+\begin{DoxyReturn}{Returns}
+The texture width
+\end{DoxyReturn}
+Gets the with of the texture \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_a1f2d72c781dba6262ac5ca6e8898fc8d}\label{class_cookie_eng_1_1_resources_1_1_texture_a1f2d72c781dba6262ac5ca6e8898fc8d}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!load@{load}}
+\index{load@{load}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Texture\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const std\+::string \&}]{\+\_\+filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Load \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+filepath} & The path to the image to be loaded\\
+\hline
+\end{DoxyParams}
+Loads an image file using stb\+\_\+image and loads it into Open\+GL 
+
+Reimplemented from \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a75648b8f2e442bebc90d6eb4ea3a2f6e}{Cookie\+Eng\+::\+Resources\+::\+Resource}.
+
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_a1af11a58e5dc08fa18baeba8cee62109}\label{class_cookie_eng_1_1_resources_1_1_texture_a1af11a58e5dc08fa18baeba8cee62109}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!un\+Bind@{un\+Bind}}
+\index{un\+Bind@{un\+Bind}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{un\+Bind()}{unBind()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Texture\+::un\+Bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uninds the \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture}. 
+
+Unbinds the texture. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_ac873fd6475f9059603f79e389089ad48}\label{class_cookie_eng_1_1_resources_1_1_texture_ac873fd6475f9059603f79e389089ad48}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!m\+\_\+\+B\+PP@{m\+\_\+\+B\+PP}}
+\index{m\+\_\+\+B\+PP@{m\+\_\+\+B\+PP}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{m\+\_\+\+B\+PP}{m\_BPP}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Resources\+::\+Texture\+::m\+\_\+\+B\+PP\hspace{0.3cm}{\ttfamily [protected]}}
+
+The width, height and bpp \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_ae67553523fd6d4c29ec23ef180d18bd8}\label{class_cookie_eng_1_1_resources_1_1_texture_ae67553523fd6d4c29ec23ef180d18bd8}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!m\+\_\+filepath@{m\+\_\+filepath}}
+\index{m\+\_\+filepath@{m\+\_\+filepath}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{m\+\_\+filepath}{m\_filepath}}
+{\footnotesize\ttfamily std\+::string Cookie\+Eng\+::\+Resources\+::\+Texture\+::m\+\_\+filepath\hspace{0.3cm}{\ttfamily [protected]}}
+
+The filepath to the texture \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_ab52f89f4a8a5dc91e2581e53857036bf}\label{class_cookie_eng_1_1_resources_1_1_texture_ab52f89f4a8a5dc91e2581e53857036bf}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!m\+\_\+local\+Buffer@{m\+\_\+local\+Buffer}}
+\index{m\+\_\+local\+Buffer@{m\+\_\+local\+Buffer}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{m\+\_\+local\+Buffer}{m\_localBuffer}}
+{\footnotesize\ttfamily unsigned char$\ast$ Cookie\+Eng\+::\+Resources\+::\+Texture\+::m\+\_\+local\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+The local buffer for the loaded image \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_texture_af0b6161b941846749407ba504e68ef5a}\label{class_cookie_eng_1_1_resources_1_1_texture_af0b6161b941846749407ba504e68ef5a}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}!m\+\_\+texture\+ID@{m\+\_\+texture\+ID}}
+\index{m\+\_\+texture\+ID@{m\+\_\+texture\+ID}!Cookie\+Eng\+::\+Resources\+::\+Texture@{Cookie\+Eng\+::\+Resources\+::\+Texture}}
+\subsubsection{\texorpdfstring{m\+\_\+texture\+ID}{m\_textureID}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Resources\+::\+Texture\+::m\+\_\+texture\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Open\+GL \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Texture} ID 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Texture.\+h\end{DoxyCompactItemize}

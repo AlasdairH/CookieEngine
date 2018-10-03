@@ -13,11 +13,18 @@
 #include "ServiceLocator.h"
 
 #include "Texture.h"
+#include "Material.h"
+#include "ShaderProgram.h"
 
 namespace CookieEng
 {
 namespace Core
 {
+	/*! @class ResourceLoader
+	*	@brief Loads a list of resources from a .lvl file
+	*
+	*	Takes a .lvl file and parses it for the loading of resources to the ResourceManager singleton.
+	*/
 	class ResourceLoader
 	{
 	public:
@@ -27,11 +34,16 @@ namespace Core
 		*/
 		static ResourceLoader& getInstance()
 		{
-			static ResourceLoader instance;	// Guaranteed to be destroyed.
+			static ResourceLoader instance;		// Guaranteed to be destroyed.
 												// Instantiated on first use.
 			return instance;
 		}
 
+		/** @brief Loads a .lvl file for resource loading
+		*	@param _filepath The filepath to load from
+		*
+		*	This loads a file (.lvl) to get the load instructions from
+		*/
 		void fromFile(const std::string _filepath);
 
 		// ------------------------------------------------

@@ -9,6 +9,8 @@ namespace Resources
 	{
 		vertices.clear();
 		indices.clear();
+		layout.reset();
+
 		std::string objFile = Services::ServiceLocator::getFileManager().loadTextFile(_filepath);
 
 		unsigned int cursor = 0;

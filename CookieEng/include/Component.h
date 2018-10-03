@@ -9,19 +9,8 @@
 
 namespace CookieEng
 {
-namespace Components
+namespace ECS
 {
-	class Component
-	{
-	public:
-		Component();
-		~Component();
-
-		virtual void onStart() = 0;
-		virtual void onUpdate() = 0;
-
-	protected:
-
-	};
+	
 }
 };

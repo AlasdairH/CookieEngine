@@ -1,6 +1,8 @@
 #pragma once
 
 // cstdlib
+#include <memory>
+#include <vector>
 
 // external libs
 
@@ -11,10 +13,6 @@ namespace CookieEng
 {
 namespace ECS
 {
-	struct Entity
-	{
-		Entity();
-		~Entity();
-	};
+
 }
 };

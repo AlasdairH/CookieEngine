@@ -4,14 +4,6 @@ namespace CookieEng
 {
 namespace ECS
 {
-	Entity::Entity()
-	{
 
-	}
-
-	Entity::~Entity()
-	{
-
-	}
 }
 };

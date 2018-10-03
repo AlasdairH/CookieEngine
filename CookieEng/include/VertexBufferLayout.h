@@ -111,6 +111,14 @@ namespace Graphics
 		*/
 		inline GLuint getStride() const { return m_stride; }
 
+		/** @brief Resets the layout
+		*
+		*	Resets the layout back to default
+		*/
+		inline void reset() { m_stride = 0; m_elements.clear(); }
+
+
+
 	protected:
 		std::vector<VertexBufferElement>	m_elements;			/**< The vector containing the elements that make up the layout */
 		GLuint								m_stride;			/**< The stride between data in the layout */

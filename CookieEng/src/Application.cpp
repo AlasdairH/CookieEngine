@@ -29,6 +29,8 @@
 
 #include "ThreadPool.h"
 
+#include "ECS.h"
+
 #define DEBUG
 
 #undef main;
@@ -56,6 +58,9 @@ int main()
 	//Core::ResourceLoader &resourceLoader = Core::ResourceLoader::getInstance();
 	// load shaders and textures from file
 	//resourceLoader.fromFile("resources/assets/levels/test.lvl");
+
+	ECS::Manager ecsManager;
+	ecsManager.addEntity();
 
 	ResMgmt::ResourceManager &resourceManager = ResMgmt::ResourceManager::getInstance();
 	//resourceManager.load<Graphics::ShaderProgram>("BasicShader", "resources/shaders/BasicShader.cngShader");
@@ -158,6 +163,9 @@ int main()
 			//Services::ServiceLocator::getMessageQueue().update();
 		});
 		
+		
+		ecsManager.update();
+		ecsManager.refresh();
 
 		// modify
 		testGameObject.transform.rotate(0.5f, glm::vec3(1, 1, 1));

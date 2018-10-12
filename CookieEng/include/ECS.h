@@ -141,6 +141,11 @@ namespace CookieEng
 				return *e;
 			}
 
+			Entity &getEntity(int _index)
+			{
+				return *m_entities[_index];
+			}
+
 			void update()
 			{
 				for (auto &e : m_entities)

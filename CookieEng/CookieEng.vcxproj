@@ -175,6 +175,7 @@
     <ClCompile Include="src\Resource.cpp" />
     <ClCompile Include="src\ResourceLoader.cpp" />
     <ClCompile Include="src\ResourceManager.cpp" />
+    <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\ShaderProgram.cpp" />
     <ClCompile Include="include\CookieEng.h" />
     <ClCompile Include="src\FileManager.cpp" />
@@ -196,6 +197,7 @@
   <ItemGroup>
     <ClInclude Include="include\Camera.h" />
     <ClInclude Include="include\ECS.h" />
+    <ClInclude Include="include\Scene.h" />
     <ClInclude Include="include\Times.h" />
     <ClInclude Include="include\Renderable.h" />
     <ClInclude Include="include\IGameObject.h" />

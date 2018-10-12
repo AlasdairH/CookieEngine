@@ -43,7 +43,7 @@ namespace CookieEng
 	class Base
 	{
 	public:
-		void start()
+		void initialise()
 		{
 			// assign services to the service locator using the service container
 			Services::ServiceContainer serviceContainer;
@@ -65,7 +65,7 @@ namespace CookieEng
 			glCullFace(GL_BACK);
 			//SDL_GL_SetSwapInterval(0);
 
-
+			/*
 
 			//Core::ResourceLoader &resourceLoader = Core::ResourceLoader::getInstance();
 			// load shaders and textures from file
@@ -91,6 +91,7 @@ namespace CookieEng
 			entity.getComponent<Components::Renderable>().setMesh("BasicMesh");
 			entity.getComponent<Components::Renderable>().setMaterial("BasicMaterial");
 
+			*/
 
 			// camera
 			Object::Camera testCamera;
@@ -163,17 +164,13 @@ namespace CookieEng
 				});
 
 
-				ecsManager.update();
-				ecsManager.refresh();
-
-				// modify
-				entity.getComponent<Components::Transform>().rotate(10.0f * Utilities::Times::deltaTime, glm::vec3(1, 1, 1));
-
-				resourceManager.get<Resources::Material>("BasicMaterial")->setMVP(entity.getComponent<Components::Transform>().getMatrix(), glm::inverse(testCamera.transform.getMatrix()), testCamera.getProjectionMatrix());
+				//ecsManager.update();
+				//ecsManager.refresh();
+;
 
 				// draw to the framebuffer
 				//renderer.drawToFrameBuffer(testFrameBuffer, testVAO, testIBO, *resourceManager.get<Resources::Material>("BasicMaterial"));
-				renderer.drawToFrameBuffer(primaryFrameBuffer, entity);
+				//renderer.drawToFrameBuffer(primaryFrameBuffer, entity);
 
 				glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

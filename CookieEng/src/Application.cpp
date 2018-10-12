@@ -32,6 +32,8 @@
 #include "ECS.h"
 #include "Renderable.h"
 
+#include "Times.h"
+
 #define DEBUG
 
 #undef main;
@@ -39,10 +41,6 @@
 int main()
 {
 	using namespace CookieEng;
-
-	glEnable(GL_DEPTH_TEST);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	glEnable(GL_BLEND);
 
 	// assign services to the service locator using the service container
 	Services::ServiceContainer serviceContainer;
@@ -55,6 +53,16 @@ int main()
 	Window *window = new Window("CookieEng", 1280, 720);
 	// init GLEW (OpenGL)
 	Services::ServiceLocator::getInitialiser().initOpenGL();
+
+	// GL Funcs
+	glEnable(GL_DEPTH_TEST);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glEnable(GL_BLEND);
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
+	//SDL_GL_SetSwapInterval(0);
+
+
 
 	//Core::ResourceLoader &resourceLoader = Core::ResourceLoader::getInstance();
 	// load shaders and textures from file
@@ -71,9 +79,7 @@ int main()
 	resourceManager.load<Resources::ShaderProgram>("BasicShader", "resources/shaders/BasicShader.cngShader");
 
 	// load materials
-	resourceManager.load<Resources::Material>("BasicMaterial", "");
-	resourceManager.get<Resources::Material>("BasicMaterial")->setShader("BasicShader");
-	resourceManager.get<Resources::Material>("BasicMaterial")->setDiffuse("BasicTexture");
+	resourceManager.load<Resources::Material>("BasicMaterial", "resources/materials/Default.cngMaterial");
 
 	ECS::Manager ecsManager;
 	auto &entity(ecsManager.addEntity());
@@ -101,11 +107,17 @@ int main()
 
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-	const int targetFPS = 20;
+	Uint64 TIME_NOW = SDL_GetPerformanceCounter();
+	Uint64 TIME_LAST = 0;
 
 	bool shouldQuit = false;
 	while (!shouldQuit)
 	{
+		// deltaTime calculations
+		TIME_LAST = TIME_NOW;
+		TIME_NOW = SDL_GetPerformanceCounter();
+		Utilities::Times::deltaTime = ((double)((TIME_NOW - TIME_LAST) * 1000 / (double)SDL_GetPerformanceFrequency())) * 0.001f;
+
 		SDL_Event incomingEvent;
 		while (SDL_PollEvent(&incomingEvent))
 		{
@@ -132,11 +144,11 @@ int main()
 				}
 				if (incomingEvent.key.keysym.sym == SDLK_w)
 				{
-					testCamera.transform.translate(glm::vec3(0, 0, -1));
+					testCamera.transform.translate(glm::vec3(0, 0, -10) * Utilities::Times::deltaTime);
 				}
 				if (incomingEvent.key.keysym.sym == SDLK_s)
 				{
-					testCamera.transform.translate(glm::vec3(0, 0, 1));
+					testCamera.transform.translate(glm::vec3(0, 0, 10) * Utilities::Times::deltaTime);
 				}
 			}
 		}
@@ -152,15 +164,13 @@ int main()
 		ecsManager.refresh();
 
 		// modify
-		entity.getComponent<Components::Transform>().rotate(0.5f, glm::vec3(1, 1, 1));
+		entity.getComponent<Components::Transform>().rotate(10.0f * Utilities::Times::deltaTime, glm::vec3(1, 1, 1));
 
 		resourceManager.get<Resources::Material>("BasicMaterial")->setMVP(entity.getComponent<Components::Transform>().getMatrix(), glm::inverse(testCamera.transform.getMatrix()), testCamera.getProjectionMatrix());
 		
 		// draw to the framebuffer
 		//renderer.drawToFrameBuffer(testFrameBuffer, testVAO, testIBO, *resourceManager.get<Resources::Material>("BasicMaterial"));
-		renderer.drawToFrameBuffer(
-			testFrameBuffer,
-			entity);
+		renderer.drawToFrameBuffer(testFrameBuffer, entity);
 
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

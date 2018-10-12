@@ -42,6 +42,14 @@ namespace Resources
 		*/
 		~Material() { }
 
+		/** @brief Loads the Material from a file
+		*	@param _name The name to assign the material
+		*	@param _filepath The filepath to load from
+		*
+		*	Overrides the Resource load to allow loading of a material
+		*/
+		void load(const std::string &_name, const std::string &_filepath) override;
+
 		/** @brief Uses the Material (Binds)
 		*
 		*	Binds the shader and texture members.
@@ -84,8 +92,8 @@ namespace Resources
 
 	protected:
 		std::shared_ptr<ShaderProgram>	m_shaderProgram;		/**< The Material's Shader */
-		std::shared_ptr<Texture>					m_textureDiffuse;		/**< The Material's Diffuse Texture (if used) */
-		glm::vec4									m_diffuseColour;		/**< The Material's Diffuse Colour (if used) */
+		std::shared_ptr<Texture>		m_textureDiffuse;		/**< The Material's Diffuse Texture (if used) */
+		glm::vec4						m_diffuseColour;		/**< The Material's Diffuse Colour (if used) */
 	};
 }
 }

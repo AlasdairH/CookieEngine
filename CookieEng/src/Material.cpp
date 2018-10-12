@@ -3,6 +3,53 @@ namespace CookieEng
 {
 namespace Resources
 {
+	void Material::load(const std::string & _name, const std::string & _filepath)
+	{
+		std::string text = Services::ServiceLocator::getFileManager().loadTextFile(_filepath);
+		int lineNumber = 0;
+
+		for (unsigned int i = 0; i < text.size(); ++i)
+		{
+			++lineNumber;
+			// find the index of the next end of line char, starting from i
+			unsigned int eol = text.find("\n", i);
+			// get a substring from i, for end of line - i chars
+			std::string line = text.substr(i, eol - i);
+
+			// split the current line by the ' ' delimiter
+			std::vector<std::string> splitString = Utilities::UtilsStr::split(line, ' ');
+
+			if (splitString.size() == 0) continue;
+
+			// FILETYPE
+			if (splitString[0] == "FILETYPE")
+			{
+				// FILETYPE type
+				if (splitString[1] != "Material")
+				{
+					LOG_ERROR("Tried to load ShaderProgram from a file that isn't a ShaderProgram");
+				}
+			}
+			// SET
+			else if (splitString[0] == "SET")
+			{
+				// SET SHADER
+				if (splitString[1] == "SHADER")
+				{
+					setShader(splitString[2]);
+				}
+				// SET DIFFUSE
+				if (splitString[1] == "DIFFUSE")
+				{
+					setDiffuse(splitString[2]);
+				}
+			}
+
+			// move the cursor on to the next line
+			i = eol;
+		}
+	}
+	
 	void Material::use() const
 	{
 		m_shaderProgram->bind();

@@ -1,0 +1,3 @@
+FILETYPE Material
+SET SHADER BasicShader
+SET DIFFUSE BasicTexture

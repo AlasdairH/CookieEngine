@@ -16,6 +16,11 @@ namespace Resources
 
 	void ShaderProgram::load(const std::string &_name, const std::string &_filepath)
 	{
+		if (_filepath == "")
+		{
+			LOG_MESSAGE("Creating Material with Default Settings");
+			return;
+		}
 		std::string text = Services::ServiceLocator::getFileManager().loadTextFile(_filepath);
 		int lineNumber = 0;
 

@@ -4,7 +4,6 @@ namespace CookieEng
 {
 namespace Resources
 {
-	
 	void Mesh::load(const std::string & _name, const std::string & _filepath)
 	{
 		vertices.clear();

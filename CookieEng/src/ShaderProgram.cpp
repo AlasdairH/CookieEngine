@@ -44,6 +44,7 @@ namespace Resources
 				if (splitString[1] != "shaderprogram")
 				{
 					LOG_ERROR("Tried to load ShaderProgram from a file that isn't a ShaderProgram");
+					return;
 				}
 			}
 			// VERTEX

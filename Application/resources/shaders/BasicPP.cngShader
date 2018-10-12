@@ -1,0 +1,4 @@
+FILETYPE shaderprogram
+VERTEX resources/shaders/PostProcVert.glsl
+FRAGMENT resources/shaders/PostProcFrag.glsl
+LINK

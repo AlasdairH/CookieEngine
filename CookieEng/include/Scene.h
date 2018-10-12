@@ -21,7 +21,7 @@ namespace Core
 		void draw();
 
 	protected:
-		ECS::Manager ecsManager;
+		//ECS::Manager ecsManager;
 	};
 }
 }

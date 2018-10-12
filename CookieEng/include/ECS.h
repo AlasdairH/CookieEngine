@@ -1,3 +1,4 @@
+/*
 #pragma once
 
 // cstdlib
@@ -167,3 +168,5 @@ namespace CookieEng
 		};
 	}
 }
+
+*/

@@ -7,7 +7,7 @@
 
 // program
 #include "Macro.h"
-#include "ECS.h"
+#include "Component.h"
 #include "Mesh.h"
 #include "Material.h"
 #include "VertexArray.h"

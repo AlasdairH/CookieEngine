@@ -9,7 +9,7 @@
 
 // program
 #include "Macro.h"
-#include "ECS.h"
+#include "Component.h"
 
 // TODO: Scale Implementation
 

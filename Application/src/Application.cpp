@@ -7,7 +7,7 @@
 int main()
 {
 	CookieEng::Base Engine;
-	Engine.start();
+	Engine.initialise();
 
 	return 0;
 }

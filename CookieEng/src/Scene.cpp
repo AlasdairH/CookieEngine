@@ -16,13 +16,13 @@ namespace Core
 
 	void Scene::update()
 	{
-		ecsManager.update();
-		ecsManager.refresh();
+		//ecsManager.update();
+		//ecsManager.refresh();
 	}
 
 	void Scene::draw()
 	{
-		ecsManager
+		//ecsManager
 	}
 }
 }

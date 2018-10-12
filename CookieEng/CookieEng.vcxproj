@@ -163,6 +163,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Entity.cpp" />
     <ClCompile Include="src\external\stb_image\stb_image.cpp" />
     <ClCompile Include="src\FrameBuffer.cpp" />
     <ClCompile Include="src\IGameObject.cpp" />
@@ -196,7 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="include\Component.h" />
     <ClInclude Include="include\ECS.h" />
+    <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\Scene.h" />
     <ClInclude Include="include\Times.h" />
     <ClInclude Include="include\Renderable.h" />
@@ -229,6 +232,7 @@
     <ClInclude Include="include\VertexBufferLayout.h" />
     <ClInclude Include="include\Window.h" />
     <ClInclude Include="include\ShaderProgram.h" />
+    <ClInclude Include="src\Component.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\DoxygenRef.txt" />

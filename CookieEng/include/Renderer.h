@@ -9,7 +9,7 @@
 #include "GL/glew.h"
 
 // program
-#include "ECS.h"
+#include "Entity.h"
 #include "Renderable.h"
 #include "VertexArray.h"
 #include "VertexBuffer.h"

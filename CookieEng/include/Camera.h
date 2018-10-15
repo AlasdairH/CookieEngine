@@ -4,11 +4,14 @@
 
 
 // external libs
+#include "GL/glew.h"
 #include "GLM/glm.hpp"
 #include "GLM/ext.hpp"
 
 // program
 #include "Macro.h"
+#include "ResourceManager.h"
+#include "ShaderProgram.h"
 #include "Transform.h"
 
 // TODO: Matrix Optimisation
@@ -17,6 +20,13 @@ namespace CookieEng
 {
 namespace Object
 {
+	struct CameraUniformData_t
+	{
+		glm::mat4 viewMatrix;
+		glm::mat4 projectionMatrix;
+	};
+
+
 	/*! @class Camera
 	*	@brief Contains the data for the representation of a perspective camera
 	*
@@ -59,6 +69,12 @@ namespace Object
 		*/
 		inline glm::mat4 getProjectionMatrix() { return m_projectionMatrix; }
 
+		/** @brief Updates the OpenGL Camera Data Uniform
+		*
+		*	Updates the GPU side uniform for camera view and projection matricies.
+		*/
+		void updateCameraUniform();
+
 	protected:
 		/** @brief Sets the updated Projection Matrix
 		*
@@ -70,6 +86,10 @@ namespace Object
 		float		m_aspect;				/**< The current Aspect Ratio */
 
 		glm::mat4	m_projectionMatrix;		/**< The Projection Matrix */
+
+		GLuint m_UBO;
+
+		CameraUniformData_t m_uniformData;
 	};
 }
 }

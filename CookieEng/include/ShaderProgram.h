@@ -140,6 +140,20 @@ namespace Resources
 		*/
 		void setUniformBool(const std::string &_name, const bool _value);
 
+		/** @brief Gets a Uniform Block Index
+		*	@param _name The name of the block to get 
+		*
+		*	The index of the uniform block on the shader
+		*/
+		GLuint getUniformBlockIndex(const std::string &_name);
+
+		/** @brief Gets a Uniform Block Index
+		*	@param _blockIndex The block index name to bind to the binding point
+		*	@param _bindingPoint The binding point to bind the block index to
+		*
+		*	Binds uniform block to binding point
+		*/
+		void bindUniformBlock(const std::string &_blockIndex, GLuint _bindingPoint);
 
 	protected:
 

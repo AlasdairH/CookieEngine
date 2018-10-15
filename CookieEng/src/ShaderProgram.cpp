@@ -168,5 +168,20 @@ namespace Resources
 	{
 		setUniform1i(_name, _value);
 	}
+
+	GLuint ShaderProgram::getUniformBlockIndex(const std::string & _name)
+	{
+		GLuint blockIndex = glGetUniformBlockIndex(m_programID, _name.c_str());
+		if (blockIndex = -1)
+		{
+			LOG_WARNING("Uniform block" << _name << " does not exist.");
+		}
+		return blockIndex;
+	}
+
+	void ShaderProgram::bindUniformBlock(const std::string &_blockIndex, GLuint _bindingPoint)
+	{
+		glUniformBlockBinding(m_programID, getUniformBlockIndex(_blockIndex), _bindingPoint);
+	}
 }
 }

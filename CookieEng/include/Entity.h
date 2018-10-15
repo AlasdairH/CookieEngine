@@ -15,8 +15,7 @@
 #define ADDCOMPONENT \
   std::shared_ptr<T> rtn = std::make_shared<T>(); \
   rtn->parent = this; \
-  rtn->began = false; \
-  components.push_back(rtn);
+  m_components.push_back(rtn);
 
 
 namespace CookieEng
@@ -28,9 +27,16 @@ namespace ECS
 	class Entity
 	{
 	public:
+		Entity();
+
 		template <typename T> 
 		std::shared_ptr<T> addComponent()
 		{
+			if (hasComponent<T>())
+			{
+				return getComponent<T>();
+			}
+
 			ADDCOMPONENT
 			rtn->onInit();
 

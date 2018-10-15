@@ -29,7 +29,9 @@
 
 #include "ThreadPool.h"
 
-#include "ECS.h"
+#include "Entity.h"
+#include "Component.h"
+
 #include "Renderable.h"
 
 #include "Times.h"
@@ -65,7 +67,6 @@ namespace CookieEng
 			glCullFace(GL_BACK);
 			//SDL_GL_SetSwapInterval(0);
 
-			/*
 
 			//Core::ResourceLoader &resourceLoader = Core::ResourceLoader::getInstance();
 			// load shaders and textures from file
@@ -84,6 +85,7 @@ namespace CookieEng
 			// load materials
 			resourceManager.load<Resources::Material>("BasicMaterial", "resources/materials/Default.cngMaterial");
 
+			/*
 			ECS::Manager ecsManager;
 			auto &entity(ecsManager.addEntity());
 			entity.addComponent<Components::Transform>();
@@ -92,6 +94,12 @@ namespace CookieEng
 			entity.getComponent<Components::Renderable>().setMaterial("BasicMaterial");
 
 			*/
+
+			ECS::Entity entity;
+			entity.addComponent<Components::Transform>();
+			entity.addComponent<Components::Renderable>();
+			entity.getComponent<Components::Renderable>()->setMesh("BasicMesh");
+			entity.getComponent<Components::Renderable>()->setMaterial("BasicMaterial");
 
 			// camera
 			Object::Camera testCamera;
@@ -166,11 +174,13 @@ namespace CookieEng
 
 				//ecsManager.update();
 				//ecsManager.refresh();
-;
+
+
+				resourceManager.get<Resources::Material>("BasicMaterial")->setMVP(entity.getComponent<Components::Transform>()->getMatrix(), glm::inverse(testCamera.transform.getMatrix()), testCamera.getProjectionMatrix());
 
 				// draw to the framebuffer
 				//renderer.drawToFrameBuffer(testFrameBuffer, testVAO, testIBO, *resourceManager.get<Resources::Material>("BasicMaterial"));
-				//renderer.drawToFrameBuffer(primaryFrameBuffer, entity);
+				renderer.drawToFrameBuffer(primaryFrameBuffer, entity);
 
 				glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

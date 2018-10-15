@@ -71,7 +71,6 @@ namespace CookieEng
 			{
 				for (auto &c : m_components)
 					c->onStart();
-
 			}
 			void update()
 			{

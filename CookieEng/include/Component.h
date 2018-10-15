@@ -22,8 +22,9 @@ namespace ECS
 	public:
 		Entity *parent;
 
-		virtual void start() { }
-		virtual void update() { }
+		virtual void onInit() { }
+		virtual void onStart() { }
+		virtual void onUpdate() { }
 
 	protected:
 

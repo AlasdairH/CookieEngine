@@ -38,11 +38,13 @@ namespace Graphics
 		}
 
 		_fbo.bind();
-		_entity.getComponent<Components::Renderable>()->getMaterial()->use();
-		_entity.getComponent<Components::Renderable>()->getVAO()->bind();
-		_entity.getComponent<Components::Renderable>()->getIBO()->bind();
+		// cache the render component
+		std::shared_ptr<Components::Renderable> renderComponent = _entity.getComponent<Components::Renderable>();
+		renderComponent->getMaterial()->use();
+		renderComponent->getVAO()->bind();
+		renderComponent->getIBO()->bind();
 
-		glDrawElements(GL_TRIANGLES, _entity.getComponent<Components::Renderable>()->getIBO()->getCount(), GL_UNSIGNED_INT, 0);
+		glDrawElements(GL_TRIANGLES, renderComponent->getIBO()->getCount(), GL_UNSIGNED_INT, 0);
 
 		_fbo.unBind();
 	}

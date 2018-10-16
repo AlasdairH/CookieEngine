@@ -10,6 +10,7 @@
 
 // program
 #include "Macro.h"
+#include "VertexBuffer.h"
 #include "ResourceManager.h"
 #include "ShaderProgram.h"
 #include "Transform.h"
@@ -88,6 +89,7 @@ namespace Object
 		glm::mat4	m_projectionMatrix;		/**< The Projection Matrix */
 
 		GLuint m_UBO;
+		std::unique_ptr<Graphics::VertexBuffer> m_uniformBuffer;
 
 		CameraUniformData_t m_uniformData;
 	};

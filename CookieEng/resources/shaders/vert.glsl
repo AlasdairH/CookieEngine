@@ -23,6 +23,7 @@ void main()
 	frag_texCoord = texCoord;
 	frag_vert = position;
 	frag_normal = normal;
+
 	mat4 MVP = u_p * u_v * u_m;
     gl_Position = MVP * vec4(position.x, position.y, position.z, 1.0);
 }

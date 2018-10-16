@@ -21,9 +21,8 @@ namespace Components
 		ResMgmt::ResourceManager &resourceManager = ResMgmt::ResourceManager::getInstance();
 
 		m_VAO = std::make_shared<Graphics::VertexArray>();
-		m_VBO = std::make_shared<Graphics::VertexBuffer>(Graphics::BUFFER_ARRAY);
-		m_IBO = std::make_shared<Graphics::VertexBuffer>(Graphics::BUFFER_ELEMENT_ARRAY);
-		//std::shared_ptr<Resources::Mesh> mesh = resourceManager.get<Resources::Mesh>(m_mesh);
+		m_VBO = std::make_shared<Graphics::VertexBuffer>(Graphics::CNG_BUFFER_ARRAY);
+		m_IBO = std::make_shared<Graphics::VertexBuffer>(Graphics::CNG_BUFFER_ELEMENT_ARRAY);
 
 		m_VAO->addBuffer(*m_VBO, m_mesh->layout);
 

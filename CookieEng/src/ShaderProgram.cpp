@@ -172,16 +172,17 @@ namespace Resources
 	GLuint ShaderProgram::getUniformBlockIndex(const std::string & _name)
 	{
 		GLuint blockIndex = glGetUniformBlockIndex(m_programID, _name.c_str());
-		if (blockIndex = -1)
+		if (blockIndex == -1)
 		{
-			LOG_WARNING("Uniform block" << _name << " does not exist.");
+			LOG_WARNING("Uniform block " << _name << " does not exist (" << blockIndex << ")");
 		}
 		return blockIndex;
 	}
 
-	void ShaderProgram::bindUniformBlock(const std::string &_blockIndex, GLuint _bindingPoint)
+	void ShaderProgram::linkUniformBlock(const std::string &_blockIndex, GLuint _bindingPoint)
 	{
 		glUniformBlockBinding(m_programID, getUniformBlockIndex(_blockIndex), _bindingPoint);
+		LOG_MESSAGE("Linked shader " << m_programID << " uniform block " << _blockIndex << " to binding point " << _bindingPoint);
 	}
 }
 }

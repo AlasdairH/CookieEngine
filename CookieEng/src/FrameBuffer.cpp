@@ -14,7 +14,7 @@ namespace Graphics
 		// create VAO
 		m_arrayBuffer = new VertexArray;
 		// create VBO
-		m_vertexBuffer = new VertexBuffer(Graphics::BUFFER_ARRAY);
+		m_vertexBuffer = new VertexBuffer(Graphics::CNG_BUFFER_ARRAY);
 		GLfloat fbo_vertices[] = 
 		{
 			-1.0f,  1.0f,  0.0f, 1.0f,

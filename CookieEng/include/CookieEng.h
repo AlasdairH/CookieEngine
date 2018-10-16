@@ -172,9 +172,7 @@ namespace CookieEng
 				});
 
 
-				//ecsManager.update();
-				//ecsManager.refresh();
-
+				testCamera.updateCameraUniform();
 
 				resourceManager.get<Resources::Material>("BasicMaterial")->setMVP(entity.getComponent<Components::Transform>()->getMatrix(), glm::inverse(testCamera.transform.getMatrix()), testCamera.getProjectionMatrix());
 

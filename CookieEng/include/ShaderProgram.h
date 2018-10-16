@@ -153,7 +153,7 @@ namespace Resources
 		*
 		*	Binds uniform block to binding point
 		*/
-		void bindUniformBlock(const std::string &_blockIndex, GLuint _bindingPoint);
+		void linkUniformBlock(const std::string &_blockIndex, GLuint _bindingPoint);
 
 	protected:
 

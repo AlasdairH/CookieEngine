@@ -34,6 +34,7 @@ namespace Graphics
 	{
 		m_count = _count;
 		bind();
+		// TODO: Fix static draw
 		glBufferData(m_vertexBufferType, _size, _data, GL_STATIC_DRAW);
 	}
 
@@ -45,6 +46,12 @@ namespace Graphics
 	void VertexBuffer::unBind() const
 	{
 		glBindBuffer(m_vertexBufferType, 0);
+	}
+
+	void VertexBuffer::bindBase(GLuint _index)
+	{
+		// TODO: Might not be a uniform buffer?
+		glBindBufferBase(GL_UNIFORM_BUFFER, _index, m_vertexBufferID);
 	}
 
 }

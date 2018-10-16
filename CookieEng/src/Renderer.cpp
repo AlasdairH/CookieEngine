@@ -35,12 +35,13 @@ namespace Graphics
 		if (!_entity.hasComponent<Components::Renderable>())
 		{
 			LOG_WARNING("Unable to draw, no renderable component found");
+			return;
 		}
 
 		_fbo.bind();
 		// cache the render component
 		std::shared_ptr<Components::Renderable> renderComponent = _entity.getComponent<Components::Renderable>();
-		// set the model matrix
+		// set the model matrix (view and projection is set by camera uniform buffer)
 		renderComponent->getMaterial()->setModelMatrix(_entity.getComponent<Components::Transform>()->getMatrix());
 		// use the material (shader)
 		renderComponent->getMaterial()->use();

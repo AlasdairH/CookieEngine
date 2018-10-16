@@ -11,5 +11,6 @@ int main()
 
 	CookieEng::ResMgmt::ResourceManager &resourceManager = CookieEng::ResMgmt::ResourceManager::getInstance();
 
+
 	return 0;
 }

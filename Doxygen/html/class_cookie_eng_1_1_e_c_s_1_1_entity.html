@@ -71,28 +71,168 @@ $(function() {
 <div class="title">CookieEng::ECS::Entity Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Holds together a group of components that are unique of each other.  
+ <a href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_entity_8h_source.html">Entity.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="memTemplParams" colspan="2"><a id="a7b24f6959d8f1686e02e8ae5ef61f08c"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addComponent</b> ()</td></tr>
+<tr class="memitem:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#a7b24f6959d8f1686e02e8ae5ef61f08c">addComponent</a> ()</td></tr>
+<tr class="memdesc:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a component to the entity.  <a href="#a7b24f6959d8f1686e02e8ae5ef61f08c">More...</a><br /></td></tr>
 <tr class="separator:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e954d74445ccffe29412c885d97bf63"><td class="memTemplParams" colspan="2"><a id="a7e954d74445ccffe29412c885d97bf63"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7e954d74445ccffe29412c885d97bf63"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getComponent</b> ()</td></tr>
+<tr class="memitem:a7e954d74445ccffe29412c885d97bf63"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7e954d74445ccffe29412c885d97bf63"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#a7e954d74445ccffe29412c885d97bf63">getComponent</a> ()</td></tr>
+<tr class="memdesc:a7e954d74445ccffe29412c885d97bf63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a component from the <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html" title="Holds together a group of components that are unique of each other. ">Entity</a>.  <a href="#a7e954d74445ccffe29412c885d97bf63">More...</a><br /></td></tr>
 <tr class="separator:a7e954d74445ccffe29412c885d97bf63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a594daff6ddf321ac9c3a2fad3e50620e"><td class="memTemplParams" colspan="2"><a id="a594daff6ddf321ac9c3a2fad3e50620e"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a594daff6ddf321ac9c3a2fad3e50620e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hasComponent</b> ()</td></tr>
+<tr class="memitem:a594daff6ddf321ac9c3a2fad3e50620e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a594daff6ddf321ac9c3a2fad3e50620e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#a594daff6ddf321ac9c3a2fad3e50620e">hasComponent</a> ()</td></tr>
+<tr class="memdesc:a594daff6ddf321ac9c3a2fad3e50620e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests to see if an <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html" title="Holds together a group of components that are unique of each other. ">Entity</a> contains a component of type T.  <a href="#a594daff6ddf321ac9c3a2fad3e50620e">More...</a><br /></td></tr>
 <tr class="separator:a594daff6ddf321ac9c3a2fad3e50620e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a5c8b8b6f07c07b97e898ece5dab38517"><td class="memItemLeft" align="right" valign="top"><a id="a5c8b8b6f07c07b97e898ece5dab38517"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html">Component</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_components</b></td></tr>
+<tr class="memitem:a5c8b8b6f07c07b97e898ece5dab38517"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html">Component</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#a5c8b8b6f07c07b97e898ece5dab38517">m_components</a></td></tr>
 <tr class="separator:a5c8b8b6f07c07b97e898ece5dab38517"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Holds together a group of components that are unique of each other. </p>
+<p>Holds a group of components that dictate the behaviour of the entity. Each component holds a pointer to its parent entity. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7b24f6959d8f1686e02e8ae5ef61f08c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b24f6959d8f1686e02e8ae5ef61f08c">&#9670;&nbsp;</a></span>addComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;T&gt; CookieEng::ECS::Entity::addComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a component to the entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>The component type to add (must inherit from <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html" title="The component base class. ">Component</a>)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Takes a templated input of the component type to add (must inherit from <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html" title="The component base class. ">Component</a>) and adds it to the entity. It is at this point the components onInit method is run. </p>
+
+</div>
+</div>
+<a id="a7e954d74445ccffe29412c885d97bf63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e954d74445ccffe29412c885d97bf63">&#9670;&nbsp;</a></span>getComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;T&gt; CookieEng::ECS::Entity::getComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a component from the <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html" title="Holds together a group of components that are unique of each other. ">Entity</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>The component type to get (must inherit from <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html" title="The component base class. ">Component</a>)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Takes a templated input of the component type to get (must inherit from <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html" title="The component base class. ">Component</a>) and returns a shared pointer to it. If the component is not found on the entity then it will add it and return the new component </p>
+
+</div>
+</div>
+<a id="a594daff6ddf321ac9c3a2fad3e50620e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a594daff6ddf321ac9c3a2fad3e50620e">&#9670;&nbsp;</a></span>hasComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CookieEng::ECS::Entity::hasComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests to see if an <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html" title="Holds together a group of components that are unique of each other. ">Entity</a> contains a component of type T. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>The component type to test (must inherit from <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html" title="The component base class. ">Component</a>)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Looks at the components on the <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html" title="Holds together a group of components that are unique of each other. ">Entity</a> and returns wether the entity contains that component </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5c8b8b6f07c07b97e898ece5dab38517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c8b8b6f07c07b97e898ece5dab38517">&#9670;&nbsp;</a></span>m_components</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html">Component</a>&gt; &gt; CookieEng::ECS::Entity::m_components</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The vector of components on the <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html" title="Holds together a group of components that are unique of each other. ">Entity</a> </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Programming/Engine Development/CookieEng/CookieEng/include/<a class="el" href="_entity_8h_source.html">Entity.h</a></li>
 </ul>

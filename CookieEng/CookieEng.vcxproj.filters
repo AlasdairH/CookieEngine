@@ -327,9 +327,6 @@
     <None Include="resources\DoxygenMain.dox">
       <Filter>Resource Files\Doxygen</Filter>
     </None>
-    <None Include="resources\doxygen\DoxygenMain.doxtxt">
-      <Filter>Resource Files\Doxygen</Filter>
-    </None>
     <None Include="resources\doxygen\home.dox">
       <Filter>Resource Files\Doxygen</Filter>
     </None>

@@ -2,49 +2,167 @@
 \label{class_cookie_eng_1_1_components_1_1_renderable}\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
 
 
+An Component for providing the data needed to render to the screen.  
+
+
+
+
+{\ttfamily \#include $<$Renderable.\+h$>$}
+
+
+
 Inherits \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}.
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a4b9903e0bfb81ec574d022d7b2c198af}\label{class_cookie_eng_1_1_components_1_1_renderable_a4b9903e0bfb81ec574d022d7b2c198af}} 
-void {\bfseries set\+Mesh} (const std\+::string \&\+\_\+mesh)
-\item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a5ea9d1153bbe51b264c20102f8c72db9}\label{class_cookie_eng_1_1_components_1_1_renderable_a5ea9d1153bbe51b264c20102f8c72db9}} 
-void {\bfseries set\+Material} (const std\+::string \&\+\_\+material)
-\item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a8d51c4b3588d81811043a8cce0904c0d}\label{class_cookie_eng_1_1_components_1_1_renderable_a8d51c4b3588d81811043a8cce0904c0d}} 
-void {\bfseries load\+Mesh} ()
-\item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a676d79c49c493b4a67a97aa3c3b5c25e}\label{class_cookie_eng_1_1_components_1_1_renderable_a676d79c49c493b4a67a97aa3c3b5c25e}} 
-std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Graphics\+::\+Vertex\+Array} $>$ {\bfseries get\+V\+AO} ()
-\item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a57c744030c4b1271c7ceaeedd0c08533}\label{class_cookie_eng_1_1_components_1_1_renderable_a57c744030c4b1271c7ceaeedd0c08533}} 
-std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ {\bfseries get\+I\+BO} ()
-\item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a578ffbbc5b4245ade613d0dcfa571413}\label{class_cookie_eng_1_1_components_1_1_renderable_a578ffbbc5b4245ade613d0dcfa571413}} 
-std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} $>$ {\bfseries get\+Material} ()
-\end{DoxyCompactItemize}
+void \hyperlink{class_cookie_eng_1_1_components_1_1_renderable_a4b9903e0bfb81ec574d022d7b2c198af}{set\+Mesh} (const std\+::string \&\+\_\+mesh)
+\begin{DoxyCompactList}\small\item\em Sets the mesh data from a Resource\+Manager name. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_renderable_a5ea9d1153bbe51b264c20102f8c72db9}{set\+Material} (const std\+::string \&\+\_\+material)
+\begin{DoxyCompactList}\small\item\em Sets the Material data from a Resource\+Manager name. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_renderable_a8d51c4b3588d81811043a8cce0904c0d}{load\+Mesh} ()
+\begin{DoxyCompactList}\small\item\em Takes the mesh and places it in a V\+BO which is then added to a V\+AO. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Graphics\+::\+Vertex\+Array} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_renderable_a676d79c49c493b4a67a97aa3c3b5c25e}{get\+V\+AO} ()
+\begin{DoxyCompactList}\small\item\em Getter for the V\+AO member variable. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_renderable_a57c744030c4b1271c7ceaeedd0c08533}{get\+I\+BO} ()
+\begin{DoxyCompactList}\small\item\em Getter for the I\+BO member variable. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_renderable_a578ffbbc5b4245ade613d0dcfa571413}{get\+Material} ()
+\begin{DoxyCompactList}\small\item\em Getter for the Material pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a9da5e010c1d6c0ccb008b2af664b925a}\label{class_cookie_eng_1_1_components_1_1_renderable_a9da5e010c1d6c0ccb008b2af664b925a}} 
-std\+::shared\+\_\+ptr$<$ \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Resources\+::\+Mesh} $>$ {\bfseries m\+\_\+mesh}
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Resources\+::\+Mesh} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_renderable_a9da5e010c1d6c0ccb008b2af664b925a}{m\+\_\+mesh}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a69e36f6c8b8d58c978d86f2591c53ec5}\label{class_cookie_eng_1_1_components_1_1_renderable_a69e36f6c8b8d58c978d86f2591c53ec5}} 
-std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} $>$ {\bfseries m\+\_\+material}
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_renderable_a69e36f6c8b8d58c978d86f2591c53ec5}{m\+\_\+material}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_ad9486a5a4befa25f74fe9e4d553f2ce6}\label{class_cookie_eng_1_1_components_1_1_renderable_ad9486a5a4befa25f74fe9e4d553f2ce6}} 
-std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Graphics\+::\+Vertex\+Array} $>$ {\bfseries m\+\_\+\+V\+AO}
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Graphics\+::\+Vertex\+Array} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_renderable_ad9486a5a4befa25f74fe9e4d553f2ce6}{m\+\_\+\+V\+AO}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a09cf84ce90d1e6474a0e89f035f74b7c}\label{class_cookie_eng_1_1_components_1_1_renderable_a09cf84ce90d1e6474a0e89f035f74b7c}} 
-std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ {\bfseries m\+\_\+\+V\+BO}
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_renderable_a09cf84ce90d1e6474a0e89f035f74b7c}{m\+\_\+\+V\+BO}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_ad78ea55ae87ccf49d3643e50aed49d2c}\label{class_cookie_eng_1_1_components_1_1_renderable_ad78ea55ae87ccf49d3643e50aed49d2c}} 
-std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ {\bfseries m\+\_\+\+I\+BO}
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_renderable_ad78ea55ae87ccf49d3643e50aed49d2c}{m\+\_\+\+I\+BO}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+An Component for providing the data needed to render to the screen. 
+
+This component contains the data for rendering. This comprises of a Vertex Array Object, an Index Buffer Object and a Material. The renderer takes this component and uses the getter methods to render to a framebuffer. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a57c744030c4b1271c7ceaeedd0c08533}\label{class_cookie_eng_1_1_components_1_1_renderable_a57c744030c4b1271c7ceaeedd0c08533}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}!get\+I\+BO@{get\+I\+BO}}
+\index{get\+I\+BO@{get\+I\+BO}!Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
+\subsubsection{\texorpdfstring{get\+I\+B\+O()}{getIBO()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer}$>$ Cookie\+Eng\+::\+Components\+::\+Renderable\+::get\+I\+BO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the I\+BO member variable. 
+
+\begin{DoxyReturn}{Returns}
+The I\+BO member variable for use by the renderer
+\end{DoxyReturn}
+Getter for the I\+BO member variable (make this friend to Renderer?) \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a578ffbbc5b4245ade613d0dcfa571413}\label{class_cookie_eng_1_1_components_1_1_renderable_a578ffbbc5b4245ade613d0dcfa571413}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}!get\+Material@{get\+Material}}
+\index{get\+Material@{get\+Material}!Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
+\subsubsection{\texorpdfstring{get\+Material()}{getMaterial()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material}$>$ Cookie\+Eng\+::\+Components\+::\+Renderable\+::get\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the Material pointer. 
+
+\begin{DoxyReturn}{Returns}
+The material to render the mesh with
+\end{DoxyReturn}
+Getter for the renderables material to go along with the mesh \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a676d79c49c493b4a67a97aa3c3b5c25e}\label{class_cookie_eng_1_1_components_1_1_renderable_a676d79c49c493b4a67a97aa3c3b5c25e}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}!get\+V\+AO@{get\+V\+AO}}
+\index{get\+V\+AO@{get\+V\+AO}!Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
+\subsubsection{\texorpdfstring{get\+V\+A\+O()}{getVAO()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Graphics\+::\+Vertex\+Array}$>$ Cookie\+Eng\+::\+Components\+::\+Renderable\+::get\+V\+AO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the V\+AO member variable. 
+
+\begin{DoxyReturn}{Returns}
+The V\+AO member variable for use by the renderer
+\end{DoxyReturn}
+Getter for the V\+AO member variable (make this friend to Renderer?) \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a8d51c4b3588d81811043a8cce0904c0d}\label{class_cookie_eng_1_1_components_1_1_renderable_a8d51c4b3588d81811043a8cce0904c0d}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}!load\+Mesh@{load\+Mesh}}
+\index{load\+Mesh@{load\+Mesh}!Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
+\subsubsection{\texorpdfstring{load\+Mesh()}{loadMesh()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+Renderable\+::load\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Takes the mesh and places it in a V\+BO which is then added to a V\+AO. 
+
+Takes the C\+PU side data of the mesh and loads it up to a V\+BO and adds it to a V\+AO on the G\+PU. \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a5ea9d1153bbe51b264c20102f8c72db9}\label{class_cookie_eng_1_1_components_1_1_renderable_a5ea9d1153bbe51b264c20102f8c72db9}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}!set\+Material@{set\+Material}}
+\index{set\+Material@{set\+Material}!Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
+\subsubsection{\texorpdfstring{set\+Material()}{setMaterial()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+Renderable\+::set\+Material (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+material }\end{DoxyParamCaption})}
+
+
+
+Sets the Material data from a Resource\+Manager name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+material} & The string that corresponds to a Material in the Resource\+Manager\\
+\hline
+\end{DoxyParams}
+Takes the given string, looks it up in the resource manager and assigns the Material pointer member variable. \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a4b9903e0bfb81ec574d022d7b2c198af}\label{class_cookie_eng_1_1_components_1_1_renderable_a4b9903e0bfb81ec574d022d7b2c198af}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}!set\+Mesh@{set\+Mesh}}
+\index{set\+Mesh@{set\+Mesh}!Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
+\subsubsection{\texorpdfstring{set\+Mesh()}{setMesh()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+Renderable\+::set\+Mesh (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+mesh }\end{DoxyParamCaption})}
+
+
+
+Sets the mesh data from a Resource\+Manager name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+mesh} & The string that corresponds to a mesh in the Resource\+Manager\\
+\hline
+\end{DoxyParams}
+Takes the given string, looks it up in the resource manager and assigns the mesh pointer member variable. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_ad78ea55ae87ccf49d3643e50aed49d2c}\label{class_cookie_eng_1_1_components_1_1_renderable_ad78ea55ae87ccf49d3643e50aed49d2c}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}!m\+\_\+\+I\+BO@{m\+\_\+\+I\+BO}}
+\index{m\+\_\+\+I\+BO@{m\+\_\+\+I\+BO}!Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
+\subsubsection{\texorpdfstring{m\+\_\+\+I\+BO}{m\_IBO}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer}$>$ Cookie\+Eng\+::\+Components\+::\+Renderable\+::m\+\_\+\+I\+BO\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Renderbales Index\+Buffer, set by the load\+Mesh function \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a69e36f6c8b8d58c978d86f2591c53ec5}\label{class_cookie_eng_1_1_components_1_1_renderable_a69e36f6c8b8d58c978d86f2591c53ec5}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}!m\+\_\+material@{m\+\_\+material}}
+\index{m\+\_\+material@{m\+\_\+material}!Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
+\subsubsection{\texorpdfstring{m\+\_\+material}{m\_material}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material}$>$ Cookie\+Eng\+::\+Components\+::\+Renderable\+::m\+\_\+material\hspace{0.3cm}{\ttfamily [protected]}}
+
+A shared pointer to the Material, typically in the Resource\+Manager \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a9da5e010c1d6c0ccb008b2af664b925a}\label{class_cookie_eng_1_1_components_1_1_renderable_a9da5e010c1d6c0ccb008b2af664b925a}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}!m\+\_\+mesh@{m\+\_\+mesh}}
+\index{m\+\_\+mesh@{m\+\_\+mesh}!Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
+\subsubsection{\texorpdfstring{m\+\_\+mesh}{m\_mesh}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Resources\+::\+Mesh}$>$ Cookie\+Eng\+::\+Components\+::\+Renderable\+::m\+\_\+mesh\hspace{0.3cm}{\ttfamily [protected]}}
+
+A shared pointer to the Mesh, typically in the Resource\+Manager \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_ad9486a5a4befa25f74fe9e4d553f2ce6}\label{class_cookie_eng_1_1_components_1_1_renderable_ad9486a5a4befa25f74fe9e4d553f2ce6}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}!m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}}
+\index{m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}!Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
+\subsubsection{\texorpdfstring{m\+\_\+\+V\+AO}{m\_VAO}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Graphics\+::\+Vertex\+Array}$>$ Cookie\+Eng\+::\+Components\+::\+Renderable\+::m\+\_\+\+V\+AO\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Renderbales Vertex\+Array, set by the load\+Mesh function \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_renderable_a09cf84ce90d1e6474a0e89f035f74b7c}\label{class_cookie_eng_1_1_components_1_1_renderable_a09cf84ce90d1e6474a0e89f035f74b7c}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}!m\+\_\+\+V\+BO@{m\+\_\+\+V\+BO}}
+\index{m\+\_\+\+V\+BO@{m\+\_\+\+V\+BO}!Cookie\+Eng\+::\+Components\+::\+Renderable@{Cookie\+Eng\+::\+Components\+::\+Renderable}}
+\subsubsection{\texorpdfstring{m\+\_\+\+V\+BO}{m\_VBO}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer}$>$ Cookie\+Eng\+::\+Components\+::\+Renderable\+::m\+\_\+\+V\+BO\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Renderbales Vertex\+Buffer, set by the load\+Mesh function 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

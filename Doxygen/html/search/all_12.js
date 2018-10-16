@@ -6,5 +6,6 @@ var searchData=
   ['vertexbuffer',['VertexBuffer',['../class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html',1,'CookieEng::Graphics::VertexBuffer'],['../class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#ac877c409fdb8a09947bb13664b78a335',1,'CookieEng::Graphics::VertexBuffer::VertexBuffer(const VertexBufferType _type)'],['../class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html#af4ceb32a35ff5747f2f80c8cec1e7800',1,'CookieEng::Graphics::VertexBuffer::VertexBuffer(const VertexBufferType _type, const void *_data, GLuint _count, GLuint _size)']]],
   ['vertexbufferelement',['VertexBufferElement',['../struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element.html',1,'CookieEng::Graphics']]],
   ['vertexbufferlayout',['VertexBufferLayout',['../class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout.html',1,'CookieEng::Graphics']]],
-  ['vertices',['vertices',['../struct_cookie_eng_1_1_resources_1_1_mesh.html#aa2d9365b3bb9855de51053a1bbde84a1',1,'CookieEng::Resources::Mesh']]]
+  ['vertices',['vertices',['../struct_cookie_eng_1_1_resources_1_1_mesh.html#aa2d9365b3bb9855de51053a1bbde84a1',1,'CookieEng::Resources::Mesh']]],
+  ['viewmatrix',['viewMatrix',['../struct_cookie_eng_1_1_object_1_1u___camera_data.html#a1b1b0afdb4ac8c07474be855341516e4',1,'CookieEng::Object::u_CameraData']]]
 ];

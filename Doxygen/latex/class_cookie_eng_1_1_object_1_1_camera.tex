@@ -43,14 +43,9 @@ float \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a86c6f04a4f39bfa931493b1
 \item 
 glm\+::mat4 \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a6a5152fd8fbd92c4cbcc73d14511e584}{m\+\_\+projection\+Matrix}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a58fb1802afae02fbd0cdb6d03c988f17}\label{class_cookie_eng_1_1_object_1_1_camera_a58fb1802afae02fbd0cdb6d03c988f17}} 
-G\+Luint {\bfseries m\+\_\+\+U\+BO}
+std\+::unique\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a609beae2a3fb5cfca418fac357ef6d36}{m\+\_\+uniform\+Buffer}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a609beae2a3fb5cfca418fac357ef6d36}\label{class_cookie_eng_1_1_object_1_1_camera_a609beae2a3fb5cfca418fac357ef6d36}} 
-std\+::unique\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ {\bfseries m\+\_\+uniform\+Buffer}
-\item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a45c921e6872f0c16bc8ab742732d759c}\label{class_cookie_eng_1_1_object_1_1_camera_a45c921e6872f0c16bc8ab742732d759c}} 
-\hyperlink{struct_cookie_eng_1_1_object_1_1_camera_uniform_data__t}{Camera\+Uniform\+Data\+\_\+t} {\bfseries m\+\_\+uniform\+Data}
+\hyperlink{struct_cookie_eng_1_1_object_1_1u___camera_data}{u\+\_\+\+Camera\+Data} \hyperlink{class_cookie_eng_1_1_object_1_1_camera_acd3f4dab5ebb7b14b6e5ffd9704bccb6}{m\+\_\+uniform\+Data}
 \end{DoxyCompactItemize}
 
 
@@ -167,7 +162,19 @@ The current FoV \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a6a515
 \subsubsection{\texorpdfstring{m\+\_\+projection\+Matrix}{m\_projectionMatrix}}
 {\footnotesize\ttfamily glm\+::mat4 Cookie\+Eng\+::\+Object\+::\+Camera\+::m\+\_\+projection\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}
 
-The Projection Matrix \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_aa996e685c79a71bd30e88341b68ed197}\label{class_cookie_eng_1_1_object_1_1_camera_aa996e685c79a71bd30e88341b68ed197}} 
+The Projection Matrix \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a609beae2a3fb5cfca418fac357ef6d36}\label{class_cookie_eng_1_1_object_1_1_camera_a609beae2a3fb5cfca418fac357ef6d36}} 
+\index{Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}!m\+\_\+uniform\+Buffer@{m\+\_\+uniform\+Buffer}}
+\index{m\+\_\+uniform\+Buffer@{m\+\_\+uniform\+Buffer}!Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+uniform\+Buffer}{m\_uniformBuffer}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer}$>$ Cookie\+Eng\+::\+Object\+::\+Camera\+::m\+\_\+uniform\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+The uniform buffer for View and Projection matrices \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_acd3f4dab5ebb7b14b6e5ffd9704bccb6}\label{class_cookie_eng_1_1_object_1_1_camera_acd3f4dab5ebb7b14b6e5ffd9704bccb6}} 
+\index{Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}!m\+\_\+uniform\+Data@{m\+\_\+uniform\+Data}}
+\index{m\+\_\+uniform\+Data@{m\+\_\+uniform\+Data}!Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+uniform\+Data}{m\_uniformData}}
+{\footnotesize\ttfamily \hyperlink{struct_cookie_eng_1_1_object_1_1u___camera_data}{u\+\_\+\+Camera\+Data} Cookie\+Eng\+::\+Object\+::\+Camera\+::m\+\_\+uniform\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+The struct containing the matrices for the uniform buffer to use \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_aa996e685c79a71bd30e88341b68ed197}\label{class_cookie_eng_1_1_object_1_1_camera_aa996e685c79a71bd30e88341b68ed197}} 
 \index{Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}!transform@{transform}}
 \index{transform@{transform}!Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}}
 \subsubsection{\texorpdfstring{transform}{transform}}

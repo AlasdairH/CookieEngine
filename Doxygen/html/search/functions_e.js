@@ -8,6 +8,8 @@ var searchData=
   ['setfov',['setFOV',['../class_cookie_eng_1_1_object_1_1_camera.html#aef44a3e6cef1540be7e8bcb977dddd78',1,'CookieEng::Object::Camera']]],
   ['setframebuffer',['setFrameBuffer',['../class_cookie_eng_1_1_graphics_1_1_renderer.html#a9e8bce3cb731b1f09ca5bc4bc863414b',1,'CookieEng::Graphics::Renderer']]],
   ['setinitialiser',['setInitialiser',['../class_cookie_eng_1_1_services_1_1_service_locator.html#a49766d5e7cdca3f2384feb4258c9a155',1,'CookieEng::Services::ServiceLocator']]],
+  ['setmaterial',['setMaterial',['../class_cookie_eng_1_1_components_1_1_renderable.html#a5ea9d1153bbe51b264c20102f8c72db9',1,'CookieEng::Components::Renderable']]],
+  ['setmesh',['setMesh',['../class_cookie_eng_1_1_components_1_1_renderable.html#a4b9903e0bfb81ec574d022d7b2c198af',1,'CookieEng::Components::Renderable']]],
   ['setmessagequeue',['setMessageQueue',['../class_cookie_eng_1_1_services_1_1_service_locator.html#aafa67e5c104a89681d41937b4deaad9d',1,'CookieEng::Services::ServiceLocator']]],
   ['setmodelmatrix',['setModelMatrix',['../class_cookie_eng_1_1_resources_1_1_material.html#ab0155fcca9b954c1661b02e01ab9e06d',1,'CookieEng::Resources::Material::setModelMatrix()'],['../class_cookie_eng_1_1_components_1_1_transform.html#a169960289f66442f692bb52c4c86478e',1,'CookieEng::Components::Transform::setModelMatrix()']]],
   ['setname',['setName',['../class_cookie_eng_1_1_resources_1_1_resource.html#a3968130b5e2207df4735a616c6545158',1,'CookieEng::Resources::Resource']]],

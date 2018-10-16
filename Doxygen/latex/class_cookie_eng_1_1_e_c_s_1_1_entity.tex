@@ -1,24 +1,94 @@
 \hypertarget{class_cookie_eng_1_1_e_c_s_1_1_entity}{}\section{Cookie\+Eng\+:\+:E\+CS\+:\+:Entity Class Reference}
 \label{class_cookie_eng_1_1_e_c_s_1_1_entity}\index{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity@{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity}}
+
+
+Holds together a group of components that are unique of each other.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_entity_a7b24f6959d8f1686e02e8ae5ef61f08c}\label{class_cookie_eng_1_1_e_c_s_1_1_entity_a7b24f6959d8f1686e02e8ae5ef61f08c}} 
-{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries add\+Component} ()
-\item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_entity_a7e954d74445ccffe29412c885d97bf63}\label{class_cookie_eng_1_1_e_c_s_1_1_entity_a7e954d74445ccffe29412c885d97bf63}} 
-{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries get\+Component} ()
-\item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_entity_a594daff6ddf321ac9c3a2fad3e50620e}\label{class_cookie_eng_1_1_e_c_s_1_1_entity_a594daff6ddf321ac9c3a2fad3e50620e}} 
-{\footnotesize template$<$typename T $>$ }\\bool {\bfseries has\+Component} ()
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity_a7b24f6959d8f1686e02e8ae5ef61f08c}{add\+Component} ()
+\begin{DoxyCompactList}\small\item\em Adds a component to the entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity_a7e954d74445ccffe29412c885d97bf63}{get\+Component} ()
+\begin{DoxyCompactList}\small\item\em Gets a component from the \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{Entity}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity_a594daff6ddf321ac9c3a2fad3e50620e}{has\+Component} ()
+\begin{DoxyCompactList}\small\item\em Tests to see if an \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{Entity} contains a component of type T. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_entity_a5c8b8b6f07c07b97e898ece5dab38517}\label{class_cookie_eng_1_1_e_c_s_1_1_entity_a5c8b8b6f07c07b97e898ece5dab38517}} 
-std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Component} $>$ $>$ {\bfseries m\+\_\+components}
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Component} $>$ $>$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity_a5c8b8b6f07c07b97e898ece5dab38517}{m\+\_\+components}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Holds together a group of components that are unique of each other. 
+
+Holds a group of components that dictate the behaviour of the entity. Each component holds a pointer to its parent entity. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_entity_a7b24f6959d8f1686e02e8ae5ef61f08c}\label{class_cookie_eng_1_1_e_c_s_1_1_entity_a7b24f6959d8f1686e02e8ae5ef61f08c}} 
+\index{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity@{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity}!add\+Component@{add\+Component}}
+\index{add\+Component@{add\+Component}!Cookie\+Eng\+::\+E\+C\+S\+::\+Entity@{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity}}
+\subsubsection{\texorpdfstring{add\+Component()}{addComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Cookie\+Eng\+::\+E\+C\+S\+::\+Entity\+::add\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a component to the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & The component type to add (must inherit from \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Component})\\
+\hline
+\end{DoxyParams}
+Takes a templated input of the component type to add (must inherit from \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Component}) and adds it to the entity. It is at this point the components on\+Init method is run. \mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_entity_a7e954d74445ccffe29412c885d97bf63}\label{class_cookie_eng_1_1_e_c_s_1_1_entity_a7e954d74445ccffe29412c885d97bf63}} 
+\index{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity@{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!Cookie\+Eng\+::\+E\+C\+S\+::\+Entity@{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity}}
+\subsubsection{\texorpdfstring{get\+Component()}{getComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ Cookie\+Eng\+::\+E\+C\+S\+::\+Entity\+::get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a component from the \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{Entity}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & The component type to get (must inherit from \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Component})\\
+\hline
+\end{DoxyParams}
+Takes a templated input of the component type to get (must inherit from \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Component}) and returns a shared pointer to it. If the component is not found on the entity then it will add it and return the new component \mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_entity_a594daff6ddf321ac9c3a2fad3e50620e}\label{class_cookie_eng_1_1_e_c_s_1_1_entity_a594daff6ddf321ac9c3a2fad3e50620e}} 
+\index{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity@{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity}!has\+Component@{has\+Component}}
+\index{has\+Component@{has\+Component}!Cookie\+Eng\+::\+E\+C\+S\+::\+Entity@{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity}}
+\subsubsection{\texorpdfstring{has\+Component()}{hasComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool Cookie\+Eng\+::\+E\+C\+S\+::\+Entity\+::has\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tests to see if an \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{Entity} contains a component of type T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & The component type to test (must inherit from \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Component})\\
+\hline
+\end{DoxyParams}
+Looks at the components on the \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{Entity} and returns wether the entity contains that component 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_entity_a5c8b8b6f07c07b97e898ece5dab38517}\label{class_cookie_eng_1_1_e_c_s_1_1_entity_a5c8b8b6f07c07b97e898ece5dab38517}} 
+\index{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity@{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity}!m\+\_\+components@{m\+\_\+components}}
+\index{m\+\_\+components@{m\+\_\+components}!Cookie\+Eng\+::\+E\+C\+S\+::\+Entity@{Cookie\+Eng\+::\+E\+C\+S\+::\+Entity}}
+\subsubsection{\texorpdfstring{m\+\_\+components}{m\_components}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Component}$>$ $>$ Cookie\+Eng\+::\+E\+C\+S\+::\+Entity\+::m\+\_\+components\hspace{0.3cm}{\ttfamily [protected]}}
+
+The vector of components on the \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{Entity} 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

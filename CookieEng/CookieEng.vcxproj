@@ -243,7 +243,6 @@
   <ItemGroup>
     <None Include="resources\assets\levels\test.lvl" />
     <None Include="resources\DoxygenMain.dox" />
-    <None Include="resources\doxygen\DoxygenMain.doxtxt" />
     <None Include="resources\doxygen\home.dox" />
     <None Include="resources\materials\BasicMaterial.mat" />
     <None Include="resources\shaders\BasicPP.cngShader" />

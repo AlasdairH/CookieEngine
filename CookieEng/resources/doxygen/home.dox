@@ -2,6 +2,8 @@
 
 \section sec_intro Introduction
 
+Welcome to the documentation for Cookie Engine! This project was created on the Bournemouth University Game Programming course for the Game Engine
+Programming unit.
 This documentation covers the setup to build the project from the source for running on a Windows 10 PC as well as documentation for
 all classes.
 
@@ -10,10 +12,11 @@ all classes.
 1. Load the solution in Microsoft Visual Studio 2017 or later.
 2. Select the x86 Solution Platform.
 3. Select the Release Solution Configuration.
-4. Build and run the project.
+4. Build the project
+5. You should now have a CookieEng.lib file!
 
 \section sec_use Use
 
-Use
+To use the engine, first include the CookieEng.lib file and corresponding headers to your project
  
 */

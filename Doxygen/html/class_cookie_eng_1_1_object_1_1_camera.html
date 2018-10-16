@@ -119,15 +119,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a86c6f04a4f39bfa931493b1f6b9c013c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a5152fd8fbd92c4cbcc73d14511e584"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a6a5152fd8fbd92c4cbcc73d14511e584">m_projectionMatrix</a></td></tr>
 <tr class="separator:a6a5152fd8fbd92c4cbcc73d14511e584"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58fb1802afae02fbd0cdb6d03c988f17"><td class="memItemLeft" align="right" valign="top"><a id="a58fb1802afae02fbd0cdb6d03c988f17"></a>
-GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>m_UBO</b></td></tr>
-<tr class="separator:a58fb1802afae02fbd0cdb6d03c988f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a609beae2a3fb5cfca418fac357ef6d36"><td class="memItemLeft" align="right" valign="top"><a id="a609beae2a3fb5cfca418fac357ef6d36"></a>
-std::unique_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_uniformBuffer</b></td></tr>
+<tr class="memitem:a609beae2a3fb5cfca418fac357ef6d36"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a609beae2a3fb5cfca418fac357ef6d36">m_uniformBuffer</a></td></tr>
 <tr class="separator:a609beae2a3fb5cfca418fac357ef6d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45c921e6872f0c16bc8ab742732d759c"><td class="memItemLeft" align="right" valign="top"><a id="a45c921e6872f0c16bc8ab742732d759c"></a>
-<a class="el" href="struct_cookie_eng_1_1_object_1_1_camera_uniform_data__t.html">CameraUniformData_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_uniformData</b></td></tr>
-<tr class="separator:a45c921e6872f0c16bc8ab742732d759c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3f4dab5ebb7b14b6e5ffd9704bccb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_cookie_eng_1_1_object_1_1u___camera_data.html">u_CameraData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#acd3f4dab5ebb7b14b6e5ffd9704bccb6">m_uniformData</a></td></tr>
+<tr class="separator:acd3f4dab5ebb7b14b6e5ffd9704bccb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the data for the representation of a perspective camera. </p>
@@ -396,6 +391,52 @@ std::unique_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex
 </table>
 </div><div class="memdoc">
 <p>The Projection Matrix </p>
+
+</div>
+</div>
+<a id="a609beae2a3fb5cfca418fac357ef6d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609beae2a3fb5cfca418fac357ef6d36">&#9670;&nbsp;</a></span>m_uniformBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a>&gt; CookieEng::Object::Camera::m_uniformBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The uniform buffer for View and Projection matrices </p>
+
+</div>
+</div>
+<a id="acd3f4dab5ebb7b14b6e5ffd9704bccb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd3f4dab5ebb7b14b6e5ffd9704bccb6">&#9670;&nbsp;</a></span>m_uniformData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_cookie_eng_1_1_object_1_1u___camera_data.html">u_CameraData</a> CookieEng::Object::Camera::m_uniformData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The struct containing the matrices for the uniform buffer to use </p>
 
 </div>
 </div>

@@ -72,55 +72,55 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>An Component for providing the data needed to render to the screen.  
+ <a href="class_cookie_eng_1_1_components_1_1_renderable.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_renderable_8h_source.html">Renderable.h</a>&gt;</code></p>
+
 <p>Inherits <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html">CookieEng::ECS::Component</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4b9903e0bfb81ec574d022d7b2c198af"><td class="memItemLeft" align="right" valign="top"><a id="a4b9903e0bfb81ec574d022d7b2c198af"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setMesh</b> (const std::string &amp;_mesh)</td></tr>
+<tr class="memitem:a4b9903e0bfb81ec574d022d7b2c198af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_renderable.html#a4b9903e0bfb81ec574d022d7b2c198af">setMesh</a> (const std::string &amp;_mesh)</td></tr>
+<tr class="memdesc:a4b9903e0bfb81ec574d022d7b2c198af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the mesh data from a ResourceManager name.  <a href="#a4b9903e0bfb81ec574d022d7b2c198af">More...</a><br /></td></tr>
 <tr class="separator:a4b9903e0bfb81ec574d022d7b2c198af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ea9d1153bbe51b264c20102f8c72db9"><td class="memItemLeft" align="right" valign="top"><a id="a5ea9d1153bbe51b264c20102f8c72db9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setMaterial</b> (const std::string &amp;_material)</td></tr>
+<tr class="memitem:a5ea9d1153bbe51b264c20102f8c72db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_renderable.html#a5ea9d1153bbe51b264c20102f8c72db9">setMaterial</a> (const std::string &amp;_material)</td></tr>
+<tr class="memdesc:a5ea9d1153bbe51b264c20102f8c72db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Material data from a ResourceManager name.  <a href="#a5ea9d1153bbe51b264c20102f8c72db9">More...</a><br /></td></tr>
 <tr class="separator:a5ea9d1153bbe51b264c20102f8c72db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d51c4b3588d81811043a8cce0904c0d"><td class="memItemLeft" align="right" valign="top"><a id="a8d51c4b3588d81811043a8cce0904c0d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadMesh</b> ()</td></tr>
+<tr class="memitem:a8d51c4b3588d81811043a8cce0904c0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_renderable.html#a8d51c4b3588d81811043a8cce0904c0d">loadMesh</a> ()</td></tr>
+<tr class="memdesc:a8d51c4b3588d81811043a8cce0904c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes the mesh and places it in a VBO which is then added to a VAO.  <a href="#a8d51c4b3588d81811043a8cce0904c0d">More...</a><br /></td></tr>
 <tr class="separator:a8d51c4b3588d81811043a8cce0904c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a676d79c49c493b4a67a97aa3c3b5c25e"><td class="memItemLeft" align="right" valign="top"><a id="a676d79c49c493b4a67a97aa3c3b5c25e"></a>
-std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html">Graphics::VertexArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getVAO</b> ()</td></tr>
+<tr class="memitem:a676d79c49c493b4a67a97aa3c3b5c25e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html">Graphics::VertexArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_renderable.html#a676d79c49c493b4a67a97aa3c3b5c25e">getVAO</a> ()</td></tr>
+<tr class="memdesc:a676d79c49c493b4a67a97aa3c3b5c25e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the VAO member variable.  <a href="#a676d79c49c493b4a67a97aa3c3b5c25e">More...</a><br /></td></tr>
 <tr class="separator:a676d79c49c493b4a67a97aa3c3b5c25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57c744030c4b1271c7ceaeedd0c08533"><td class="memItemLeft" align="right" valign="top"><a id="a57c744030c4b1271c7ceaeedd0c08533"></a>
-std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getIBO</b> ()</td></tr>
+<tr class="memitem:a57c744030c4b1271c7ceaeedd0c08533"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_renderable.html#a57c744030c4b1271c7ceaeedd0c08533">getIBO</a> ()</td></tr>
+<tr class="memdesc:a57c744030c4b1271c7ceaeedd0c08533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the IBO member variable.  <a href="#a57c744030c4b1271c7ceaeedd0c08533">More...</a><br /></td></tr>
 <tr class="separator:a57c744030c4b1271c7ceaeedd0c08533"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a578ffbbc5b4245ade613d0dcfa571413"><td class="memItemLeft" align="right" valign="top"><a id="a578ffbbc5b4245ade613d0dcfa571413"></a>
-std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html">Resources::Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getMaterial</b> ()</td></tr>
+<tr class="memitem:a578ffbbc5b4245ade613d0dcfa571413"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html">Resources::Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_renderable.html#a578ffbbc5b4245ade613d0dcfa571413">getMaterial</a> ()</td></tr>
+<tr class="memdesc:a578ffbbc5b4245ade613d0dcfa571413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the Material pointer.  <a href="#a578ffbbc5b4245ade613d0dcfa571413">More...</a><br /></td></tr>
 <tr class="separator:a578ffbbc5b4245ade613d0dcfa571413"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html">CookieEng::ECS::Component</a></td></tr>
-<tr class="memitem:a4b02b630558005a9c4723cf15b8b03d6 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a4b02b630558005a9c4723cf15b8b03d6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onInit</b> ()</td></tr>
+<tr class="memitem:a4b02b630558005a9c4723cf15b8b03d6 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html#a4b02b630558005a9c4723cf15b8b03d6">onInit</a> ()</td></tr>
+<tr class="memdesc:a4b02b630558005a9c4723cf15b8b03d6 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on component initialisation.  <a href="class_cookie_eng_1_1_e_c_s_1_1_component.html#a4b02b630558005a9c4723cf15b8b03d6">More...</a><br /></td></tr>
 <tr class="separator:a4b02b630558005a9c4723cf15b8b03d6 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf8523586d57c3e40d4149f228755139 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="aaf8523586d57c3e40d4149f228755139"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onStart</b> ()</td></tr>
+<tr class="memitem:aaf8523586d57c3e40d4149f228755139 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html#aaf8523586d57c3e40d4149f228755139">onStart</a> ()</td></tr>
+<tr class="memdesc:aaf8523586d57c3e40d4149f228755139 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on component start.  <a href="class_cookie_eng_1_1_e_c_s_1_1_component.html#aaf8523586d57c3e40d4149f228755139">More...</a><br /></td></tr>
 <tr class="separator:aaf8523586d57c3e40d4149f228755139 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c4a11f71e21181bc6f56841565b9a56 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a7c4a11f71e21181bc6f56841565b9a56"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onUpdate</b> ()</td></tr>
+<tr class="memitem:a7c4a11f71e21181bc6f56841565b9a56 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html#a7c4a11f71e21181bc6f56841565b9a56">onUpdate</a> ()</td></tr>
+<tr class="memdesc:a7c4a11f71e21181bc6f56841565b9a56 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on component update.  <a href="class_cookie_eng_1_1_e_c_s_1_1_component.html#a7c4a11f71e21181bc6f56841565b9a56">More...</a><br /></td></tr>
 <tr class="separator:a7c4a11f71e21181bc6f56841565b9a56 inherit pub_methods_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a9da5e010c1d6c0ccb008b2af664b925a"><td class="memItemLeft" align="right" valign="top"><a id="a9da5e010c1d6c0ccb008b2af664b925a"></a>
-std::shared_ptr&lt; <a class="el" href="struct_cookie_eng_1_1_resources_1_1_mesh.html">Resources::Mesh</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_mesh</b></td></tr>
+<tr class="memitem:a9da5e010c1d6c0ccb008b2af664b925a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="struct_cookie_eng_1_1_resources_1_1_mesh.html">Resources::Mesh</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_renderable.html#a9da5e010c1d6c0ccb008b2af664b925a">m_mesh</a></td></tr>
 <tr class="separator:a9da5e010c1d6c0ccb008b2af664b925a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69e36f6c8b8d58c978d86f2591c53ec5"><td class="memItemLeft" align="right" valign="top"><a id="a69e36f6c8b8d58c978d86f2591c53ec5"></a>
-std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html">Resources::Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_material</b></td></tr>
+<tr class="memitem:a69e36f6c8b8d58c978d86f2591c53ec5"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html">Resources::Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_renderable.html#a69e36f6c8b8d58c978d86f2591c53ec5">m_material</a></td></tr>
 <tr class="separator:a69e36f6c8b8d58c978d86f2591c53ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9486a5a4befa25f74fe9e4d553f2ce6"><td class="memItemLeft" align="right" valign="top"><a id="ad9486a5a4befa25f74fe9e4d553f2ce6"></a>
-std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html">Graphics::VertexArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_VAO</b></td></tr>
+<tr class="memitem:ad9486a5a4befa25f74fe9e4d553f2ce6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html">Graphics::VertexArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_renderable.html#ad9486a5a4befa25f74fe9e4d553f2ce6">m_VAO</a></td></tr>
 <tr class="separator:ad9486a5a4befa25f74fe9e4d553f2ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09cf84ce90d1e6474a0e89f035f74b7c"><td class="memItemLeft" align="right" valign="top"><a id="a09cf84ce90d1e6474a0e89f035f74b7c"></a>
-std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_VBO</b></td></tr>
+<tr class="memitem:a09cf84ce90d1e6474a0e89f035f74b7c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_renderable.html#a09cf84ce90d1e6474a0e89f035f74b7c">m_VBO</a></td></tr>
 <tr class="separator:a09cf84ce90d1e6474a0e89f035f74b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad78ea55ae87ccf49d3643e50aed49d2c"><td class="memItemLeft" align="right" valign="top"><a id="ad78ea55ae87ccf49d3643e50aed49d2c"></a>
-std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_IBO</b></td></tr>
+<tr class="memitem:ad78ea55ae87ccf49d3643e50aed49d2c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_renderable.html#ad78ea55ae87ccf49d3643e50aed49d2c">m_IBO</a></td></tr>
 <tr class="separator:ad78ea55ae87ccf49d3643e50aed49d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -130,6 +130,287 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b></td></tr>
 <tr class="separator:a8a0c5a4ee3a87809d3e6d0bdaed3ebbe inherit pub_attribs_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An Component for providing the data needed to render to the screen. </p>
+<p>This component contains the data for rendering. This comprises of a Vertex Array Object, an Index Buffer Object and a Material. The renderer takes this component and uses the getter methods to render to a framebuffer. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a57c744030c4b1271c7ceaeedd0c08533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c744030c4b1271c7ceaeedd0c08533">&#9670;&nbsp;</a></span>getIBO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a>&gt; CookieEng::Components::Renderable::getIBO </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the IBO member variable. </p>
+<dl class="section return"><dt>Returns</dt><dd>The IBO member variable for use by the renderer</dd></dl>
+<p>Getter for the IBO member variable (make this friend to Renderer?) </p>
+
+</div>
+</div>
+<a id="a578ffbbc5b4245ade613d0dcfa571413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578ffbbc5b4245ade613d0dcfa571413">&#9670;&nbsp;</a></span>getMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html">Resources::Material</a>&gt; CookieEng::Components::Renderable::getMaterial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the Material pointer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The material to render the mesh with</dd></dl>
+<p>Getter for the renderables material to go along with the mesh </p>
+
+</div>
+</div>
+<a id="a676d79c49c493b4a67a97aa3c3b5c25e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a676d79c49c493b4a67a97aa3c3b5c25e">&#9670;&nbsp;</a></span>getVAO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html">Graphics::VertexArray</a>&gt; CookieEng::Components::Renderable::getVAO </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the VAO member variable. </p>
+<dl class="section return"><dt>Returns</dt><dd>The VAO member variable for use by the renderer</dd></dl>
+<p>Getter for the VAO member variable (make this friend to Renderer?) </p>
+
+</div>
+</div>
+<a id="a8d51c4b3588d81811043a8cce0904c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d51c4b3588d81811043a8cce0904c0d">&#9670;&nbsp;</a></span>loadMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::Components::Renderable::loadMesh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Takes the mesh and places it in a VBO which is then added to a VAO. </p>
+<p>Takes the CPU side data of the mesh and loads it up to a VBO and adds it to a VAO on the GPU. </p>
+
+</div>
+</div>
+<a id="a5ea9d1153bbe51b264c20102f8c72db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ea9d1153bbe51b264c20102f8c72db9">&#9670;&nbsp;</a></span>setMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::Components::Renderable::setMaterial </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_material</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the Material data from a ResourceManager name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_material</td><td>The string that corresponds to a Material in the ResourceManager</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Takes the given string, looks it up in the resource manager and assigns the Material pointer member variable. </p>
+
+</div>
+</div>
+<a id="a4b9903e0bfb81ec574d022d7b2c198af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b9903e0bfb81ec574d022d7b2c198af">&#9670;&nbsp;</a></span>setMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::Components::Renderable::setMesh </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the mesh data from a ResourceManager name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_mesh</td><td>The string that corresponds to a mesh in the ResourceManager</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Takes the given string, looks it up in the resource manager and assigns the mesh pointer member variable. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad78ea55ae87ccf49d3643e50aed49d2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78ea55ae87ccf49d3643e50aed49d2c">&#9670;&nbsp;</a></span>m_IBO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a>&gt; CookieEng::Components::Renderable::m_IBO</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Renderbales IndexBuffer, set by the loadMesh function </p>
+
+</div>
+</div>
+<a id="a69e36f6c8b8d58c978d86f2591c53ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e36f6c8b8d58c978d86f2591c53ec5">&#9670;&nbsp;</a></span>m_material</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html">Resources::Material</a>&gt; CookieEng::Components::Renderable::m_material</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A shared pointer to the Material, typically in the ResourceManager </p>
+
+</div>
+</div>
+<a id="a9da5e010c1d6c0ccb008b2af664b925a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9da5e010c1d6c0ccb008b2af664b925a">&#9670;&nbsp;</a></span>m_mesh</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="struct_cookie_eng_1_1_resources_1_1_mesh.html">Resources::Mesh</a>&gt; CookieEng::Components::Renderable::m_mesh</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A shared pointer to the Mesh, typically in the ResourceManager </p>
+
+</div>
+</div>
+<a id="ad9486a5a4befa25f74fe9e4d553f2ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9486a5a4befa25f74fe9e4d553f2ce6">&#9670;&nbsp;</a></span>m_VAO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html">Graphics::VertexArray</a>&gt; CookieEng::Components::Renderable::m_VAO</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Renderbales VertexArray, set by the loadMesh function </p>
+
+</div>
+</div>
+<a id="a09cf84ce90d1e6474a0e89f035f74b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09cf84ce90d1e6474a0e89f035f74b7c">&#9670;&nbsp;</a></span>m_VBO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a>&gt; CookieEng::Components::Renderable::m_VBO</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The Renderbales VertexBuffer, set by the loadMesh function </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Programming/Engine Development/CookieEng/CookieEng/include/<a class="el" href="_renderable_8h_source.html">Renderable.h</a></li>
 </ul>

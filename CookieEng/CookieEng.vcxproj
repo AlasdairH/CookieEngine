@@ -188,6 +188,7 @@
     <ClCompile Include="src\TestEntity.cpp" />
     <ClCompile Include="src\Texture.cpp" />
     <ClCompile Include="src\ThreadPool.cpp" />
+    <ClCompile Include="src\Times.cpp" />
     <ClCompile Include="src\Transform.cpp" />
     <ClCompile Include="src\Vertex.cpp" />
     <ClCompile Include="src\VertexArray.cpp" />

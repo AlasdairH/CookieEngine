@@ -195,6 +195,9 @@
     <ClCompile Include="include\CookieCore.h">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Times.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ServiceLocator.h">

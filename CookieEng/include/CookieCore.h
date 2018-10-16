@@ -4,6 +4,8 @@
 #include <iostream>
 
 // external libs
+#include "SDL/SDL.h"
+#include "GL/glew.h"
 
 // progra
 #include "Initialiser.h"
@@ -30,7 +32,7 @@ namespace CookieEng
 	class CookieCore
 	{
 	public:
-		CookieCore() { }
+		CookieCore();
 
 		void initialise()
 		{

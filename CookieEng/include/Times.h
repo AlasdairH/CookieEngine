@@ -22,7 +22,5 @@ namespace Utilities
 	public:
 		static double deltaTime;	/**< The time in seconds it took to complete the last frame */
 	};
-
-	double Times::deltaTime = 0;
 }
 }

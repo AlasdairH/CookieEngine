@@ -165,16 +165,17 @@ namespace CookieEng
 					}
 				}
 
+				/*
 				// update message queue on seperate thread
 				testThreadPool.enqueue([]
 				{
 					//Services::ServiceLocator::getMessageQueue().update();
 				});
+				*/
 
+				entity.getComponent<Components::Transform>()->rotate(50 * Utilities::Times::deltaTime, glm::vec3(1, 1, 1));
 
 				testCamera.updateCameraUniform();
-
-				resourceManager.get<Resources::Material>("BasicMaterial")->setMVP(entity.getComponent<Components::Transform>()->getMatrix(), glm::inverse(testCamera.transform.getMatrix()), testCamera.getProjectionMatrix());
 
 				// draw to the framebuffer
 				//renderer.drawToFrameBuffer(testFrameBuffer, testVAO, testIBO, *resourceManager.get<Resources::Material>("BasicMaterial"));

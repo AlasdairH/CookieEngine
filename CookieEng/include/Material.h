@@ -81,14 +81,13 @@ namespace Resources
 		*/
 		void setDiffuse(const glm::vec4 &_colour);
 
-		/** @brief Sets the Materials MVP uniforms | TODO: Uniform Buffer Implementation
+		/** @brief Sets the Materials model matrix for rendering
 		*	@param _m The model matrix
-		*	@param _v The view matrix
-		*	@param _p The projection matrix
 		*
-		*	Sets the MVP to be calculated in the shader. This is kept seperate because individual elements are required for lighting.
+		*	Sets the model matrix of the underlying shader. The view and projection matrix is handled by a camera's view and projection matrix
+		*	uniform buffer and the shaders uniform block.
 		*/
-		void setMVP(const glm::mat4 &_m, const glm::mat4 &_v, const glm::mat4 &_p);
+		void setModelMatrix(const glm::mat4 &_m);
 
 	protected:
 		std::shared_ptr<ShaderProgram>	m_shaderProgram;		/**< The Material's Shader */

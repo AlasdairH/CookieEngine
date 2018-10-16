@@ -108,7 +108,7 @@ namespace Resources
 		m_textureDiffuse = nullptr;
 	}
 
-	void Material::setMVP(const glm::mat4 &_m, const glm::mat4 &_v, const glm::mat4 &_p)
+	void Material::setModelMatrix(const glm::mat4 &_m)
 	{
 		if (m_shaderProgram == nullptr)
 		{
@@ -118,8 +118,6 @@ namespace Resources
 
 		m_shaderProgram->bind();
 		m_shaderProgram->setUniformMat4f("u_m", _m);
-		m_shaderProgram->setUniformMat4f("u_v", _v);
-		m_shaderProgram->setUniformMat4f("u_p", _p);
 		//m_shaderProgram->unBind();
 	}
 }

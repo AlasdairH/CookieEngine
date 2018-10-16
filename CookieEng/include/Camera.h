@@ -72,7 +72,7 @@ namespace Object
 
 		/** @brief Updates the OpenGL Camera Data Uniform
 		*
-		*	Updates the GPU side uniform for camera view and projection matricies.
+		*	Updates the GPU side uniform for camera view and projection matrices.
 		*/
 		void updateCameraUniform();
 

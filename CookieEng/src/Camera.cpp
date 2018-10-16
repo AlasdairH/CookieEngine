@@ -4,20 +4,17 @@ namespace CookieEng
 {
 namespace Object
 {
+	std::shared_ptr<Object::Camera> Camera::activeCamera = nullptr;
+
 	Camera::Camera()
 	{
 		m_fov = 0.7f;
 		m_aspect = 1.0f;
 
 		// create the uniform buffer
-		m_uniformBuffer = std::make_unique<Graphics::VertexBuffer>(Graphics::CNG_UNIFORM_BUFFER);
+		m_uniformBuffer = std::make_unique<Graphics::VertexBuffer>(Graphics::CNG_BUFFER_UNIFORM);
 		// load the data to the uniform buffer
 		m_uniformBuffer->loadData(&m_uniformData, 0, sizeof(m_uniformData));
-
-		//glGenBuffers(1, &m_UBO);
-		//glBindBuffer(GL_UNIFORM_BUFFER, m_UBO);
-		//glBufferData(GL_UNIFORM_BUFFER, sizeof(m_uniformData), &m_uniformData, GL_DYNAMIC_DRAW);
-		//glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
 		ResMgmt::ResourceManager &resourceManager = ResMgmt::ResourceManager::getInstance();
 

@@ -61,7 +61,7 @@ namespace ECS
 		template <typename T>
 		std::shared_ptr<T> getComponent()
 		{
-			for (size_t i = 0; i < m_components.size(); i++)
+			for (unsigned int i = 0; i < m_components.size(); ++i)
 			{
 				// attempty to cast the component at i to the requested component type
 				std::shared_ptr<T> component = std::dynamic_pointer_cast<T>(m_components.at(i));
@@ -87,7 +87,7 @@ namespace ECS
 		bool hasComponent()
 		{
 			// TODO: bitset implementation
-			for (size_t i = 0; i < m_components.size(); i++)
+			for (unsigned int i = 0; i < m_components.size(); i++)
 			{
 				// attempty to cast the component at i to the requested component type
 				std::shared_ptr<T> component = std::dynamic_pointer_cast<T>(m_components.at(i));
@@ -100,6 +100,19 @@ namespace ECS
 			}
 
 			return false;
+		}
+
+		/** @brief Updates the underlying components
+		*
+		*	Loops through the linked components and updates them all
+		*/
+		void onUpdate()
+		{
+			for (unsigned int i = 0; i < m_components.size(); ++i)
+			{
+				// TODO: Fix
+				//m_components[i]->onUpdate();
+			}
 		}
 
 	protected:

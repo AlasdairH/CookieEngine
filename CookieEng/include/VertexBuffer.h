@@ -16,7 +16,7 @@ namespace CookieEng
 namespace Graphics
 {
 
-	enum VertexBufferType { CNG_BUFFER_ARRAY = GL_ARRAY_BUFFER, CNG_BUFFER_ELEMENT_ARRAY = GL_ELEMENT_ARRAY_BUFFER, CNG_UNIFORM_BUFFER = GL_UNIFORM_BUFFER };
+	enum VertexBufferType { CNG_BUFFER_ARRAY = GL_ARRAY_BUFFER, CNG_BUFFER_ELEMENT_ARRAY = GL_ELEMENT_ARRAY_BUFFER, CNG_BUFFER_UNIFORM = GL_UNIFORM_BUFFER };
 
 	/*! @class VertexBuffer
 	*	@brief An abstraction of an OpenGL Vertex Bufer Object (VBO).
@@ -87,9 +87,11 @@ namespace Graphics
 		void bindBase(GLuint _index);
 
 	protected:
-		VertexBufferType	m_vertexBufferType;		/**< The type of Vertex Buffer (BUFFER_ARRAY, BUFFER_ELEMENT_ARRAY, etc)  */
-		GLuint				m_count;				/**< The number of items of data there is in the buffer */
-		GLuint				m_vertexBufferID;		/**< The Vertex Buffer ID */
+		VertexBufferType	m_vertexBufferType;			/**< The type of Vertex Buffer (BUFFER_ARRAY, BUFFER_ELEMENT_ARRAY, etc)  */
+		GLuint				m_count;					/**< The number of items of data there is in the buffer */
+		GLuint				m_vertexBufferID;			/**< The Vertex Buffer ID */
+
+		GLuint				m_usage = GL_STATIC_DRAW;	/**< The usage pattern for the buffer */
 	};
 
 }

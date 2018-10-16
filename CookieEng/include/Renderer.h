@@ -15,6 +15,7 @@
 #include "VertexBuffer.h"
 #include "Material.h"
 #include "FrameBuffer.h"
+#include "Transform.h"
 
 namespace CookieEng
 {

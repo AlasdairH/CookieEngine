@@ -81,6 +81,8 @@ namespace Object
 		*/
 		void updateCameraUniform();
 
+		static std::shared_ptr<Object::Camera> activeCamera;	/**< The currently active camera */
+
 	protected:
 		/** @brief Sets the updated Projection Matrix
 		*

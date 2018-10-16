@@ -18,7 +18,7 @@
 
 namespace CookieEng
 {
-namespace Core
+namespace ResMgmt
 {
 	/*! @class ResourceLoader
 	*	@brief Loads a list of resources from a .lvl file

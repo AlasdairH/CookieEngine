@@ -2,7 +2,7 @@
 
 namespace CookieEng
 {
-namespace Core
+namespace ResMgmt
 {
 
 	ResourceLoader::ResourceLoader()

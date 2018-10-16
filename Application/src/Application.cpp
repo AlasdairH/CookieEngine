@@ -1,15 +1,18 @@
 #include <iostream>
-#include "CookieEng.h"
+
+#include "CookieCore.h"
 
 
 #undef main
 
 int main()
 {
-	CookieEng::Base Engine;
-	Engine.initialise();
+	CookieEng::CookieCore engine;
+	engine.initialise();
 
 	CookieEng::ResMgmt::ResourceManager &resourceManager = CookieEng::ResMgmt::ResourceManager::getInstance();
+
+	engine.start();
 
 
 	return 0;

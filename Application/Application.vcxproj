@@ -164,9 +164,6 @@
     <None Include="resources\shaders\vert.glsl" />
   </ItemGroup>
   <ItemGroup>
-    <Object Include="resources\models\Default.obj" />
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="resources\textures\Default.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

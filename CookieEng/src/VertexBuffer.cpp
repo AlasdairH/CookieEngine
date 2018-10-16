@@ -27,6 +27,17 @@ namespace Graphics
 	void VertexBuffer::init()
 	{
 		glGenBuffers(1, &m_vertexBufferID);
+
+		// try to guess what the usage pattern will be, can be set otherwise
+		if (m_vertexBufferType == CNG_BUFFER_ARRAY || m_vertexBufferType == CNG_BUFFER_ELEMENT_ARRAY)
+		{
+			m_usage = GL_STATIC_DRAW;
+		}
+		else if (m_vertexBufferType == CNG_BUFFER_UNIFORM)
+		{
+			m_usage = GL_DYNAMIC_DRAW;
+		}
+
 		LOG_MESSAGE("Vertex Buffer Object with ID: " << m_vertexBufferID << " Created");
 	}
 
@@ -35,7 +46,7 @@ namespace Graphics
 		m_count = _count;
 		bind();
 		// TODO: Fix static draw
-		glBufferData(m_vertexBufferType, _size, _data, GL_STATIC_DRAW);
+		glBufferData(m_vertexBufferType, _size, _data, m_usage);
 	}
 
 	void VertexBuffer::bind() const

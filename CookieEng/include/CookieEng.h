@@ -85,16 +85,6 @@ namespace CookieEng
 			// load materials
 			resourceManager.load<Resources::Material>("BasicMaterial", "resources/materials/Default.cngMaterial");
 
-			/*
-			ECS::Manager ecsManager;
-			auto &entity(ecsManager.addEntity());
-			entity.addComponent<Components::Transform>();
-			entity.addComponent<Components::Renderable>();
-			entity.getComponent<Components::Renderable>().setMesh("BasicMesh");
-			entity.getComponent<Components::Renderable>().setMaterial("BasicMaterial");
-
-			*/
-
 			ECS::Entity entity;
 			entity.addComponent<Components::Transform>();
 			entity.addComponent<Components::Renderable>();

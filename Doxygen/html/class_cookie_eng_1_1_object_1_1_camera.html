@@ -96,11 +96,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afa69ef269138610423e2dc8707720500"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#afa69ef269138610423e2dc8707720500">getProjectionMatrix</a> ()</td></tr>
 <tr class="memdesc:afa69ef269138610423e2dc8707720500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Projection Matrix.  <a href="#afa69ef269138610423e2dc8707720500">More...</a><br /></td></tr>
 <tr class="separator:afa69ef269138610423e2dc8707720500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b8a35f92490adf193d36f2906a2c1d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a0b8a35f92490adf193d36f2906a2c1d8">updateCameraUniform</a> ()</td></tr>
+<tr class="memdesc:a0b8a35f92490adf193d36f2906a2c1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the OpenGL <a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html" title="Contains the data for the representation of a perspective camera. ">Camera</a> Data Uniform.  <a href="#a0b8a35f92490adf193d36f2906a2c1d8">More...</a><br /></td></tr>
+<tr class="separator:a0b8a35f92490adf193d36f2906a2c1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae991b0b27c6be58d11f44dbfd3092956"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_cookie_eng_1_1_attribute_1_1_transform.html">Attribute::Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#ae991b0b27c6be58d11f44dbfd3092956">transform</a></td></tr>
-<tr class="separator:ae991b0b27c6be58d11f44dbfd3092956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa996e685c79a71bd30e88341b68ed197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_cookie_eng_1_1_components_1_1_transform.html">Components::Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#aa996e685c79a71bd30e88341b68ed197">transform</a></td></tr>
+<tr class="separator:aa996e685c79a71bd30e88341b68ed197"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -116,6 +119,15 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a86c6f04a4f39bfa931493b1f6b9c013c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a5152fd8fbd92c4cbcc73d14511e584"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a6a5152fd8fbd92c4cbcc73d14511e584">m_projectionMatrix</a></td></tr>
 <tr class="separator:a6a5152fd8fbd92c4cbcc73d14511e584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58fb1802afae02fbd0cdb6d03c988f17"><td class="memItemLeft" align="right" valign="top"><a id="a58fb1802afae02fbd0cdb6d03c988f17"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>m_UBO</b></td></tr>
+<tr class="separator:a58fb1802afae02fbd0cdb6d03c988f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609beae2a3fb5cfca418fac357ef6d36"><td class="memItemLeft" align="right" valign="top"><a id="a609beae2a3fb5cfca418fac357ef6d36"></a>
+std::unique_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_uniformBuffer</b></td></tr>
+<tr class="separator:a609beae2a3fb5cfca418fac357ef6d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c921e6872f0c16bc8ab742732d759c"><td class="memItemLeft" align="right" valign="top"><a id="a45c921e6872f0c16bc8ab742732d759c"></a>
+<a class="el" href="struct_cookie_eng_1_1_object_1_1_camera_uniform_data__t.html">CameraUniformData_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_uniformData</b></td></tr>
+<tr class="separator:a45c921e6872f0c16bc8ab742732d759c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the data for the representation of a perspective camera. </p>
@@ -297,6 +309,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0b8a35f92490adf193d36f2906a2c1d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b8a35f92490adf193d36f2906a2c1d8">&#9670;&nbsp;</a></span>updateCameraUniform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::Object::Camera::updateCameraUniform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the OpenGL <a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html" title="Contains the data for the representation of a perspective camera. ">Camera</a> Data Uniform. </p>
+<p>Updates the GPU side uniform for camera view and projection matrices. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a86c6f04a4f39bfa931493b1f6b9c013c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86c6f04a4f39bfa931493b1f6b9c013c">&#9670;&nbsp;</a></span>m_aspect</h2>
@@ -367,14 +399,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae991b0b27c6be58d11f44dbfd3092956"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae991b0b27c6be58d11f44dbfd3092956">&#9670;&nbsp;</a></span>transform</h2>
+<a id="aa996e685c79a71bd30e88341b68ed197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa996e685c79a71bd30e88341b68ed197">&#9670;&nbsp;</a></span>transform</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_cookie_eng_1_1_attribute_1_1_transform.html">Attribute::Transform</a> CookieEng::Object::Camera::transform</td>
+          <td class="memname"><a class="el" href="class_cookie_eng_1_1_components_1_1_transform.html">Components::Transform</a> CookieEng::Object::Camera::transform</td>
         </tr>
       </table>
 </div><div class="memdoc">

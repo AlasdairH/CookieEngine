@@ -28,7 +28,9 @@ G\+Luint \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a667b81c1552
 void \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a6fbaa64c5edeb00d4f5770587eb7b369}{bind} () const
 \begin{DoxyCompactList}\small\item\em Binds the V\+BO. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a8fbc3f39762c511438bc13e8c405926c}{un\+Bind} () const
-\begin{DoxyCompactList}\small\item\em Unbinds the V\+BO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Unbinds the V\+BO. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a3098cec29d253dd295586fc92bc48001}{bind\+Base} (G\+Luint \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Bind the buffer to an indexed buffer target. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -105,7 +107,22 @@ Deletes the Vertex Buffer
 
 Binds the V\+BO. 
 
-Binds the V\+BO. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a667b81c15525bd5f76d979e0c8b02be0}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a667b81c15525bd5f76d979e0c8b02be0}} 
+Binds the V\+BO. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a3098cec29d253dd295586fc92bc48001}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a3098cec29d253dd295586fc92bc48001}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}!bind\+Base@{bind\+Base}}
+\index{bind\+Base@{bind\+Base}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}}
+\subsubsection{\texorpdfstring{bind\+Base()}{bindBase()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+::bind\+Base (\begin{DoxyParamCaption}\item[{G\+Luint}]{\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Bind the buffer to an indexed buffer target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+index} & The index of the binding point\\
+\hline
+\end{DoxyParams}
+Binds the buffer object buffer to the binding point at index index of the array of targets specified by target. (Copied from Kkronos.\+org) \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a667b81c15525bd5f76d979e0c8b02be0}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_a667b81c15525bd5f76d979e0c8b02be0}} 
 \index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}!get\+Count@{get\+Count}}
 \index{get\+Count@{get\+Count}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer}}
 \subsubsection{\texorpdfstring{get\+Count()}{getCount()}}

@@ -1,0 +1,235 @@
+\hypertarget{class_cookie_eng_1_1_components_1_1_transform}{}\section{Cookie\+Eng\+:\+:Components\+:\+:Transform Class Reference}
+\label{class_cookie_eng_1_1_components_1_1_transform}\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+
+
+A \hyperlink{class_cookie_eng_1_1_components_1_1_transform}{Transform} Component.  
+
+
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+
+
+Inherits \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_components_1_1_transform_a477bc2eb1d09fecdcb7399d5124ccd0d}{Transform} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_components_1_1_transform}{Transform} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_components_1_1_transform_ad07b4e7f04ec0c60646339be8b67c69c}{$\sim$\+Transform} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_components_1_1_transform}{Transform} Dtor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a169960289f66442f692bb52c4c86478e}{set\+Model\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Sets the Model Matrix. \end{DoxyCompactList}\item 
+glm\+::mat4 \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a0d18917e8701c84b6759823f785969de}{get\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Gets the model matrix. \end{DoxyCompactList}\item 
+glm\+::vec3 \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a20c33650a735e8c9c54b232e871ff526}{get\+Position\+Vec3} ()
+\begin{DoxyCompactList}\small\item\em Gets the Position. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_transform_ac20843bb62dfdf7fce9fa96368b5a807}{set\+Position} (const glm\+::vec3 \&\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Sets the absolute position. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_transform_afe2e00e8126fd92eab8c2e1a5725b2c5}{translate} (const glm\+::vec3 \&\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Moves the transform to a new position relative to its old position. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a382a16d437c34d7e345a60d11a9578b2}{set\+Rotation} (const float \+\_\+rotation, const glm\+::vec3 \&\+\_\+axis)
+\begin{DoxyCompactList}\small\item\em Sets the absolute rotation. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a061b3b2b5d33c1dda2955e9b2e01d736}{rotate} (const float \+\_\+rotation, const glm\+::vec3 \+\_\+axis)
+\begin{DoxyCompactList}\small\item\em Rotates the transform to a new rotation relative to its old rotation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a6e99757f68b1de46b9caeaacdf6e88ae}{m\+\_\+position}
+\item 
+glm\+::vec3 \hyperlink{class_cookie_eng_1_1_components_1_1_transform_ab47df9535ea8c9b95ebd86b16381b86b}{m\+\_\+rotation}
+\item 
+glm\+::mat4 \hyperlink{class_cookie_eng_1_1_components_1_1_transform_ab4c66323537c12117739471665c6ddf9}{m\+\_\+model\+Matrix}
+\item 
+glm\+::mat4 \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a247892c3be676ab7ec613600435cead8}{m\+\_\+model\+Matrix\+NS}
+\item 
+glm\+::mat4 \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a8ab2d1886012bb7942ef4e4aafbd0321}{m\+\_\+translation\+Matrix}
+\item 
+glm\+::mat4 \hyperlink{class_cookie_eng_1_1_components_1_1_transform_aea4ccabe5423b8d31df96c6b9bd5553e}{m\+\_\+rotation\+Matrix}
+\item 
+glm\+::mat4 \hyperlink{class_cookie_eng_1_1_components_1_1_transform_aa41354d093d9821fb9a790517d97732f}{m\+\_\+scale\+Matrix}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A \hyperlink{class_cookie_eng_1_1_components_1_1_transform}{Transform} Component. 
+
+Tracks a position / rotation and scale in 3D space using the G\+LM library 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a477bc2eb1d09fecdcb7399d5124ccd0d}\label{class_cookie_eng_1_1_components_1_1_transform_a477bc2eb1d09fecdcb7399d5124ccd0d}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Components\+::\+Transform\+::\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_components_1_1_transform}{Transform} Ctor. 
+
+Creates a transform at the world 0, 0, 0 with default rotation and scale \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_ad07b4e7f04ec0c60646339be8b67c69c}\label{class_cookie_eng_1_1_components_1_1_transform_ad07b4e7f04ec0c60646339be8b67c69c}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!````~Transform@{$\sim$\+Transform}}
+\index{````~Transform@{$\sim$\+Transform}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{$\sim$\+Transform()}{~Transform()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Components\+::\+Transform\+::$\sim$\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{class_cookie_eng_1_1_components_1_1_transform}{Transform} Dtor. 
+
+Deletes a transform 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a0d18917e8701c84b6759823f785969de}\label{class_cookie_eng_1_1_components_1_1_transform_a0d18917e8701c84b6759823f785969de}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!get\+Matrix@{get\+Matrix}}
+\index{get\+Matrix@{get\+Matrix}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{get\+Matrix()}{getMatrix()}}
+{\footnotesize\ttfamily glm\+::mat4 Cookie\+Eng\+::\+Components\+::\+Transform\+::get\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the model matrix. 
+
+\begin{DoxyReturn}{Returns}
+The model matrix
+\end{DoxyReturn}
+Returns the model matrix of the transform \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a20c33650a735e8c9c54b232e871ff526}\label{class_cookie_eng_1_1_components_1_1_transform_a20c33650a735e8c9c54b232e871ff526}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!get\+Position\+Vec3@{get\+Position\+Vec3}}
+\index{get\+Position\+Vec3@{get\+Position\+Vec3}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{get\+Position\+Vec3()}{getPositionVec3()}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Components\+::\+Transform\+::get\+Position\+Vec3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Position. 
+
+\begin{DoxyReturn}{Returns}
+The position vector in 3D
+\end{DoxyReturn}
+Returns the position vector \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a061b3b2b5d33c1dda2955e9b2e01d736}\label{class_cookie_eng_1_1_components_1_1_transform_a061b3b2b5d33c1dda2955e9b2e01d736}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!rotate@{rotate}}
+\index{rotate@{rotate}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+Transform\+::rotate (\begin{DoxyParamCaption}\item[{const float}]{\+\_\+rotation,  }\item[{const glm\+::vec3}]{\+\_\+axis }\end{DoxyParamCaption})}
+
+
+
+Rotates the transform to a new rotation relative to its old rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+rotation} & The difference in rotation to apply \\
+\hline
+{\em \+\_\+axis} & The axis to rotate on\\
+\hline
+\end{DoxyParams}
+Changes the rotation of the transform by the given vector 3D. \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a169960289f66442f692bb52c4c86478e}\label{class_cookie_eng_1_1_components_1_1_transform_a169960289f66442f692bb52c4c86478e}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!set\+Model\+Matrix@{set\+Model\+Matrix}}
+\index{set\+Model\+Matrix@{set\+Model\+Matrix}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{set\+Model\+Matrix()}{setModelMatrix()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+Transform\+::set\+Model\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the Model Matrix. 
+
+Calculates the new Model Matrix from the internal Vec3 attributes \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_ac20843bb62dfdf7fce9fa96368b5a807}\label{class_cookie_eng_1_1_components_1_1_transform_ac20843bb62dfdf7fce9fa96368b5a807}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+Transform\+::set\+Position (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Sets the absolute position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+position} & The new position\\
+\hline
+\end{DoxyParams}
+Sets the new position of the transform, disregarding its old position \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a382a16d437c34d7e345a60d11a9578b2}\label{class_cookie_eng_1_1_components_1_1_transform_a382a16d437c34d7e345a60d11a9578b2}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{set\+Rotation()}{setRotation()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+Transform\+::set\+Rotation (\begin{DoxyParamCaption}\item[{const float}]{\+\_\+rotation,  }\item[{const glm\+::vec3 \&}]{\+\_\+axis }\end{DoxyParamCaption})}
+
+
+
+Sets the absolute rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+rotation} & The new rotation \\
+\hline
+{\em \+\_\+axis} & The axis to rotate on\\
+\hline
+\end{DoxyParams}
+Sets the new rotation of the transform, disregarding its old rotation \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_afe2e00e8126fd92eab8c2e1a5725b2c5}\label{class_cookie_eng_1_1_components_1_1_transform_afe2e00e8126fd92eab8c2e1a5725b2c5}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!translate@{translate}}
+\index{translate@{translate}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+Transform\+::translate (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Moves the transform to a new position relative to its old position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+position} & The difference in position to apply\\
+\hline
+\end{DoxyParams}
+Translates the position of the transform by the given vector 3D. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_ab4c66323537c12117739471665c6ddf9}\label{class_cookie_eng_1_1_components_1_1_transform_ab4c66323537c12117739471665c6ddf9}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!m\+\_\+model\+Matrix@{m\+\_\+model\+Matrix}}
+\index{m\+\_\+model\+Matrix@{m\+\_\+model\+Matrix}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{m\+\_\+model\+Matrix}{m\_modelMatrix}}
+{\footnotesize\ttfamily glm\+::mat4 Cookie\+Eng\+::\+Components\+::\+Transform\+::m\+\_\+model\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+The model matrix \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a247892c3be676ab7ec613600435cead8}\label{class_cookie_eng_1_1_components_1_1_transform_a247892c3be676ab7ec613600435cead8}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!m\+\_\+model\+Matrix\+NS@{m\+\_\+model\+Matrix\+NS}}
+\index{m\+\_\+model\+Matrix\+NS@{m\+\_\+model\+Matrix\+NS}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{m\+\_\+model\+Matrix\+NS}{m\_modelMatrixNS}}
+{\footnotesize\ttfamily glm\+::mat4 Cookie\+Eng\+::\+Components\+::\+Transform\+::m\+\_\+model\+Matrix\+NS\hspace{0.3cm}{\ttfamily [protected]}}
+
+The model matrix without scale \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a6e99757f68b1de46b9caeaacdf6e88ae}\label{class_cookie_eng_1_1_components_1_1_transform_a6e99757f68b1de46b9caeaacdf6e88ae}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!m\+\_\+position@{m\+\_\+position}}
+\index{m\+\_\+position@{m\+\_\+position}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{m\+\_\+position}{m\_position}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Components\+::\+Transform\+::m\+\_\+position\hspace{0.3cm}{\ttfamily [protected]}}
+
+The current position \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_ab47df9535ea8c9b95ebd86b16381b86b}\label{class_cookie_eng_1_1_components_1_1_transform_ab47df9535ea8c9b95ebd86b16381b86b}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!m\+\_\+rotation@{m\+\_\+rotation}}
+\index{m\+\_\+rotation@{m\+\_\+rotation}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{m\+\_\+rotation}{m\_rotation}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Components\+::\+Transform\+::m\+\_\+rotation\hspace{0.3cm}{\ttfamily [protected]}}
+
+The current rotation \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_aea4ccabe5423b8d31df96c6b9bd5553e}\label{class_cookie_eng_1_1_components_1_1_transform_aea4ccabe5423b8d31df96c6b9bd5553e}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!m\+\_\+rotation\+Matrix@{m\+\_\+rotation\+Matrix}}
+\index{m\+\_\+rotation\+Matrix@{m\+\_\+rotation\+Matrix}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{m\+\_\+rotation\+Matrix}{m\_rotationMatrix}}
+{\footnotesize\ttfamily glm\+::mat4 Cookie\+Eng\+::\+Components\+::\+Transform\+::m\+\_\+rotation\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+The rotation matrix \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_aa41354d093d9821fb9a790517d97732f}\label{class_cookie_eng_1_1_components_1_1_transform_aa41354d093d9821fb9a790517d97732f}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!m\+\_\+scale\+Matrix@{m\+\_\+scale\+Matrix}}
+\index{m\+\_\+scale\+Matrix@{m\+\_\+scale\+Matrix}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{m\+\_\+scale\+Matrix}{m\_scaleMatrix}}
+{\footnotesize\ttfamily glm\+::mat4 Cookie\+Eng\+::\+Components\+::\+Transform\+::m\+\_\+scale\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+The scale matrix \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a8ab2d1886012bb7942ef4e4aafbd0321}\label{class_cookie_eng_1_1_components_1_1_transform_a8ab2d1886012bb7942ef4e4aafbd0321}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!m\+\_\+translation\+Matrix@{m\+\_\+translation\+Matrix}}
+\index{m\+\_\+translation\+Matrix@{m\+\_\+translation\+Matrix}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{m\+\_\+translation\+Matrix}{m\_translationMatrix}}
+{\footnotesize\ttfamily glm\+::mat4 Cookie\+Eng\+::\+Components\+::\+Transform\+::m\+\_\+translation\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+The translation matrix 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Transform.\+h\end{DoxyCompactItemize}

@@ -11,8 +11,6 @@
 #include "Macro.h"
 #include "Resource.h"
 
-// TODO: Doxygen
-
 namespace CookieEng
 {
 namespace ResMgmt

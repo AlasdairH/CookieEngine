@@ -21,11 +21,13 @@ void \hyperlink{class_cookie_eng_1_1_object_1_1_camera_aef44a3e6cef1540be7e8bcb9
 void \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a2a86235e64f591e8c812f1d69be30a94}{set\+Aspect\+Ratio} (const float \+\_\+aspect)
 \begin{DoxyCompactList}\small\item\em Sets the Aspect Ratio ( width / height ) \end{DoxyCompactList}\item 
 glm\+::mat4 \hyperlink{class_cookie_eng_1_1_object_1_1_camera_afa69ef269138610423e2dc8707720500}{get\+Projection\+Matrix} ()
-\begin{DoxyCompactList}\small\item\em Return the Projection Matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Return the Projection Matrix. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a0b8a35f92490adf193d36f2906a2c1d8}{update\+Camera\+Uniform} ()
+\begin{DoxyCompactList}\small\item\em Updates the Open\+GL \hyperlink{class_cookie_eng_1_1_object_1_1_camera}{Camera} Data Uniform. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_cookie_eng_1_1_attribute_1_1_transform}{Attribute\+::\+Transform} \hyperlink{class_cookie_eng_1_1_object_1_1_camera_ae991b0b27c6be58d11f44dbfd3092956}{transform}
+\hyperlink{class_cookie_eng_1_1_components_1_1_transform}{Components\+::\+Transform} \hyperlink{class_cookie_eng_1_1_object_1_1_camera_aa996e685c79a71bd30e88341b68ed197}{transform}
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -40,6 +42,15 @@ float \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a8ec41f98d646a5c9dd73315
 float \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a86c6f04a4f39bfa931493b1f6b9c013c}{m\+\_\+aspect}
 \item 
 glm\+::mat4 \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a6a5152fd8fbd92c4cbcc73d14511e584}{m\+\_\+projection\+Matrix}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a58fb1802afae02fbd0cdb6d03c988f17}\label{class_cookie_eng_1_1_object_1_1_camera_a58fb1802afae02fbd0cdb6d03c988f17}} 
+G\+Luint {\bfseries m\+\_\+\+U\+BO}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a609beae2a3fb5cfca418fac357ef6d36}\label{class_cookie_eng_1_1_object_1_1_camera_a609beae2a3fb5cfca418fac357ef6d36}} 
+std\+::unique\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ {\bfseries m\+\_\+uniform\+Buffer}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a45c921e6872f0c16bc8ab742732d759c}\label{class_cookie_eng_1_1_object_1_1_camera_a45c921e6872f0c16bc8ab742732d759c}} 
+\hyperlink{struct_cookie_eng_1_1_object_1_1_camera_uniform_data__t}{Camera\+Uniform\+Data\+\_\+t} {\bfseries m\+\_\+uniform\+Data}
 \end{DoxyCompactItemize}
 
 
@@ -125,7 +136,17 @@ Sets the Field of View.
 {\em \+\_\+fov} & The desired Field of View\\
 \hline
 \end{DoxyParams}
-Sets the FoV and cleans the projection matrix 
+Sets the FoV and cleans the projection matrix \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a0b8a35f92490adf193d36f2906a2c1d8}\label{class_cookie_eng_1_1_object_1_1_camera_a0b8a35f92490adf193d36f2906a2c1d8}} 
+\index{Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}!update\+Camera\+Uniform@{update\+Camera\+Uniform}}
+\index{update\+Camera\+Uniform@{update\+Camera\+Uniform}!Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}}
+\subsubsection{\texorpdfstring{update\+Camera\+Uniform()}{updateCameraUniform()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Object\+::\+Camera\+::update\+Camera\+Uniform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the Open\+GL \hyperlink{class_cookie_eng_1_1_object_1_1_camera}{Camera} Data Uniform. 
+
+Updates the G\+PU side uniform for camera view and projection matrices. 
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a86c6f04a4f39bfa931493b1f6b9c013c}\label{class_cookie_eng_1_1_object_1_1_camera_a86c6f04a4f39bfa931493b1f6b9c013c}} 
@@ -146,11 +167,11 @@ The current FoV \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a6a515
 \subsubsection{\texorpdfstring{m\+\_\+projection\+Matrix}{m\_projectionMatrix}}
 {\footnotesize\ttfamily glm\+::mat4 Cookie\+Eng\+::\+Object\+::\+Camera\+::m\+\_\+projection\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}
 
-The Projection Matrix \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_ae991b0b27c6be58d11f44dbfd3092956}\label{class_cookie_eng_1_1_object_1_1_camera_ae991b0b27c6be58d11f44dbfd3092956}} 
+The Projection Matrix \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_aa996e685c79a71bd30e88341b68ed197}\label{class_cookie_eng_1_1_object_1_1_camera_aa996e685c79a71bd30e88341b68ed197}} 
 \index{Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}!transform@{transform}}
 \index{transform@{transform}!Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}}
 \subsubsection{\texorpdfstring{transform}{transform}}
-{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_attribute_1_1_transform}{Attribute\+::\+Transform} Cookie\+Eng\+::\+Object\+::\+Camera\+::transform}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_components_1_1_transform}{Components\+::\+Transform} Cookie\+Eng\+::\+Object\+::\+Camera\+::transform}
 
 The transform attribute of the \hyperlink{class_cookie_eng_1_1_object_1_1_camera}{Camera}, used for moving it around the world 
 

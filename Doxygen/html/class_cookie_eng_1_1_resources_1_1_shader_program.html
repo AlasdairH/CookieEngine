@@ -126,6 +126,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea57a6a608fe57a1057d3a038bac16dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_resources_1_1_shader_program.html#aea57a6a608fe57a1057d3a038bac16dd">setUniformBool</a> (const std::string &amp;_name, const bool _value)</td></tr>
 <tr class="memdesc:aea57a6a608fe57a1057d3a038bac16dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a boolean uniform.  <a href="#aea57a6a608fe57a1057d3a038bac16dd">More...</a><br /></td></tr>
 <tr class="separator:aea57a6a608fe57a1057d3a038bac16dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74c040878159bceefb0b6b125a8b3e87"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_resources_1_1_shader_program.html#a74c040878159bceefb0b6b125a8b3e87">getUniformBlockIndex</a> (const std::string &amp;_name)</td></tr>
+<tr class="memdesc:a74c040878159bceefb0b6b125a8b3e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a Uniform Block Index.  <a href="#a74c040878159bceefb0b6b125a8b3e87">More...</a><br /></td></tr>
+<tr class="separator:a74c040878159bceefb0b6b125a8b3e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af298d334a9c678b7e1c8e32403a91d92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_resources_1_1_shader_program.html#af298d334a9c678b7e1c8e32403a91d92">linkUniformBlock</a> (const std::string &amp;_blockIndex, GLuint _bindingPoint)</td></tr>
+<tr class="memdesc:af298d334a9c678b7e1c8e32403a91d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a Uniform Block Index.  <a href="#af298d334a9c678b7e1c8e32403a91d92">More...</a><br /></td></tr>
+<tr class="separator:af298d334a9c678b7e1c8e32403a91d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_cookie_eng_1_1_resources_1_1_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cookie_eng_1_1_resources_1_1_resource')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cookie_eng_1_1_resources_1_1_resource.html">CookieEng::Resources::Resource</a></td></tr>
 <tr class="memitem:acfe5141c546d7f3f3e08435b3a21b09c inherit pub_methods_class_cookie_eng_1_1_resources_1_1_resource"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_resources_1_1_resource.html#acfe5141c546d7f3f3e08435b3a21b09c">unload</a> ()</td></tr>
 <tr class="memdesc:acfe5141c546d7f3f3e08435b3a21b09c inherit pub_methods_class_cookie_eng_1_1_resources_1_1_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on the unload of a resource.  <a href="class_cookie_eng_1_1_resources_1_1_resource.html#acfe5141c546d7f3f3e08435b3a21b09c">More...</a><br /></td></tr>
@@ -263,6 +269,33 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a74c040878159bceefb0b6b125a8b3e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74c040878159bceefb0b6b125a8b3e87">&#9670;&nbsp;</a></span>getUniformBlockIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint CookieEng::Resources::ShaderProgram::getUniformBlockIndex </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a Uniform Block Index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>The name of the block to get</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The index of the uniform block on the shader </p>
+
+</div>
+</div>
 <a id="ae2fb823b3e8da3cf7154e0a8ffe25c85"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae2fb823b3e8da3cf7154e0a8ffe25c85">&#9670;&nbsp;</a></span>getUniformLocation()</h2>
 
@@ -308,6 +341,44 @@ Protected Attributes</h2></td></tr>
 
 <p>Links the Shader Program. </p>
 <p>Links the shader program. </p>
+
+</div>
+</div>
+<a id="af298d334a9c678b7e1c8e32403a91d92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af298d334a9c678b7e1c8e32403a91d92">&#9670;&nbsp;</a></span>linkUniformBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::Resources::ShaderProgram::linkUniformBlock </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_blockIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLuint&#160;</td>
+          <td class="paramname"><em>_bindingPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a Uniform Block Index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_blockIndex</td><td>The block index name to bind to the binding point </td></tr>
+    <tr><td class="paramname">_bindingPoint</td><td>The binding point to bind the block index to</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Binds uniform block to binding point </p>
 
 </div>
 </div>

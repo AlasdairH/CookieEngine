@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cookie Engine: CookieEng::Components::Component Class Reference</title>
+<title>Cookie Engine: CookieEng::ECS::Entity Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,29 +59,42 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>CookieEng</b></li><li class="navelem"><b>Components</b></li><li class="navelem"><a class="el" href="class_cookie_eng_1_1_components_1_1_component.html">Component</a></li>  </ul>
+<li class="navelem"><b>CookieEng</b></li><li class="navelem"><b>ECS</b></li><li class="navelem"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html">Entity</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="class_cookie_eng_1_1_components_1_1_component-members.html">List of all members</a>  </div>
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="class_cookie_eng_1_1_e_c_s_1_1_entity-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">CookieEng::Components::Component Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">CookieEng::ECS::Entity Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aff030998db121bdb3dc3970c1ea9050e"><td class="memItemLeft" align="right" valign="top"><a id="aff030998db121bdb3dc3970c1ea9050e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onStart</b> ()=0</td></tr>
-<tr class="separator:aff030998db121bdb3dc3970c1ea9050e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8be8aaa70ee7bf1b97967399960f5ca"><td class="memItemLeft" align="right" valign="top"><a id="af8be8aaa70ee7bf1b97967399960f5ca"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onUpdate</b> ()=0</td></tr>
-<tr class="separator:af8be8aaa70ee7bf1b97967399960f5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="memTemplParams" colspan="2"><a id="a7b24f6959d8f1686e02e8ae5ef61f08c"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addComponent</b> ()</td></tr>
+<tr class="separator:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e954d74445ccffe29412c885d97bf63"><td class="memTemplParams" colspan="2"><a id="a7e954d74445ccffe29412c885d97bf63"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7e954d74445ccffe29412c885d97bf63"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getComponent</b> ()</td></tr>
+<tr class="separator:a7e954d74445ccffe29412c885d97bf63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a594daff6ddf321ac9c3a2fad3e50620e"><td class="memTemplParams" colspan="2"><a id="a594daff6ddf321ac9c3a2fad3e50620e"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a594daff6ddf321ac9c3a2fad3e50620e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hasComponent</b> ()</td></tr>
+<tr class="separator:a594daff6ddf321ac9c3a2fad3e50620e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a5c8b8b6f07c07b97e898ece5dab38517"><td class="memItemLeft" align="right" valign="top"><a id="a5c8b8b6f07c07b97e898ece5dab38517"></a>
+std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html">Component</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_components</b></td></tr>
+<tr class="separator:a5c8b8b6f07c07b97e898ece5dab38517"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>D:/Programming/Engine Development/CookieEng/CookieEng/include/<a class="el" href="_component_8h_source.html">Component.h</a></li>
+<li>D:/Programming/Engine Development/CookieEng/CookieEng/include/<a class="el" href="_entity_8h_source.html">Entity.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

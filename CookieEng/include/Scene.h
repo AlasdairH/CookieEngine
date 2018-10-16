@@ -5,7 +5,6 @@
 // external libs
 
 // program
-#include "ECS.h"
 
 namespace CookieEng
 {
@@ -21,7 +20,7 @@ namespace Core
 		void draw();
 
 	protected:
-		//ECS::Manager ecsManager;
+
 	};
 }
 }

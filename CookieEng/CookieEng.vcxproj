@@ -198,7 +198,6 @@
   <ItemGroup>
     <ClInclude Include="include\Camera.h" />
     <ClInclude Include="include\Component.h" />
-    <ClInclude Include="include\ECS.h" />
     <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\Scene.h" />
     <ClInclude Include="include\Times.h" />

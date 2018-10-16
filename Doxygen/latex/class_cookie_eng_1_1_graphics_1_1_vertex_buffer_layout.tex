@@ -23,7 +23,9 @@ Abstraction of the layout of a V\+BO.
 const std\+::vector$<$ \hyperlink{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element}{Vertex\+Buffer\+Element} $>$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a082cc08b182cabe19998ae522c0466be}{get\+Elements} () const
 \begin{DoxyCompactList}\small\item\em Returns the vector of elements that make up the layout. \end{DoxyCompactList}\item 
 G\+Luint \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a4c771d06898767d1a92237b03a53e887}{get\+Stride} () const
-\begin{DoxyCompactList}\small\item\em Returns the stride of the layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the stride of the layout. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a9e511f18b0895825ff8ea2b567f89626}{reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -123,7 +125,17 @@ Pushes a new unsigned char element to the layout.
 {\em \+\_\+count} & The number of values in the element. Eg, 3 for a vec3 (3 floats), 2 for a vec2 (2 floats).\\
 \hline
 \end{DoxyParams}
-Pushes a new unsigned char element into the layout with the specified count (how many items of the specified type make up the element). 
+Pushes a new unsigned char element into the layout with the specified count (how many items of the specified type make up the element). \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a9e511f18b0895825ff8ea2b567f89626}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a9e511f18b0895825ff8ea2b567f89626}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}!reset@{reset}}
+\index{reset@{reset}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the layout. 
+
+Resets the layout back to default 
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a7986bf1ce59d1ffa1dc31613014aa2e7}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a7986bf1ce59d1ffa1dc31613014aa2e7}} 

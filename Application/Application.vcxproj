@@ -153,6 +153,22 @@
       <Project>{881da49d-9c43-4c8b-a5ea-ca9535dcc376}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\assets\levels\test.lvl" />
+    <None Include="resources\materials\Default.cngMaterial" />
+    <None Include="resources\shaders\BasicPP.cngShader" />
+    <None Include="resources\shaders\BasicShader.cngShader" />
+    <None Include="resources\shaders\frag.glsl" />
+    <None Include="resources\shaders\PostProcFrag.glsl" />
+    <None Include="resources\shaders\PostProcVert.glsl" />
+    <None Include="resources\shaders\vert.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="resources\models\Default.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\textures\Default.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

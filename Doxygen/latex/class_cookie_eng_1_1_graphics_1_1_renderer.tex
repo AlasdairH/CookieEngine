@@ -17,6 +17,8 @@ An Open\+GL \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer}{Renderer}.
 void \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_a9e8bce3cb731b1f09ca5bc4bc863414b}{set\+Frame\+Buffer} (\hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} $\ast$\+\_\+frame\+Buffer)
 \begin{DoxyCompactList}\small\item\em Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to render to if one has not been provided. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_aa32e62971f191a434ab457f9ac84ac31}{draw\+To\+Frame\+Buffer} (const \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} \&\+\_\+fbo, const \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Vertex\+Array} \&\+\_\+vao, const \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Vertex\+Buffer} \&\+\_\+index\+Buffer, const \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} \&\+\_\+material)
+\begin{DoxyCompactList}\small\item\em Draw to a framebuffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_a8ce19d76df0b4353a76d2116340b8024}{draw\+To\+Frame\+Buffer} (const \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} \&\+\_\+fbo, \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} \&\+\_\+entity)
 \begin{DoxyCompactList}\small\item\em Draw to a framebuffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -47,7 +49,7 @@ Logs a created message
 \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_renderer_aa32e62971f191a434ab457f9ac84ac31}\label{class_cookie_eng_1_1_graphics_1_1_renderer_aa32e62971f191a434ab457f9ac84ac31}} 
 \index{Cookie\+Eng\+::\+Graphics\+::\+Renderer@{Cookie\+Eng\+::\+Graphics\+::\+Renderer}!draw\+To\+Frame\+Buffer@{draw\+To\+Frame\+Buffer}}
 \index{draw\+To\+Frame\+Buffer@{draw\+To\+Frame\+Buffer}!Cookie\+Eng\+::\+Graphics\+::\+Renderer@{Cookie\+Eng\+::\+Graphics\+::\+Renderer}}
-\subsubsection{\texorpdfstring{draw\+To\+Frame\+Buffer()}{drawToFrameBuffer()}}
+\subsubsection{\texorpdfstring{draw\+To\+Frame\+Buffer()}{drawToFrameBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Renderer\+::draw\+To\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{const \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} \&}]{\+\_\+fbo,  }\item[{const \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Vertex\+Array} \&}]{\+\_\+vao,  }\item[{const \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Vertex\+Buffer} \&}]{\+\_\+index\+Buffer,  }\item[{const \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} \&}]{\+\_\+material }\end{DoxyParamCaption})}
 
 
@@ -63,6 +65,23 @@ Draw to a framebuffer.
 {\em \+\_\+index\+Buffer} & The index buffer (\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Vertex\+Buffer}) that contains the indicies to map the vertex drawing to. (Avoids duplicate data) \\
 \hline
 {\em \+\_\+material} & The material to use when rendering the mesh to the screen\\
+\hline
+\end{DoxyParams}
+Takes a frame buffer and the required objects for rendering and renders using the provided material to the framebuffer. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_renderer_a8ce19d76df0b4353a76d2116340b8024}\label{class_cookie_eng_1_1_graphics_1_1_renderer_a8ce19d76df0b4353a76d2116340b8024}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Renderer@{Cookie\+Eng\+::\+Graphics\+::\+Renderer}!draw\+To\+Frame\+Buffer@{draw\+To\+Frame\+Buffer}}
+\index{draw\+To\+Frame\+Buffer@{draw\+To\+Frame\+Buffer}!Cookie\+Eng\+::\+Graphics\+::\+Renderer@{Cookie\+Eng\+::\+Graphics\+::\+Renderer}}
+\subsubsection{\texorpdfstring{draw\+To\+Frame\+Buffer()}{drawToFrameBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Renderer\+::draw\+To\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{const \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} \&}]{\+\_\+fbo,  }\item[{\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} \&}]{\+\_\+entity }\end{DoxyParamCaption})}
+
+
+
+Draw to a framebuffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+fbo} & The framebuffer to draw to \\
+\hline
+{\em \+\_\+entity} & The Entity to draw\\
 \hline
 \end{DoxyParams}
 Takes a frame buffer and the required objects for rendering and renders using the provided material to the framebuffer. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_renderer_a9e8bce3cb731b1f09ca5bc4bc863414b}\label{class_cookie_eng_1_1_graphics_1_1_renderer_a9e8bce3cb731b1f09ca5bc4bc863414b}} 

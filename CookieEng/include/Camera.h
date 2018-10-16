@@ -20,11 +20,16 @@
 namespace CookieEng
 {
 namespace Object
-{
-	struct CameraUniformData_t
+{	
+	/*! @class u_CameraData
+	*	@brief The CPU side uniform block for camera view and projection matrices
+	*
+	*	This data corresponds to the shader side "u_camera_data" for the per frame unchanging data of camera matrices. 
+	*/
+	struct u_CameraData
 	{
-		glm::mat4 viewMatrix;
-		glm::mat4 projectionMatrix;
+		glm::mat4 viewMatrix;			/**< Camera View Matrix data */
+		glm::mat4 projectionMatrix;		/**< Camera Projection Matrix data */
 	};
 
 
@@ -83,15 +88,13 @@ namespace Object
 		*/
 		void cleanProjectionMatrix() { m_projectionMatrix = glm::perspective(m_fov, m_aspect, 0.1f, 100.0f); }
 		
-		float		m_fov;					/**< The current FoV */
-		float		m_aspect;				/**< The current Aspect Ratio */
+		float										m_fov;					/**< The current FoV */
+		float										m_aspect;				/**< The current Aspect Ratio */
 
-		glm::mat4	m_projectionMatrix;		/**< The Projection Matrix */
+		glm::mat4									m_projectionMatrix;		/**< The Projection Matrix */
 
-		GLuint m_UBO;
-		std::unique_ptr<Graphics::VertexBuffer> m_uniformBuffer;
-
-		CameraUniformData_t m_uniformData;
+		std::unique_ptr<Graphics::VertexBuffer>		m_uniformBuffer;		/**< The uniform buffer for View and Projection matrices */
+		u_CameraData								m_uniformData;			/**< The struct containing the matrices for the uniform buffer to use */
 	};
 }
 }

@@ -45,7 +45,11 @@ void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a328b09fef2d71
 void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a172752bb917cb141b1a3a1cc44b6a645}{set\+Uniform\+Mat4f} (const std\+::string \&\+\_\+name, const glm\+::mat4 \&\+\_\+value)
 \begin{DoxyCompactList}\small\item\em Sets a matrix(4x4) uniform. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_aea57a6a608fe57a1057d3a038bac16dd}{set\+Uniform\+Bool} (const std\+::string \&\+\_\+name, const bool \+\_\+value)
-\begin{DoxyCompactList}\small\item\em Sets a boolean uniform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets a boolean uniform. \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_a74c040878159bceefb0b6b125a8b3e87}{get\+Uniform\+Block\+Index} (const std\+::string \&\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Gets a Uniform Block Index. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_af298d334a9c678b7e1c8e32403a91d92}{link\+Uniform\+Block} (const std\+::string \&\+\_\+block\+Index, G\+Luint \+\_\+binding\+Point)
+\begin{DoxyCompactList}\small\item\em Gets a Uniform Block Index. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -111,7 +115,22 @@ Attaches a shader to the program. \mbox{\Hypertarget{class_cookie_eng_1_1_resour
 
 Binds the shader. 
 
-Binds the shader. For this to sucseed, the shader must be verified. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_ae2fb823b3e8da3cf7154e0a8ffe25c85}\label{class_cookie_eng_1_1_resources_1_1_shader_program_ae2fb823b3e8da3cf7154e0a8ffe25c85}} 
+Binds the shader. For this to sucseed, the shader must be verified. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_a74c040878159bceefb0b6b125a8b3e87}\label{class_cookie_eng_1_1_resources_1_1_shader_program_a74c040878159bceefb0b6b125a8b3e87}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!get\+Uniform\+Block\+Index@{get\+Uniform\+Block\+Index}}
+\index{get\+Uniform\+Block\+Index@{get\+Uniform\+Block\+Index}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{get\+Uniform\+Block\+Index()}{getUniformBlockIndex()}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::get\+Uniform\+Block\+Index (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Gets a Uniform Block Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name of the block to get\\
+\hline
+\end{DoxyParams}
+The index of the uniform block on the shader \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_ae2fb823b3e8da3cf7154e0a8ffe25c85}\label{class_cookie_eng_1_1_resources_1_1_shader_program_ae2fb823b3e8da3cf7154e0a8ffe25c85}} 
 \index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!get\+Uniform\+Location@{get\+Uniform\+Location}}
 \index{get\+Uniform\+Location@{get\+Uniform\+Location}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
 \subsubsection{\texorpdfstring{get\+Uniform\+Location()}{getUniformLocation()}}
@@ -139,7 +158,24 @@ Gets the location of a uniform in a shader based on its name. If the shader unif
 
 Links the Shader Program. 
 
-Links the shader program. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_aef29916bad667d1f820053fd891d9e58}\label{class_cookie_eng_1_1_resources_1_1_shader_program_aef29916bad667d1f820053fd891d9e58}} 
+Links the shader program. \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_af298d334a9c678b7e1c8e32403a91d92}\label{class_cookie_eng_1_1_resources_1_1_shader_program_af298d334a9c678b7e1c8e32403a91d92}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!link\+Uniform\+Block@{link\+Uniform\+Block}}
+\index{link\+Uniform\+Block@{link\+Uniform\+Block}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{link\+Uniform\+Block()}{linkUniformBlock()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Shader\+Program\+::link\+Uniform\+Block (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+block\+Index,  }\item[{G\+Luint}]{\+\_\+binding\+Point }\end{DoxyParamCaption})}
+
+
+
+Gets a Uniform Block Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+block\+Index} & The block index name to bind to the binding point \\
+\hline
+{\em \+\_\+binding\+Point} & The binding point to bind the block index to\\
+\hline
+\end{DoxyParams}
+Binds uniform block to binding point \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_shader_program_aef29916bad667d1f820053fd891d9e58}\label{class_cookie_eng_1_1_resources_1_1_shader_program_aef29916bad667d1f820053fd891d9e58}} 
 \index{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}!load@{load}}
 \index{load@{load}!Cookie\+Eng\+::\+Resources\+::\+Shader\+Program@{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}}
 \subsubsection{\texorpdfstring{load()}{load()}}

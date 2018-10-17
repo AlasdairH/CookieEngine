@@ -20,14 +20,20 @@ namespace CookieEng
 {
 namespace Scene
 {
-	class Scene
+	class Scene : public std::enable_shared_from_this<Scene>
 	{
 	public:
 		Scene();
 		~Scene();
 
+		inline void setActive() { activeScene = this; }
+
+		void addEntity(const ECS::Entity &_entity);
+
 		void onUpdate();
 		void draw();
+
+		static Scene *activeScene;	/**< The currently active camera */
 
 	protected:
 		int m_width = 1280;
@@ -35,8 +41,6 @@ namespace Scene
 
 		std::vector<ECS::Entity> m_entities;
 		std::map<std::string, ECS::Entity> m_entityMap;
-
-		std::shared_ptr<Object::Camera> m_camera;
 
 		Graphics::Renderer m_renderer;
 		std::shared_ptr<Graphics::FrameBuffer> m_frameBuffer;

@@ -4,15 +4,28 @@ namespace CookieEng
 {
 namespace Object
 {
-	std::shared_ptr<Object::Camera> Camera::activeCamera = nullptr;
+	Camera *Camera::activeCamera = nullptr;
 
 	Camera::Camera()
 	{
-		m_fov = 0.7f;
+		m_fovRad = 0.7f;
 		m_aspect = 1.0f;
 
+		init();
+	}
+
+	Camera::Camera(const int _resolutionWidth, const int _resolutionHeight)
+	{
+		m_fovRad = 0.7f;
+		setAspectRatio(_resolutionWidth / (float)_resolutionHeight);
+
+		init();
+	}
+
+	void Camera::init()
+	{
 		// create the uniform buffer
-		m_uniformBuffer = std::make_unique<Graphics::VertexBuffer>(Graphics::CNG_BUFFER_UNIFORM);
+		m_uniformBuffer = std::make_shared<Graphics::VertexBuffer>(Graphics::CNG_BUFFER_UNIFORM);
 		// load the data to the uniform buffer
 		m_uniformBuffer->loadData(&m_uniformData, 0, sizeof(m_uniformData));
 
@@ -25,6 +38,12 @@ namespace Object
 		// link the uniform buffer to the binding point
 		m_uniformBuffer->bindBase(bindingPoint);
 		// now the shader and the uniform buffer are pointing at the same binding point the fun can commence
+
+		// if there is no current active camera, set it to this one
+		if (Camera::activeCamera == nullptr)
+		{
+			activeCamera = this;
+		}
 	}
 
 	void Camera::updateCameraUniform()

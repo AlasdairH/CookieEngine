@@ -39,7 +39,7 @@ namespace Object
 	*	Contains the data required to represent a camera in OpenGL. This uses the glm::perspective function to create a camera that can be moved around using the
 	*	transform.
 	*/
-	class Camera
+	class Camera : public std::enable_shared_from_this<Camera>
 	{
 	public:
 		/** @brief Camera Ctor
@@ -47,20 +47,33 @@ namespace Object
 		*	Creates a camera at the world 0, 0, 0 with a standard FoV
 		*/
 		Camera();
+		/** @brief Camera Ctor
+		*	@param _resolutionWidth The width of the camera's resolution
+		*	@param _resolutionHeight The height of the camera's resolution
+		*
+		*	Creates a camera at the world 0, 0, 0 with a standard FoV at the specified resolution
+		*/
+		Camera(const int _resolutionWidth, const int _resolutionHeight);
 		/** @brief Camera Dtor
 		*
-		*	Deletes the camera
+		*	Removes the camera
 		*/
 		~Camera() { }
+
+		/** @brief Sets the active camera
+		*
+		*	Sets the active camera in the engine to this camera
+		*/
+		inline void setActive() { activeCamera = this; }
 
 		Components::Transform transform;		/**< The transform attribute of the Camera, used for moving it around the world */
 
 		/** @brief Sets the Field of View
-		*	@param _fov The desired Field of View
+		*	@param _fov The desired Field of View in Radians
 		*
 		*	Sets the FoV and cleans the projection matrix
 		*/
-		inline void setFOV(const float _fov) { m_fov = _fov; cleanProjectionMatrix(); }
+		inline void setFOV(const float _fov) { m_fovRad = _fov; cleanProjectionMatrix(); }
 		/** @brief Sets the Aspect Ratio ( width / height )
 		*	@param _aspect The desired Aspect Ratio
 		*
@@ -81,21 +94,26 @@ namespace Object
 		*/
 		void updateCameraUniform();
 
-		static std::shared_ptr<Object::Camera> activeCamera;	/**< The currently active camera */
+		static Camera *activeCamera;	/**< The currently active camera */
 
 	protected:
+		/** @brief Initialises the camera data after the constructor
+		*
+		*	Initialises the camera data after the constructor
+		*/
+		void init();
 		/** @brief Sets the updated Projection Matrix
 		*
 		*	Sets a fresh perspective matrix from the FoV, aspect ratio and near / far planes
 		*/
-		void cleanProjectionMatrix() { m_projectionMatrix = glm::perspective(m_fov, m_aspect, 0.1f, 100.0f); }
+		void cleanProjectionMatrix() { m_projectionMatrix = glm::perspective(m_fovRad, m_aspect, 0.1f, 100.0f); }
 		
-		float										m_fov;					/**< The current FoV */
+		float										m_fovRad;				/**< The current FoV in radians*/
 		float										m_aspect;				/**< The current Aspect Ratio */
 
 		glm::mat4									m_projectionMatrix;		/**< The Projection Matrix */
 
-		std::unique_ptr<Graphics::VertexBuffer>		m_uniformBuffer;		/**< The uniform buffer for View and Projection matrices */
+		std::shared_ptr<Graphics::VertexBuffer>		m_uniformBuffer;		/**< The uniform buffer for View and Projection matrices */
 		u_CameraData								m_uniformData;			/**< The struct containing the matrices for the uniform buffer to use */
 	};
 }

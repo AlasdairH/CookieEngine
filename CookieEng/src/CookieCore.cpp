@@ -7,7 +7,7 @@ namespace CookieEng
 		LOG_MESSAGE("Hello World!");
 	}
 
-	void CookieCore::initialise()
+	void CookieCore::initialise(int _windowResolutionWidth, int _windowResolutionHeight)
 	{
 		LOG_MESSAGE("Beginning Engine Initialisation");
 		if (m_isInitialised)
@@ -23,7 +23,7 @@ namespace CookieEng
 		// init SDL
 		Services::ServiceLocator::getInitialiser().initSDL();
 		// create window for OpenGL context
-		m_window = new Window("CookieEng", 1280, 720);
+		m_window = new Window("CookieEng", _windowResolutionWidth, _windowResolutionHeight);
 		// init GLEW (OpenGL)
 		Services::ServiceLocator::getInitialiser().initOpenGL();
 
@@ -38,7 +38,7 @@ namespace CookieEng
 		glCullFace(GL_BACK);
 		//SDL_GL_SetSwapInterval(0);
 
-		m_scene = std::make_shared<Scene::Scene>();
+		//m_scene = std::make_shared<Scene::Scene>();
 
 		// thread test
 		Threads::ThreadPool testThreadPool(6);
@@ -109,12 +109,21 @@ namespace CookieEng
 			});
 			*/
 
-			m_scene->onUpdate();
+			// if there is a valid scene to update and render
+			if (Scene::Scene::activeScene != nullptr)
+			{
+				Scene::Scene::activeScene->onUpdate();
 
-			glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+				glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-			m_scene->draw();
+				Scene::Scene::activeScene->draw();
+			}
+			else
+			{
+				LOG_WARNING("No Active Scene Set");
+			}
+
 
 			m_window->swapBuffer();
 		}

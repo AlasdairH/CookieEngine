@@ -34,11 +34,11 @@ namespace CookieEng
 	public:
 		CookieCore();
 
-		void initialise();
+		void initialise(int _windowResolutionWidth, int _windowResolutionHeight);
 		void start();
 
 	protected:
-		std::shared_ptr<Scene::Scene> m_scene;
+		//std::shared_ptr<Scene::Scene> m_scene;
 
 		Window *m_window;
 

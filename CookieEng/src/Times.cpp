@@ -4,6 +4,6 @@ namespace CookieEng
 {
 namespace Utilities
 {
-	double Times::deltaTime = 0;
+	double Times::deltaTime = 0.0;
 }
 }

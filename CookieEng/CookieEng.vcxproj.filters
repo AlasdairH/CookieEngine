@@ -192,9 +192,6 @@
     <ClCompile Include="src\CookieCore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="include\CookieCore.h">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Times.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -303,6 +300,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Component.cpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CookieCore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

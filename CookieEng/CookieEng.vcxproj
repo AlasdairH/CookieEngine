@@ -178,7 +178,6 @@
     <ClCompile Include="src\ResourceManager.cpp" />
     <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\ShaderProgram.cpp" />
-    <ClCompile Include="include\CookieCore.h" />
     <ClCompile Include="src\FileManager.cpp" />
     <ClCompile Include="src\Initialiser.cpp" />
     <ClCompile Include="src\Renderer.cpp" />
@@ -199,6 +198,7 @@
   <ItemGroup>
     <ClInclude Include="include\Camera.h" />
     <ClInclude Include="include\Component.h" />
+    <ClInclude Include="include\CookieCore.h" />
     <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\Scene.h" />
     <ClInclude Include="include\Times.h" />

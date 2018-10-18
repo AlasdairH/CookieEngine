@@ -10,6 +10,9 @@
 #define OPENGL
 //#define D3D
 
+#define CNG_ACTIVE_SCENE CookieEng::Scene::Scene::activeScene
+#define CNG_ACTIVE_CAMERA CookieEng::Object::Camera::activeCamera
+
 #ifdef DEBUG
 	#define LOG_MESSAGE(_text) std::cout << __TIME__ << " MESSAGE: " << _text << std::endl
 	#define LOG_WARNING(_text) std::cout << __TIME__ << " WARNING: " << _text << std::endl

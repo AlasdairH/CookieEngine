@@ -20,6 +20,12 @@ namespace CookieEng
 {
 namespace Scene
 {
+	/*! @class Scene
+	*	@brief A level representation containing entities
+	*
+	*	The scene class handles the entities within it, grouping a level into one place. The activeScene static points to the currently
+	*	active scene. On creation of a scene, if no active scene is set then it is set to that scene.
+	*/
 	class Scene : public std::enable_shared_from_this<Scene>
 	{
 	public:

@@ -39,6 +39,12 @@ namespace Services
 		return str;
 	}
 
+	ECS::Entity FileManager::loadEntity(std::string _filepath)
+	{
+
+		return ECS::Entity();
+	}
+
 	/*
 	Resources::Mesh FileManager::loadMesh(std::string _filepath)
 	{

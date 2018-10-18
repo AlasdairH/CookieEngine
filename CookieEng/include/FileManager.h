@@ -12,6 +12,7 @@
 // program
 #include "Macro.h"
 #include "Utils.h"
+#include "Entity.h"
 
 namespace CookieEng
 {
@@ -53,6 +54,14 @@ namespace Services
 		*	Loads a text file into an std::string.
 		*/
 		std::string loadTextFileASync(std::string _filepath) { } 
+
+		/** @brief Loads an Entity from file
+		*	@param _filepath The path to the Entity File to be loaded
+		*	@return An std::string containing the contents of the text file.
+		*
+		*	Loads a text file into an std::string.
+		*/
+		ECS::Entity loadEntity(std::string _filepath);
 
 	protected:
 

@@ -1,0 +1,3 @@
+FILETYPE entity
+COMPONENT Transform
+COMPONENT Renderable

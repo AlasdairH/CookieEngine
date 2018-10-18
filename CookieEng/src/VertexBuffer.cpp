@@ -45,7 +45,6 @@ namespace Graphics
 	{
 		m_count = _count;
 		bind();
-		// TODO: Fix static draw
 		glBufferData(m_vertexBufferType, _size, _data, m_usage);
 	}
 

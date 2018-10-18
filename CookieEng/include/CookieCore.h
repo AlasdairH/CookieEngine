@@ -22,6 +22,7 @@
 #include "Scene.h"
 
 #include "Times.h"
+#include "Macro.h"
 
 #define DEBUG
 

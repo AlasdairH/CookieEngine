@@ -13,6 +13,7 @@
 #define CNG_ACTIVE_SCENE CookieEng::Scene::Scene::activeScene
 #define CNG_ACTIVE_CAMERA CookieEng::Object::Camera::activeCamera
 #define CNG_DELTA_TIME Utilities::Times::deltaTime
+#define CNG_SYS_TIME std::chrono::system_clock::now()
 
 #ifdef DEBUG
 	#define LOG_MESSAGE(_text) std::cout << __TIME__ << " MESSAGE: " << _text << std::endl

@@ -2,12 +2,9 @@
 
 // cstdlib
 
-
 // external libs
 
 // program
-#include "Entity.h"
-
 
 namespace CookieEng
 {

@@ -8,6 +8,7 @@
 // program
 #include "Macro.h"
 #include "Component.h"
+#include "Transform.h"
 #include "Mesh.h"
 #include "Material.h"
 #include "VertexArray.h"
@@ -62,6 +63,9 @@ namespace Components
 		*	Getter for the renderables material to go along with the mesh
 		*/
 		inline std::shared_ptr<Resources::Material> getMaterial() { return m_material; }
+
+		// TODO: Doxygen
+		Data::BoundingBox getBoundingBox();
 
 	protected:
 		std::shared_ptr<Resources::Mesh>			m_mesh;			/**< A shared pointer to the Mesh, typically in the ResourceManager */

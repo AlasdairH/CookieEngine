@@ -70,14 +70,14 @@ namespace Graphics
 	void FrameBuffer::bind() const
 	{
 		glBindFramebuffer(GL_FRAMEBUFFER, m_frameBufferID);
-		//glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // we're not using the stencil buffer now
+		glEnable(GL_DEPTH_TEST);
 	}
 
 	void FrameBuffer::unBind() const
 	{
-		glBindFramebuffer(GL_FRAMEBUFFER, 0); // back to default
-		//glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+		glBindFramebuffer(GL_FRAMEBUFFER, 0); // back to default franebuffer
+		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 	}
 
@@ -85,15 +85,12 @@ namespace Graphics
 	{
 		m_shaderProgram->bind();
 		m_arrayBuffer->bind();
-		
 
 		glBindTexture(GL_TEXTURE_2D, m_textureID);
 		m_shaderProgram->setUniform1i("screenTexture", 0);
 
 		glDisable(GL_DEPTH_TEST);
-
 		glDrawArrays(GL_TRIANGLES, 0, 6);
-
 		glEnable(GL_DEPTH_TEST);
 
 #ifdef DEBUG

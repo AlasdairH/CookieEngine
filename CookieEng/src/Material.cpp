@@ -115,10 +115,10 @@ namespace Resources
 			LOG_ERROR("Unable to set MVP, shader not set");
 			return;
 		} 
-
+		 
 		m_shaderProgram->bind();
 		m_shaderProgram->setUniformMat4f("u_m", _m);
-		//m_shaderProgram->unBind();
+		m_shaderProgram->unBind();
 	}
 }
 }

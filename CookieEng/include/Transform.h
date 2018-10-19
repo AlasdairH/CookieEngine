@@ -10,6 +10,7 @@
 // program
 #include "Macro.h"
 #include "Component.h"
+#include "Times.h"
 
 // TODO: Scale Implementation
 
@@ -87,6 +88,9 @@ namespace Components
 		*	Changes the rotation of the transform by the given vector 3D.
 		*/
 		void rotate(const float _rotation, const glm::vec3 _axis);
+
+		// TODO: Remove
+		void onUpdate() override;
 
 	protected:
 		glm::vec3	m_position;				/**< The current position */

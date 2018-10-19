@@ -58,7 +58,7 @@ namespace Graphics
 		*
 		*	Takes a frame buffer and the required objects for rendering and renders using the provided material to the framebuffer.
 		*/
-		void drawToFrameBuffer(const FrameBuffer &_fbo, ECS::Entity &_entity);
+		void draw(ECS::Entity &_entity);
 
 	protected:
 		FrameBuffer *m_frameBuffer; /**< The framebuffer to render to by default */ // TODO: Implement default framebuffer rendering

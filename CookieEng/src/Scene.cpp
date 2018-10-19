@@ -47,10 +47,12 @@ namespace Scene
 
 	void Scene::draw()
 	{
+		m_frameBuffer->bind();
 		for (unsigned int i = 0; i < m_entities.size(); ++i)
 		{
-			m_renderer.drawToFrameBuffer(*m_frameBuffer, m_entities[i]);
+			m_renderer.draw(m_entities[i]);
 		}
+		m_frameBuffer->unBind();
 
 		m_frameBuffer->drawToScreen();
 	}

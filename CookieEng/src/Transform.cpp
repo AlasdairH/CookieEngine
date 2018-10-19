@@ -84,5 +84,10 @@ namespace Components
 
 		setModelMatrix();
 	}
+
+	void Transform::onUpdate()
+	{
+		rotate(30 * CNG_DELTA_TIME, glm::vec3(0, 1, 0));
+	}
 }
 }

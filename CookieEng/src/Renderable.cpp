@@ -27,8 +27,17 @@ namespace Components
 		m_VAO->addBuffer(*m_VBO, m_mesh->layout);
 
 		m_VBO->loadData(m_mesh->vertices.data(), 0, m_mesh->layout.getStride() * m_mesh->vertices.size());
-
 		m_IBO->loadData(m_mesh->indices.data(), m_mesh->indices.size(), sizeof(unsigned int) * m_mesh->indices.size());
+	}
+
+	Data::BoundingBox Renderable::getBoundingBox()
+	{
+		std::shared_ptr<Components::Transform> transform = parent->getComponent<Components::Transform>();
+		Data::BoundingBox adjustedAABB;
+		adjustedAABB.min = m_mesh->boundingBox.min + transform->getPositionVec3();
+		adjustedAABB.max = m_mesh->boundingBox.max + transform->getPositionVec3();
+		// TODO: Scale
+		return adjustedAABB;
 	}
 }
 }

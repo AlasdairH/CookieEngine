@@ -30,7 +30,7 @@ namespace Graphics
 #endif
 	}
 
-	void Renderer::drawToFrameBuffer(const FrameBuffer & _fbo, ECS::Entity & _entity)
+	void Renderer::draw(ECS::Entity & _entity)
 	{
 		if (!_entity.hasComponent<Components::Renderable>())
 		{
@@ -38,11 +38,13 @@ namespace Graphics
 			return;
 		}
 
-		_fbo.bind();
 		// cache the render component
 		std::shared_ptr<Components::Renderable> renderComponent = _entity.getComponent<Components::Renderable>();
+		// cache the transform component
+		std::shared_ptr<Components::Transform> transformComponent = _entity.getComponent<Components::Transform>();
+
 		// set the model matrix (view and projection is set by camera uniform buffer)
-		renderComponent->getMaterial()->setModelMatrix(_entity.getComponent<Components::Transform>()->getMatrix());
+		renderComponent->getMaterial()->setModelMatrix(transformComponent->getMatrix());
 		// use the material (shader)
 		renderComponent->getMaterial()->use();
 		// use the VAO (vertices)
@@ -52,8 +54,6 @@ namespace Graphics
 
 		// render it to the bound buffer (should in theory be the designated famebuffer)
 		glDrawElements(GL_TRIANGLES, renderComponent->getIBO()->getCount(), GL_UNSIGNED_INT, 0);
-
-		_fbo.unBind();
 	}
 	
 }

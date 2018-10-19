@@ -27,18 +27,16 @@ int main()
 	entity1.getComponent<Components::Renderable>()->setMaterial("BasicMaterial");
 	CNG_ACTIVE_SCENE->addEntity(entity1); 
 
-	CookieEng::ECS::Entity entity2;
-	entity2.addComponent<Components::Transform>();
-	entity2.addComponent<Components::Renderable>();
-	entity2.getComponent<Components::Renderable>()->setMesh("BasicMesh");
-	entity2.getComponent<Components::Renderable>()->setMaterial("BasicMaterial");
-	CNG_ACTIVE_SCENE->addEntity(entity2);
+	Data::Ray ray1(glm::vec3(0, 0, 8), glm::vec3(0, 0.1f, -1));
 
-	entity1.getComponent<Components::Transform>()->translate(glm::vec3( 1.5f, 0, 0));
-	entity2.getComponent<Components::Transform>()->translate(glm::vec3(-1.5f, 0, 0));
+	//entity1.getComponent<Components::Transform>()->translate(glm::vec3( 1.5f, 0, 0));
 
 	Data::BoundingBox bb1 = entity1.getComponent<Components::Renderable>()->getBoundingBox();
-	Data::BoundingBox bb2 = entity2.getComponent<Components::Renderable>()->getBoundingBox();
+
+	if (bb1.testCollision(ray1))
+	{
+		LOG_MESSAGE("COLLISION");
+	}
 	
 
 	// when the camera is created, it will set itself as the main camera as there are no others

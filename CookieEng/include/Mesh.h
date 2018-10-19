@@ -11,6 +11,7 @@
 #include "Vertex.h"
 #include "VertexBufferLayout.h"
 #include "ServiceLocator.h"
+#include "BoundingBox.h"
 
 namespace CookieEng
 {
@@ -23,10 +24,11 @@ namespace Resources
 	*/
 	struct Mesh : public Resource
 	{
-		std::vector<Data::Vertex>		vertices;	/**< A vector of vertices that stores all the positions, UV data, etc of each vertex */
-		std::vector<unsigned int>		indices;	/**< The indices for the index buffer that ties all the vertex data together */
+		std::vector<Data::Vertex>		vertices;		/**< A vector of vertices that stores all the positions, UV data, etc of each vertex */
+		std::vector<unsigned int>		indices;		/**< The indices for the index buffer that ties all the vertex data together */
 		
-		Graphics::VertexBufferLayout	layout;		/**< The layout of the vertices member */
+		Data::BoundingBox				boundingBox;	/**< The bounding box set by load */
+		Graphics::VertexBufferLayout	layout;			/**< The layout of the vertices member */
 
 		/** @brief Loads the Mesh from a file
 		*	@param _name The name to assign the mesh

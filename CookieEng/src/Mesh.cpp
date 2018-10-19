@@ -39,7 +39,26 @@ namespace Resources
 				std::string yVal = line.substr(secondSpaceIndex + 1, thirdSpaceIndex - secondSpaceIndex - 1);
 				std::string zVal = line.substr(thirdSpaceIndex + 1, eolIndex - thirdSpaceIndex - 1);
 
-				verticesMap[(int)verticesMap.size() + 1] = glm::vec3(std::stof(xVal), std::stof(yVal), std::stof(zVal));
+				float x = std::stof(xVal);
+				float y = std::stof(yVal);
+				float z = std::stof(zVal);
+
+				// check bounding box values
+				if (x < boundingBox.min.x)
+					boundingBox.min.x = x;
+				if (y < boundingBox.min.y)
+					boundingBox.min.y = y;
+				if (z < boundingBox.min.z)
+					boundingBox.min.z = z;
+
+				if (x > boundingBox.max.x)
+					boundingBox.max.x = x;
+				if (y > boundingBox.max.y)
+					boundingBox.max.y = y;
+				if (z > boundingBox.max.z)
+					boundingBox.max.z = z;
+
+				verticesMap[(int)verticesMap.size() + 1] = glm::vec3(x, y, z);
 			}
 
 			// texture coord line

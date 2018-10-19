@@ -108,10 +108,9 @@ namespace ECS
 		*/
 		void onUpdate()
 		{
-			for (unsigned int i = 0; i < m_components.size(); ++i)
+			for (std::vector<std::shared_ptr<Component> >::iterator it = m_components.begin(); it != m_components.end(); it++)
 			{
-				// TODO: Fix
-				//m_components[i]->onUpdate();
+				(*it)->onUpdate();
 			}
 		}
 

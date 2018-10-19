@@ -87,7 +87,7 @@ namespace Components
 
 	void Transform::onUpdate()
 	{
-		rotate(30 * CNG_DELTA_TIME, glm::vec3(0, 1, 0));
+		rotate(30.0f * CNG_DELTA_TIME, glm::vec3(0, 1, 0));
 	}
 }
 }

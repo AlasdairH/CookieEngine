@@ -34,7 +34,7 @@ namespace Scene
 
 		inline void setActive() { activeScene = this; }
 
-		void addEntity(const ECS::Entity &_entity);
+		void addEntity(ECS::Entity &_entity);
 
 		void onUpdate();
 		void draw();

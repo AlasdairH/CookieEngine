@@ -22,8 +22,12 @@ namespace Scene
 
 	}
 
-	void Scene::addEntity(const ECS::Entity & _entity)
+	void Scene::addEntity(ECS::Entity & _entity)
 	{
+		if (!_entity.hasComponent<Components::Transform>())
+		{
+			_entity.addComponent<Components::Transform>();
+		}
 		m_entities.emplace_back(_entity);
 	}
 

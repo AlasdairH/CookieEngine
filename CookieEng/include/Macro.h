@@ -15,6 +15,8 @@
 #define CNG_DELTA_TIME Utilities::Times::deltaTime
 #define CNG_SYS_TIME std::chrono::system_clock::now()
 
+#define CNG_GL_BINDPOINT_CAMERA_VP 1
+
 #ifdef DEBUG
 	#define LOG_MESSAGE(_text) std::cout << __TIME__ << " MESSAGE: " << _text << std::endl
 	#define LOG_WARNING(_text) std::cout << __TIME__ << " WARNING: " << _text << std::endl

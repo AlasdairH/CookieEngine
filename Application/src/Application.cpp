@@ -23,8 +23,8 @@ int main()
 	CookieEng::ECS::Entity entity1;
 	entity1.addComponent<Components::Renderable>();
 	entity1.addComponent<Components::Transform>();
-	entity1.getComponent<Components::Renderable>()->setMesh("BasicMesh");
-	entity1.getComponent<Components::Renderable>()->setMaterial("BasicMaterial");
+	entity1.getComponent<Components::Renderable>()->setMesh("DefaultMesh");
+	entity1.getComponent<Components::Renderable>()->setMaterial("DefaultMaterial");
 	CNG_ACTIVE_SCENE->addEntity(entity1); 
 
 	Data::Ray ray1(glm::vec3(0, 0, 8), glm::vec3(0, 0.1f, -1));
@@ -42,7 +42,7 @@ int main()
 	// when the camera is created, it will set itself as the main camera as there are no others
 	CookieEng::Object::Camera camera(WINDOW_WIDTH, WINDOW_HEIGHT);
 	CNG_ACTIVE_CAMERA->setFOV(1.0f);
-	CNG_ACTIVE_CAMERA->transform.setPosition(glm::vec3(0, 0, 8));
+	CNG_ACTIVE_CAMERA->transform.setPosition(glm::vec3(0, 0, 4));
 
 	engine.start();
 

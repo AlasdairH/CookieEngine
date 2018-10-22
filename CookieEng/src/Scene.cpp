@@ -24,6 +24,7 @@ namespace Scene
 
 	void Scene::addEntity(ECS::Entity & _entity)
 	{
+		// if the entity being added does not have a Transform component, add one
 		if (!_entity.hasComponent<Components::Transform>())
 		{
 			_entity.addComponent<Components::Transform>();
@@ -39,6 +40,7 @@ namespace Scene
 			entity.onUpdate();
 		}
 
+		// update the camera uniform buffer
 		if (Object::Camera::activeCamera != nullptr)
 		{
 			Object::Camera::activeCamera->updateCameraUniform();
@@ -47,13 +49,16 @@ namespace Scene
 
 	void Scene::draw()
 	{
+		// bind the framebuffer
 		m_frameBuffer->bind();
 		for (unsigned int i = 0; i < m_entities.size(); ++i)
 		{
+			// draw to the framebuffer
 			m_renderer.draw(m_entities[i]);
 		}
+		// unbind the framebuffer
 		m_frameBuffer->unBind();
-
+		// draw the framebuffer to the screen
 		m_frameBuffer->drawToScreen();
 	}
 }

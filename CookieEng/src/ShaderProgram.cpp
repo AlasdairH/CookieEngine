@@ -82,6 +82,14 @@ namespace Resources
 		glLinkProgram(m_programID);
 
 		verify();
+
+		// if the shader program contains the camera data uniform block then link it to binding point 1
+		if (getUniformBlockIndex("u_camera_data") != -1)
+		{
+			LOG_MESSAGE("Found u_camera_data uniform block, starting link");
+			// link the BasicShader Uniform block "u_camera_data" to the binding point
+			linkUniformBlock("u_camera_data", CNG_GL_BINDPOINT_CAMERA_VP);
+		}
 	}
 
 	bool ShaderProgram::verify()

@@ -47,16 +47,16 @@ namespace CookieEng
 
 		LOG_MESSAGE("Loading Default Resources");
 		// load meshs
-		resourceManager.load<Resources::Mesh>("BasicMesh", "resources/models/Default.obj");
+		resourceManager.load<Resources::Mesh>("DefaultMesh", "resources/models/Default.obj");
 
 		// load textures
-		resourceManager.load<Resources::Texture>("BasicTexture", "resources/textures/Default.png");
+		resourceManager.load<Resources::Texture>("DefaultTexture", "resources/textures/Default.png");
 
 		// load shaders
-		resourceManager.load<Resources::ShaderProgram>("BasicShader", "resources/shaders/BasicShader.cngShader");
+		resourceManager.load<Resources::ShaderProgram>("DefaultShader", "resources/shaders/BasicShader.cngShader");
 
 		// load materials
-		resourceManager.load<Resources::Material>("BasicMaterial", "resources/materials/Default.cngMaterial");
+		resourceManager.load<Resources::Material>("DefaultMaterial", "resources/materials/Default.cngMaterial");
 
 		LOG_MESSAGE("Engine Initialisation Complete");
 		m_isInitialised = true;

@@ -24,6 +24,16 @@ namespace Resources
 	*	@brief Abstracted OpenGL Program
 	*
 	*	Abstracts and provides simple utilities for an OpenGL Shader Program. The program MUST be verified before it can be bound.
+	*	This also provides various default uniform buffers that store usefull data for example the "u_camera_data" uniform block which contains the View and Projection Matrices.
+	*	To use the "u_camera_data" uniform block, simply include
+	*	
+	*	layout (std140) uniform u_camera_data
+	*	{
+	*		mat4 viewMatrix;
+	*		mat4 projectionMatrix;
+	*	};
+	*	
+	*	in the vertex shader. It will be detected and linked on shader verification.
 	*/
 	class ShaderProgram : public Resource
 	{

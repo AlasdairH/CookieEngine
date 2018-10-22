@@ -76,7 +76,7 @@ namespace ResMgmt
 		*/
 		template<typename T>
 		std::shared_ptr<T> get(std::string _name)
-		{ 
+		{
 			return std::dynamic_pointer_cast<T>(m_resources[_name]);
 		}
 

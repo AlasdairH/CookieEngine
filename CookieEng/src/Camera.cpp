@@ -31,12 +31,8 @@ namespace Object
 
 		ResMgmt::ResourceManager &resourceManager = ResMgmt::ResourceManager::getInstance();
 
-		// set the binding point
-		GLuint bindingPoint = 1;
-		// link the BasicShader Uniform block "u_camera_data" to the binding point
-		resourceManager.get<Resources::ShaderProgram>("BasicShader")->linkUniformBlock("u_camera_data", bindingPoint);
 		// link the uniform buffer to the binding point
-		m_uniformBuffer->bindBase(bindingPoint);
+		m_uniformBuffer->bindBase(CNG_GL_BINDPOINT_CAMERA_VP);
 		// now the shader and the uniform buffer are pointing at the same binding point the fun can commence
 
 		// if there is no current active camera, set it to this one

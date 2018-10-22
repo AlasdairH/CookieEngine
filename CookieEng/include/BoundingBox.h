@@ -5,6 +5,7 @@
 
 // external libs
 #include "GLM/common.hpp"
+#include "GLM/gtx/common.hpp"
 
 // program
 #include "Ray.h"
@@ -21,9 +22,17 @@ namespace Data
 
 		bool testCollision(const BoundingBox &_other)
 		{
-			return	(min.x <= _other.max.x && max.x >= _other.min.x) &&
-					(min.y <= _other.max.y && max.y >= _other.min.y) &&
-					(min.z <= _other.max.z && max.z >= _other.min.z);
+			if (min.x <= _other.max.x && max.x >= _other.min.x)
+			{
+				if (min.y <= _other.max.y && max.y >= _other.min.y)
+				{
+					if (min.z <= _other.max.z && max.z >= _other.min.z)
+					{
+						return true;
+					}
+				}
+			}
+			return false;
 		}
 
 		bool testCollision(const Ray &_other)

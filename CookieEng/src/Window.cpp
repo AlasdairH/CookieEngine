@@ -35,14 +35,12 @@ namespace CookieEng
 
 		float aspect = (float)m_width / (float)m_height;
 		glViewport(0, 0, m_width, m_height);
-		glEnable(GL_TEXTURE_2D);
-		glEnable(GL_BLEND); //Enable alpha blending
-		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		glMatrixMode(GL_PROJECTION);
-		glLoadIdentity();
-		gluPerspective(60, (float)m_width / (float)m_height, 0.01f, 100.0f);
-		gluOrtho2D(0.0, m_width, m_height * aspect, 0.0);
-		glMatrixMode(GL_MODELVIEW);
+
+		if (CNG_ACTIVE_CAMERA != nullptr)
+		{
+			LOG_MESSAGE("Updating camera aspect ratio");
+			CNG_ACTIVE_CAMERA->setAspectRatio(aspect);
+		}
 
 	}
 

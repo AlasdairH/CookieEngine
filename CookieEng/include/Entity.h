@@ -3,17 +3,22 @@
 // cstdlib
 #include <vector>
 #include <memory>
+#include <bitset>
 
 // external libs
+#include "GLM/gtx/common.hpp"
 
 // program
 #include "Macro.h"
 #include "Component.h"
 
 #define ADDCOMPONENT \
-  std::shared_ptr<T> rtn = std::make_shared<T>(); \
-  rtn->parent = this; \
-  m_components.push_back(rtn);
+	std::shared_ptr<T> rtn = std::make_shared<T>(); \
+	rtn->parent = this; \
+	m_components.push_back(rtn);
+	
+
+#define CNG_MAX_COMPONENTS 32
 
 
 namespace CookieEng
@@ -47,6 +52,7 @@ namespace ECS
 			}
 
 			ADDCOMPONENT
+			m_componentKey[getComponentTypeID<T>()] = true;
 			rtn->onInit();
 
 			return rtn;
@@ -102,6 +108,19 @@ namespace ECS
 			return false;
 		}
 
+		inline int getComponentTypeID()
+		{
+			static int componentID = -1;
+			return ++componentID;
+		}
+
+		template <typename T>
+		inline int getComponentTypeID()
+		{
+			static int typeID = getComponentTypeID();
+			return typeID;
+		}
+
 		/** @brief Updates the underlying components
 		*
 		*	Loops through the linked components and updates them all
@@ -116,6 +135,8 @@ namespace ECS
 
 	protected:
 		std::vector<std::shared_ptr<Component>> m_components;	/**< The vector of components on the Entity */
+		std::bitset<CNG_MAX_COMPONENTS> m_componentKey;
+
 	};
 }
 }

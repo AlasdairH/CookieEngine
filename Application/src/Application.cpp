@@ -26,25 +26,18 @@ int main()
 	gameController.addComponent<Crumble::GameController>();
 	CNG_ACTIVE_SCENE->addEntity(gameController);
 
-
 	CookieEng::ECS::Entity object;
-	object.addComponent<Components::Renderable>();
-	object.addComponent<Components::Transform>();
-	object.getComponent<Components::Renderable>()->setMesh("DefaultMesh");
-	object.getComponent<Components::Renderable>()->setMaterial("DefaultMaterial");
+	object.addComponent<CookieEng::Components::Renderable>();
+	object.addComponent<CookieEng::Components::Transform>();
+	object.getComponent<CookieEng::Components::Renderable>()->setMesh("DefaultMesh");
+	object.getComponent<CookieEng::Components::Renderable>()->setMaterial("DefaultMaterial");
 	CNG_ACTIVE_SCENE->addEntity(object);
 
 	Data::Ray ray1(glm::vec3(0, 0, 8), glm::vec3(0, 0.1f, -1));
 
 	//entity1.getComponent<Components::Transform>()->translate(glm::vec3( 1.5f, 0, 0));
 
-	Data::BoundingBox bb1 = object.getComponent<Components::Renderable>()->getBoundingBox();
-
-	if (bb1.testCollision(ray1))
-	{
-		LOG_MESSAGE("COLLISION");
-	}
-	
+	//Data::BoundingBox bb1 = object.getComponent<Components::Renderable>()->getBoundingBox();
 
 	// when the camera is created, it will set itself as the main camera as there are no others
 	CookieEng::Object::Camera camera(WINDOW_WIDTH, WINDOW_HEIGHT);

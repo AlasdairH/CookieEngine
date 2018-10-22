@@ -11,6 +11,7 @@
 
 // program
 #include "Macro.h"
+#include "Camera.h"
 
 namespace CookieEng
 {

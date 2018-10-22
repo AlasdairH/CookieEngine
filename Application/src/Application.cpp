@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "CookieCore.h"
+#include "GameController.h"
 
 #define WINDOW_WIDTH 1280
 #define WINDOW_HEIGHT 720
@@ -22,6 +23,7 @@ int main()
 
 	CookieEng::ECS::Entity gameController;
 	gameController.addComponent<Components::Transform>();
+	gameController.addComponent<Crumble::GameController>();
 	CNG_ACTIVE_SCENE->addEntity(gameController);
 
 

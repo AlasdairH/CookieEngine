@@ -34,7 +34,7 @@ namespace Graphics
 	{
 		if (!_entity.hasComponent<Components::Renderable>())
 		{
-			LOG_WARNING("Unable to draw, no renderable component found");
+			//OG_WARNING("Unable to draw, no renderable component found");
 			return;
 		}
 

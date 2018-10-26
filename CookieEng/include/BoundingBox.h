@@ -8,6 +8,7 @@
 #include "GLM/gtx/common.hpp"
 
 // program
+#include "Macro.h"
 #include "Ray.h"
 
 namespace CookieEng

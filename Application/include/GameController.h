@@ -6,6 +6,8 @@
 
 // program
 #include "CookieCore.h"
+#include "Ray.h"
+#include "BoundingBox.h"
 
 //TODO: Doxygen
 

@@ -26,21 +26,12 @@ int main()
 	gameController.addComponent<Crumble::GameController>();
 	CNG_ACTIVE_SCENE->addEntity(gameController);
 
-	LOG_MESSAGE("Game Controller Started");
-	CookieEng::ECS::Entity object;
-	object.addComponent<CookieEng::Components::Renderable>();
-	object.addComponent<CookieEng::Components::Transform>();
-	object.getComponent<Components::Transform>()->setPosition(glm::vec3(0, -0.5f, 0));
-	object.getComponent<CookieEng::Components::Renderable>()->setMesh("DefaultMesh");
-	object.getComponent<CookieEng::Components::Renderable>()->setMaterial("DefaultMaterial");
-	CNG_ACTIVE_SCENE->addEntity(object);
-
-	Data::Ray ray1(glm::vec3(0, 0, 8), glm::vec3(0, 0, -1));
+	glm::vec3 cameraPos = glm::vec3(0, 2, 5.0f);
 
 	// when the camera is created, it will set itself as the main camera as there are no others
 	CookieEng::Object::Camera camera(WINDOW_WIDTH, WINDOW_HEIGHT);
 	CNG_ACTIVE_CAMERA->setFOV(1.0f);
-	CNG_ACTIVE_CAMERA->transform.setPosition(glm::vec3(0, 0, 4));
+	CNG_ACTIVE_CAMERA->transform.setPosition(cameraPos);
 
 	engine.start();
 

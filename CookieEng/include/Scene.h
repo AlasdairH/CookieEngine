@@ -37,8 +37,9 @@ namespace Scene
 		inline void setActive() { activeScene = this; }
 
 		void addEntity(ECS::Entity &_entity);
+		std::shared_ptr<ECS::Entity> getEntity(const int _index);
 
-		void onStart();
+		void onStart();  
 		void onUpdate();
 		void draw();
 
@@ -48,7 +49,7 @@ namespace Scene
 		int m_width = 1280;
 		int m_height = 720;
 
-		std::vector<ECS::Entity> m_entities;
+		std::vector<std::shared_ptr<ECS::Entity>> m_entities;
 		std::map<std::string, ECS::Entity> m_entityMap;
 
 		Graphics::Renderer m_renderer;

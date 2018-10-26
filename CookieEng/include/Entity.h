@@ -12,12 +12,6 @@
 #include "Macro.h"
 #include "Component.h"
 
-#define ADDCOMPONENT \
-	std::shared_ptr<T> rtn = std::make_shared<T>(); \
-	rtn->parent = this; \
-	m_components.push_back(rtn);
-	
-
 #define CNG_MAX_COMPONENTS 32
 
 
@@ -51,7 +45,9 @@ namespace ECS
 				return getComponent<T>();
 			}
 
-			ADDCOMPONENT
+			std::shared_ptr<T> rtn = std::make_shared<T>();
+			rtn->parent = this; 
+			m_components.push_back(rtn);
 			m_componentKey[getComponentTypeID<T>()] = true;
 			rtn->onInit();
 
@@ -152,6 +148,14 @@ namespace ECS
 			for (std::vector<std::shared_ptr<Component> >::iterator it = m_components.begin(); it != m_components.end(); it++)
 			{
 				(*it)->onUpdate();
+			}
+		}
+
+		void resetComponentParents()
+		{
+			for (std::vector<std::shared_ptr<Component> >::iterator it = m_components.begin(); it != m_components.end(); it++)
+			{
+				(*it)->parent = this;
 			}
 		}
 

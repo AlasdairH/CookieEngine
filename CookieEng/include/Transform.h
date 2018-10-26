@@ -89,12 +89,35 @@ namespace Components
 		*/
 		void rotate(const float _rotation, const glm::vec3 _axis);
 
+		// scale
+		// get
+		/** @brief Gets the Position
+		*	@return The position vector in 3D
+		*
+		*	Returns the position vector
+		*/
+		inline glm::vec3 getScaleVec3() { return m_scale; }
+		// modify
+		/** @brief Sets the absolute position
+		*	@param _position The new position
+		*
+		*	Sets the new position of the transform, disregarding its old position
+		*/
+		void setScale(const glm::vec3 &_scale);
+		/** @brief Moves the transform to a new position relative to its old position
+		*	@param _position The difference in position to apply
+		*
+		*	Translates the position of the transform by the given vector 3D.
+		*/
+		void scale(const glm::vec3 &_scale);
+
 		// TODO: Remove
 		void onUpdate() override;
 
 	protected:
 		glm::vec3	m_position;				/**< The current position */
 		glm::vec3	m_rotation;				/**< The current rotation */
+		glm::vec3	m_scale;				/**< The current scale */
 
 		glm::mat4	m_modelMatrix;			/**< The model matrix */
 		glm::mat4	m_modelMatrixNS;		/**< The model matrix without scale */

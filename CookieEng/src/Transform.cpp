@@ -13,6 +13,7 @@ namespace Components
 
 		m_position = glm::vec3(0, 0, 0);
 		m_rotation = glm::vec3(0, 0, 0);
+		m_scale = glm::vec3(1, 1, 1);
 
 		setModelMatrix();
 	}
@@ -26,7 +27,7 @@ namespace Components
 	void Transform::setPosition(const glm::vec3 & _position)
 	{
 		m_position = _position;
-		m_translationMatrix = glm::translate(glm::mat4(1.0), _position);
+		m_translationMatrix = glm::translate(glm::mat4(1.0f), m_position);
 		setModelMatrix();
 	}
 
@@ -85,9 +86,26 @@ namespace Components
 		setModelMatrix();
 	}
 
+	void Transform::setScale(const glm::vec3 & _scale)
+	{
+		m_scale = _scale;
+		m_scaleMatrix = glm::scale(glm::mat4(1.0f), m_scale);
+
+		setModelMatrix();
+
+	}
+
+	void Transform::scale(const glm::vec3 & _scale)
+	{
+		m_scale += _scale;
+		m_scaleMatrix = glm::scale(m_scaleMatrix, m_scale);
+
+		setModelMatrix();
+	}
+
 	void Transform::onUpdate()
 	{
-		rotate(30.0f * CNG_DELTA_TIME, glm::vec3(1, 1, 1));
+		//rotate(30.0f * CNG_DELTA_TIME, glm::vec3(1, 1, 1));
 	}
 }
 }

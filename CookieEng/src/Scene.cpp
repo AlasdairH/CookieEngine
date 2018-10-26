@@ -29,14 +29,27 @@ namespace Scene
 		{
 			_entity.addComponent<Components::Transform>();
 		}
-		m_entities.emplace_back(_entity);
+		m_entities.emplace_back(std::make_shared<ECS::Entity>(_entity));
+		// reset component parents as the entity will have  moved
+		m_entities[m_entities.size() - 1]->resetComponentParents();
+	}
+
+	std::shared_ptr<ECS::Entity> Scene::getEntity(const int _index)
+	{
+		if (_index >= m_entities.size())
+		{
+			LOG_WARNING("Index out of bounds, returning index 0");
+			return m_entities[0];
+		}
+
+		return m_entities[_index];
 	}
 
 	void Scene::onStart()
 	{
 		for (auto entity : m_entities)
 		{
-			entity.onStart();
+			entity->onStart();
 		}
 	}
 
@@ -45,7 +58,7 @@ namespace Scene
 		// update entities
 		for (auto entity : m_entities)
 		{
-			entity.onUpdate();
+			entity->onUpdate();
 		}
 
 		// update the camera uniform buffer
@@ -62,7 +75,7 @@ namespace Scene
 		for (unsigned int i = 0; i < m_entities.size(); ++i)
 		{
 			// draw to the framebuffer
-			m_renderer.draw(m_entities[i]);
+			m_renderer.draw(*m_entities[i]);
 		}
 		// unbind the framebuffer
 		m_frameBuffer->unBind();

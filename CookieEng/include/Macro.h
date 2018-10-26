@@ -15,6 +15,9 @@
 #define CNG_DELTA_TIME Utilities::Times::deltaTime
 #define CNG_SYS_TIME std::chrono::system_clock::now()
 
+#define CNG_MIN(x, y) ((x) < (y) ? (x) : (y))
+#define CNG_MAX(x, y) ((x) > (y) ? (x) : (y))
+
 #define CNG_GL_BINDPOINT_CAMERA_VP 1
 
 #ifdef DEBUG

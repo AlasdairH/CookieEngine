@@ -35,21 +35,23 @@ namespace Data
 			return false;
 		}
 
-		bool testCollision(const Ray &_other)
+		bool testCollision(const Ray &_ray)
 		{
+			double t1 = (min.x - _ray.origin.x) * _ray.inverseDirection.x;
+			double t2 = (min.x - _ray.origin.x) * _ray.inverseDirection.x;
 
-			if ((_other.m_origin.x > max.x) || (_other.m_origin.y > max.y) || (_other.m_origin.z > max.z)
-			 || (_other.m_s_xy * max.x - min.y + _other.m_c_xy < 0)
-			 || (_other.m_s_yx * max.y - min.x + _other.m_c_yx < 0)
-			 || (_other.m_s_zy * max.z - min.y + _other.m_c_zy < 0)
-			 || (_other.m_s_yz * max.y - min.z + _other.m_c_yz < 0)
-			 || (_other.m_s_xz * max.x - min.z + _other.m_c_xz < 0)
-			 || (_other.m_s_zx * max.z - min.x + _other.m_c_zx < 0))
-			{
-				return false;
+			double tmin = CNG_MIN(t1, t2);
+			double tmax = CNG_MAX(t1, t2);
+
+			for (int i = 1; i < 3; ++i) {
+				t1 = (min[i] - _ray.origin[i]) * _ray.inverseDirection[i];
+				t2 = (max[i] - _ray.origin[i]) * _ray.inverseDirection[i];
+
+				tmin = CNG_MAX(tmin, CNG_MIN(t1, t2));
+				tmax = CNG_MIN(tmax, CNG_MAX(t1, t2));
 			}
-			
-			return true;
+
+			return tmax > CNG_MAX(tmin, 0.0);
 		}
 	};
 }

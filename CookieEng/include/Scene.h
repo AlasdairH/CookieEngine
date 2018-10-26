@@ -20,6 +20,8 @@ namespace CookieEng
 {
 namespace Scene
 {
+	//TODO: Doxygen
+
 	/*! @class Scene
 	*	@brief A level representation containing entities
 	*
@@ -36,6 +38,7 @@ namespace Scene
 
 		void addEntity(ECS::Entity &_entity);
 
+		void onStart();
 		void onUpdate();
 		void draw();
 

@@ -108,17 +108,39 @@ namespace ECS
 			return false;
 		}
 
+		/** @brief Gets a unique integar
+		*	@return An increasing integar that is used for assignment to a component type
+		*
+		*	Returns a new unique integar
+		*/
 		inline int getComponentTypeID()
 		{
 			static int componentID = -1;
 			return ++componentID;
 		}
 
+		/** @brief Returns the corresonding unique integar for a specified type
+		*	@return The unique integar
+		*
+		*	Takes in a component type and returns a unique integar for that type. Used by the bitset to get an index for the bit that represents the component.
+		*/
 		template <typename T>
 		inline int getComponentTypeID()
 		{
 			static int typeID = getComponentTypeID();
 			return typeID;
+		}
+
+		/** @brief Starts the underlying components
+		*
+		*	Loops through the linked components and starts them all
+		*/
+		void onStart()
+		{
+			for (std::vector<std::shared_ptr<Component> >::iterator it = m_components.begin(); it != m_components.end(); it++)
+			{
+				(*it)->onStart();
+			}
 		}
 
 		/** @brief Updates the underlying components
@@ -135,7 +157,7 @@ namespace ECS
 
 	protected:
 		std::vector<std::shared_ptr<Component>> m_components;	/**< The vector of components on the Entity */
-		std::bitset<CNG_MAX_COMPONENTS> m_componentKey;
+		std::bitset<CNG_MAX_COMPONENTS> m_componentKey;			/**< A bitset representing the current components used to quickly test wether an entity has a certain component */
 
 	};
 }

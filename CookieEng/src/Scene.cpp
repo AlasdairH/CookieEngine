@@ -32,6 +32,14 @@ namespace Scene
 		m_entities.emplace_back(_entity);
 	}
 
+	void Scene::onStart()
+	{
+		for (auto entity : m_entities)
+		{
+			entity.onStart();
+		}
+	}
+
 	void Scene::onUpdate()
 	{
 		// update entities

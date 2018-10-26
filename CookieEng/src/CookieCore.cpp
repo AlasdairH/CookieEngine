@@ -64,13 +64,14 @@ namespace CookieEng
 
 	void CookieCore::start()
 	{
-		LOG_MESSAGE("Starting Engine Loop");
+		CNG_ACTIVE_SCENE->onStart();
 
 		//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 		Uint64 TIME_NOW = SDL_GetPerformanceCounter();
 		Uint64 TIME_LAST = 0;
 
+		LOG_MESSAGE("Starting Engine Loop");
 		bool shouldQuit = false;
 		while (!shouldQuit)
 		{
@@ -105,11 +106,11 @@ namespace CookieEng
 					}
 					if (incomingEvent.key.keysym.sym == SDLK_w)
 					{
-						//testCamera.transform.translate(glm::vec3(0, 0, -10) * Utilities::Times::deltaTime);
+						CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, -10) * Utilities::Times::deltaTime);
 					}
 					if (incomingEvent.key.keysym.sym == SDLK_s)
 					{
-						//testCamera.transform.translate(glm::vec3(0, 0, 10) * Utilities::Times::deltaTime);
+						CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, 10) * Utilities::Times::deltaTime);
 					}
 				}
 			}

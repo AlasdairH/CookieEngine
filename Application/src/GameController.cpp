@@ -4,12 +4,6 @@
 
 namespace Crumble
 {
-
-	void GameController::onInit()
-	{
-		LOG_MESSAGE("Game Controller initialised");
-	}
-
 	void GameController::onStart()
 	{
 

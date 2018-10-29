@@ -20,12 +20,10 @@ namespace Crumble
 	{
 		auto object = CNG_ACTIVE_SCENE->getEntity(1);
 
-		CookieEng::Data::Ray ray(CNG_ACTIVE_CAMERA->transform.getPositionVec3(), glm::vec3(0, -0.1f, -1));
+		CookieEng::Data::Ray ray(CNG_ACTIVE_CAMERA->transform.getPositionVec3(), glm::vec3(0, -0.25f, -1));
 		object->getComponent<CookieEng::Components::Transform>()->setPosition(ray.getPoint(5));
 		
 		CookieEng::Data::BoundingBox bb1 = object->getComponent<CookieEng::Components::Renderable>()->getBoundingBox();
-
-		
 		
 		if (bb1.testCollision(ray))
 		{

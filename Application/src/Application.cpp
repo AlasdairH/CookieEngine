@@ -26,7 +26,7 @@ int main()
 	gameController.addComponent<Crumble::GameController>();
 	CNG_ACTIVE_SCENE->addEntity(gameController);
 
-	glm::vec3 cameraPos = glm::vec3(0, 2, 5.0f);
+	glm::vec3 cameraPos = glm::vec3(0.01f, 0.01f, 5.01f);
 
 	// when the camera is created, it will set itself as the main camera as there are no others
 	CookieEng::Object::Camera camera(WINDOW_WIDTH, WINDOW_HEIGHT);

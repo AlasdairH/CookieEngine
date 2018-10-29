@@ -38,15 +38,11 @@ namespace Data
 
 		bool testCollision(const Ray &_ray)
 		{
-			double t1 = (min.x - _ray.origin.x) * _ray.inverseDirection.x;
-			double t2 = (min.x - _ray.origin.x) * _ray.inverseDirection.x;
+			double tmin = -INFINITY, tmax = INFINITY;
 
-			double tmin = CNG_MIN(t1, t2);
-			double tmax = CNG_MAX(t1, t2);
-
-			for (int i = 1; i < 3; ++i) {
-				t1 = (min[i] - _ray.origin[i]) * _ray.inverseDirection[i];
-				t2 = (max[i] - _ray.origin[i]) * _ray.inverseDirection[i];
+			for (int i = 0; i < 3; ++i) {
+				double t2 = (max[i] - _ray.origin[i]) * _ray.inverseDirection[i];
+				double t1 = (min[i] - _ray.origin[i]) * _ray.inverseDirection[i];
 
 				tmin = CNG_MAX(tmin, CNG_MIN(t1, t2));
 				tmax = CNG_MIN(tmax, CNG_MAX(t1, t2));

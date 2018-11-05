@@ -12,7 +12,7 @@
 
 #define CNG_ACTIVE_SCENE CookieEng::Scene::Scene::activeScene
 #define CNG_ACTIVE_CAMERA CookieEng::Object::Camera::activeCamera
-#define CNG_DELTA_TIME Utilities::Times::deltaTime
+#define CNG_DELTA_TIME CookieEng::Utilities::Times::deltaTime
 #define CNG_SYS_TIME std::chrono::system_clock::now()
 
 #define CNG_MIN(x, y) ((x) < (y) ? (x) : (y))

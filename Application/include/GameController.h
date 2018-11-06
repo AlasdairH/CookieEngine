@@ -9,6 +9,7 @@
 #include "Ray.h"
 #include "BoundingBox.h"
 #include "Collectable.h"
+#include "Player.h"
 
 //TODO: Doxygen
 

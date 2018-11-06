@@ -172,6 +172,7 @@
     <ClCompile Include="src\external\stb_image\stb_image.cpp" />
     <ClCompile Include="src\FrameBuffer.cpp" />
     <ClCompile Include="src\IMessageHandler.cpp" />
+    <ClCompile Include="src\Keyboard.cpp" />
     <ClCompile Include="src\Material.cpp" />
     <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\Message.cpp" />
@@ -206,6 +207,8 @@
     <ClInclude Include="include\Component.h" />
     <ClInclude Include="include\CookieCore.h" />
     <ClInclude Include="include\Entity.h" />
+    <ClInclude Include="include\InputKey.h" />
+    <ClInclude Include="include\Keyboard.h" />
     <ClInclude Include="include\Ray.h" />
     <ClInclude Include="include\Scene.h" />
     <ClInclude Include="include\Times.h" />

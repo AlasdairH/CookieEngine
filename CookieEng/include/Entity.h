@@ -12,9 +12,6 @@
 #include "Macro.h"
 #include "Component.h"
 
-#define CNG_MAX_COMPONENTS 32
-
-
 namespace CookieEng
 {
 namespace ECS

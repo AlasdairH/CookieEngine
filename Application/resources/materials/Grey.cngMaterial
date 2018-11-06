@@ -1,4 +1,4 @@
 FILETYPE Material
 SET SHADER DefaultShader
-SET DIFFUSE DefaultTexture
+SET DIFFUSE GreyTexture
 

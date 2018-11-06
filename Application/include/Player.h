@@ -6,8 +6,6 @@
 
 // program
 #include "CookieCore.h"
-#include "Ray.h"
-#include "BoundingBox.h"
 
 //TODO: Doxygen
 
@@ -18,7 +16,7 @@ namespace Crumble
 	*
 	*
 	*/
-	class Collectable : public CookieEng::ECS::Component
+	class Player : public CookieEng::ECS::Component
 	{
 	public:
 		/** @brief Called on component initlaisation

@@ -16,8 +16,26 @@ int main()
 	CookieCore engine;
 	engine.initialise(WINDOW_WIDTH, WINDOW_HEIGHT);
 
+	srand(static_cast <unsigned>(time(0)));
+
 	CookieEng::ResMgmt::ResourceManager &resourceManager = CookieEng::ResMgmt::ResourceManager::getInstance();
-	resourceManager.load<Resources::Mesh>("Mug", "resources/models/Mug.obj");
+
+	LOG_MESSAGE("Loading Resources");
+	// load meshs
+	resourceManager.load<Resources::Mesh>("CookieMesh", "resources/models/Cookie.obj");
+	resourceManager.load<Resources::Mesh>("MugMesh", "resources/models/CoffeeMug.obj");
+
+	// load textures
+	resourceManager.load<Resources::Texture>("CookieTexture", "resources/textures/Cookie.png");
+	resourceManager.load<Resources::Texture>("GreyTexture", "resources/textures/Grey.png");
+
+	// load shaders
+	resourceManager.load<Resources::ShaderProgram>("DefaultShader", "resources/shaders/BasicShader.cngShader");
+
+	// load materials
+	resourceManager.load<Resources::Material>("CookieMaterial", "resources/materials/Cookie.cngMaterial");
+	resourceManager.load<Resources::Material>("GreyMaterial", "resources/materials/Grey.cngMaterial");
+
 
 	// when the scene is created, it will set itself as the main scene as there are no others
 	CookieEng::Scene::Scene scene;
@@ -27,7 +45,7 @@ int main()
 	gameController.addComponent<Crumble::GameController>();
 	CNG_ACTIVE_SCENE->addEntity(gameController);
 
-	glm::vec3 cameraPos = glm::vec3(0.01f, 0.01f, 5.01f);
+	glm::vec3 cameraPos = glm::vec3(0.01f, 0.01f, 10.00f);
 
 	// when the camera is created, it will set itself as the main camera as there are no others
 	CookieEng::Object::Camera camera(WINDOW_WIDTH, WINDOW_HEIGHT);

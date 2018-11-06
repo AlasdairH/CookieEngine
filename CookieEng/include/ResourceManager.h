@@ -4,6 +4,7 @@
 #include <memory>
 #include <string>
 #include <unordered_map>
+#include <assert.h>
 
 // external libs
 
@@ -77,7 +78,16 @@ namespace ResMgmt
 		template<typename T>
 		std::shared_ptr<T> get(std::string _name)
 		{
-			return std::dynamic_pointer_cast<T>(m_resources[_name]);
+			if (exists(_name))
+			{
+				return std::dynamic_pointer_cast<T>(m_resources[_name]);
+			}
+			else
+			{
+				LOG_ERROR("Requested Resource " << _name << " does not exist");
+				assert(exists(_name));
+				return std::dynamic_pointer_cast<T>(m_resources[_name]);
+			}
 		}
 
 		/** @brief Tests to see if the resource map contains a key

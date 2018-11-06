@@ -153,6 +153,7 @@
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\Collectable.cpp" />
     <ClCompile Include="src\GameController.cpp" />
+    <ClCompile Include="src\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CookieEng\CookieEng.vcxproj">
@@ -175,6 +176,7 @@
   <ItemGroup>
     <ClInclude Include="include\Collectable.h" />
     <ClInclude Include="include\GameController.h" />
+    <ClInclude Include="include\Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

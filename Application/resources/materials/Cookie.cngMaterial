@@ -1,0 +1,4 @@
+FILETYPE Material
+SET SHADER DefaultShader
+SET DIFFUSE CookieTexture
+

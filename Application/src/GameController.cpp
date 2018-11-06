@@ -6,21 +6,26 @@ namespace Crumble
 {
 	void GameController::onStart()
 	{
-		LOG_MESSAGE("Game Controller Started");
-		CookieEng::ECS::Entity object;
-		object.addComponent<CookieEng::Components::Renderable>();
-		object.addComponent<CookieEng::Components::Transform>();
-		object.addComponent<Crumble::Collectable>();
-		object.getComponent<CookieEng::Components::Transform>()->setPosition(glm::vec3(0, 5, 0));
-		object.getComponent<CookieEng::Components::Transform>()->setRotation(90, glm::vec3(1, 0, 0));
-		object.getComponent<CookieEng::Components::Renderable>()->setMesh("Mug");
-		object.getComponent<CookieEng::Components::Renderable>()->setMaterial("DefaultMaterial");
-		CNG_ACTIVE_SCENE->addEntity(object);
+		CookieEng::ECS::Entity player;
+		player.addComponent<CookieEng::Components::Transform>();
+		player.addComponent<CookieEng::Components::Renderable>();
+		player.addComponent<Crumble::Player>();
+		CNG_ACTIVE_SCENE->addEntity(player);
 	}
 
 	void GameController::onUpdate()
 	{
-
+		float test = CookieEng::Utilities::UtilsFloat::randFloat(0.0f, 1.0f);
+		if (test > 0.99f)
+		{
+			int xpos = (int)(CookieEng::Utilities::UtilsFloat::randFloat(-8.0f, 8.0f) / 2) * 2;
+			CookieEng::ECS::Entity object;
+			object.addComponent<CookieEng::Components::Transform>();
+			object.getComponent<CookieEng::Components::Transform>()->setPosition(glm::vec3(xpos, 5, 0));
+			object.addComponent<CookieEng::Components::Renderable>();
+			object.addComponent<Crumble::Collectable>();
+			CNG_ACTIVE_SCENE->addEntity(object);
+		}
 	}
 }
 

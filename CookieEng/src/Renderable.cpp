@@ -12,8 +12,11 @@ namespace Components
 
 	void Renderable::setMaterial(const std::string & _material)
 	{
+		
 		ResMgmt::ResourceManager &resourceManager = ResMgmt::ResourceManager::getInstance();
+
 		m_material = resourceManager.get<Resources::Material>(_material);
+
 	}
 
 	void Renderable::loadMesh()

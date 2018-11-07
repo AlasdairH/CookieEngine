@@ -108,7 +108,7 @@ namespace Object
 		*/
 		void cleanProjectionMatrix() { m_projectionMatrix = glm::perspective(m_fovRad, m_aspect, 0.1f, 100.0f); }
 		
-		float										m_fovRad;				/**< The current FoV in radians*/
+		float										m_fovRad;				/**< The current FoV in radians */
 		float										m_aspect;				/**< The current Aspect Ratio */
 
 		glm::mat4									m_projectionMatrix;		/**< The Projection Matrix */

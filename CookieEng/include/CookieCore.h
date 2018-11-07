@@ -24,6 +24,8 @@
 #include "Times.h"
 #include "Macro.h"
 
+#include "Keyboard.h"
+
 #define DEBUG
 
 #undef main;

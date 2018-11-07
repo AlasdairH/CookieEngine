@@ -52,8 +52,16 @@ namespace Graphics
 		// unse the IBO (vertex indices)
 		renderComponent->getIBO()->bind();
 
+#ifdef CNG_DEBUG_RENDER_WIREFRAME
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+#endif
+
 		// render it to the bound buffer (should in theory be the designated famebuffer)
 		glDrawElements(GL_TRIANGLES, renderComponent->getIBO()->getCount(), GL_UNSIGNED_INT, 0);
+
+#ifdef CNG_DEBUG_RENDER_WIREFRAME
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+#endif
 	}
 	
 }

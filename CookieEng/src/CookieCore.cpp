@@ -38,6 +38,7 @@ namespace CookieEng
 		glCullFace(GL_BACK);
 		//SDL_GL_SetSwapInterval(0);
 
+
 		//m_scene = std::make_shared<Scene::Scene>();
 
 		// thread test
@@ -53,7 +54,9 @@ namespace CookieEng
 	{
 		CNG_ACTIVE_SCENE->onStart();
 
-		//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+		Input::Keyboard::Keyboard keyboard;
+		keyboard.addKey(Input::Keyboard::CNG_Keycode::CNG_KEY_W, SDLK_w);
+		keyboard.addKey(Input::Keyboard::CNG_Keycode::CNG_KEY_S, SDLK_s);
 
 		Uint64 TIME_NOW = SDL_GetPerformanceCounter();
 		Uint64 TIME_LAST = 0;
@@ -70,6 +73,8 @@ namespace CookieEng
 			SDL_Event incomingEvent;
 			while (SDL_PollEvent(&incomingEvent))
 			{
+				keyboard.update(incomingEvent.key);
+
 				if (incomingEvent.type == SDL_QUIT)
 				{
 					shouldQuit = true;
@@ -84,22 +89,15 @@ namespace CookieEng
 						break;
 					}
 				}
+			}
 
-				if (incomingEvent.type == SDL_KEYDOWN)
-				{
-					if (incomingEvent.key.keysym.sym == SDLK_ESCAPE)
-					{
-						shouldQuit = true;
-					}
-					if (incomingEvent.key.keysym.sym == SDLK_w)
-					{
-						CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, -10) * Utilities::Times::deltaTime);
-					}
-					if (incomingEvent.key.keysym.sym == SDLK_s)
-					{
-						CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, 10) * Utilities::Times::deltaTime);
-					}
-				}
+			if (keyboard.isKeyDown(Input::Keyboard::CNG_KEY_W))
+			{
+				CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, -10) * Utilities::Times::deltaTime);
+			}
+			if (keyboard.isKeyDown(Input::Keyboard::CNG_KEY_S))
+			{
+				CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, 10) * Utilities::Times::deltaTime);
 			}
 
 			/*

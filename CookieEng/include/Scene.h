@@ -49,11 +49,11 @@ namespace Scene
 		int m_width = 1280;
 		int m_height = 720;
 
-		std::vector<std::shared_ptr<ECS::Entity>> m_entities;
-		std::map<std::string, ECS::Entity> m_entityMap;
+		std::vector<std::shared_ptr<ECS::Entity>>	m_entities;
+		std::map<std::string, ECS::Entity>			m_entityMap;
 
-		Graphics::Renderer m_renderer;
-		std::shared_ptr<Graphics::FrameBuffer> m_frameBuffer;
+		Graphics::Renderer							m_renderer;
+		std::shared_ptr<Graphics::FrameBuffer>		m_frameBuffer;
 	};
 }
 }

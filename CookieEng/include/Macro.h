@@ -1,12 +1,15 @@
 #pragma once
 
 #include <iostream>
-#include <chrono>
+#include <ctime>
 
 #define DEBUG
 //#define TEST
 //#define RELEASE
 
+#define _CRT_SECURE_NO_WARNINGS
+
+#define USE_SDL
 #define OPENGL
 //#define D3D
 
@@ -14,7 +17,7 @@
 #define CNG_ACTIVE_SCENE CookieEng::Scene::Scene::activeScene
 #define CNG_ACTIVE_CAMERA CookieEng::Object::Camera::activeCamera
 #define CNG_DELTA_TIME CookieEng::Utilities::Times::deltaTime
-#define CNG_SYS_TIME std::chrono::system_clock::now()
+#define CNG_SYS_TIME //*std::localtime(std::addressof(std::time(NULL)))
 
 #define CNG_MIN(x, y) ((x) < (y) ? (x) : (y))
 #define CNG_MAX(x, y) ((x) > (y) ? (x) : (y))
@@ -27,6 +30,8 @@
 #define CNG_MAX_ENTITIES 10000
 // max conponents per entity
 #define CNG_MAX_COMPONENTS 32
+// wireframe
+//#define CNG_DEBUG_RENDER_WIREFRAME
 
 
 #ifdef DEBUG

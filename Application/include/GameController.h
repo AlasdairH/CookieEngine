@@ -11,8 +11,6 @@
 #include "Collectable.h"
 #include "Player.h"
 
-//TODO: Doxygen
-
 namespace Crumble
 {
 	/*! @class GameController

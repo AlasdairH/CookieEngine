@@ -49,11 +49,12 @@ namespace Scene
 		inline void setActive() { activeScene = this; }
 
 		/** @brief Adds an entity to the scene
+		*	@return A shared pointer to the newly added entity
 		*	@param _entity The entity to add
 		*
 		*	Adds an entity to the scene. This will instantiate it.
 		*/
-		void addEntity(ECS::Entity &_entity);
+		std::shared_ptr<ECS::Entity> addEntity(ECS::Entity &_entity);
 		/** @brief Adds an entity to the scene
 		*	@return A shared pointer to the entity requested by index
 		*	@param _index The index of the entity to get.

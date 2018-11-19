@@ -15,6 +15,7 @@ namespace Crumble
 
 	void GameController::onUpdate()
 	{
+		// check if a new cookie is to be spawned
 		float test = CookieEng::Utilities::UtilsFloat::randFloat(0.0f, 1.0f);
 		if (test > 0.99f)
 		{
@@ -24,7 +25,7 @@ namespace Crumble
 			object.getComponent<CookieEng::Components::Transform>()->setPosition(glm::vec3(xpos, 5, 0));
 			object.addComponent<CookieEng::Components::Renderable>();
 			object.addComponent<Crumble::Collectable>();
-			CNG_ACTIVE_SCENE->addEntity(object);
+			m_collectables.emplace_back(CNG_ACTIVE_SCENE->addEntity(object));
 		}
 	}
 }

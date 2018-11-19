@@ -60,6 +60,11 @@ namespace ECS
 		template <typename T>
 		std::shared_ptr<T> getComponent()
 		{
+			if (!hasComponent<T>())
+			{
+				addComponent<T>();
+			}
+
 			for (unsigned int i = 0; i < m_components.size(); ++i)
 			{
 				// attempty to cast the component at i to the requested component type
@@ -85,6 +90,13 @@ namespace ECS
 		template <typename T>
 		bool hasComponent()
 		{
+			if (m_componentKey[getComponentTypeID<T>()])
+			{
+				return true;
+			}
+			return false;
+
+			/*
 			// TODO: bitset implementation
 			for (unsigned int i = 0; i < m_components.size(); i++)
 			{
@@ -99,6 +111,7 @@ namespace ECS
 			}
 
 			return false;
+			*/
 		}
 
 		/** @brief Gets a unique integar

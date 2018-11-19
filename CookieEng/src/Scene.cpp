@@ -23,7 +23,7 @@ namespace Scene
 
 	}
 
-	void Scene::addEntity(ECS::Entity & _entity)
+	std::shared_ptr<ECS::Entity> Scene::addEntity(ECS::Entity & _entity)
 	{
 		// if the entity being added does not have a Transform component, add one
 		if (!_entity.hasComponent<Components::Transform>())
@@ -33,6 +33,7 @@ namespace Scene
 		m_entities.emplace_back(std::make_shared<ECS::Entity>(_entity));
 		// reset component parents as the entity will have  moved
 		m_entities[m_entities.size() - 1]->resetComponentParents();
+		return m_entities[m_entities.size() - 1];
 	}
 
 	std::shared_ptr<ECS::Entity> Scene::getEntity(const int _index)

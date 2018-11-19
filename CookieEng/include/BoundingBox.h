@@ -23,6 +23,7 @@ namespace Data
 	*/
 	class BoundingBox
 	{
+	public:
 		glm::vec3 min = glm::vec3(std::numeric_limits<float>::max());		/**< The minimum corner of the bounding box */
 		glm::vec3 max = glm::vec3(std::numeric_limits<float>::min());		/**< The maximum corner of the bounding box */
 

@@ -287,9 +287,6 @@
     <ClInclude Include="include\ResourceManager.h">
       <Filter>Header Files\Resource Managment</Filter>
     </ClInclude>
-    <ClInclude Include="include\TestEntity.h">
-      <Filter>Header Files\ECS</Filter>
-    </ClInclude>
     <ClInclude Include="include\Renderable.h">
       <Filter>Header Files</Filter>
     </ClInclude>

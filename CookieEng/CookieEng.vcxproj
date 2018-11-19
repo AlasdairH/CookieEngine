@@ -222,7 +222,6 @@
     <ClInclude Include="include\Resource.h" />
     <ClInclude Include="include\ResourceLoader.h" />
     <ClInclude Include="include\ResourceManager.h" />
-    <ClInclude Include="include\TestEntity.h" />
     <ClInclude Include="include\ThreadPool.h" />
     <ClInclude Include="include\Transform.h" />
     <ClInclude Include="include\FileManager.h" />

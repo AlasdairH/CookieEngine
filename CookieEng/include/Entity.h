@@ -148,6 +148,11 @@ namespace ECS
 			}
 		}
 
+		/** @brief Resets the parents of the entities on this component to be this entity
+		*
+		*	Loops through all the components on an entity and resets the parent pointer. This is required as sometimes the entity may move. I should have fuixed this through
+		*	reserving more space in the entity vector but i'll keep this method just in case.
+		*/
 		void resetComponentParents()
 		{
 			for (std::vector<std::shared_ptr<Component> >::iterator it = m_components.begin(); it != m_components.end(); it++)

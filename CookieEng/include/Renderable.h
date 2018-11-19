@@ -60,12 +60,6 @@ namespace Components
 	protected:
 		std::shared_ptr<Resources::Mesh>			m_mesh;			/**< A shared pointer to the Mesh, typically in the ResourceManager */
 		std::shared_ptr<Resources::Material>		m_material;		/**< A shared pointer to the Material, typically in the ResourceManager */
-
-		
-		//std::shared_ptr<Graphics::VertexArray>		m_VAO;			/**< The Renderbales VertexArray, set by the loadMesh function */
-		//std::shared_ptr<Graphics::VertexBuffer>		m_VBO;			/**< The Renderbales VertexBuffer, set by the loadMesh function */
-		//std::shared_ptr<Graphics::VertexBuffer>		m_IBO;			/**< The Renderbales IndexBuffer, set by the loadMesh function */
-		
 	};
 }
 }

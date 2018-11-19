@@ -35,7 +35,7 @@ namespace Resources
 		*	@param _name The name to assign the mesh
 		*	@param _filepath The filepath to load from
 		*
-		*	Overrides the Resource load to allow loading from a .obj file
+		*	Overrides the Resource load to allow loading from a .obj file. This Obj loader is definitely not the fastest or the most efficient but it works! 
 		*/
 		void load(const std::string &_name, const std::string &_filepath) override;
 

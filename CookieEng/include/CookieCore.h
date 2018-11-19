@@ -32,19 +32,38 @@
 
 namespace CookieEng
 {
+	/*! @class CookieCore
+	*	@brief The engine core class
+	*
+	*	The core class which contains the initialisation and start functions. These must be run for the engine to work properly.
+	*/
 	class CookieCore
 	{
 	public:
+		/** @brief Core Ctor
+		*
+		*	Does nothing
+		*/
 		CookieCore();
 
+		/** @brief Initialises CookieEngine
+		*	@param _windowResolutionWidth The window width to create with the engine
+		*	@param _windowResolutionHeight The filepath The window height to create with the engine
+		*
+		*	Does the essential engine initialisation such as starting services and running the constructors of any singletons. This ensures an explicit construction order is adheared to
+		*	as some services require others to be started before they can work.
+		*/
 		void initialise(int _windowResolutionWidth, int _windowResolutionHeight);
+		
+		/** @brief Starts CookieEngine
+		*
+		*	Runs the start methods of any entitie's components in the scene at the beginning of the program and starts the engine loop.
+		*/
 		void start();
 
 	protected:
-		//std::shared_ptr<Scene::Scene> m_scene;
+		Window		*m_window;						/**< The window with an OpenGL context to render to */
 
-		Window *m_window;
-
-		bool m_isInitialised = false;
+		bool		m_isInitialised = false;		/**< State flag for the engine initialisation state. Cannot start unless this is true. */
 	};
 }

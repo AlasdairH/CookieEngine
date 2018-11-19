@@ -16,6 +16,7 @@
 
 #include "ResourceManager.h"
 #include "ResourceLoader.h"
+#include "InputManager.h"
 
 #include "ThreadPool.h"
 

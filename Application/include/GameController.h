@@ -33,6 +33,7 @@ namespace Crumble
 		void onUpdate() override;
 
 	protected:
+		std::shared_ptr< CookieEng::ECS::Entity> m_player;
 		std::vector<std::shared_ptr<CookieEng::ECS::Entity>> m_collectables;
 	};
 

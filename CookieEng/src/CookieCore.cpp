@@ -29,6 +29,8 @@ namespace CookieEng
 
 		// instanciate the ResourceManager so the constructor is run
 		ResMgmt::ResourceManager &resourceManager = ResMgmt::ResourceManager::getInstance();
+		// instanciate the InputManager so the constructor is run
+		Input::InputManager &inputManager = Input::InputManager::getInstance();
 
 		// GL Funcs
 		glEnable(GL_DEPTH_TEST);
@@ -54,9 +56,7 @@ namespace CookieEng
 	{
 		CNG_ACTIVE_SCENE->onStart();
 
-		Input::Keyboard::Keyboard keyboard;
-		keyboard.addKey(Input::Keyboard::CNG_Keycode::CNG_KEY_W, SDLK_w);
-		keyboard.addKey(Input::Keyboard::CNG_Keycode::CNG_KEY_S, SDLK_s);
+		std::shared_ptr<Input::Keyboard::Keyboard> keyboard = Input::InputManager::getInstance().getKeyboard();
 
 		Uint64 TIME_NOW = SDL_GetPerformanceCounter();
 		Uint64 TIME_LAST = 0;
@@ -73,7 +73,7 @@ namespace CookieEng
 			SDL_Event incomingEvent;
 			while (SDL_PollEvent(&incomingEvent))
 			{
-				keyboard.update(incomingEvent.key);
+				keyboard->update(incomingEvent.key);
 
 				if (incomingEvent.type == SDL_QUIT)
 				{
@@ -91,11 +91,11 @@ namespace CookieEng
 				}
 			}
 
-			if (keyboard.isKeyDown(Input::Keyboard::CNG_KEY_W))
+			if (keyboard->isKeyDown(Input::Keyboard::CNG_KEY_W))
 			{
 				CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, -10) * Utilities::Times::deltaTime);
 			}
-			if (keyboard.isKeyDown(Input::Keyboard::CNG_KEY_S))
+			if (keyboard->isKeyDown(Input::Keyboard::CNG_KEY_S))
 			{
 				CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, 10) * Utilities::Times::deltaTime);
 			}

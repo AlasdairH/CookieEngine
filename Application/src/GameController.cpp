@@ -10,7 +10,7 @@ namespace Crumble
 		player.addComponent<CookieEng::Components::Transform>();
 		player.addComponent<CookieEng::Components::Renderable>();
 		player.addComponent<Crumble::Player>();
-		CNG_ACTIVE_SCENE->addEntity(player);
+		m_player = CNG_ACTIVE_SCENE->addEntity(player);
 	}
 
 	void GameController::onUpdate()
@@ -26,6 +26,16 @@ namespace Crumble
 			object.addComponent<CookieEng::Components::Renderable>();
 			object.addComponent<Crumble::Collectable>();
 			m_collectables.emplace_back(CNG_ACTIVE_SCENE->addEntity(object));
+		}
+
+		// TODO: CONTINUE FROM HERE
+		for (unsigned int i = 0; i < m_collectables.size(); ++i)
+		{
+			if (m_collectables[i]->getComponent<CookieEng::Components::Renderable>()->getBoundingBox().testCollision(m_player->getComponent<CookieEng::Components::Renderable>()->getBoundingBox()))
+			{
+				LOG_MESSAGE("HIT");
+				CNG_ACTIVE_SCENE->removeEntity(m_collectables[i]);
+			}
 		}
 	}
 }

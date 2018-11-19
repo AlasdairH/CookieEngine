@@ -26,6 +26,10 @@ namespace ECS
 	class Entity
 	{
 	public:
+		/** @brief Entity Ctor
+		*
+		*	Reserves memory for max components
+		*/
 		Entity();
 
 		/** @brief Adds a component to the entity
@@ -34,7 +38,7 @@ namespace ECS
 		*	Takes a templated input of the component type to add (must inherit from Component) and adds it to the entity.
 		*	It is at this point the components onInit method is run.
 		*/
-		template <typename T> 
+		template <typename T>
 		std::shared_ptr<T> addComponent()
 		{
 			if (hasComponent<T>())
@@ -43,7 +47,7 @@ namespace ECS
 			}
 
 			std::shared_ptr<T> rtn = std::make_shared<T>();
-			rtn->parent = this; 
+			rtn->parent = this;
 			m_components.push_back(rtn);
 			m_componentKey[getComponentTypeID<T>()] = true;
 			rtn->onInit();
@@ -95,23 +99,6 @@ namespace ECS
 				return true;
 			}
 			return false;
-
-			/*
-			// TODO: bitset implementation
-			for (unsigned int i = 0; i < m_components.size(); i++)
-			{
-				// attempty to cast the component at i to the requested component type
-				std::shared_ptr<T> component = std::dynamic_pointer_cast<T>(m_components.at(i));
-
-				// if the component casts to specified type
-				if (component)
-				{
-					return true;
-				}
-			}
-
-			return false;
-			*/
 		}
 
 		/** @brief Gets a unique integar
@@ -175,9 +162,8 @@ namespace ECS
 		}
 
 	protected:
-		std::vector<std::shared_ptr<Component>> m_components;	/**< The vector of components on the Entity */
-		std::bitset<CNG_MAX_COMPONENTS> m_componentKey;			/**< A bitset representing the current components used to quickly test wether an entity has a certain component */
-
+		std::vector<std::shared_ptr<Component>>		m_components;		/**< The vector of components on the Entity */
+		std::bitset<CNG_MAX_COMPONENTS>				m_componentKey;		/**< A bitset representing the current components used to quickly test wether an entity has a certain component */
 	};
 }
 }

@@ -47,6 +47,29 @@ namespace Scene
 		return m_entities[_index];
 	}
 
+	void Scene::removeEntity(std::shared_ptr<ECS::Entity> _entity)
+	{
+		int index = -1;
+		for (unsigned int i = 0; i < m_entities.size(); ++i)
+		{
+			if (m_entities[i] == _entity)
+			{
+				index = i;
+			}
+		}
+
+		if (index != -1)
+		{
+			LOG_MESSAGE("Removing entity " << index);
+			m_entities[index].reset();
+			m_entities.erase(m_entities.begin(), m_entities.begin() + index);
+		}
+		else
+		{
+			LOG_WARNING("Unable to remove entity, not found in scene");
+		}
+	}
+
 	void Scene::onStart()
 	{
 		for (auto entity : m_entities)

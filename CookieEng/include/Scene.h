@@ -63,6 +63,13 @@ namespace Scene
 		*/
 		std::shared_ptr<ECS::Entity> getEntity(const int _index);
 
+		/** @brief Removes an entity from the scene
+		*	@param _entity The entity to remove
+		*
+		*	Removes an entity
+		*/
+		void removeEntity(std::shared_ptr<ECS::Entity> _entity);
+
 		/** @brief Starts the scene
 		*
 		*	Starts the scene. This loops through all the entities and runs their start method.

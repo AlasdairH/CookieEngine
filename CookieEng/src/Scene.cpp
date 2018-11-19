@@ -37,7 +37,7 @@ namespace Scene
 
 	std::shared_ptr<ECS::Entity> Scene::getEntity(const int _index)
 	{
-		if (_index >= m_entities.size())
+		if ((unsigned int)_index >= m_entities.size())
 		{
 			LOG_WARNING("Index out of bounds, returning index 0");
 			return m_entities[0];

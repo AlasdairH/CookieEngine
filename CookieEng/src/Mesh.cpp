@@ -154,6 +154,20 @@ namespace Resources
 		// push 3 floats for the normals (x, y, z)
 		layout.push<float>(3);
 		// return the mesh
+
+		if (!m_loadedToGPU)
+		{
+			m_VAO = std::make_shared<Graphics::VertexArray>();
+			m_VBO = std::make_shared<Graphics::VertexBuffer>(Graphics::CNG_BUFFER_ARRAY);
+			m_IBO = std::make_shared<Graphics::VertexBuffer>(Graphics::CNG_BUFFER_ELEMENT_ARRAY);
+
+			m_VAO->addBuffer(*m_VBO, layout);
+
+			m_VBO->loadData(vertices.data(), 0, layout.getStride() * vertices.size());
+			m_IBO->loadData(indices.data(), indices.size(), sizeof(unsigned int) * indices.size());
+
+			m_loadedToGPU = true;
+		}
 	}
 	
 }

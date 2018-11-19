@@ -39,24 +39,14 @@ namespace Components
 		*	Takes the given string, looks it up in the resource manager and assigns the Material pointer member variable.
 		*/
 		void setMaterial(const std::string &_material);
-		/** @brief Takes the mesh and places it in a VBO which is then added to a VAO
-		*
-		*	Takes the CPU side data of the mesh and loads it up to a VBO and adds it to a VAO on the GPU.
-		*/
-		void loadMesh();
 
-		/** @brief Getter for the VAO member variable
-		*	@return The VAO member variable for use by the renderer
+		/** @brief Getter for the Mesh pointer
+		*	@return The renderable mesh
 		*
-		*	Getter for the VAO member variable (make this friend to Renderer?)
+		*	Getter for the mesh to be rendered
 		*/
-		inline std::shared_ptr<Graphics::VertexArray> getVAO() { return m_VAO; }
-		/** @brief Getter for the IBO member variable
-		*	@return The IBO member variable for use by the renderer
-		*
-		*	Getter for the IBO member variable (make this friend to Renderer?)
-		*/
-		inline std::shared_ptr<Graphics::VertexBuffer> getIBO() { return m_IBO; }
+		inline std::shared_ptr<Resources::Mesh> getMesh() { return m_mesh; }
+
 		/** @brief Getter for the Material pointer
 		*	@return The material to render the mesh with
 		*
@@ -71,9 +61,11 @@ namespace Components
 		std::shared_ptr<Resources::Mesh>			m_mesh;			/**< A shared pointer to the Mesh, typically in the ResourceManager */
 		std::shared_ptr<Resources::Material>		m_material;		/**< A shared pointer to the Material, typically in the ResourceManager */
 
-		std::shared_ptr<Graphics::VertexArray>		m_VAO;			/**< The Renderbales VertexArray, set by the loadMesh function */
-		std::shared_ptr<Graphics::VertexBuffer>		m_VBO;			/**< The Renderbales VertexBuffer, set by the loadMesh function */
-		std::shared_ptr<Graphics::VertexBuffer>		m_IBO;			/**< The Renderbales IndexBuffer, set by the loadMesh function */
+		
+		//std::shared_ptr<Graphics::VertexArray>		m_VAO;			/**< The Renderbales VertexArray, set by the loadMesh function */
+		//std::shared_ptr<Graphics::VertexBuffer>		m_VBO;			/**< The Renderbales VertexBuffer, set by the loadMesh function */
+		//std::shared_ptr<Graphics::VertexBuffer>		m_IBO;			/**< The Renderbales IndexBuffer, set by the loadMesh function */
+		
 	};
 }
 }

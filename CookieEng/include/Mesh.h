@@ -12,6 +12,7 @@
 #include "VertexBufferLayout.h"
 #include "ServiceLocator.h"
 #include "BoundingBox.h"
+#include "VertexArray.h"
 
 namespace CookieEng
 {
@@ -37,6 +38,25 @@ namespace Resources
 		*	Overrides the Resource load to allow loading from a .obj file
 		*/
 		void load(const std::string &_name, const std::string &_filepath) override;
+
+		/** @brief Getter for the VAO member variable
+		*	@return The VAO member variable for use by the renderer
+		*
+		*	Getter for the VAO member variable (make this friend to Renderer?)
+		*/
+		inline std::shared_ptr<Graphics::VertexArray> getVAO() { return m_VAO; }
+		/** @brief Getter for the IBO member variable
+		*	@return The IBO member variable for use by the renderer
+		*
+		*	Getter for the IBO member variable (make this friend to Renderer?)
+		*/
+		inline std::shared_ptr<Graphics::VertexBuffer> getIBO() { return m_IBO; }
+
+	protected:
+		bool										m_loadedToGPU = false;	/**< State flag for if the mash has been loaded to the GPU as a VAO/VBO */
+		std::shared_ptr<Graphics::VertexArray>		m_VAO;					/**< The Renderbales VertexArray, set by the loadMesh function */
+		std::shared_ptr<Graphics::VertexBuffer>		m_VBO;					/**< The Renderbales VertexBuffer, set by the loadMesh function */
+		std::shared_ptr<Graphics::VertexBuffer>		m_IBO;					/**< The Renderbales IndexBuffer, set by the loadMesh function */
 	};
 
 }

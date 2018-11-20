@@ -61,7 +61,7 @@ namespace Graphics
 		void draw(ECS::Entity &_entity);
 
 	protected:
-		FrameBuffer *m_frameBuffer; /**< The framebuffer to render to by default */ // TODO: Implement default framebuffer rendering
+		FrameBuffer *m_frameBuffer; /**< The framebuffer to render to by default */
 	};
 
 }

@@ -60,9 +60,9 @@ namespace Scene
 
 		if (index != -1)
 		{
-			LOG_MESSAGE("Removing entity " << index);
-			m_entities[index].reset();
-			m_entities.erase(m_entities.begin(), m_entities.begin() + index);
+			LOG_MESSAGE("Marked entity " << index << " for deletion");
+			m_deleteQueue.push_back(index);
+			return;
 		}
 		else
 		{
@@ -106,6 +106,23 @@ namespace Scene
 		m_frameBuffer->unBind();
 		// draw the framebuffer to the screen
 		m_frameBuffer->drawToScreen();
+	}
+
+	void Scene::clean()
+	{
+		// sort the indices
+		std::sort(m_deleteQueue.begin(), m_deleteQueue.end());
+		// reverse to decend
+		std::reverse(m_deleteQueue.begin(), m_deleteQueue.end());
+
+		for (unsigned int i = 0; i < m_deleteQueue.size(); ++i)
+		{
+			int indexToRemove = m_deleteQueue[i];
+			LOG_MESSAGE("Removing entity at index " << indexToRemove);
+			m_entities.erase(m_entities.begin() + indexToRemove);
+		}
+
+		m_deleteQueue.clear();
 	}
 }
 }

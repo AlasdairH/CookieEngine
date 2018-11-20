@@ -33,8 +33,10 @@ namespace Crumble
 		void onUpdate() override;
 
 	protected:
+		int m_score = 0;
+
 		std::shared_ptr< CookieEng::ECS::Entity> m_player;
-		std::vector<std::shared_ptr<CookieEng::ECS::Entity>> m_collectables;
+		std::vector<std::weak_ptr<CookieEng::ECS::Entity>> m_collectables;
 	};
 
 }

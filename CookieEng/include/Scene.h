@@ -20,8 +20,6 @@ namespace CookieEng
 {
 namespace Scene
 {
-	//TODO: Doxygen
-
 	/*! @class Scene
 	*	@brief A level representation containing entities
 	*
@@ -85,6 +83,11 @@ namespace Scene
 		*	Uses the member renderer to render the scene to a framebuffer and then render that to the screen.
 		*/
 		void draw();
+		/** @brief Cleans the scene
+		*
+		*	Clean will remove any entities that are marked for deletion.
+		*/
+		void clean();
 
 		static Scene *activeScene;	/**< The currently active scene */
 
@@ -94,6 +97,7 @@ namespace Scene
 		int		m_height	= 720;		/**< The height of the scene's resolution */
 
 		std::vector<std::shared_ptr<ECS::Entity>>	m_entities;		/**< The vector of entities in the scene */
+		std::vector<int>							m_deleteQueue;	/**< Stores the indices of entities to be removed at the end of the update */
 		std::map<std::string, ECS::Entity>			m_entityMap;	/**< Not used? */
 
 		Graphics::Renderer							m_renderer;		/**< The renderer used in the draw method */

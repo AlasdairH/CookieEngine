@@ -15,6 +15,8 @@ namespace Crumble
 
 	void GameController::onUpdate()
 	{
+		std::shared_ptr<CookieEng::Input::Keyboard::Keyboard> keyboard = CookieEng::Input::InputManager::getInstance().getKeyboard();
+
 		// check if a new cookie is to be spawned
 		float test = CookieEng::Utilities::UtilsFloat::randFloat(0.0f, 1.0f);
 		if (test > 0.99f)
@@ -28,14 +30,44 @@ namespace Crumble
 			m_collectables.emplace_back(CNG_ACTIVE_SCENE->addEntity(object));
 		}
 
-		// TODO: CONTINUE FROM HERE
+		std::vector<unsigned int> indexToRemove;
+
 		for (unsigned int i = 0; i < m_collectables.size(); ++i)
 		{
-			if (m_collectables[i]->getComponent<CookieEng::Components::Renderable>()->getBoundingBox().testCollision(m_player->getComponent<CookieEng::Components::Renderable>()->getBoundingBox()))
+			if (m_collectables[i].expired())
 			{
-				LOG_MESSAGE("HIT");
-				CNG_ACTIVE_SCENE->removeEntity(m_collectables[i]);
+				indexToRemove.push_back(i);
+				continue;
 			}
+			if (m_collectables[i].lock()->getComponent<CookieEng::Components::Renderable>()->getBoundingBox().testCollision(m_player->getComponent<CookieEng::Components::Renderable>()->getBoundingBox()))
+			{
+				LOG_MESSAGE("Collision Detected");
+				CNG_ACTIVE_SCENE->removeEntity(m_collectables[i].lock());
+				indexToRemove.push_back(i);
+				++m_score;
+			}
+		}
+
+		
+		// sort the indices
+		std::sort(indexToRemove.begin(), indexToRemove.end());
+		// reverse to decend
+		std::reverse(indexToRemove.begin(), indexToRemove.end());
+
+		for (int i = 0; i < indexToRemove.size(); ++i)
+		{
+			m_collectables.erase(m_collectables.begin() + indexToRemove[i]);
+		}
+		
+		indexToRemove.clear();
+
+		if (keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_W))
+		{
+			m_player->getComponent<CookieEng::Components::Transform>()->translate(glm::vec3(-10, 0, 0) * CNG_DELTA_TIME);
+		}
+		if (keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_S))
+		{
+			m_player->getComponent<CookieEng::Components::Transform>()->translate(glm::vec3(10, 0, 0) * CNG_DELTA_TIME);
 		}
 	}
 }

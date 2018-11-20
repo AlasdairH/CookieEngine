@@ -64,7 +64,8 @@ namespace Scene
 		/** @brief Removes an entity from the scene
 		*	@param _entity The entity to remove
 		*
-		*	Removes an entity
+		*	This method will not actually remove an entity. This will simply mark the entity for removal, to actually remove it the clean() method must be run.
+		*	To avoid issues, do not run a clean between an update and draw, preferably do it before or after both.
 		*/
 		void removeEntity(std::shared_ptr<ECS::Entity> _entity);
 
@@ -92,9 +93,8 @@ namespace Scene
 		static Scene *activeScene;	/**< The currently active scene */
 
 	protected:
-		// TODO: Remove hardcoding of size
-		int		m_width		= 1280;		/**< The width of the scene's resolution */
-		int		m_height	= 720;		/**< The height of the scene's resolution */
+		int											m_width;		/**< The width of the scene's resolution */
+		int											m_height;		/**< The height of the scene's resolution */
 
 		std::vector<std::shared_ptr<ECS::Entity>>	m_entities;		/**< The vector of entities in the scene */
 		std::vector<int>							m_deleteQueue;	/**< Stores the indices of entities to be removed at the end of the update */

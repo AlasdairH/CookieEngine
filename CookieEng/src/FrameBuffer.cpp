@@ -7,9 +7,9 @@ namespace Graphics
 
 	FrameBuffer::FrameBuffer(const int _width, const int _height)
 	{
-		LOG_MESSAGE("Creating Frame Buffer...");
 		m_width = _width;
 		m_height = _height;
+		LOG_MESSAGE("Creating Frame Buffer with resolution: " << m_width << ", " << m_height);
 
 		// create VAO
 		m_arrayBuffer = new VertexArray;

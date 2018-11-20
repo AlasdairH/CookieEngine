@@ -39,12 +39,14 @@ namespace Crumble
 				indexToRemove.push_back(i);
 				continue;
 			}
+			// test collision between cookie (Collectable) and mug (Player)
 			if (m_collectables[i].lock()->getComponent<CookieEng::Components::Renderable>()->getBoundingBox().testCollision(m_player->getComponent<CookieEng::Components::Renderable>()->getBoundingBox()))
 			{
 				LOG_MESSAGE("Collision Detected");
 				CNG_ACTIVE_SCENE->removeEntity(m_collectables[i].lock());
 				indexToRemove.push_back(i);
 				++m_score;
+				LOG_MESSAGE("Score: " << m_score);
 			}
 		}
 
@@ -60,13 +62,15 @@ namespace Crumble
 		}
 		
 		indexToRemove.clear();
-
-		if (keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_W))
+		
+		if (keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_A))
 		{
+			LOG_MESSAGE("A");
 			m_player->getComponent<CookieEng::Components::Transform>()->translate(glm::vec3(-10, 0, 0) * CNG_DELTA_TIME);
 		}
-		if (keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_S))
+		if (keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_D))
 		{
+			LOG_MESSAGE("D");
 			m_player->getComponent<CookieEng::Components::Transform>()->translate(glm::vec3(10, 0, 0) * CNG_DELTA_TIME);
 		}
 	}

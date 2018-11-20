@@ -12,8 +12,6 @@
 #include "Component.h"
 #include "Times.h"
 
-// TODO: Scale Implementation
-
 namespace CookieEng
 {
 namespace Components
@@ -110,9 +108,6 @@ namespace Components
 		*	Translates the position of the transform by the given vector 3D.
 		*/
 		void scale(const glm::vec3 &_scale);
-
-		// TODO: Remove
-		void onUpdate() override;
 
 	protected:
 		glm::vec3	m_position;				/**< The current position */

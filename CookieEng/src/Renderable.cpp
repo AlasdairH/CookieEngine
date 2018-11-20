@@ -23,9 +23,8 @@ namespace Components
 	{
 		std::shared_ptr<Components::Transform> transform = parent->getComponent<Components::Transform>();
 		Data::BoundingBox adjustedAABB;
-		adjustedAABB.min = m_mesh->boundingBox.min + transform->getPositionVec3();
-		adjustedAABB.max = m_mesh->boundingBox.max + transform->getPositionVec3();
-		// TODO: Scale
+		adjustedAABB.min = (m_mesh->boundingBox.min + transform->getPositionVec3()) * transform->getScaleVec3();
+		adjustedAABB.max = (m_mesh->boundingBox.max + transform->getPositionVec3()) * transform->getScaleVec3();
 		return adjustedAABB;
 	}
 }

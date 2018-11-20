@@ -19,6 +19,9 @@ namespace Object
 		m_fovRad = 0.7f;
 		setAspectRatio(_resolutionWidth / (float)_resolutionHeight);
 
+		m_viewportWidth = _resolutionWidth;
+		m_viewportHeight = _resolutionHeight;
+
 		init();
 	}
 

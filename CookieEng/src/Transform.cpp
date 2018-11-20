@@ -102,10 +102,5 @@ namespace Components
 
 		setModelMatrix();
 	}
-
-	void Transform::onUpdate()
-	{
-		//rotate(30.0f * CNG_DELTA_TIME, glm::vec3(1, 1, 1));
-	}
 }
 }

@@ -94,6 +94,19 @@ namespace Object
 		*/
 		void updateCameraUniform();
 
+		/** @brief Returns the width of the viewport
+		*	@return The width of the viewport
+		*
+		*	Returns the camera's viewport width
+		*/
+		inline int getViewportWidth() { return m_viewportWidth; }		
+		/** @brief Returns the height of the viewport
+		*	@return The height of the viewport
+		*
+		*	Returns the camera's viewport height
+		*/
+		inline int getViewportHeight() { return m_viewportHeight; }
+
 		static Camera *activeCamera;	/**< The currently active camera */
 
 	protected:
@@ -110,6 +123,8 @@ namespace Object
 		
 		float										m_fovRad;				/**< The current FoV in radians */
 		float										m_aspect;				/**< The current Aspect Ratio */
+		int											m_viewportWidth;		/**< Width of the viewport in pixels */
+		int											m_viewportHeight;		/**< Height of the viewport in pixels */
 
 		glm::mat4									m_projectionMatrix;		/**< The Projection Matrix */
 

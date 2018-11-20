@@ -36,6 +36,11 @@ int main()
 	resourceManager.load<Resources::Material>("CookieMaterial", "resources/materials/Cookie.cngMaterial");
 	resourceManager.load<Resources::Material>("GreyMaterial", "resources/materials/Grey.cngMaterial");
 
+	// when the camera is created, it will set itself as the main camera as there are no others
+	CookieEng::Object::Camera camera(WINDOW_WIDTH, WINDOW_HEIGHT);
+	CNG_ACTIVE_CAMERA->setFOV(1.0f);
+	glm::vec3 cameraPos = glm::vec3(0.01f, 0.01f, 10.00f);
+	CNG_ACTIVE_CAMERA->transform.setPosition(cameraPos);
 
 	// when the scene is created, it will set itself as the main scene as there are no others
 	CookieEng::Scene::Scene scene;
@@ -45,12 +50,7 @@ int main()
 	gameController.addComponent<Crumble::GameController>();
 	CNG_ACTIVE_SCENE->addEntity(gameController);
 
-	glm::vec3 cameraPos = glm::vec3(0.01f, 0.01f, 10.00f);
 
-	// when the camera is created, it will set itself as the main camera as there are no others
-	CookieEng::Object::Camera camera(WINDOW_WIDTH, WINDOW_HEIGHT);
-	CNG_ACTIVE_CAMERA->setFOV(1.0f);
-	CNG_ACTIVE_CAMERA->transform.setPosition(cameraPos);
 
 	engine.start();
 

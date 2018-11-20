@@ -8,7 +8,6 @@ namespace Scene
 
 	Scene::Scene()
 	{
-		m_frameBuffer = std::make_shared<Graphics::FrameBuffer>(m_width, m_height);
 		m_entities.reserve(CNG_MAX_ENTITIES);
 
 		// if there is no current active scene, set it to this one
@@ -16,6 +15,14 @@ namespace Scene
 		{
 			activeScene = this;
 		}
+
+		if (CNG_ACTIVE_CAMERA != nullptr)
+		{
+			m_width = CNG_ACTIVE_CAMERA->getViewportWidth();
+			m_height = CNG_ACTIVE_CAMERA->getViewportHeight();
+		}
+
+		m_frameBuffer = std::make_shared<Graphics::FrameBuffer>(m_width, m_height);
 	}
 
 	Scene::~Scene()

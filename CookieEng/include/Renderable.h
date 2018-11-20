@@ -54,7 +54,12 @@ namespace Components
 		*/
 		inline std::shared_ptr<Resources::Material> getMaterial() { return m_material; }
 
-		// TODO: Doxygen
+		// TODO: Move this to a component
+		/** @brief Gets a bounding box with transform applied
+		*	@return A bounding box
+		*
+		*	Gets a bounding box including the objects transform data
+		*/
 		Data::BoundingBox getBoundingBox();
 
 	protected:

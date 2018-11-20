@@ -30,7 +30,7 @@ namespace Input
 		}
 
 
-		std::shared_ptr<Keyboard::Keyboard> getKeyboard() { return std::make_shared<Keyboard::Keyboard>(m_keyboard); }
+		std::shared_ptr<Keyboard::Keyboard> getKeyboard() { return m_keyboard; }
 
 		// ------------------------------------------------
 		InputManager(InputManager const&) = delete;
@@ -43,7 +43,8 @@ namespace Input
 		*/
 		InputManager();
 
-		Keyboard::Keyboard m_keyboard;
+
+		std::shared_ptr<Keyboard::Keyboard> m_keyboard;	/**< The Keyboard */
 	};
 }
 }

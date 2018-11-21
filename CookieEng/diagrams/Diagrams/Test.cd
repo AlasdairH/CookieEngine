@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CookieEng::Resources::Material">
+    <Position X="0.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkAAAQAAAIgMAAAAAAIAAAAAAAAAAAAABAAAAAQAAAA=</HashCode>
+      <FileName>include\Material.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookieEng::Resources::Resource">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EICAAAAAIIEAAAAAAAAACAAAAAACEABAAAAAAAAAQAA=</HashCode>
+      <FileName>include\Resource.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookieEng::Resources::ShaderProgram">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAACBAIAAAAJAAAAAAABAAAgAAAgAAJABQAAAFEA=</HashCode>
+      <FileName>include\ShaderProgram.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookieEng::Resources::Texture">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAIAAgAABAAAhAAAAQAAAUACAAAIAAAAABAA=</HashCode>
+      <FileName>include\Texture.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="CookieEng::Resources::Mesh">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAIIAYAAAAAgAAAAAAQAQAAAgAAAACAAAAAA=</HashCode>
+      <FileName>include\Mesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -10,22 +10,64 @@
 // program
 #include "Macro.h"
 #include "Ray.h"
+#include "Component.h"
+#include "Entity.h"
+#include "Transform.h"
+#include "Renderable.h"
 
 namespace CookieEng
 {
-namespace Data
+namespace Components
 {
+	class Transform;
+
 	/*! @class BoundingBox
 	*	@brief An axis aligned bounding box represented by the two minimum and maximum corners
 	*
 	*	Contains the positional data for the corners of the box as well as the available intersect tests.
 	*	The bounding box is not adjusted for the object transform. This must be applied on the getting of the bounding box.
 	*/
-	class BoundingBox
+	class BoundingBox : public ECS::Component
 	{
 	public:
-		glm::vec3 min = glm::vec3(std::numeric_limits<float>::max());		/**< The minimum corner of the bounding box */
-		glm::vec3 max = glm::vec3(std::numeric_limits<float>::min());		/**< The maximum corner of the bounding box */
+		/** @brief Gets the BoundingBox in reference to the object
+		*	@return The BoundingBox
+		*
+		*	Takes the transform component of the parent entity and applies it to a new bounding box from this and then returns it.
+		*/
+		BoundingBox getBoundingBox();
+
+		/** @brief Pulls size data from an attached mesh component
+		*
+		*	Looks for a mesh on the parent component and if it has one, pulls the mesh min / max
+		*/
+		void pullFromMesh();
+
+		/** @brief Gets the minimum bounding point of the AABB
+		*	@return The minimum bounding point of the AABB
+		*
+		*	Gets the minimum bounding point of the AABB
+		*/
+		inline glm::vec3 getMinBoundingPoint() const { return m_min; }
+		/** @brief Gets the maximum bounding point of the AABB
+		*	@return The maximum bounding point of the AABB
+		*
+		*	Gets the maximum bounding point of the AABB
+		*/
+		inline glm::vec3 getMaxBoundingPoint() const { return m_max; }
+
+		/** @brief Sets the minimum bounding point of the AABB
+		*	@param The new minimum bounding point of the AABB
+		*
+		*	Sets the minimum bounding point of the AABB
+		*/
+		inline void setMinBoundingPoint(const glm::vec3 &_min) { m_min = _min; }
+		/** @brief Sets the maximum bounding point of the AABB
+		*	@paran The new maximum bounding point of the AABB
+		*
+		*	Sets the maximum bounding point of the AABB
+		*/
+		inline void setMaxBoundingPoint(const glm::vec3 &_max) { m_max = _max; }
 
 		/** @brief Tests if the bounding box collides with another bounding box
 		*	@return A boolean flag stating if a collision occured or not
@@ -33,20 +75,7 @@ namespace Data
 		*
 		*	Tests a collision between 'this' bounding box and another. 
 		*/
-		bool testCollision(const BoundingBox &_other)
-		{
-			if (min.x <= _other.max.x && max.x >= _other.min.x)
-			{
-				if (min.y <= _other.max.y && max.y >= _other.min.y)
-				{
-					if (min.z <= _other.max.z && max.z >= _other.min.z)
-					{
-						return true;
-					}
-				}
-			}
-			return false;
-		}
+		bool testCollision(const BoundingBox &_other);
 
 		/** @brief Tests if the bounding box collides with a ray
 		*	@return A boolean flag stating if a collision occured or not
@@ -54,20 +83,11 @@ namespace Data
 		*
 		*	Tests a collision between 'this' bounding box and a ray.
 		*/
-		bool testCollision(const Ray &_ray)
-		{
-			double tmin = -INFINITY, tmax = INFINITY;
+		bool testCollision(const Data::Ray &_ray);
 
-			for (int i = 0; i < 3; ++i) {
-				double t2 = (max[i] - _ray.origin[i]) * _ray.inverseDirection[i];
-				double t1 = (min[i] - _ray.origin[i]) * _ray.inverseDirection[i];
-
-				tmin = CNG_MAX(tmin, CNG_MIN(t1, t2));
-				tmax = CNG_MIN(tmax, CNG_MAX(t1, t2));
-			}
-
-			return tmax > CNG_MAX(tmin, 0.0);
-		}
+	protected:
+		glm::vec3 m_min = glm::vec3(std::numeric_limits<float>::max());		/**< The minimum corner of the bounding box */
+		glm::vec3 m_max = glm::vec3(std::numeric_limits<float>::min());		/**< The maximum corner of the bounding box */
 	};
 }
 }

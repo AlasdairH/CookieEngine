@@ -44,19 +44,19 @@ namespace Resources
 				float z = std::stof(zVal);
 
 				// check bounding box values
-				if (x < boundingBox.min.x)
-					boundingBox.min.x = x;
-				if (y < boundingBox.min.y)
-					boundingBox.min.y = y;
-				if (z < boundingBox.min.z)
-					boundingBox.min.z = z;
+				if (x < m_minBound.x)
+					m_minBound.x = x;
+				if (y < m_minBound.y)
+					m_minBound.y = y;
+				if (z < m_minBound.z)
+					m_minBound.z = z;
 
-				if (x > boundingBox.max.x)
-					boundingBox.max.x = x;
-				if (y > boundingBox.max.y)
-					boundingBox.max.y = y;
-				if (z > boundingBox.max.z)
-					boundingBox.max.z = z;
+				if (x > m_maxBound.x)
+					m_maxBound.x = x;
+				if (y > m_maxBound.y)
+					m_maxBound.y = y;
+				if (z > m_maxBound.z)
+					m_maxBound.z = z;
 
 				verticesMap[(int)verticesMap.size() + 1] = glm::vec3(x, y, z);
 			}
@@ -168,6 +168,8 @@ namespace Resources
 
 			m_loadedToGPU = true;
 		}
+
+		m_isLoaded = true;
 	}
 	
 }

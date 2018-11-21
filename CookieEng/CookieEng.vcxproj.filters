@@ -204,6 +204,9 @@
     <ClCompile Include="src\InputManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\BoundingBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ServiceLocator.h">
@@ -359,6 +362,7 @@
     <None Include="resources\shaders\BasicPP.cngShader" />
     <None Include="resources\assets\levels\test.lvl" />
     <None Include="resources\materials\BasicMaterial.mat" />
+    <None Include="diagrams\Diagrams\Test.cd" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\Default.png">

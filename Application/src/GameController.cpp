@@ -1,7 +1,5 @@
 #include "GameController.h"
 
-
-
 namespace Crumble
 {
 	void GameController::onStart()
@@ -10,6 +8,13 @@ namespace Crumble
 		player.addComponent<CookieEng::Components::Transform>();
 		player.addComponent<CookieEng::Components::Renderable>();
 		player.addComponent<Crumble::Player>();
+
+		// add and set bounding box
+		
+		player.addComponent<CookieEng::Components::BoundingBox>();
+		auto boundingBox = player.getComponent<CookieEng::Components::BoundingBox>();
+		boundingBox->pullFromMesh();
+		
 		m_player = CNG_ACTIVE_SCENE->addEntity(player);
 	}
 
@@ -28,12 +33,20 @@ namespace Crumble
 			float test = CookieEng::Utilities::UtilsFloat::randFloat(0.0f, 1.0f);
 			if (test > 0.99f)
 			{
+				// get a random x pos over the top of the screen
 				int xpos = (int)(CookieEng::Utilities::UtilsFloat::randFloat(-8.0f, 8.0f) / 2) * 2;
 				CookieEng::ECS::Entity object;
 				object.addComponent<CookieEng::Components::Transform>();
 				object.getComponent<CookieEng::Components::Transform>()->setPosition(glm::vec3(xpos, 5, 0));
 				object.addComponent<CookieEng::Components::Renderable>();
+				auto rednerable = object.getComponent<CookieEng::Components::Renderable>();
+				object.addComponent<CookieEng::Components::BoundingBox>();
+
 				object.addComponent<Crumble::Collectable>();
+
+				auto boundingBox = object.getComponent<CookieEng::Components::BoundingBox>();
+				boundingBox->pullFromMesh();
+
 				m_collectables.emplace_back(CNG_ACTIVE_SCENE->addEntity(object));
 			}
 		}
@@ -49,7 +62,8 @@ namespace Crumble
 				continue;
 			}
 
-			if (m_collectables[i].lock()->getComponent<CookieEng::Components::Transform>()->getPositionVec3().y < -5.0f)
+			// if the collectable has gone over the bottom of the screen
+			if (m_collectables[i].lock()->getComponent<CookieEng::Components::Transform>()->getPositionVec3().y < -6.0f)
 			{
 				CNG_ACTIVE_SCENE->removeEntity(m_collectables[i].lock());
 				indexToRemove.push_back(i);
@@ -60,7 +74,7 @@ namespace Crumble
 			}
 
 			// test collision between cookie (Collectable) and mug (Player)
-			if (m_collectables[i].lock()->getComponent<CookieEng::Components::Renderable>()->getBoundingBox().testCollision(m_player->getComponent<CookieEng::Components::Renderable>()->getBoundingBox()))
+			if (m_collectables[i].lock()->getComponent<CookieEng::Components::BoundingBox>()->getBoundingBox().testCollision(m_player->getComponent<CookieEng::Components::BoundingBox>()->getBoundingBox()))
 			{
 				LOG_MESSAGE("Collision Detected");
 				CNG_ACTIVE_SCENE->removeEntity(m_collectables[i].lock());
@@ -76,7 +90,7 @@ namespace Crumble
 		// reverse to decend
 		std::reverse(indexToRemove.begin(), indexToRemove.end());
 
-		for (int i = 0; i < indexToRemove.size(); ++i)
+		for (unsigned int i = 0; i < indexToRemove.size(); ++i)
 		{
 			m_collectables.erase(m_collectables.begin() + indexToRemove[i]);
 		}

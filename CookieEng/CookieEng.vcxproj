@@ -166,6 +166,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\BoundingBox.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\CookieCore.cpp" />
     <ClCompile Include="src\Entity.cpp" />
@@ -252,6 +253,7 @@
     <Text Include="resources\shaders\object\vert.glsl" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="diagrams\Diagrams\Test.cd" />
     <None Include="resources\assets\levels\test.lvl" />
     <None Include="resources\DoxygenMain.dox" />
     <None Include="resources\doxygen\home.dox" />

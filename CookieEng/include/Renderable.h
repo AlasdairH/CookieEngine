@@ -54,14 +54,6 @@ namespace Components
 		*/
 		inline std::shared_ptr<Resources::Material> getMaterial() { return m_material; }
 
-		// TODO: Move this to a component
-		/** @brief Gets a bounding box with transform applied
-		*	@return A bounding box
-		*
-		*	Gets a bounding box including the objects transform data
-		*/
-		Data::BoundingBox getBoundingBox();
-
 	protected:
 		std::shared_ptr<Resources::Mesh>			m_mesh;			/**< A shared pointer to the Mesh, typically in the ResourceManager */
 		std::shared_ptr<Resources::Material>		m_material;		/**< A shared pointer to the Material, typically in the ResourceManager */

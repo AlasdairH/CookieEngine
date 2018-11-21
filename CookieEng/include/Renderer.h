@@ -17,10 +17,14 @@
 #include "FrameBuffer.h"
 #include "Transform.h"
 
+
 namespace CookieEng
 {
 namespace Graphics
 {
+
+	enum RenderMode { CNG_RENDERMODE_FILL, CNG_RENDERMODE_WIREFRAME};
+
 	/*! @class Renderer
 	*	@brief An OpenGL Renderer
 	*
@@ -34,6 +38,13 @@ namespace Graphics
 		*	Logs a created message
 		*/
 		Renderer();
+
+		/** @brief Sets the default FrameBuffer to render to if one has not been provided.
+		*	@param _frameBuffer A pointer to the FrameBuffer to use
+		*
+		*	Sets the default FrameBuffer to render to if one has not been provided. CAREFUL OF DANGLING POINTERS HERE
+		*/
+		inline void setRenderMode(RenderMode _renderMode) { m_renderMode = _renderMode; }
 
 		/** @brief Sets the default FrameBuffer to render to if one has not been provided.
 		*	@param _frameBuffer A pointer to the FrameBuffer to use
@@ -61,7 +72,9 @@ namespace Graphics
 		void draw(ECS::Entity &_entity);
 
 	protected:
-		FrameBuffer *m_frameBuffer; /**< The framebuffer to render to by default */
+		FrameBuffer *m_frameBuffer;		/**< The framebuffer to render to by default */
+
+		RenderMode	m_renderMode = CNG_RENDERMODE_FILL;		/**< The render mode to use when drawing */
 	};
 
 }

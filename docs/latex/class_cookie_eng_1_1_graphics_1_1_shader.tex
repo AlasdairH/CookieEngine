@@ -1,0 +1,169 @@
+\hypertarget{class_cookie_eng_1_1_graphics_1_1_shader}{}\section{Cookie\+Eng\+:\+:Graphics\+:\+:Shader Class Reference}
+\label{class_cookie_eng_1_1_graphics_1_1_shader}\index{Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}}
+
+
+Abstracted Open\+GL \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader}.  
+
+
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_shader_a98dc593bccbf90a50cadf035b3382374}{Shader} (Shader\+Type \+\_\+shader\+Type)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_shader_a0c90d1cf0ddfb5f9aef80fd196bbf890}{$\sim$\+Shader} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader} Dtor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader_aa11548ffaa72d77521576044a122af43}{load} (std\+::string \+\_\+filepath)
+\begin{DoxyCompactList}\small\item\em Loads a text file into the \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader_a28abd2dba4a183cb810b196af2e1d5a3}{verify} ()
+\begin{DoxyCompactList}\small\item\em Loads a text file into the \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader}. \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader_a4d3333267a9bbdaf9157a59120cf8b51}{get\+Shader\+ID} ()
+\begin{DoxyCompactList}\small\item\em Gets the shader ID. \end{DoxyCompactList}\item 
+Shader\+Type \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader_adde0294c86137d22a247bd011b8e40c8}{get\+Shader\+Type} ()
+\begin{DoxyCompactList}\small\item\em Gets the shader type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader_ae591a7107e04f835f1f8dbc42e0035c6}{init} ()
+\begin{DoxyCompactList}\small\item\em Initialises the \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader_acfa364395f90fdea34e5365221b3b564}{m\+\_\+verified}
+\item 
+Shader\+Type \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader_a50b512033ec7bd695dcd4daa2d971c22}{m\+\_\+shader\+Type}
+\item 
+G\+Luint \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader_a3c2b2bf0f97b9367c3871de99378bbbf}{m\+\_\+shader\+ID}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstracted Open\+GL \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader}. 
+
+Abstracts and provides simple utilities for an Open\+GL \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader} to be used by a shader program. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_shader_a98dc593bccbf90a50cadf035b3382374}\label{class_cookie_eng_1_1_graphics_1_1_shader_a98dc593bccbf90a50cadf035b3382374}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Shader()}{Shader()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Graphics\+::\+Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{Shader\+Type}]{\+\_\+shader\+Type }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader} Ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+shader\+Type} & The Type of \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader} to Create (vertex, fragment, etc)\\
+\hline
+\end{DoxyParams}
+Creates an Open\+GL shader of the specified type and stores the Open\+GL ID in m\+\_\+shader\+ID. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_shader_a0c90d1cf0ddfb5f9aef80fd196bbf890}\label{class_cookie_eng_1_1_graphics_1_1_shader_a0c90d1cf0ddfb5f9aef80fd196bbf890}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}!````~Shader@{$\sim$\+Shader}}
+\index{````~Shader@{$\sim$\+Shader}!Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{$\sim$\+Shader()}{~Shader()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Graphics\+::\+Shader\+::$\sim$\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader} Dtor. 
+
+Destorys the shader 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_shader_a4d3333267a9bbdaf9157a59120cf8b51}\label{class_cookie_eng_1_1_graphics_1_1_shader_a4d3333267a9bbdaf9157a59120cf8b51}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}!get\+Shader\+ID@{get\+Shader\+ID}}
+\index{get\+Shader\+ID@{get\+Shader\+ID}!Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{get\+Shader\+I\+D()}{getShaderID()}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Shader\+::get\+Shader\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the shader ID. 
+
+\begin{DoxyReturn}{Returns}
+The shader ID
+\end{DoxyReturn}
+Returns the \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader} ID \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_shader_adde0294c86137d22a247bd011b8e40c8}\label{class_cookie_eng_1_1_graphics_1_1_shader_adde0294c86137d22a247bd011b8e40c8}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}!get\+Shader\+Type@{get\+Shader\+Type}}
+\index{get\+Shader\+Type@{get\+Shader\+Type}!Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{get\+Shader\+Type()}{getShaderType()}}
+{\footnotesize\ttfamily Shader\+Type Cookie\+Eng\+::\+Graphics\+::\+Shader\+::get\+Shader\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the shader type. 
+
+\begin{DoxyReturn}{Returns}
+The shader type
+\end{DoxyReturn}
+Returns the \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader} Type \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_shader_ae591a7107e04f835f1f8dbc42e0035c6}\label{class_cookie_eng_1_1_graphics_1_1_shader_ae591a7107e04f835f1f8dbc42e0035c6}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}!init@{init}}
+\index{init@{init}!Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Shader\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialises the \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader}. 
+
+Creates the shader on the G\+PU. This is seperated from the Constructor as initialising there was causing issues. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_shader_aa11548ffaa72d77521576044a122af43}\label{class_cookie_eng_1_1_graphics_1_1_shader_aa11548ffaa72d77521576044a122af43}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}!load@{load}}
+\index{load@{load}!Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Graphics\+::\+Shader\+::load (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+filepath }\end{DoxyParamCaption})}
+
+
+
+Loads a text file into the \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+filepath} & The path to the Text File to be loaded \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the load. True for sucessful, false for error.
+\end{DoxyReturn}
+Uses the file manager service to load a text file and places it onto the G\+PU. The shader is then verified to ensure the shader source is valid. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_shader_a28abd2dba4a183cb810b196af2e1d5a3}\label{class_cookie_eng_1_1_graphics_1_1_shader_a28abd2dba4a183cb810b196af2e1d5a3}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}!verify@{verify}}
+\index{verify@{verify}!Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Graphics\+::\+Shader\+::verify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads a text file into the \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader}. 
+
+\begin{DoxyReturn}{Returns}
+The result of the verification. True for sucessful, false for error.
+\end{DoxyReturn}
+Verifies the shader complination and insures it will run. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_shader_a3c2b2bf0f97b9367c3871de99378bbbf}\label{class_cookie_eng_1_1_graphics_1_1_shader_a3c2b2bf0f97b9367c3871de99378bbbf}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}!m\+\_\+shader\+ID@{m\+\_\+shader\+ID}}
+\index{m\+\_\+shader\+ID@{m\+\_\+shader\+ID}!Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{m\+\_\+shader\+ID}{m\_shaderID}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Shader\+::m\+\_\+shader\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Open\+GL ID \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_shader_a50b512033ec7bd695dcd4daa2d971c22}\label{class_cookie_eng_1_1_graphics_1_1_shader_a50b512033ec7bd695dcd4daa2d971c22}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}!m\+\_\+shader\+Type@{m\+\_\+shader\+Type}}
+\index{m\+\_\+shader\+Type@{m\+\_\+shader\+Type}!Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{m\+\_\+shader\+Type}{m\_shaderType}}
+{\footnotesize\ttfamily Shader\+Type Cookie\+Eng\+::\+Graphics\+::\+Shader\+::m\+\_\+shader\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+The \hyperlink{class_cookie_eng_1_1_graphics_1_1_shader}{Shader} Type \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_shader_acfa364395f90fdea34e5365221b3b564}\label{class_cookie_eng_1_1_graphics_1_1_shader_acfa364395f90fdea34e5365221b3b564}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}!m\+\_\+verified@{m\+\_\+verified}}
+\index{m\+\_\+verified@{m\+\_\+verified}!Cookie\+Eng\+::\+Graphics\+::\+Shader@{Cookie\+Eng\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{m\+\_\+verified}{m\_verified}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Graphics\+::\+Shader\+::m\+\_\+verified\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag to indiciate the verification state of the shader 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Shader.\+h\end{DoxyCompactItemize}

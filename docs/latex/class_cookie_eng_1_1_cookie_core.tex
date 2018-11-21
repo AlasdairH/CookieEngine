@@ -1,0 +1,95 @@
+\hypertarget{class_cookie_eng_1_1_cookie_core}{}\section{Cookie\+Eng\+:\+:Cookie\+Core Class Reference}
+\label{class_cookie_eng_1_1_cookie_core}\index{Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}}
+
+
+The engine core class.  
+
+
+
+
+{\ttfamily \#include $<$Cookie\+Core.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_cookie_core_a4eca2aeec2dc76b06646bd5124de3d98}{Cookie\+Core} ()
+\begin{DoxyCompactList}\small\item\em Core Ctor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_cookie_core_ac3921a88393cf927bce932958ba710b6}{initialise} (int \+\_\+window\+Resolution\+Width, int \+\_\+window\+Resolution\+Height)
+\begin{DoxyCompactList}\small\item\em Initialises Cookie\+Engine. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_cookie_core_a30f6d3ab2c753095de7d61c69dddbd87}{start} ()
+\begin{DoxyCompactList}\small\item\em Starts Cookie\+Engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_window}{Window} $\ast$ \hyperlink{class_cookie_eng_1_1_cookie_core_ab95ee714d9d00c4a43859d0e427ea577}{m\+\_\+window}
+\item 
+bool \hyperlink{class_cookie_eng_1_1_cookie_core_a56072701bf07b2f787081cf41f5ae254}{m\+\_\+is\+Initialised} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The engine core class. 
+
+The core class which contains the initialisation and start functions. These must be run for the engine to work properly. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_cookie_core_a4eca2aeec2dc76b06646bd5124de3d98}\label{class_cookie_eng_1_1_cookie_core_a4eca2aeec2dc76b06646bd5124de3d98}} 
+\index{Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}!Cookie\+Core@{Cookie\+Core}}
+\index{Cookie\+Core@{Cookie\+Core}!Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}}
+\subsubsection{\texorpdfstring{Cookie\+Core()}{CookieCore()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Cookie\+Core\+::\+Cookie\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Core Ctor. 
+
+Does nothing 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_cookie_core_ac3921a88393cf927bce932958ba710b6}\label{class_cookie_eng_1_1_cookie_core_ac3921a88393cf927bce932958ba710b6}} 
+\index{Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}!initialise@{initialise}}
+\index{initialise@{initialise}!Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}}
+\subsubsection{\texorpdfstring{initialise()}{initialise()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Cookie\+Core\+::initialise (\begin{DoxyParamCaption}\item[{int}]{\+\_\+window\+Resolution\+Width,  }\item[{int}]{\+\_\+window\+Resolution\+Height }\end{DoxyParamCaption})}
+
+
+
+Initialises Cookie\+Engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+window\+Resolution\+Width} & The window width to create with the engine \\
+\hline
+{\em \+\_\+window\+Resolution\+Height} & The filepath The window height to create with the engine\\
+\hline
+\end{DoxyParams}
+Does the essential engine initialisation such as starting services and running the constructors of any singletons. This ensures an explicit construction order is adheared to as some services require others to be started before they can work. \mbox{\Hypertarget{class_cookie_eng_1_1_cookie_core_a30f6d3ab2c753095de7d61c69dddbd87}\label{class_cookie_eng_1_1_cookie_core_a30f6d3ab2c753095de7d61c69dddbd87}} 
+\index{Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}!start@{start}}
+\index{start@{start}!Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Cookie\+Core\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts Cookie\+Engine. 
+
+Runs the start methods of any entitie\textquotesingle{}s components in the scene at the beginning of the program and starts the engine loop. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_cookie_core_a56072701bf07b2f787081cf41f5ae254}\label{class_cookie_eng_1_1_cookie_core_a56072701bf07b2f787081cf41f5ae254}} 
+\index{Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}!m\+\_\+is\+Initialised@{m\+\_\+is\+Initialised}}
+\index{m\+\_\+is\+Initialised@{m\+\_\+is\+Initialised}!Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}}
+\subsubsection{\texorpdfstring{m\+\_\+is\+Initialised}{m\_isInitialised}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Cookie\+Core\+::m\+\_\+is\+Initialised = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+State flag for the engine initialisation state. Cannot start unless this is true. \mbox{\Hypertarget{class_cookie_eng_1_1_cookie_core_ab95ee714d9d00c4a43859d0e427ea577}\label{class_cookie_eng_1_1_cookie_core_ab95ee714d9d00c4a43859d0e427ea577}} 
+\index{Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}!m\+\_\+window@{m\+\_\+window}}
+\index{m\+\_\+window@{m\+\_\+window}!Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}}
+\subsubsection{\texorpdfstring{m\+\_\+window}{m\_window}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_window}{Window}$\ast$ Cookie\+Eng\+::\+Cookie\+Core\+::m\+\_\+window\hspace{0.3cm}{\ttfamily [protected]}}
+
+The window with an Open\+GL context to render to 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Cookie\+Core.\+h\end{DoxyCompactItemize}

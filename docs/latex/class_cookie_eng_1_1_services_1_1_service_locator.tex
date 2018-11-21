@@ -1,0 +1,191 @@
+\hypertarget{class_cookie_eng_1_1_services_1_1_service_locator}{}\section{Cookie\+Eng\+:\+:Services\+:\+:Service\+Locator Class Reference}
+\label{class_cookie_eng_1_1_services_1_1_service_locator}\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+
+
+Works as an interface to the managers and services provided by the engine.  
+
+
+
+
+{\ttfamily \#include $<$Service\+Locator.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser} \& \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_af235353d13e544fe474d6908ef4f96fb}{get\+Initialiser} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the initialiser. \end{DoxyCompactList}\item 
+static void \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_a49766d5e7cdca3f2384feb4258c9a155}{set\+Initialiser} (\hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser} $\ast$\+\_\+initialiser)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser}. \end{DoxyCompactList}\item 
+static void \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_a1603a231c16663c30ed40afd49dffb72}{clear\+Initialiser} ()
+\begin{DoxyCompactList}\small\item\em Clears the \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser}. \end{DoxyCompactList}\item 
+static \hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager} \& \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_a964340ed78281fdd04f499c80f7ce01d}{get\+File\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the File Manager. \end{DoxyCompactList}\item 
+static void \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_a8a58e7b22845b4bf688cd98d2d78a72d}{set\+File\+Manager} (\hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager} $\ast$\+\_\+file\+Manager)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager}. \end{DoxyCompactList}\item 
+static void \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_a648c75987f9d4380475b3c2056f6d963}{clear\+File\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Clears the \hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager}. \end{DoxyCompactList}\item 
+static \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue} \& \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_a3acc403cde719caada08b5cf9327ad24}{get\+Message\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the Message Queue. \end{DoxyCompactList}\item 
+static void \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_aafa67e5c104a89681d41937b4deaad9d}{set\+Message\+Queue} (\hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue} $\ast$\+\_\+message\+Queue)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue}. \end{DoxyCompactList}\item 
+static void \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_a1354419abaf9ead394541a24f64bb5fa}{clear\+Message\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Clears the \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser} $\ast$ \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_a4016a14884b5701e26047bd9e9404c20}{s\+\_\+initialiser}
+\item 
+static \hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager} $\ast$ \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_a98841ef7f94fae563997ce5bc2d6e507}{s\+\_\+file\+Manager}
+\item 
+static \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue} $\ast$ \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator_a69ae2c1a6385322f36009b87c90cc0de}{s\+\_\+message\+Queue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Works as an interface to the managers and services provided by the engine. 
+
+This class provides access to services and managers. These are static to follow a singleton pattern that can be accessed anywhere in the engine.
+
+Different managers and services can be applied to the locator to make multiple versions of the same manager possible if differing settings were required. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_a648c75987f9d4380475b3c2056f6d963}\label{class_cookie_eng_1_1_services_1_1_service_locator_a648c75987f9d4380475b3c2056f6d963}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!clear\+File\+Manager@{clear\+File\+Manager}}
+\index{clear\+File\+Manager@{clear\+File\+Manager}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{clear\+File\+Manager()}{clearFileManager()}}
+{\footnotesize\ttfamily static void Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::clear\+File\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Clears the \hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager}. 
+
+Sets the File Manager to a nullptr \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_a1603a231c16663c30ed40afd49dffb72}\label{class_cookie_eng_1_1_services_1_1_service_locator_a1603a231c16663c30ed40afd49dffb72}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!clear\+Initialiser@{clear\+Initialiser}}
+\index{clear\+Initialiser@{clear\+Initialiser}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{clear\+Initialiser()}{clearInitialiser()}}
+{\footnotesize\ttfamily static void Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::clear\+Initialiser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Clears the \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser}. 
+
+Sets the \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser} to a nullptr \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_a1354419abaf9ead394541a24f64bb5fa}\label{class_cookie_eng_1_1_services_1_1_service_locator_a1354419abaf9ead394541a24f64bb5fa}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!clear\+Message\+Queue@{clear\+Message\+Queue}}
+\index{clear\+Message\+Queue@{clear\+Message\+Queue}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{clear\+Message\+Queue()}{clearMessageQueue()}}
+{\footnotesize\ttfamily static void Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::clear\+Message\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Clears the \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue}. 
+
+Sets the Message Queue to a nullptr \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_a964340ed78281fdd04f499c80f7ce01d}\label{class_cookie_eng_1_1_services_1_1_service_locator_a964340ed78281fdd04f499c80f7ce01d}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!get\+File\+Manager@{get\+File\+Manager}}
+\index{get\+File\+Manager@{get\+File\+Manager}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{get\+File\+Manager()}{getFileManager()}}
+{\footnotesize\ttfamily static \hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager}\& Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::get\+File\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a reference to the File Manager. 
+
+\begin{DoxyReturn}{Returns}
+The File Manager
+\end{DoxyReturn}
+Returns a reference to the File Manager \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_af235353d13e544fe474d6908ef4f96fb}\label{class_cookie_eng_1_1_services_1_1_service_locator_af235353d13e544fe474d6908ef4f96fb}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!get\+Initialiser@{get\+Initialiser}}
+\index{get\+Initialiser@{get\+Initialiser}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{get\+Initialiser()}{getInitialiser()}}
+{\footnotesize\ttfamily static \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser}\& Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::get\+Initialiser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a reference to the initialiser. 
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser}
+\end{DoxyReturn}
+Returns a reference to the initialiser. \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_a3acc403cde719caada08b5cf9327ad24}\label{class_cookie_eng_1_1_services_1_1_service_locator_a3acc403cde719caada08b5cf9327ad24}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!get\+Message\+Queue@{get\+Message\+Queue}}
+\index{get\+Message\+Queue@{get\+Message\+Queue}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{get\+Message\+Queue()}{getMessageQueue()}}
+{\footnotesize\ttfamily static \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue}\& Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::get\+Message\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a reference to the Message Queue. 
+
+\begin{DoxyReturn}{Returns}
+The Message Queue
+\end{DoxyReturn}
+Returns a reference to the Message Queue \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_a8a58e7b22845b4bf688cd98d2d78a72d}\label{class_cookie_eng_1_1_services_1_1_service_locator_a8a58e7b22845b4bf688cd98d2d78a72d}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!set\+File\+Manager@{set\+File\+Manager}}
+\index{set\+File\+Manager@{set\+File\+Manager}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{set\+File\+Manager()}{setFileManager()}}
+{\footnotesize\ttfamily static void Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::set\+File\+Manager (\begin{DoxyParamCaption}\item[{\hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager} $\ast$}]{\+\_\+file\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the \hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+file\+Manager} & The File Manager to be used by the Service Locator\\
+\hline
+\end{DoxyParams}
+Sets the \hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager} that will be accessesd through the Service Locator \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_a49766d5e7cdca3f2384feb4258c9a155}\label{class_cookie_eng_1_1_services_1_1_service_locator_a49766d5e7cdca3f2384feb4258c9a155}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!set\+Initialiser@{set\+Initialiser}}
+\index{set\+Initialiser@{set\+Initialiser}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{set\+Initialiser()}{setInitialiser()}}
+{\footnotesize\ttfamily static void Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::set\+Initialiser (\begin{DoxyParamCaption}\item[{\hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser} $\ast$}]{\+\_\+initialiser }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+initialiser} & The initialiser to be used by the Service Locator\\
+\hline
+\end{DoxyParams}
+Sets the initialiser that will be accessesd through the Service Locator \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_aafa67e5c104a89681d41937b4deaad9d}\label{class_cookie_eng_1_1_services_1_1_service_locator_aafa67e5c104a89681d41937b4deaad9d}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!set\+Message\+Queue@{set\+Message\+Queue}}
+\index{set\+Message\+Queue@{set\+Message\+Queue}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{set\+Message\+Queue()}{setMessageQueue()}}
+{\footnotesize\ttfamily static void Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::set\+Message\+Queue (\begin{DoxyParamCaption}\item[{\hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue} $\ast$}]{\+\_\+message\+Queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+message\+Queue} & The File Manager to be used by the Service Locator\\
+\hline
+\end{DoxyParams}
+Sets the Message Queue that will be accessesd through the Service Locator 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_a98841ef7f94fae563997ce5bc2d6e507}\label{class_cookie_eng_1_1_services_1_1_service_locator_a98841ef7f94fae563997ce5bc2d6e507}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!s\+\_\+file\+Manager@{s\+\_\+file\+Manager}}
+\index{s\+\_\+file\+Manager@{s\+\_\+file\+Manager}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{s\+\_\+file\+Manager}{s\_fileManager}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager}$\ast$ Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::s\+\_\+file\+Manager\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Static Pointer to the File Mananger. \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_a4016a14884b5701e26047bd9e9404c20}\label{class_cookie_eng_1_1_services_1_1_service_locator_a4016a14884b5701e26047bd9e9404c20}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!s\+\_\+initialiser@{s\+\_\+initialiser}}
+\index{s\+\_\+initialiser@{s\+\_\+initialiser}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{s\+\_\+initialiser}{s\_initialiser}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser}$\ast$ Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::s\+\_\+initialiser\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Static Pointer to the \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser}. \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_locator_a69ae2c1a6385322f36009b87c90cc0de}\label{class_cookie_eng_1_1_services_1_1_service_locator_a69ae2c1a6385322f36009b87c90cc0de}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}!s\+\_\+message\+Queue@{s\+\_\+message\+Queue}}
+\index{s\+\_\+message\+Queue@{s\+\_\+message\+Queue}!Cookie\+Eng\+::\+Services\+::\+Service\+Locator@{Cookie\+Eng\+::\+Services\+::\+Service\+Locator}}
+\subsubsection{\texorpdfstring{s\+\_\+message\+Queue}{s\_messageQueue}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue}$\ast$ Cookie\+Eng\+::\+Services\+::\+Service\+Locator\+::s\+\_\+message\+Queue\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Static Pointer to the Message Queue. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Service\+Locator.\+h\end{DoxyCompactItemize}

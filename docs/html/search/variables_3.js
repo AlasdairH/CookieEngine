@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['layout',['layout',['../struct_cookie_eng_1_1_resources_1_1_mesh.html#a7d60f959cc5a9cadbc59299e207032f2',1,'CookieEng::Resources::Mesh']]]
+  ['deltatime',['deltaTime',['../struct_cookie_eng_1_1_utilities_1_1_times.html#abab3889716480204f7250ff3347b8392',1,'CookieEng::Utilities::Times']]],
+  ['direction',['direction',['../struct_cookie_eng_1_1_data_1_1_ray.html#aa245307862a93851ec6bc93ec23ee829',1,'CookieEng::Data::Ray']]]
 ];

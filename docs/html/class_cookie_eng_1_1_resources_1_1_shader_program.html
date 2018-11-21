@@ -24,6 +24,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cookie Engine
    </div>
+   <div id="projectbrief">A basic OpenGL engine designed for Games Programming BSc</div>
   </td>
  </tr>
  </tbody>
@@ -171,7 +172,9 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstracted OpenGL Program. </p>
-<p>Abstracts and provides simple utilities for an OpenGL Shader Program. The program MUST be verified before it can be bound. </p>
+<p>Abstracts and provides simple utilities for an OpenGL Shader Program. The program MUST be verified before it can be bound. This also provides various default uniform buffers that store usefull data for example the "u_camera_data" uniform block which contains the View and Projection Matrices. To use the "u_camera_data" uniform block, simply include</p>
+<p>layout (std140) uniform u_camera_data { mat4 viewMatrix; mat4 projectionMatrix; };</p>
+<p>in the vertex shader. It will be detected and linked on shader verification. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2de1a879247aa4ee38fc2c37408c5285"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2de1a879247aa4ee38fc2c37408c5285">&#9670;&nbsp;</a></span>ShaderProgram()</h2>

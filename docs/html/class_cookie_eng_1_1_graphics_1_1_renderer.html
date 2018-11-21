@@ -24,6 +24,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cookie Engine
    </div>
+   <div id="projectbrief">A basic OpenGL engine designed for Games Programming BSc</div>
   </td>
  </tr>
  </tbody>
@@ -88,9 +89,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa32e62971f191a434ab457f9ac84ac31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#aa32e62971f191a434ab457f9ac84ac31">drawToFrameBuffer</a> (const <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html">FrameBuffer</a> &amp;_fbo, const <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html">VertexArray</a> &amp;_vao, const <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">VertexBuffer</a> &amp;_indexBuffer, const <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html">Resources::Material</a> &amp;_material)</td></tr>
 <tr class="memdesc:aa32e62971f191a434ab457f9ac84ac31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw to a framebuffer.  <a href="#aa32e62971f191a434ab457f9ac84ac31">More...</a><br /></td></tr>
 <tr class="separator:aa32e62971f191a434ab457f9ac84ac31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ce19d76df0b4353a76d2116340b8024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#a8ce19d76df0b4353a76d2116340b8024">drawToFrameBuffer</a> (const <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html">FrameBuffer</a> &amp;_fbo, <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html">ECS::Entity</a> &amp;_entity)</td></tr>
-<tr class="memdesc:a8ce19d76df0b4353a76d2116340b8024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw to a framebuffer.  <a href="#a8ce19d76df0b4353a76d2116340b8024">More...</a><br /></td></tr>
-<tr class="separator:a8ce19d76df0b4353a76d2116340b8024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cadfbd80259f0188e52880c47ac7573"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#a5cadfbd80259f0188e52880c47ac7573">draw</a> (<a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html">ECS::Entity</a> &amp;_entity)</td></tr>
+<tr class="memdesc:a5cadfbd80259f0188e52880c47ac7573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw to a framebuffer.  <a href="#a5cadfbd80259f0188e52880c47ac7573">More...</a><br /></td></tr>
+<tr class="separator:a5cadfbd80259f0188e52880c47ac7573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -122,8 +123,36 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5cadfbd80259f0188e52880c47ac7573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cadfbd80259f0188e52880c47ac7573">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::Graphics::Renderer::draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html">ECS::Entity</a> &amp;&#160;</td>
+          <td class="paramname"><em>_entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw to a framebuffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_fbo</td><td>The framebuffer to draw to </td></tr>
+    <tr><td class="paramname">_entity</td><td>The Entity to draw</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Takes a frame buffer and the required objects for rendering and renders using the provided material to the framebuffer. </p>
+
+</div>
+</div>
 <a id="aa32e62971f191a434ab457f9ac84ac31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa32e62971f191a434ab457f9ac84ac31">&#9670;&nbsp;</a></span>drawToFrameBuffer() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa32e62971f191a434ab457f9ac84ac31">&#9670;&nbsp;</a></span>drawToFrameBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,44 +196,6 @@ Protected Attributes</h2></td></tr>
     <tr><td class="paramname">_vao</td><td>The <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_array.html" title="Absraction of an OpenGL Vertex Array Object (VAO) ">VertexArray</a> that contains the vertex data for the model to be displayed. </td></tr>
     <tr><td class="paramname">_indexBuffer</td><td>The index buffer (<a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html" title="An abstraction of an OpenGL Vertex Bufer Object (VBO). ">VertexBuffer</a>) that contains the indicies to map the vertex drawing to. (Avoids duplicate data) </td></tr>
     <tr><td class="paramname">_material</td><td>The material to use when rendering the mesh to the screen</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Takes a frame buffer and the required objects for rendering and renders using the provided material to the framebuffer. </p>
-
-</div>
-</div>
-<a id="a8ce19d76df0b4353a76d2116340b8024"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ce19d76df0b4353a76d2116340b8024">&#9670;&nbsp;</a></span>drawToFrameBuffer() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CookieEng::Graphics::Renderer::drawToFrameBuffer </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html">FrameBuffer</a> &amp;&#160;</td>
-          <td class="paramname"><em>_fbo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html">ECS::Entity</a> &amp;&#160;</td>
-          <td class="paramname"><em>_entity</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draw to a framebuffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">_fbo</td><td>The framebuffer to draw to </td></tr>
-    <tr><td class="paramname">_entity</td><td>The Entity to draw</td></tr>
   </table>
   </dd>
 </dl>

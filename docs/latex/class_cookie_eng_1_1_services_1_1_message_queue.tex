@@ -1,0 +1,125 @@
+\hypertarget{class_cookie_eng_1_1_services_1_1_message_queue}{}\section{Cookie\+Eng\+:\+:Services\+:\+:Message\+Queue Class Reference}
+\label{class_cookie_eng_1_1_services_1_1_message_queue}\index{Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}}
+
+
+A queue for distributing messages to Observers.  
+
+
+
+
+{\ttfamily \#include $<$Message\+Queue.\+h$>$}
+
+
+
+Inherits \hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{Cookie\+Eng\+::\+Messaging\+::\+I\+Message\+Handler}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue_aa8e385cf13d310d88f97053897e4970e}{push\+Message} (const \hyperlink{class_cookie_eng_1_1_messaging_1_1_message}{Messaging\+::\+Message} \&\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em Adds a message to the queue. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue_ab21464c42066c511f5e9284a24113ad9}{update} ()
+\begin{DoxyCompactList}\small\item\em Handles the queue of messages. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue_a33acc39b1189fd0ced268ee68e3eba7a}{add\+Observer} (const Messaging\+::\+Message\+Type \+\_\+msg\+Type, \hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{Messaging\+::\+I\+Message\+Handler} $\ast$\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em Adds a message to the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::queue$<$ \hyperlink{class_cookie_eng_1_1_messaging_1_1_message}{Messaging\+::\+Message} $>$ \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue_a78777e2abfdd974561b81a3c06d185bf}{m\+\_\+message\+Queue}
+\item 
+std\+::vector$<$ \hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{Messaging\+::\+I\+Message\+Handler} $\ast$ $>$ \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue_a377d77776078730deac58602ab35bf6c}{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+U\+N\+K\+N\+O\+WN}
+\item 
+std\+::vector$<$ \hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{Messaging\+::\+I\+Message\+Handler} $\ast$ $>$ \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue_acff4df9b3d2164173c1aad88fd894c87}{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+D\+O\+WN}
+\item 
+std\+::vector$<$ \hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{Messaging\+::\+I\+Message\+Handler} $\ast$ $>$ \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue_adadeff05bbf5d9260948094904a9b611}{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+UP}
+\item 
+std\+::vector$<$ \hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{Messaging\+::\+I\+Message\+Handler} $\ast$ $>$ \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue_a0fe2077166687dff340472158b85af06}{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+M\+O\+U\+SE}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A queue for distributing messages to Observers. 
+
+Message handlers can register as observers to a specific message type and the message queue will distribute messages of tha type to the observers as they are handled by the queue. T\+O\+DO\+: Msg Expand 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_message_queue_a33acc39b1189fd0ced268ee68e3eba7a}\label{class_cookie_eng_1_1_services_1_1_message_queue_a33acc39b1189fd0ced268ee68e3eba7a}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}!add\+Observer@{add\+Observer}}
+\index{add\+Observer@{add\+Observer}!Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}}
+\subsubsection{\texorpdfstring{add\+Observer()}{addObserver()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Services\+::\+Message\+Queue\+::add\+Observer (\begin{DoxyParamCaption}\item[{const Messaging\+::\+Message\+Type}]{\+\_\+msg\+Type,  }\item[{\hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{Messaging\+::\+I\+Message\+Handler} $\ast$}]{\+\_\+obj }\end{DoxyParamCaption})}
+
+
+
+Adds a message to the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+msg\+Type} & The type that the handler wants to observe \\
+\hline
+{\em \+\_\+obj} & The message handler to assign as an observer\\
+\hline
+\end{DoxyParams}
+Adds an observer of a specified type to the corresponding member vector (m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+). \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_message_queue_aa8e385cf13d310d88f97053897e4970e}\label{class_cookie_eng_1_1_services_1_1_message_queue_aa8e385cf13d310d88f97053897e4970e}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}!push\+Message@{push\+Message}}
+\index{push\+Message@{push\+Message}!Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}}
+\subsubsection{\texorpdfstring{push\+Message()}{pushMessage()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Services\+::\+Message\+Queue\+::push\+Message (\begin{DoxyParamCaption}\item[{const \hyperlink{class_cookie_eng_1_1_messaging_1_1_message}{Messaging\+::\+Message} \&}]{\+\_\+msg }\end{DoxyParamCaption})}
+
+
+
+Adds a message to the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+msg} & The message to push to the queue\\
+\hline
+\end{DoxyParams}
+Adds a message to the queue. \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_message_queue_ab21464c42066c511f5e9284a24113ad9}\label{class_cookie_eng_1_1_services_1_1_message_queue_ab21464c42066c511f5e9284a24113ad9}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}!update@{update}}
+\index{update@{update}!Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Services\+::\+Message\+Queue\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the queue of messages. 
+
+This method runs through the queue of messages and handles them one by one. The message type is read and then messages are distributed to the observers of that type. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_message_queue_a78777e2abfdd974561b81a3c06d185bf}\label{class_cookie_eng_1_1_services_1_1_message_queue_a78777e2abfdd974561b81a3c06d185bf}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}!m\+\_\+message\+Queue@{m\+\_\+message\+Queue}}
+\index{m\+\_\+message\+Queue@{m\+\_\+message\+Queue}!Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}}
+\subsubsection{\texorpdfstring{m\+\_\+message\+Queue}{m\_messageQueue}}
+{\footnotesize\ttfamily std\+::queue$<$\hyperlink{class_cookie_eng_1_1_messaging_1_1_message}{Messaging\+::\+Message}$>$ Cookie\+Eng\+::\+Services\+::\+Message\+Queue\+::m\+\_\+message\+Queue\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Message Queue \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_message_queue_acff4df9b3d2164173c1aad88fd894c87}\label{class_cookie_eng_1_1_services_1_1_message_queue_acff4df9b3d2164173c1aad88fd894c87}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}!m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+D\+O\+WN@{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+D\+O\+WN}}
+\index{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+D\+O\+WN@{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+D\+O\+WN}!Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}}
+\subsubsection{\texorpdfstring{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+D\+O\+WN}{m\_obs\_MSG\_KEY\_DOWN}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{Messaging\+::\+I\+Message\+Handler} $\ast$$>$ Cookie\+Eng\+::\+Services\+::\+Message\+Queue\+::m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+D\+O\+WN\hspace{0.3cm}{\ttfamily [protected]}}
+
+The observer list for Key Down Messages \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_message_queue_adadeff05bbf5d9260948094904a9b611}\label{class_cookie_eng_1_1_services_1_1_message_queue_adadeff05bbf5d9260948094904a9b611}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}!m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+UP@{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+UP}}
+\index{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+UP@{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+UP}!Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}}
+\subsubsection{\texorpdfstring{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+UP}{m\_obs\_MSG\_KEY\_UP}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{Messaging\+::\+I\+Message\+Handler} $\ast$$>$ Cookie\+Eng\+::\+Services\+::\+Message\+Queue\+::m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+K\+E\+Y\+\_\+\+UP\hspace{0.3cm}{\ttfamily [protected]}}
+
+The observer list for Key Uo Messages \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_message_queue_a0fe2077166687dff340472158b85af06}\label{class_cookie_eng_1_1_services_1_1_message_queue_a0fe2077166687dff340472158b85af06}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}!m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+M\+O\+U\+SE@{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+M\+O\+U\+SE}}
+\index{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+M\+O\+U\+SE@{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+M\+O\+U\+SE}!Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}}
+\subsubsection{\texorpdfstring{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+M\+O\+U\+SE}{m\_obs\_MSG\_MOUSE}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{Messaging\+::\+I\+Message\+Handler} $\ast$$>$ Cookie\+Eng\+::\+Services\+::\+Message\+Queue\+::m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+M\+O\+U\+SE\hspace{0.3cm}{\ttfamily [protected]}}
+
+The observer list for Mouse Messages \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_message_queue_a377d77776078730deac58602ab35bf6c}\label{class_cookie_eng_1_1_services_1_1_message_queue_a377d77776078730deac58602ab35bf6c}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}!m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+U\+N\+K\+N\+O\+WN@{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+U\+N\+K\+N\+O\+WN}}
+\index{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+U\+N\+K\+N\+O\+WN@{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+U\+N\+K\+N\+O\+WN}!Cookie\+Eng\+::\+Services\+::\+Message\+Queue@{Cookie\+Eng\+::\+Services\+::\+Message\+Queue}}
+\subsubsection{\texorpdfstring{m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+U\+N\+K\+N\+O\+WN}{m\_obs\_MSG\_UNKNOWN}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_cookie_eng_1_1_messaging_1_1_i_message_handler}{Messaging\+::\+I\+Message\+Handler} $\ast$$>$ Cookie\+Eng\+::\+Services\+::\+Message\+Queue\+::m\+\_\+obs\+\_\+\+M\+S\+G\+\_\+\+U\+N\+K\+N\+O\+WN\hspace{0.3cm}{\ttfamily [protected]}}
+
+The observer list for Uknown Messages 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Message\+Queue.\+h\end{DoxyCompactItemize}

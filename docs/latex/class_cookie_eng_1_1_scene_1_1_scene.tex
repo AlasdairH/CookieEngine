@@ -1,0 +1,248 @@
+\hypertarget{class_cookie_eng_1_1_scene_1_1_scene}{}\section{Cookie\+Eng\+:\+:Scene\+:\+:Scene Class Reference}
+\label{class_cookie_eng_1_1_scene_1_1_scene}\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+
+
+A level representation containing entities.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
+
+
+Inherits enable\+\_\+shared\+\_\+from\+\_\+this$<$ Scene $>$.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a957b1da74150da2df341c1ff7ed39613}{Scene} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_scene_1_1_scene}{Scene} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a2aaed9f1b869d7c35b9d3fada5bf198a}{$\sim$\+Scene} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_scene_1_1_scene}{Scene} Dtor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_adca281b1bff287a62391b5bb8bc18f5c}{set\+Active} ()
+\begin{DoxyCompactList}\small\item\em Sets the active scene to this scene. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a2cccad4cc0411852e327b249b12b9bc3}{add\+Entity} (\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} \&\+\_\+entity)
+\begin{DoxyCompactList}\small\item\em Adds an entity to the scene. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a4287243abfe6016c8c819aebc090bf4c}{get\+Entity} (const int \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Adds an entity to the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_aefa43f3ce579fe9798870c95d92711db}{remove\+Entity} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$ \+\_\+entity)
+\begin{DoxyCompactList}\small\item\em Removes an entity from the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_ab66ffdb5475b0045d0ce5a846488590c}{on\+Start} ()
+\begin{DoxyCompactList}\small\item\em Starts the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a10fa9798a2d0cff5527a4ca160a5202f}{on\+Update} ()
+\begin{DoxyCompactList}\small\item\em Updates the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a94dbc42f8c5b2f7774d8e0de1f5e45a7}{draw} ()
+\begin{DoxyCompactList}\small\item\em Draws the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a3e1fa17bfd8e0e3af72db05c7a5ae0b3}{clean} ()
+\begin{DoxyCompactList}\small\item\em Cleans the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_cookie_eng_1_1_scene_1_1_scene}{Scene} $\ast$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a367277df49168535200a279da96d11c2}{active\+Scene}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a1990da3f0d067d2b542aa6b8fc6f0d43}{m\+\_\+width}
+\item 
+int \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_aea87f5d089b50a248e01ae281441edd3}{m\+\_\+height}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$ $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_ad27cdfdb082498a7b812e054d4b28cb9}{m\+\_\+entities}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a57af2369c4079df376fa6137b6249eaf}{m\+\_\+delete\+Queue}
+\item 
+std\+::map$<$ std\+::string, \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a3ded68c1652ffebf8a4827c6313ccae0}{m\+\_\+entity\+Map}
+\item 
+\hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer}{Graphics\+::\+Renderer} \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_aff47a056f32060d1180ae9bd379e9578}{m\+\_\+renderer}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Graphics\+::\+Frame\+Buffer} $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a44b75b86a2f7ae2ce4dc05c20255e29e}{m\+\_\+frame\+Buffer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A level representation containing entities. 
+
+The scene class handles the entities within it, grouping a level into one place. The active\+Scene static points to the currently active scene. On creation of a scene, if no active scene is set then it is set to that scene. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a957b1da74150da2df341c1ff7ed39613}\label{class_cookie_eng_1_1_scene_1_1_scene_a957b1da74150da2df341c1ff7ed39613}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Scene\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_scene_1_1_scene}{Scene} Ctor. 
+
+Initialises the scene. This sets up the framebuffer and reserves the memory for entities. \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a2aaed9f1b869d7c35b9d3fada5bf198a}\label{class_cookie_eng_1_1_scene_1_1_scene_a2aaed9f1b869d7c35b9d3fada5bf198a}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!````~Scene@{$\sim$\+Scene}}
+\index{````~Scene@{$\sim$\+Scene}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{$\sim$\+Scene()}{~Scene()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Scene\+::\+Scene\+::$\sim$\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_scene_1_1_scene}{Scene} Dtor. 
+
+Does nothing 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a2cccad4cc0411852e327b249b12b9bc3}\label{class_cookie_eng_1_1_scene_1_1_scene_a2cccad4cc0411852e327b249b12b9bc3}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!add\+Entity@{add\+Entity}}
+\index{add\+Entity@{add\+Entity}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{add\+Entity()}{addEntity()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity}$>$ Cookie\+Eng\+::\+Scene\+::\+Scene\+::add\+Entity (\begin{DoxyParamCaption}\item[{\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} \&}]{\+\_\+entity }\end{DoxyParamCaption})}
+
+
+
+Adds an entity to the scene. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to the newly added entity 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+entity} & The entity to add\\
+\hline
+\end{DoxyParams}
+Adds an entity to the scene. This will instantiate it. \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a3e1fa17bfd8e0e3af72db05c7a5ae0b3}\label{class_cookie_eng_1_1_scene_1_1_scene_a3e1fa17bfd8e0e3af72db05c7a5ae0b3}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!clean@{clean}}
+\index{clean@{clean}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Scene\+::\+Scene\+::clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleans the scene. 
+
+Clean will remove any entities that are marked for deletion. \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a94dbc42f8c5b2f7774d8e0de1f5e45a7}\label{class_cookie_eng_1_1_scene_1_1_scene_a94dbc42f8c5b2f7774d8e0de1f5e45a7}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!draw@{draw}}
+\index{draw@{draw}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Scene\+::\+Scene\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the scene. 
+
+Uses the member renderer to render the scene to a framebuffer and then render that to the screen. \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a4287243abfe6016c8c819aebc090bf4c}\label{class_cookie_eng_1_1_scene_1_1_scene_a4287243abfe6016c8c819aebc090bf4c}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!get\+Entity@{get\+Entity}}
+\index{get\+Entity@{get\+Entity}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{get\+Entity()}{getEntity()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity}$>$ Cookie\+Eng\+::\+Scene\+::\+Scene\+::get\+Entity (\begin{DoxyParamCaption}\item[{const int}]{\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Adds an entity to the scene. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to the entity requested by index 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+index} & The index of the entity to get.\\
+\hline
+\end{DoxyParams}
+Gets en entity by index. This is pretty useless most of the time as you usually have no idea what you\textquotesingle{}re going to get back. \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_ab66ffdb5475b0045d0ce5a846488590c}\label{class_cookie_eng_1_1_scene_1_1_scene_ab66ffdb5475b0045d0ce5a846488590c}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!on\+Start@{on\+Start}}
+\index{on\+Start@{on\+Start}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{on\+Start()}{onStart()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Scene\+::\+Scene\+::on\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the scene. 
+
+Starts the scene. This loops through all the entities and runs their start method. \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a10fa9798a2d0cff5527a4ca160a5202f}\label{class_cookie_eng_1_1_scene_1_1_scene_a10fa9798a2d0cff5527a4ca160a5202f}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!on\+Update@{on\+Update}}
+\index{on\+Update@{on\+Update}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{on\+Update()}{onUpdate()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Scene\+::\+Scene\+::on\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the scene. 
+
+Updates the scene. This updates all the entities and their respective components. \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_aefa43f3ce579fe9798870c95d92711db}\label{class_cookie_eng_1_1_scene_1_1_scene_aefa43f3ce579fe9798870c95d92711db}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!remove\+Entity@{remove\+Entity}}
+\index{remove\+Entity@{remove\+Entity}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{remove\+Entity()}{removeEntity()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Scene\+::\+Scene\+::remove\+Entity (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$}]{\+\_\+entity }\end{DoxyParamCaption})}
+
+
+
+Removes an entity from the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+entity} & The entity to remove\\
+\hline
+\end{DoxyParams}
+This method will not actually remove an entity. This will simply mark the entity for removal, to actually remove it the \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a3e1fa17bfd8e0e3af72db05c7a5ae0b3}{clean()} method must be run. To avoid issues, do not run a clean between an update and draw, preferably do it before or after both. \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_adca281b1bff287a62391b5bb8bc18f5c}\label{class_cookie_eng_1_1_scene_1_1_scene_adca281b1bff287a62391b5bb8bc18f5c}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!set\+Active@{set\+Active}}
+\index{set\+Active@{set\+Active}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{set\+Active()}{setActive()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Scene\+::\+Scene\+::set\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the active scene to this scene. 
+
+This sets the engine\textquotesingle{}s active scene to this one. The engine will perform the programs requested actions and render the active scene. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a367277df49168535200a279da96d11c2}\label{class_cookie_eng_1_1_scene_1_1_scene_a367277df49168535200a279da96d11c2}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!active\+Scene@{active\+Scene}}
+\index{active\+Scene@{active\+Scene}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{active\+Scene}{activeScene}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_scene_1_1_scene}{Scene}$\ast$ Cookie\+Eng\+::\+Scene\+::\+Scene\+::active\+Scene\hspace{0.3cm}{\ttfamily [static]}}
+
+The currently active scene \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a57af2369c4079df376fa6137b6249eaf}\label{class_cookie_eng_1_1_scene_1_1_scene_a57af2369c4079df376fa6137b6249eaf}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!m\+\_\+delete\+Queue@{m\+\_\+delete\+Queue}}
+\index{m\+\_\+delete\+Queue@{m\+\_\+delete\+Queue}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+delete\+Queue}{m\_deleteQueue}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Cookie\+Eng\+::\+Scene\+::\+Scene\+::m\+\_\+delete\+Queue\hspace{0.3cm}{\ttfamily [protected]}}
+
+Stores the indices of entities to be removed at the end of the update \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_ad27cdfdb082498a7b812e054d4b28cb9}\label{class_cookie_eng_1_1_scene_1_1_scene_ad27cdfdb082498a7b812e054d4b28cb9}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!m\+\_\+entities@{m\+\_\+entities}}
+\index{m\+\_\+entities@{m\+\_\+entities}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+entities}{m\_entities}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity}$>$ $>$ Cookie\+Eng\+::\+Scene\+::\+Scene\+::m\+\_\+entities\hspace{0.3cm}{\ttfamily [protected]}}
+
+The vector of entities in the scene \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a3ded68c1652ffebf8a4827c6313ccae0}\label{class_cookie_eng_1_1_scene_1_1_scene_a3ded68c1652ffebf8a4827c6313ccae0}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!m\+\_\+entity\+Map@{m\+\_\+entity\+Map}}
+\index{m\+\_\+entity\+Map@{m\+\_\+entity\+Map}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+entity\+Map}{m\_entityMap}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity}$>$ Cookie\+Eng\+::\+Scene\+::\+Scene\+::m\+\_\+entity\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+Not used? \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a44b75b86a2f7ae2ce4dc05c20255e29e}\label{class_cookie_eng_1_1_scene_1_1_scene_a44b75b86a2f7ae2ce4dc05c20255e29e}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!m\+\_\+frame\+Buffer@{m\+\_\+frame\+Buffer}}
+\index{m\+\_\+frame\+Buffer@{m\+\_\+frame\+Buffer}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+frame\+Buffer}{m\_frameBuffer}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Graphics\+::\+Frame\+Buffer}$>$ Cookie\+Eng\+::\+Scene\+::\+Scene\+::m\+\_\+frame\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+The framebuffer that will be rendered to \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_aea87f5d089b50a248e01ae281441edd3}\label{class_cookie_eng_1_1_scene_1_1_scene_aea87f5d089b50a248e01ae281441edd3}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!m\+\_\+height@{m\+\_\+height}}
+\index{m\+\_\+height@{m\+\_\+height}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+height}{m\_height}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Scene\+::\+Scene\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [protected]}}
+
+The height of the scene\textquotesingle{}s resolution \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_aff47a056f32060d1180ae9bd379e9578}\label{class_cookie_eng_1_1_scene_1_1_scene_aff47a056f32060d1180ae9bd379e9578}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!m\+\_\+renderer@{m\+\_\+renderer}}
+\index{m\+\_\+renderer@{m\+\_\+renderer}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+renderer}{m\_renderer}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer}{Graphics\+::\+Renderer} Cookie\+Eng\+::\+Scene\+::\+Scene\+::m\+\_\+renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+The renderer used in the draw method \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a1990da3f0d067d2b542aa6b8fc6f0d43}\label{class_cookie_eng_1_1_scene_1_1_scene_a1990da3f0d067d2b542aa6b8fc6f0d43}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!m\+\_\+width@{m\+\_\+width}}
+\index{m\+\_\+width@{m\+\_\+width}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+width}{m\_width}}
+{\footnotesize\ttfamily int Cookie\+Eng\+::\+Scene\+::\+Scene\+::m\+\_\+width\hspace{0.3cm}{\ttfamily [protected]}}
+
+The width of the scene\textquotesingle{}s resolution 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Scene.\+h\end{DoxyCompactItemize}

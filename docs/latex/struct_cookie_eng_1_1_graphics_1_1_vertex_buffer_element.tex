@@ -1,0 +1,77 @@
+\hypertarget{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element}{}\section{Cookie\+Eng\+:\+:Graphics\+:\+:Vertex\+Buffer\+Element Class Reference}
+\label{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element}\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element}}
+
+
+Represents an element of a layout of data stored in a V\+AO.  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Buffer\+Layout.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \hyperlink{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_a2041f09a7eb0714959f1be6f67fb111b}{get\+Size\+Of\+Type} (unsigned int \+\_\+type)
+\begin{DoxyCompactList}\small\item\em Gets the size of a supported element type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_abba091f340c618809735781f80ccee6b}{type}
+\item 
+G\+Luint \hyperlink{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_a5c5d5a5861ed76486f0ea36e8db6ed4c}{count}
+\item 
+unsigned char \hyperlink{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_a1a50c45bd6f7e11f158b142ec20552ba}{normalised}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents an element of a layout of data stored in a V\+AO. 
+
+This class is used in the \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout}{Vertex\+Buffer\+Layout} class to store an element of a layout 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_a2041f09a7eb0714959f1be6f67fb111b}\label{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_a2041f09a7eb0714959f1be6f67fb111b}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element}!get\+Size\+Of\+Type@{get\+Size\+Of\+Type}}
+\index{get\+Size\+Of\+Type@{get\+Size\+Of\+Type}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element}}
+\subsubsection{\texorpdfstring{get\+Size\+Of\+Type()}{getSizeOfType()}}
+{\footnotesize\ttfamily static unsigned int Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element\+::get\+Size\+Of\+Type (\begin{DoxyParamCaption}\item[{unsigned int}]{\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets the size of a supported element type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+type} & The type to return the size of \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the byte size of the type specified by the parameter
+\end{DoxyReturn}
+Takes in a data type and returns the size of that type. This method will only return the size of supported data types that can be added to a V\+BO (layout or actual V\+BO). 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_a5c5d5a5861ed76486f0ea36e8db6ed4c}\label{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_a5c5d5a5861ed76486f0ea36e8db6ed4c}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element}!count@{count}}
+\index{count@{count}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element}}
+\subsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element\+::count}
+
+The number of the specified type stored in the element (eg, 3 for a vec3 as it is 3 floats) \mbox{\Hypertarget{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_a1a50c45bd6f7e11f158b142ec20552ba}\label{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_a1a50c45bd6f7e11f158b142ec20552ba}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element}!normalised@{normalised}}
+\index{normalised@{normalised}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element}}
+\subsubsection{\texorpdfstring{normalised}{normalised}}
+{\footnotesize\ttfamily unsigned char Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element\+::normalised}
+
+Wether the data is normalised (between -\/1.\+0 and 1.\+0) \mbox{\Hypertarget{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_abba091f340c618809735781f80ccee6b}\label{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element_abba091f340c618809735781f80ccee6b}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element}!type@{type}}
+\index{type@{type}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Element\+::type}
+
+The data type of the element 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Vertex\+Buffer\+Layout.\+h\end{DoxyCompactItemize}

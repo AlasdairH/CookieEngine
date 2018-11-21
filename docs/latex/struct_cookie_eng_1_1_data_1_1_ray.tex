@@ -1,0 +1,105 @@
+\hypertarget{struct_cookie_eng_1_1_data_1_1_ray}{}\section{Cookie\+Eng\+:\+:Data\+:\+:Ray Class Reference}
+\label{struct_cookie_eng_1_1_data_1_1_ray}\index{Cookie\+Eng\+::\+Data\+::\+Ray@{Cookie\+Eng\+::\+Data\+::\+Ray}}
+
+
+A ray represented by an origin point and a direction for an infinite distance.  
+
+
+
+
+{\ttfamily \#include $<$Ray.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_cookie_eng_1_1_data_1_1_ray_a1e9b2fe1c7b82f3ef7e405dbe8a5f4ee}{Ray} (const glm\+::vec3 \&\+\_\+origin, const glm\+::vec3 \&\+\_\+direction)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_cookie_eng_1_1_data_1_1_ray}{Ray} Ctor. Creates a ray from the specified parameters. \end{DoxyCompactList}\item 
+glm\+::vec3 \hyperlink{struct_cookie_eng_1_1_data_1_1_ray_a2681dc85c2d445e36a77bd623d125fb8}{get\+Point} (const float \+\_\+u)
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_cookie_eng_1_1_data_1_1_ray}{Ray} Ctor. Creates a ray from the specified parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \hyperlink{struct_cookie_eng_1_1_data_1_1_ray_ac5a0fd9b0d2466d33a6c6c757ac1fec8}{origin}
+\item 
+glm\+::vec3 \hyperlink{struct_cookie_eng_1_1_data_1_1_ray_aa245307862a93851ec6bc93ec23ee829}{direction}
+\item 
+glm\+::vec3 \hyperlink{struct_cookie_eng_1_1_data_1_1_ray_a298fe1967f5d951f5b2e897e52da8519}{inverse\+Direction}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_cookie_eng_1_1_data_1_1_ray_a5f8124438184f87ceb799799fce3ae61}\label{struct_cookie_eng_1_1_data_1_1_ray_a5f8124438184f87ceb799799fce3ae61}} 
+class {\bfseries Bounding\+Box}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A ray represented by an origin point and a direction for an infinite distance. 
+
+Represents a ray with on origin point and direction for an infinite distance. This can be tested against various bounds for collision. (See \hyperlink{class_cookie_eng_1_1_data_1_1_bounding_box}{Bounding\+Box}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_cookie_eng_1_1_data_1_1_ray_a1e9b2fe1c7b82f3ef7e405dbe8a5f4ee}\label{struct_cookie_eng_1_1_data_1_1_ray_a1e9b2fe1c7b82f3ef7e405dbe8a5f4ee}} 
+\index{Cookie\+Eng\+::\+Data\+::\+Ray@{Cookie\+Eng\+::\+Data\+::\+Ray}!Ray@{Ray}}
+\index{Ray@{Ray}!Cookie\+Eng\+::\+Data\+::\+Ray@{Cookie\+Eng\+::\+Data\+::\+Ray}}
+\subsubsection{\texorpdfstring{Ray()}{Ray()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Data\+::\+Ray\+::\+Ray (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{\+\_\+origin,  }\item[{const glm\+::vec3 \&}]{\+\_\+direction }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{struct_cookie_eng_1_1_data_1_1_ray}{Ray} Ctor. Creates a ray from the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+origin} & The origin point of the ray \\
+\hline
+{\em \+\_\+direction} & The direction the ray travels\\
+\hline
+\end{DoxyParams}
+Creates a ray from the specified parameters. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_cookie_eng_1_1_data_1_1_ray_a2681dc85c2d445e36a77bd623d125fb8}\label{struct_cookie_eng_1_1_data_1_1_ray_a2681dc85c2d445e36a77bd623d125fb8}} 
+\index{Cookie\+Eng\+::\+Data\+::\+Ray@{Cookie\+Eng\+::\+Data\+::\+Ray}!get\+Point@{get\+Point}}
+\index{get\+Point@{get\+Point}!Cookie\+Eng\+::\+Data\+::\+Ray@{Cookie\+Eng\+::\+Data\+::\+Ray}}
+\subsubsection{\texorpdfstring{get\+Point()}{getPoint()}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Data\+::\+Ray\+::get\+Point (\begin{DoxyParamCaption}\item[{const float}]{\+\_\+u }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{struct_cookie_eng_1_1_data_1_1_ray}{Ray} Ctor. Creates a ray from the specified parameters. 
+
+\begin{DoxyReturn}{Returns}
+The point in world space along a ray at distance \+\_\+u 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+u} & How far along the ray to get the point from. Can be positive for negative.\\
+\hline
+\end{DoxyParams}
+Gets a point along the ray at a specified distance from the origin along the direction. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_cookie_eng_1_1_data_1_1_ray_aa245307862a93851ec6bc93ec23ee829}\label{struct_cookie_eng_1_1_data_1_1_ray_aa245307862a93851ec6bc93ec23ee829}} 
+\index{Cookie\+Eng\+::\+Data\+::\+Ray@{Cookie\+Eng\+::\+Data\+::\+Ray}!direction@{direction}}
+\index{direction@{direction}!Cookie\+Eng\+::\+Data\+::\+Ray@{Cookie\+Eng\+::\+Data\+::\+Ray}}
+\subsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Data\+::\+Ray\+::direction}
+
+The direction of the ray \mbox{\Hypertarget{struct_cookie_eng_1_1_data_1_1_ray_a298fe1967f5d951f5b2e897e52da8519}\label{struct_cookie_eng_1_1_data_1_1_ray_a298fe1967f5d951f5b2e897e52da8519}} 
+\index{Cookie\+Eng\+::\+Data\+::\+Ray@{Cookie\+Eng\+::\+Data\+::\+Ray}!inverse\+Direction@{inverse\+Direction}}
+\index{inverse\+Direction@{inverse\+Direction}!Cookie\+Eng\+::\+Data\+::\+Ray@{Cookie\+Eng\+::\+Data\+::\+Ray}}
+\subsubsection{\texorpdfstring{inverse\+Direction}{inverseDirection}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Data\+::\+Ray\+::inverse\+Direction}
+
+The pre-\/computed inverse direction of the ray \mbox{\Hypertarget{struct_cookie_eng_1_1_data_1_1_ray_ac5a0fd9b0d2466d33a6c6c757ac1fec8}\label{struct_cookie_eng_1_1_data_1_1_ray_ac5a0fd9b0d2466d33a6c6c757ac1fec8}} 
+\index{Cookie\+Eng\+::\+Data\+::\+Ray@{Cookie\+Eng\+::\+Data\+::\+Ray}!origin@{origin}}
+\index{origin@{origin}!Cookie\+Eng\+::\+Data\+::\+Ray@{Cookie\+Eng\+::\+Data\+::\+Ray}}
+\subsubsection{\texorpdfstring{origin}{origin}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Data\+::\+Ray\+::origin}
+
+The origin point of the ray 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Ray.\+h\end{DoxyCompactItemize}

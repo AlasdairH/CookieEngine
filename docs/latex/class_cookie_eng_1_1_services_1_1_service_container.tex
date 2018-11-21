@@ -1,0 +1,96 @@
+\hypertarget{class_cookie_eng_1_1_services_1_1_service_container}{}\section{Cookie\+Eng\+:\+:Services\+:\+:Service\+Container Class Reference}
+\label{class_cookie_eng_1_1_services_1_1_service_container}\index{Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}}
+
+
+The \hyperlink{class_cookie_eng_1_1_services_1_1_service_container}{Service\+Container} acts as a container for services that can be located by the \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator}{Service\+Locator}.  
+
+
+
+
+{\ttfamily \#include $<$Service\+Container.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_services_1_1_service_container_a6d91b2942fd8e169641b5e723ec0e999}{Service\+Container} ()
+\begin{DoxyCompactList}\small\item\em The Service Container Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_services_1_1_service_container_aee981da4b22b806f868cc6df3e2762af}{$\sim$\+Service\+Container} ()
+\begin{DoxyCompactList}\small\item\em Adds a light to the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_services_1_1_service_container_a97ec731de9af553fd503f3d9c81522a0}{assign\+Services} ()
+\begin{DoxyCompactList}\small\item\em Allocates the Services. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser} $\ast$ \hyperlink{class_cookie_eng_1_1_services_1_1_service_container_ae775cf624dc67f6f22e33c2437a2356e}{m\+\_\+svs\+Initialiser}
+\item 
+\hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager} $\ast$ \hyperlink{class_cookie_eng_1_1_services_1_1_service_container_abf0baf79c971ef5edc4be3c950fb7cda}{m\+\_\+svs\+File\+Manager}
+\item 
+\hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue} $\ast$ \hyperlink{class_cookie_eng_1_1_services_1_1_service_container_a5c4f37d595fdaeb210fba253a9dbc101}{m\+\_\+svs\+Message\+Queue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_cookie_eng_1_1_services_1_1_service_container}{Service\+Container} acts as a container for services that can be located by the \hyperlink{class_cookie_eng_1_1_services_1_1_service_locator}{Service\+Locator}. 
+
+This class works to allocate pointers to the various services and handle their deletion once the container is shut down. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_container_a6d91b2942fd8e169641b5e723ec0e999}\label{class_cookie_eng_1_1_services_1_1_service_container_a6d91b2942fd8e169641b5e723ec0e999}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}!Service\+Container@{Service\+Container}}
+\index{Service\+Container@{Service\+Container}!Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}}
+\subsubsection{\texorpdfstring{Service\+Container()}{ServiceContainer()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Services\+::\+Service\+Container\+::\+Service\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The Service Container Constructor. 
+
+Assigns Nullptr to all member pointers. \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_container_aee981da4b22b806f868cc6df3e2762af}\label{class_cookie_eng_1_1_services_1_1_service_container_aee981da4b22b806f868cc6df3e2762af}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}!````~Service\+Container@{$\sim$\+Service\+Container}}
+\index{````~Service\+Container@{$\sim$\+Service\+Container}!Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}}
+\subsubsection{\texorpdfstring{$\sim$\+Service\+Container()}{~ServiceContainer()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Services\+::\+Service\+Container\+::$\sim$\+Service\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adds a light to the scene. 
+
+Deletes the service pointers for memory cleanup 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_container_a97ec731de9af553fd503f3d9c81522a0}\label{class_cookie_eng_1_1_services_1_1_service_container_a97ec731de9af553fd503f3d9c81522a0}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}!assign\+Services@{assign\+Services}}
+\index{assign\+Services@{assign\+Services}!Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}}
+\subsubsection{\texorpdfstring{assign\+Services()}{assignServices()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Services\+::\+Service\+Container\+::assign\+Services (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Allocates the Services. 
+
+Allocates services and assigns them to the Service Locator. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_container_abf0baf79c971ef5edc4be3c950fb7cda}\label{class_cookie_eng_1_1_services_1_1_service_container_abf0baf79c971ef5edc4be3c950fb7cda}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}!m\+\_\+svs\+File\+Manager@{m\+\_\+svs\+File\+Manager}}
+\index{m\+\_\+svs\+File\+Manager@{m\+\_\+svs\+File\+Manager}!Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}}
+\subsubsection{\texorpdfstring{m\+\_\+svs\+File\+Manager}{m\_svsFileManager}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_services_1_1_file_manager}{File\+Manager}$\ast$ Cookie\+Eng\+::\+Services\+::\+Service\+Container\+::m\+\_\+svs\+File\+Manager\hspace{0.3cm}{\ttfamily [protected]}}
+
+A pointer to the File Manager. \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_container_ae775cf624dc67f6f22e33c2437a2356e}\label{class_cookie_eng_1_1_services_1_1_service_container_ae775cf624dc67f6f22e33c2437a2356e}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}!m\+\_\+svs\+Initialiser@{m\+\_\+svs\+Initialiser}}
+\index{m\+\_\+svs\+Initialiser@{m\+\_\+svs\+Initialiser}!Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}}
+\subsubsection{\texorpdfstring{m\+\_\+svs\+Initialiser}{m\_svsInitialiser}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser}$\ast$ Cookie\+Eng\+::\+Services\+::\+Service\+Container\+::m\+\_\+svs\+Initialiser\hspace{0.3cm}{\ttfamily [protected]}}
+
+A pointer to the \hyperlink{class_cookie_eng_1_1_services_1_1_initialiser}{Initialiser}. \mbox{\Hypertarget{class_cookie_eng_1_1_services_1_1_service_container_a5c4f37d595fdaeb210fba253a9dbc101}\label{class_cookie_eng_1_1_services_1_1_service_container_a5c4f37d595fdaeb210fba253a9dbc101}} 
+\index{Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}!m\+\_\+svs\+Message\+Queue@{m\+\_\+svs\+Message\+Queue}}
+\index{m\+\_\+svs\+Message\+Queue@{m\+\_\+svs\+Message\+Queue}!Cookie\+Eng\+::\+Services\+::\+Service\+Container@{Cookie\+Eng\+::\+Services\+::\+Service\+Container}}
+\subsubsection{\texorpdfstring{m\+\_\+svs\+Message\+Queue}{m\_svsMessageQueue}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_services_1_1_message_queue}{Message\+Queue}$\ast$ Cookie\+Eng\+::\+Services\+::\+Service\+Container\+::m\+\_\+svs\+Message\+Queue\hspace{0.3cm}{\ttfamily [protected]}}
+
+A pointer to the Message Queue. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Service\+Container.\+h\end{DoxyCompactItemize}

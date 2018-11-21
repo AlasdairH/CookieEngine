@@ -1,0 +1,175 @@
+\hypertarget{class_cookie_eng_1_1_resources_1_1_resource}{}\section{Cookie\+Eng\+:\+:Resources\+:\+:Resource Class Reference}
+\label{class_cookie_eng_1_1_resources_1_1_resource}\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+
+
+A base class for any engine resources (stuff that can be loaded)  
+
+
+
+
+{\ttfamily \#include $<$Resource.\+h$>$}
+
+
+
+Inherited by \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Cookie\+Eng\+::\+Resources\+::\+Material}, \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Cookie\+Eng\+::\+Resources\+::\+Mesh}, \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program}{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}, and \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Cookie\+Eng\+::\+Resources\+::\+Texture}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a75648b8f2e442bebc90d6eb4ea3a2f6e}{load} (const std\+::string \&\+\_\+name, const std\+::string \&\+\_\+filepath)
+\begin{DoxyCompactList}\small\item\em Asynchronous loading of text files. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_acfe5141c546d7f3f3e08435b3a21b09c}{unload} ()
+\begin{DoxyCompactList}\small\item\em Called on the unload of a resource. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a79d4a9f266373ca5b77d8debca83ee7f}{is\+Loaded} ()
+\begin{DoxyCompactList}\small\item\em Returns the loaded status of a resource. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a3968130b5e2207df4735a616c6545158}{set\+Name} (const std\+::string \&\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resource} name. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_ae7f9a2883f18b3a9d2e4e470c83bb704}{set\+Resource\+ID} (const unsigned int \&\+\_\+resource\+ID)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resource} ID. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a9ad88ddeec633dbb1df1b6f1f8ff4c47}{set\+Filepath} (const std\+::string \&\+\_\+filepath)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resource} filepath. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Resource\+Type \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a3740fe0571f4d65ddf71c36df0d8490c}{m\+\_\+resource\+Type}
+\item 
+std\+::string \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_ae00a6a02ffb92b14dd72801c5df4d98f}{m\+\_\+name}
+\item 
+unsigned int \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a03ca114563713cc8e9965e71fa895da3}{m\+\_\+resource\+ID}
+\item 
+std\+::string \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_aa7b58e5677b621033ac46b8577b8f48e}{m\+\_\+filepath}
+\item 
+bool \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a96c5a11b55f0e497ea0b38e2a1dbf175}{m\+\_\+is\+Loaded}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A base class for any engine resources (stuff that can be loaded) 
+
+A base class for resrouces to inherit from. On resource load, the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a75648b8f2e442bebc90d6eb4ea3a2f6e}{load()} method will be called and each resource should implement their own method of loading. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_a79d4a9f266373ca5b77d8debca83ee7f}\label{class_cookie_eng_1_1_resources_1_1_resource_a79d4a9f266373ca5b77d8debca83ee7f}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!is\+Loaded@{is\+Loaded}}
+\index{is\+Loaded@{is\+Loaded}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+\subsubsection{\texorpdfstring{is\+Loaded()}{isLoaded()}}
+{\footnotesize\ttfamily virtual bool Cookie\+Eng\+::\+Resources\+::\+Resource\+::is\+Loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the loaded status of a resource. 
+
+Returns the loaded status of a resource \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_a75648b8f2e442bebc90d6eb4ea3a2f6e}\label{class_cookie_eng_1_1_resources_1_1_resource_a75648b8f2e442bebc90d6eb4ea3a2f6e}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!load@{load}}
+\index{load@{load}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily virtual void Cookie\+Eng\+::\+Resources\+::\+Resource\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const std\+::string \&}]{\+\_\+filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Asynchronous loading of text files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name to assign the resource \\
+\hline
+{\em \+\_\+filepath} & The path to the resource to be loaded from\\
+\hline
+\end{DoxyParams}
+This method is called by the resource manager when the resource is loaded. This should be overridden by each resource as they all most likely require their own loading instructions. 
+
+Reimplemented in \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_aef29916bad667d1f820053fd891d9e58}{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}, \hyperlink{class_cookie_eng_1_1_resources_1_1_material_a5d14ee55b9ce265cd557b85efd0e5722}{Cookie\+Eng\+::\+Resources\+::\+Material}, \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_a1f2d72c781dba6262ac5ca6e8898fc8d}{Cookie\+Eng\+::\+Resources\+::\+Texture}, and \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_ae31053c6edaf0e735d85350bfa6093fb}{Cookie\+Eng\+::\+Resources\+::\+Mesh}.
+
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_a9ad88ddeec633dbb1df1b6f1f8ff4c47}\label{class_cookie_eng_1_1_resources_1_1_resource_a9ad88ddeec633dbb1df1b6f1f8ff4c47}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!set\+Filepath@{set\+Filepath}}
+\index{set\+Filepath@{set\+Filepath}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+\subsubsection{\texorpdfstring{set\+Filepath()}{setFilepath()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Resource\+::set\+Filepath (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resource} filepath. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+filepath} & The filepath to set the resource to\\
+\hline
+\end{DoxyParams}
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resource} filepath \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_a3968130b5e2207df4735a616c6545158}\label{class_cookie_eng_1_1_resources_1_1_resource_a3968130b5e2207df4735a616c6545158}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Resource\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resource} name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name to set the resource to\\
+\hline
+\end{DoxyParams}
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resource} name \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_ae7f9a2883f18b3a9d2e4e470c83bb704}\label{class_cookie_eng_1_1_resources_1_1_resource_ae7f9a2883f18b3a9d2e4e470c83bb704}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!set\+Resource\+ID@{set\+Resource\+ID}}
+\index{set\+Resource\+ID@{set\+Resource\+ID}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+\subsubsection{\texorpdfstring{set\+Resource\+I\+D()}{setResourceID()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Resource\+::set\+Resource\+ID (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{\+\_\+resource\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resource} ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+resource\+ID} & The ID to set the resource to\\
+\hline
+\end{DoxyParams}
+Sets the \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Resource} ID \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_acfe5141c546d7f3f3e08435b3a21b09c}\label{class_cookie_eng_1_1_resources_1_1_resource_acfe5141c546d7f3f3e08435b3a21b09c}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!unload@{unload}}
+\index{unload@{unload}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+\subsubsection{\texorpdfstring{unload()}{unload()}}
+{\footnotesize\ttfamily virtual void Cookie\+Eng\+::\+Resources\+::\+Resource\+::unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called on the unload of a resource. 
+
+This method is called when a resource is unloaded. Should be overridden. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_aa7b58e5677b621033ac46b8577b8f48e}\label{class_cookie_eng_1_1_resources_1_1_resource_aa7b58e5677b621033ac46b8577b8f48e}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!m\+\_\+filepath@{m\+\_\+filepath}}
+\index{m\+\_\+filepath@{m\+\_\+filepath}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+\subsubsection{\texorpdfstring{m\+\_\+filepath}{m\_filepath}}
+{\footnotesize\ttfamily std\+::string Cookie\+Eng\+::\+Resources\+::\+Resource\+::m\+\_\+filepath\hspace{0.3cm}{\ttfamily [protected]}}
+
+The resource filepath \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_a96c5a11b55f0e497ea0b38e2a1dbf175}\label{class_cookie_eng_1_1_resources_1_1_resource_a96c5a11b55f0e497ea0b38e2a1dbf175}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!m\+\_\+is\+Loaded@{m\+\_\+is\+Loaded}}
+\index{m\+\_\+is\+Loaded@{m\+\_\+is\+Loaded}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+\subsubsection{\texorpdfstring{m\+\_\+is\+Loaded}{m\_isLoaded}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Resources\+::\+Resource\+::m\+\_\+is\+Loaded\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag for the loaded state of the resource \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_ae00a6a02ffb92b14dd72801c5df4d98f}\label{class_cookie_eng_1_1_resources_1_1_resource_ae00a6a02ffb92b14dd72801c5df4d98f}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!m\+\_\+name@{m\+\_\+name}}
+\index{m\+\_\+name@{m\+\_\+name}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+\subsubsection{\texorpdfstring{m\+\_\+name}{m\_name}}
+{\footnotesize\ttfamily std\+::string Cookie\+Eng\+::\+Resources\+::\+Resource\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+The resource name \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_a03ca114563713cc8e9965e71fa895da3}\label{class_cookie_eng_1_1_resources_1_1_resource_a03ca114563713cc8e9965e71fa895da3}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!m\+\_\+resource\+ID@{m\+\_\+resource\+ID}}
+\index{m\+\_\+resource\+ID@{m\+\_\+resource\+ID}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+\subsubsection{\texorpdfstring{m\+\_\+resource\+ID}{m\_resourceID}}
+{\footnotesize\ttfamily unsigned int Cookie\+Eng\+::\+Resources\+::\+Resource\+::m\+\_\+resource\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+The resource ID \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_a3740fe0571f4d65ddf71c36df0d8490c}\label{class_cookie_eng_1_1_resources_1_1_resource_a3740fe0571f4d65ddf71c36df0d8490c}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!m\+\_\+resource\+Type@{m\+\_\+resource\+Type}}
+\index{m\+\_\+resource\+Type@{m\+\_\+resource\+Type}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
+\subsubsection{\texorpdfstring{m\+\_\+resource\+Type}{m\_resourceType}}
+{\footnotesize\ttfamily Resource\+Type Cookie\+Eng\+::\+Resources\+::\+Resource\+::m\+\_\+resource\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+The resource type 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Resource.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard}{}\section{Cookie\+Eng\+:\+:Input\+:\+:Keyboard\+:\+:Keyboard Class Reference}
+\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard}\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard}}
+
+
+A keyboard class that handles the state of various keys.  
+
+
+
+
+{\ttfamily \#include $<$Keyboard.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a65d004a6431f3fba5e79c67d677a01cd}{Keyboard} ()
+\begin{DoxyCompactList}\small\item\em Camera Ctor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a27da39b7745ef5953465db0159ae876a}{add\+Key} (C\+N\+G\+\_\+\+Keycode \+\_\+cng\+Key, S\+D\+L\+\_\+\+Keycode \+\_\+sdl\+Key)
+\begin{DoxyCompactList}\small\item\em Adds a C\+N\+G\+\_\+\+Keycode and links it to a S\+D\+L\+\_\+\+Keycode. \end{DoxyCompactList}\item 
+bool \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_aa5a05911bc70b35341e2d6ff7db7ce6c}{is\+Key\+Down} (C\+N\+G\+\_\+\+Keycode \+\_\+key)
+\begin{DoxyCompactList}\small\item\em Get up/down key state of the given key. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a2e38885012c428de44e6bca881bb305d}{update} (S\+D\+L\+\_\+\+Keyboard\+Event \&incoming\+Event)
+\begin{DoxyCompactList}\small\item\em Get up/down key state of the given key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ S\+D\+L\+\_\+\+Keycode, \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key}{Key} $>$ \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a6b77b43567c775186e151a6fcfeea502}{m\+\_\+keys}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A keyboard class that handles the state of various keys. 
+
+This keyboard class contains the data for keys on a keyboard. Keys can be added and linked to the S\+DL input. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a65d004a6431f3fba5e79c67d677a01cd}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a65d004a6431f3fba5e79c67d677a01cd}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard}!Keyboard@{Keyboard}}
+\index{Keyboard@{Keyboard}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{Keyboard()}{Keyboard()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard\+::\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Camera Ctor. 
+
+Does nothing 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a27da39b7745ef5953465db0159ae876a}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a27da39b7745ef5953465db0159ae876a}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard}!add\+Key@{add\+Key}}
+\index{add\+Key@{add\+Key}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{add\+Key()}{addKey()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard\+::add\+Key (\begin{DoxyParamCaption}\item[{C\+N\+G\+\_\+\+Keycode}]{\+\_\+cng\+Key,  }\item[{S\+D\+L\+\_\+\+Keycode}]{\+\_\+sdl\+Key }\end{DoxyParamCaption})}
+
+
+
+Adds a C\+N\+G\+\_\+\+Keycode and links it to a S\+D\+L\+\_\+\+Keycode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+cng\+Key} & The Cookie Engine C\+N\+G\+\_\+keycode that represents a key \\
+\hline
+{\em \+\_\+sdl\+Key} & The S\+D\+L\+\_\+\+Keycode to link to\\
+\hline
+\end{DoxyParams}
+Adds a key to the keyboard and links the S\+DL keys updates. \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_aa5a05911bc70b35341e2d6ff7db7ce6c}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_aa5a05911bc70b35341e2d6ff7db7ce6c}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard}!is\+Key\+Down@{is\+Key\+Down}}
+\index{is\+Key\+Down@{is\+Key\+Down}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{is\+Key\+Down()}{isKeyDown()}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard\+::is\+Key\+Down (\begin{DoxyParamCaption}\item[{C\+N\+G\+\_\+\+Keycode}]{\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get up/down key state of the given key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+key} & The key to get the state of\\
+\hline
+\end{DoxyParams}
+Returns wether a key is up or down. This is set by the keyboard update. \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a2e38885012c428de44e6bca881bb305d}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a2e38885012c428de44e6bca881bb305d}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard}!update@{update}}
+\index{update@{update}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard\+::update (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Keyboard\+Event \&}]{incoming\+Event }\end{DoxyParamCaption})}
+
+
+
+Get up/down key state of the given key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em incoming\+Event} & The S\+D\+L\+\_\+\+Keyboard\+Event that events are pulled from to update the keyboard\\
+\hline
+\end{DoxyParams}
+Grabs the events from incoming\+Event and updates the keyboard 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a6b77b43567c775186e151a6fcfeea502}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard_a6b77b43567c775186e151a6fcfeea502}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard}!m\+\_\+keys@{m\+\_\+keys}}
+\index{m\+\_\+keys@{m\+\_\+keys}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{m\+\_\+keys}{m\_keys}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$S\+D\+L\+\_\+\+Keycode, \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key}{Key}$>$ Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Keyboard\+::m\+\_\+keys\hspace{0.3cm}{\ttfamily [protected]}}
+
+The keys to be updated by the keyboard update 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Keyboard.\+h\end{DoxyCompactItemize}

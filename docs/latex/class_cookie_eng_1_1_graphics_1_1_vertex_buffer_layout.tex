@@ -1,0 +1,157 @@
+\hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout}{}\section{Cookie\+Eng\+:\+:Graphics\+:\+:Vertex\+Buffer\+Layout Class Reference}
+\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout}\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}}
+
+
+Abstraction of the layout of a V\+BO.  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Buffer\+Layout.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a8d9958c85411d75d7f412b2d3f7b566a}{push} (unsigned int \+\_\+count)
+\begin{DoxyCompactList}\small\item\em Pushes a new element to the layout of the specified type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a3f1a639714762ec45edf48a68995d7bd}{push} (unsigned int \+\_\+count)
+\begin{DoxyCompactList}\small\item\em Pushes a new float element to the layout. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a3f1a639714762ec45edf48a68995d7bd}{push} (unsigned int \+\_\+count)
+\begin{DoxyCompactList}\small\item\em Pushes a new G\+Luint element to the layout. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a3f1a639714762ec45edf48a68995d7bd}{push} (unsigned int \+\_\+count)
+\begin{DoxyCompactList}\small\item\em Pushes a new unsigned char element to the layout. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \hyperlink{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element}{Vertex\+Buffer\+Element} $>$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a082cc08b182cabe19998ae522c0466be}{get\+Elements} () const
+\begin{DoxyCompactList}\small\item\em Returns the vector of elements that make up the layout. \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a4c771d06898767d1a92237b03a53e887}{get\+Stride} () const
+\begin{DoxyCompactList}\small\item\em Returns the stride of the layout. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a9e511f18b0895825ff8ea2b567f89626}{reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element}{Vertex\+Buffer\+Element} $>$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a7986bf1ce59d1ffa1dc31613014aa2e7}{m\+\_\+elements}
+\item 
+G\+Luint \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a972f0e9224f28b13be7d959449423308}{m\+\_\+stride}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstraction of the layout of a V\+BO. 
+
+This class stores a vector of elements that make up the layout of data stored in a V\+BO. The push function adds a new element of the templated type to the V\+BO layout. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a082cc08b182cabe19998ae522c0466be}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a082cc08b182cabe19998ae522c0466be}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}!get\+Elements@{get\+Elements}}
+\index{get\+Elements@{get\+Elements}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}}
+\subsubsection{\texorpdfstring{get\+Elements()}{getElements()}}
+{\footnotesize\ttfamily const std\+::vector$<$\hyperlink{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element}{Vertex\+Buffer\+Element}$>$ Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout\+::get\+Elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the vector of elements that make up the layout. 
+
+Returns the vector that contains the elements of the layout. These can be read by the V\+AO class and applied to a V\+BO. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a4c771d06898767d1a92237b03a53e887}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a4c771d06898767d1a92237b03a53e887}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}!get\+Stride@{get\+Stride}}
+\index{get\+Stride@{get\+Stride}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}}
+\subsubsection{\texorpdfstring{get\+Stride()}{getStride()}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout\+::get\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the stride of the layout. 
+
+Returns the stride of the layout (the distance in bytes between one item in the data and the next corresponding item) \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a8d9958c85411d75d7f412b2d3f7b566a}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a8d9958c85411d75d7f412b2d3f7b566a}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}!push@{push}}
+\index{push@{push}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout\+::push (\begin{DoxyParamCaption}\item[{unsigned int}]{\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes a new element to the layout of the specified type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+count} & The number of values in the element. Eg, 3 for a vec3 (3 floats), 2 for a vec2 (2 floats).\\
+\hline
+\end{DoxyParams}
+Pushes a new element into the layout of the templated type and with the specified count (how many items of the specified type make up the element). \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a3f1a639714762ec45edf48a68995d7bd}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a3f1a639714762ec45edf48a68995d7bd}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}!push@{push}}
+\index{push@{push}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout\+::push (\begin{DoxyParamCaption}\item[{unsigned int}]{\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes a new float element to the layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+count} & The number of values in the element. Eg, 3 for a vec3 (3 floats), 2 for a vec2 (2 floats).\\
+\hline
+\end{DoxyParams}
+Pushes a new float element into the layout with the specified count (how many items of the specified type make up the element). \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a3f1a639714762ec45edf48a68995d7bd}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a3f1a639714762ec45edf48a68995d7bd}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}!push@{push}}
+\index{push@{push}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout\+::push (\begin{DoxyParamCaption}\item[{unsigned int}]{\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes a new G\+Luint element to the layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+count} & The number of values in the element. Eg, 3 for a vec3 (3 floats), 2 for a vec2 (2 floats).\\
+\hline
+\end{DoxyParams}
+Pushes a new G\+Luint element into the layout with the specified count (how many items of the specified type make up the element). \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a3f1a639714762ec45edf48a68995d7bd}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a3f1a639714762ec45edf48a68995d7bd}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}!push@{push}}
+\index{push@{push}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout\+::push (\begin{DoxyParamCaption}\item[{unsigned int}]{\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes a new unsigned char element to the layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+count} & The number of values in the element. Eg, 3 for a vec3 (3 floats), 2 for a vec2 (2 floats).\\
+\hline
+\end{DoxyParams}
+Pushes a new unsigned char element into the layout with the specified count (how many items of the specified type make up the element). \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a9e511f18b0895825ff8ea2b567f89626}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a9e511f18b0895825ff8ea2b567f89626}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}!reset@{reset}}
+\index{reset@{reset}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the layout. 
+
+Resets the layout back to default 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a7986bf1ce59d1ffa1dc31613014aa2e7}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a7986bf1ce59d1ffa1dc31613014aa2e7}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}!m\+\_\+elements@{m\+\_\+elements}}
+\index{m\+\_\+elements@{m\+\_\+elements}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}}
+\subsubsection{\texorpdfstring{m\+\_\+elements}{m\_elements}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element}{Vertex\+Buffer\+Element}$>$ Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout\+::m\+\_\+elements\hspace{0.3cm}{\ttfamily [protected]}}
+
+The vector containing the elements that make up the layout \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a972f0e9224f28b13be7d959449423308}\label{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout_a972f0e9224f28b13be7d959449423308}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}!m\+\_\+stride@{m\+\_\+stride}}
+\index{m\+\_\+stride@{m\+\_\+stride}!Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout@{Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout}}
+\subsubsection{\texorpdfstring{m\+\_\+stride}{m\_stride}}
+{\footnotesize\ttfamily G\+Luint Cookie\+Eng\+::\+Graphics\+::\+Vertex\+Buffer\+Layout\+::m\+\_\+stride\hspace{0.3cm}{\ttfamily [protected]}}
+
+The stride between data in the layout 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Vertex\+Buffer\+Layout.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,138 @@
+\hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key}{}\section{Cookie\+Eng\+:\+:Input\+:\+:Keyboard\+:\+:Key Class Reference}
+\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key}\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}}
+
+
+Contains a key\textquotesingle{}s state.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Key.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a263217e998b290d7e740ded3a76e06de}{Key} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key}{Key} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a61db9dd062b7fc6a38f1a4828a9a4222}{Key} (C\+N\+G\+\_\+\+Keycode \+\_\+cng\+Key, S\+D\+L\+\_\+\+Keycode \+\_\+sdl\+Key)
+\begin{DoxyCompactList}\small\item\em Camera Ctor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a2c0499cd43fea6c114114e176f5243ac}{is\+Key\+Down} ()
+\begin{DoxyCompactList}\small\item\em Returns the keydown state. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a27ba9abbd1fce1b29dff7e2cbb418223}{set\+Key\+Down} (bool \+\_\+state)
+\begin{DoxyCompactList}\small\item\em Sets the keydown state. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Keycode \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a61f34621eeb4872f9a8cd4bb8fc025d6}{get\+S\+D\+L\+Keycode} ()
+\begin{DoxyCompactList}\small\item\em Sets the S\+DL keycode of a key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+C\+N\+G\+\_\+\+Keycode \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a3db742c409fa61f02d4dfac63b6cf8fe}{m\+\_\+\+C\+N\+G\+\_\+keycode}
+\item 
+S\+D\+L\+\_\+\+Keycode \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_afe0710d351e77160764ca176a13ead32}{m\+\_\+\+S\+D\+L\+\_\+\+Keycode}
+\item 
+bool \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a85482b8698044d597eb4e09adbcd2d31}{m\+\_\+is\+Down} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains a key\textquotesingle{}s state. 
+
+Contains the current state of a key with its corresponding code for the engine and in S\+DL 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a263217e998b290d7e740ded3a76e06de}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a263217e998b290d7e740ded3a76e06de}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}!Key@{Key}}
+\index{Key@{Key}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}}
+\subsubsection{\texorpdfstring{Key()}{Key()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key\+::\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key}{Key} Ctor. 
+
+Does Nothing \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a61db9dd062b7fc6a38f1a4828a9a4222}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a61db9dd062b7fc6a38f1a4828a9a4222}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}!Key@{Key}}
+\index{Key@{Key}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}}
+\subsubsection{\texorpdfstring{Key()}{Key()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key\+::\+Key (\begin{DoxyParamCaption}\item[{C\+N\+G\+\_\+\+Keycode}]{\+\_\+cng\+Key,  }\item[{S\+D\+L\+\_\+\+Keycode}]{\+\_\+sdl\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Camera Ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+cng\+Key} & The Engine Keycode \\
+\hline
+{\em \+\_\+sdl\+Key} & The S\+DL Keycode\\
+\hline
+\end{DoxyParams}
+Creates a key and assigned the keycodes 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a61f34621eeb4872f9a8cd4bb8fc025d6}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a61f34621eeb4872f9a8cd4bb8fc025d6}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}!get\+S\+D\+L\+Keycode@{get\+S\+D\+L\+Keycode}}
+\index{get\+S\+D\+L\+Keycode@{get\+S\+D\+L\+Keycode}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}}
+\subsubsection{\texorpdfstring{get\+S\+D\+L\+Keycode()}{getSDLKeycode()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Keycode Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key\+::get\+S\+D\+L\+Keycode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the S\+DL keycode of a key. 
+
+\begin{DoxyReturn}{Returns}
+The S\+DL Keycode o Sets wether a key is down or not. This is updated by the \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard}{Keyboard} Update or can be done manually to simulate a keypress. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a2c0499cd43fea6c114114e176f5243ac}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a2c0499cd43fea6c114114e176f5243ac}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}!is\+Key\+Down@{is\+Key\+Down}}
+\index{is\+Key\+Down@{is\+Key\+Down}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}}
+\subsubsection{\texorpdfstring{is\+Key\+Down()}{isKeyDown()}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key\+::is\+Key\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the keydown state. 
+
+\begin{DoxyReturn}{Returns}
+The state the key is in
+\end{DoxyReturn}
+Returns wether a key is down or not \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a27ba9abbd1fce1b29dff7e2cbb418223}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a27ba9abbd1fce1b29dff7e2cbb418223}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}!set\+Key\+Down@{set\+Key\+Down}}
+\index{set\+Key\+Down@{set\+Key\+Down}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}}
+\subsubsection{\texorpdfstring{set\+Key\+Down()}{setKeyDown()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key\+::set\+Key\+Down (\begin{DoxyParamCaption}\item[{bool}]{\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the keydown state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+state} & The state to set\\
+\hline
+\end{DoxyParams}
+Sets wether a key is down or not. This is updated by the \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard}{Keyboard} Update or can be done manually to simulate a keypress. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a3db742c409fa61f02d4dfac63b6cf8fe}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a3db742c409fa61f02d4dfac63b6cf8fe}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}!m\+\_\+\+C\+N\+G\+\_\+keycode@{m\+\_\+\+C\+N\+G\+\_\+keycode}}
+\index{m\+\_\+\+C\+N\+G\+\_\+keycode@{m\+\_\+\+C\+N\+G\+\_\+keycode}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}}
+\subsubsection{\texorpdfstring{m\+\_\+\+C\+N\+G\+\_\+keycode}{m\_CNG\_keycode}}
+{\footnotesize\ttfamily C\+N\+G\+\_\+\+Keycode Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key\+::m\+\_\+\+C\+N\+G\+\_\+keycode\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Engine Keycode \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a85482b8698044d597eb4e09adbcd2d31}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_a85482b8698044d597eb4e09adbcd2d31}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}!m\+\_\+is\+Down@{m\+\_\+is\+Down}}
+\index{m\+\_\+is\+Down@{m\+\_\+is\+Down}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}}
+\subsubsection{\texorpdfstring{m\+\_\+is\+Down}{m\_isDown}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key\+::m\+\_\+is\+Down = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+The key up/down state \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_afe0710d351e77160764ca176a13ead32}\label{class_cookie_eng_1_1_input_1_1_keyboard_1_1_key_afe0710d351e77160764ca176a13ead32}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}!m\+\_\+\+S\+D\+L\+\_\+\+Keycode@{m\+\_\+\+S\+D\+L\+\_\+\+Keycode}}
+\index{m\+\_\+\+S\+D\+L\+\_\+\+Keycode@{m\+\_\+\+S\+D\+L\+\_\+\+Keycode}!Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key@{Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key}}
+\subsubsection{\texorpdfstring{m\+\_\+\+S\+D\+L\+\_\+\+Keycode}{m\_SDL\_Keycode}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Keycode Cookie\+Eng\+::\+Input\+::\+Keyboard\+::\+Key\+::m\+\_\+\+S\+D\+L\+\_\+\+Keycode\hspace{0.3cm}{\ttfamily [protected]}}
+
+The S\+DL Keycode 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Input\+Key.\+h\end{DoxyCompactItemize}

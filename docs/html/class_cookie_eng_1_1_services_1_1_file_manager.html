@@ -24,6 +24,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cookie Engine
    </div>
+   <div id="projectbrief">A basic OpenGL engine designed for Games Programming BSc</div>
   </td>
  </tr>
  </tbody>
@@ -90,6 +91,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abf50a7b6eb9fa88a9557254acbd2d9cc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_services_1_1_file_manager.html#abf50a7b6eb9fa88a9557254acbd2d9cc">loadTextFileASync</a> (std::string _filepath)</td></tr>
 <tr class="memdesc:abf50a7b6eb9fa88a9557254acbd2d9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous loading of text files.  <a href="#abf50a7b6eb9fa88a9557254acbd2d9cc">More...</a><br /></td></tr>
 <tr class="separator:abf50a7b6eb9fa88a9557254acbd2d9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9d81e3a19c47774c1c1f15f27e688a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html">ECS::Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_services_1_1_file_manager.html#aa9d81e3a19c47774c1c1f15f27e688a4">loadEntity</a> (std::string _filepath)</td></tr>
+<tr class="memdesc:aa9d81e3a19c47774c1c1f15f27e688a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads an Entity from file.  <a href="#aa9d81e3a19c47774c1c1f15f27e688a4">More...</a><br /></td></tr>
+<tr class="separator:aa9d81e3a19c47774c1c1f15f27e688a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Manager Class that handles the loading of files either synchronously or asynchronously. </p>
@@ -136,6 +140,34 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa9d81e3a19c47774c1c1f15f27e688a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d81e3a19c47774c1c1f15f27e688a4">&#9670;&nbsp;</a></span>loadEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html">ECS::Entity</a> CookieEng::Services::FileManager::loadEntity </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>_filepath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads an Entity from file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_filepath</td><td>The path to the Entity File to be loaded </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An std::string containing the contents of the text file.</dd></dl>
+<p>Loads a text file into an std::string. </p>
+
+</div>
+</div>
 <a id="a744bde422e66fcfbfcc379a21ae90500"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a744bde422e66fcfbfcc379a21ae90500">&#9670;&nbsp;</a></span>loadTextFile()</h2>
 

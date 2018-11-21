@@ -24,6 +24,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cookie Engine
    </div>
+   <div id="projectbrief">A basic OpenGL engine designed for Games Programming BSc</div>
   </td>
  </tr>
  </tbody>
@@ -79,6 +80,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e57da947b47b9124ad26fabf7cbbb89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#a8e57da947b47b9124ad26fabf7cbbb89">Entity</a> ()</td></tr>
+<tr class="memdesc:a8e57da947b47b9124ad26fabf7cbbb89"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html" title="Holds together a group of components that are unique of each other. ">Entity</a> Ctor.  <a href="#a8e57da947b47b9124ad26fabf7cbbb89">More...</a><br /></td></tr>
+<tr class="separator:a8e57da947b47b9124ad26fabf7cbbb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#a7b24f6959d8f1686e02e8ae5ef61f08c">addComponent</a> ()</td></tr>
 <tr class="memdesc:a7b24f6959d8f1686e02e8ae5ef61f08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a component to the entity.  <a href="#a7b24f6959d8f1686e02e8ae5ef61f08c">More...</a><br /></td></tr>
@@ -91,16 +95,55 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a594daff6ddf321ac9c3a2fad3e50620e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#a594daff6ddf321ac9c3a2fad3e50620e">hasComponent</a> ()</td></tr>
 <tr class="memdesc:a594daff6ddf321ac9c3a2fad3e50620e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests to see if an <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html" title="Holds together a group of components that are unique of each other. ">Entity</a> contains a component of type T.  <a href="#a594daff6ddf321ac9c3a2fad3e50620e">More...</a><br /></td></tr>
 <tr class="separator:a594daff6ddf321ac9c3a2fad3e50620e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13d0c3e85c8cb4672371401726df4490"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#a13d0c3e85c8cb4672371401726df4490">getComponentTypeID</a> ()</td></tr>
+<tr class="memdesc:a13d0c3e85c8cb4672371401726df4490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a unique integar.  <a href="#a13d0c3e85c8cb4672371401726df4490">More...</a><br /></td></tr>
+<tr class="separator:a13d0c3e85c8cb4672371401726df4490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fcce356d5a9a67a785c4e80c155306d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6fcce356d5a9a67a785c4e80c155306d"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#a6fcce356d5a9a67a785c4e80c155306d">getComponentTypeID</a> ()</td></tr>
+<tr class="memdesc:a6fcce356d5a9a67a785c4e80c155306d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the corresonding unique integar for a specified type.  <a href="#a6fcce356d5a9a67a785c4e80c155306d">More...</a><br /></td></tr>
+<tr class="separator:a6fcce356d5a9a67a785c4e80c155306d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20c5dad3b6d92629cb6900ecd81a051"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#aa20c5dad3b6d92629cb6900ecd81a051">onStart</a> ()</td></tr>
+<tr class="memdesc:aa20c5dad3b6d92629cb6900ecd81a051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the underlying components.  <a href="#aa20c5dad3b6d92629cb6900ecd81a051">More...</a><br /></td></tr>
+<tr class="separator:aa20c5dad3b6d92629cb6900ecd81a051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dde99658786478b528eb2cca86ba851"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#a6dde99658786478b528eb2cca86ba851">onUpdate</a> ()</td></tr>
+<tr class="memdesc:a6dde99658786478b528eb2cca86ba851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the underlying components.  <a href="#a6dde99658786478b528eb2cca86ba851">More...</a><br /></td></tr>
+<tr class="separator:a6dde99658786478b528eb2cca86ba851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2074aee92bef04bdc4e3a8b430c4ad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#ac2074aee92bef04bdc4e3a8b430c4ad7">resetComponentParents</a> ()</td></tr>
+<tr class="memdesc:ac2074aee92bef04bdc4e3a8b430c4ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the parents of the entities on this component to be this entity.  <a href="#ac2074aee92bef04bdc4e3a8b430c4ad7">More...</a><br /></td></tr>
+<tr class="separator:ac2074aee92bef04bdc4e3a8b430c4ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a5c8b8b6f07c07b97e898ece5dab38517"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html">Component</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#a5c8b8b6f07c07b97e898ece5dab38517">m_components</a></td></tr>
 <tr class="separator:a5c8b8b6f07c07b97e898ece5dab38517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57aaebd573658952dfa4ac9f1386f6d"><td class="memItemLeft" align="right" valign="top">std::bitset&lt; CNG_MAX_COMPONENTS &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html#ad57aaebd573658952dfa4ac9f1386f6d">m_componentKey</a></td></tr>
+<tr class="separator:ad57aaebd573658952dfa4ac9f1386f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Holds together a group of components that are unique of each other. </p>
 <p>Holds a group of components that dictate the behaviour of the entity. Each component holds a pointer to its parent entity. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8e57da947b47b9124ad26fabf7cbbb89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e57da947b47b9124ad26fabf7cbbb89">&#9670;&nbsp;</a></span>Entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CookieEng::ECS::Entity::Entity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html" title="Holds together a group of components that are unique of each other. ">Entity</a> Ctor. </p>
+<p>Reserves memory for max components </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7b24f6959d8f1686e02e8ae5ef61f08c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7b24f6959d8f1686e02e8ae5ef61f08c">&#9670;&nbsp;</a></span>addComponent()</h2>
 
@@ -173,6 +216,66 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a13d0c3e85c8cb4672371401726df4490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13d0c3e85c8cb4672371401726df4490">&#9670;&nbsp;</a></span>getComponentTypeID() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CookieEng::ECS::Entity::getComponentTypeID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a unique integar. </p>
+<dl class="section return"><dt>Returns</dt><dd>An increasing integar that is used for assignment to a component type</dd></dl>
+<p>Returns a new unique integar </p>
+
+</div>
+</div>
+<a id="a6fcce356d5a9a67a785c4e80c155306d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fcce356d5a9a67a785c4e80c155306d">&#9670;&nbsp;</a></span>getComponentTypeID() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CookieEng::ECS::Entity::getComponentTypeID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the corresonding unique integar for a specified type. </p>
+<dl class="section return"><dt>Returns</dt><dd>The unique integar</dd></dl>
+<p>Takes in a component type and returns a unique integar for that type. Used by the bitset to get an index for the bit that represents the component. </p>
+
+</div>
+</div>
 <a id="a594daff6ddf321ac9c3a2fad3e50620e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a594daff6ddf321ac9c3a2fad3e50620e">&#9670;&nbsp;</a></span>hasComponent()</h2>
 
@@ -209,7 +312,114 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="aa20c5dad3b6d92629cb6900ecd81a051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20c5dad3b6d92629cb6900ecd81a051">&#9670;&nbsp;</a></span>onStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::ECS::Entity::onStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Starts the underlying components. </p>
+<p>Loops through the linked components and starts them all </p>
+
+</div>
+</div>
+<a id="a6dde99658786478b528eb2cca86ba851"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dde99658786478b528eb2cca86ba851">&#9670;&nbsp;</a></span>onUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::ECS::Entity::onUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the underlying components. </p>
+<p>Loops through the linked components and updates them all </p>
+
+</div>
+</div>
+<a id="ac2074aee92bef04bdc4e3a8b430c4ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2074aee92bef04bdc4e3a8b430c4ad7">&#9670;&nbsp;</a></span>resetComponentParents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::ECS::Entity::resetComponentParents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets the parents of the entities on this component to be this entity. </p>
+<p>Loops through all the components on an entity and resets the parent pointer. This is required as sometimes the entity may move. I should have fuixed this through reserving more space in the entity vector but i'll keep this method just in case. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad57aaebd573658952dfa4ac9f1386f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57aaebd573658952dfa4ac9f1386f6d">&#9670;&nbsp;</a></span>m_componentKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::bitset&lt;CNG_MAX_COMPONENTS&gt; CookieEng::ECS::Entity::m_componentKey</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A bitset representing the current components used to quickly test wether an entity has a certain component </p>
+
+</div>
+</div>
 <a id="a5c8b8b6f07c07b97e898ece5dab38517"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c8b8b6f07c07b97e898ece5dab38517">&#9670;&nbsp;</a></span>m_components</h2>
 

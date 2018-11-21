@@ -24,6 +24,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cookie Engine
    </div>
+   <div id="projectbrief">A basic OpenGL engine designed for Games Programming BSc</div>
   </td>
  </tr>
  </tbody>
@@ -66,6 +67,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_cookie_eng_1_1_object_1_1_camera-members.html">List of all members</a>  </div>
@@ -78,15 +80,23 @@ $(function() {
  <a href="class_cookie_eng_1_1_object_1_1_camera.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_camera_8h_source.html">Camera.h</a>&gt;</code></p>
+
+<p>Inherits enable_shared_from_this&lt; Camera &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa98f73385bfef2dd29f3763dd6a7549c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#aa98f73385bfef2dd29f3763dd6a7549c">Camera</a> ()</td></tr>
 <tr class="memdesc:aa98f73385bfef2dd29f3763dd6a7549c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html" title="Contains the data for the representation of a perspective camera. ">Camera</a> Ctor.  <a href="#aa98f73385bfef2dd29f3763dd6a7549c">More...</a><br /></td></tr>
 <tr class="separator:aa98f73385bfef2dd29f3763dd6a7549c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11d9131d0dddff4e6ab545e0b09657c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#ae11d9131d0dddff4e6ab545e0b09657c">Camera</a> (const int _resolutionWidth, const int _resolutionHeight)</td></tr>
+<tr class="memdesc:ae11d9131d0dddff4e6ab545e0b09657c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html" title="Contains the data for the representation of a perspective camera. ">Camera</a> Ctor.  <a href="#ae11d9131d0dddff4e6ab545e0b09657c">More...</a><br /></td></tr>
+<tr class="separator:ae11d9131d0dddff4e6ab545e0b09657c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d672ca800d63af6fe3d6665471a2b05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a8d672ca800d63af6fe3d6665471a2b05">~Camera</a> ()</td></tr>
 <tr class="memdesc:a8d672ca800d63af6fe3d6665471a2b05"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html" title="Contains the data for the representation of a perspective camera. ">Camera</a> Dtor.  <a href="#a8d672ca800d63af6fe3d6665471a2b05">More...</a><br /></td></tr>
 <tr class="separator:a8d672ca800d63af6fe3d6665471a2b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab2361ba6df40d0aae7952a8e474c08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#aaab2361ba6df40d0aae7952a8e474c08">setActive</a> ()</td></tr>
+<tr class="memdesc:aaab2361ba6df40d0aae7952a8e474c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the active camera.  <a href="#aaab2361ba6df40d0aae7952a8e474c08">More...</a><br /></td></tr>
+<tr class="separator:aaab2361ba6df40d0aae7952a8e474c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef44a3e6cef1540be7e8bcb977dddd78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#aef44a3e6cef1540be7e8bcb977dddd78">setFOV</a> (const float _fov)</td></tr>
 <tr class="memdesc:aef44a3e6cef1540be7e8bcb977dddd78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Field of View.  <a href="#aef44a3e6cef1540be7e8bcb977dddd78">More...</a><br /></td></tr>
 <tr class="separator:aef44a3e6cef1540be7e8bcb977dddd78"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,28 +109,46 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0b8a35f92490adf193d36f2906a2c1d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a0b8a35f92490adf193d36f2906a2c1d8">updateCameraUniform</a> ()</td></tr>
 <tr class="memdesc:a0b8a35f92490adf193d36f2906a2c1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the OpenGL <a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html" title="Contains the data for the representation of a perspective camera. ">Camera</a> Data Uniform.  <a href="#a0b8a35f92490adf193d36f2906a2c1d8">More...</a><br /></td></tr>
 <tr class="separator:a0b8a35f92490adf193d36f2906a2c1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae21ba7bbc237d0ddfac4d9531ba4597e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#ae21ba7bbc237d0ddfac4d9531ba4597e">getViewportWidth</a> ()</td></tr>
+<tr class="memdesc:ae21ba7bbc237d0ddfac4d9531ba4597e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the viewport.  <a href="#ae21ba7bbc237d0ddfac4d9531ba4597e">More...</a><br /></td></tr>
+<tr class="separator:ae21ba7bbc237d0ddfac4d9531ba4597e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3cd942d665b97a64e19b68b5d0fe6fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#ad3cd942d665b97a64e19b68b5d0fe6fb">getViewportHeight</a> ()</td></tr>
+<tr class="memdesc:ad3cd942d665b97a64e19b68b5d0fe6fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the viewport.  <a href="#ad3cd942d665b97a64e19b68b5d0fe6fb">More...</a><br /></td></tr>
+<tr class="separator:ad3cd942d665b97a64e19b68b5d0fe6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa996e685c79a71bd30e88341b68ed197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_cookie_eng_1_1_components_1_1_transform.html">Components::Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#aa996e685c79a71bd30e88341b68ed197">transform</a></td></tr>
 <tr class="separator:aa996e685c79a71bd30e88341b68ed197"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a552d79d05b0478c0ce92aa1d673ea1a7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a552d79d05b0478c0ce92aa1d673ea1a7">activeCamera</a></td></tr>
+<tr class="separator:a552d79d05b0478c0ce92aa1d673ea1a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a25657d7f0704523a1fd10dd7e00d9d61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a25657d7f0704523a1fd10dd7e00d9d61">init</a> ()</td></tr>
+<tr class="memdesc:a25657d7f0704523a1fd10dd7e00d9d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises the camera data after the constructor.  <a href="#a25657d7f0704523a1fd10dd7e00d9d61">More...</a><br /></td></tr>
+<tr class="separator:a25657d7f0704523a1fd10dd7e00d9d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab685b627f1a3bc019ae68185d41ee38b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#ab685b627f1a3bc019ae68185d41ee38b">cleanProjectionMatrix</a> ()</td></tr>
 <tr class="memdesc:ab685b627f1a3bc019ae68185d41ee38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the updated Projection Matrix.  <a href="#ab685b627f1a3bc019ae68185d41ee38b">More...</a><br /></td></tr>
 <tr class="separator:ab685b627f1a3bc019ae68185d41ee38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a8ec41f98d646a5c9dd733157ee41f435"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a8ec41f98d646a5c9dd733157ee41f435">m_fov</a></td></tr>
-<tr class="separator:a8ec41f98d646a5c9dd733157ee41f435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e63b2dc45a36cef1075909c5521d71"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#ad9e63b2dc45a36cef1075909c5521d71">m_fovRad</a></td></tr>
+<tr class="separator:ad9e63b2dc45a36cef1075909c5521d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86c6f04a4f39bfa931493b1f6b9c013c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a86c6f04a4f39bfa931493b1f6b9c013c">m_aspect</a></td></tr>
 <tr class="separator:a86c6f04a4f39bfa931493b1f6b9c013c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257e21bd91592e599162cd6bf0d618d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a257e21bd91592e599162cd6bf0d618d6">m_viewportWidth</a></td></tr>
+<tr class="separator:a257e21bd91592e599162cd6bf0d618d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a65724cf71fe2ce24e4ee2071a4e068"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a5a65724cf71fe2ce24e4ee2071a4e068">m_viewportHeight</a></td></tr>
+<tr class="separator:a5a65724cf71fe2ce24e4ee2071a4e068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a5152fd8fbd92c4cbcc73d14511e584"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a6a5152fd8fbd92c4cbcc73d14511e584">m_projectionMatrix</a></td></tr>
 <tr class="separator:a6a5152fd8fbd92c4cbcc73d14511e584"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a609beae2a3fb5cfca418fac357ef6d36"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#a609beae2a3fb5cfca418fac357ef6d36">m_uniformBuffer</a></td></tr>
-<tr class="separator:a609beae2a3fb5cfca418fac357ef6d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7715274f84e9b2e164c32a528989c3b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#ae7715274f84e9b2e164c32a528989c3b">m_uniformBuffer</a></td></tr>
+<tr class="separator:ae7715274f84e9b2e164c32a528989c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd3f4dab5ebb7b14b6e5ffd9704bccb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_cookie_eng_1_1_object_1_1u___camera_data.html">u_CameraData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html#acd3f4dab5ebb7b14b6e5ffd9704bccb6">m_uniformData</a></td></tr>
 <tr class="separator:acd3f4dab5ebb7b14b6e5ffd9704bccb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -129,7 +157,7 @@ Protected Attributes</h2></td></tr>
 <p>Contains the data required to represent a camera in OpenGL. This uses the glm::perspective function to create a camera that can be moved around using the transform. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa98f73385bfef2dd29f3763dd6a7549c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa98f73385bfef2dd29f3763dd6a7549c">&#9670;&nbsp;</a></span>Camera()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa98f73385bfef2dd29f3763dd6a7549c">&#9670;&nbsp;</a></span>Camera() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,6 +173,44 @@ Protected Attributes</h2></td></tr>
 
 <p><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html" title="Contains the data for the representation of a perspective camera. ">Camera</a> Ctor. </p>
 <p>Creates a camera at the world 0, 0, 0 with a standard FoV </p>
+
+</div>
+</div>
+<a id="ae11d9131d0dddff4e6ab545e0b09657c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae11d9131d0dddff4e6ab545e0b09657c">&#9670;&nbsp;</a></span>Camera() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CookieEng::Object::Camera::Camera </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>_resolutionWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>_resolutionHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html" title="Contains the data for the representation of a perspective camera. ">Camera</a> Ctor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_resolutionWidth</td><td>The width of the camera's resolution </td></tr>
+    <tr><td class="paramname">_resolutionHeight</td><td>The height of the camera's resolution</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Creates a camera at the world 0, 0, 0 with a standard FoV at the specified resolution </p>
 
 </div>
 </div>
@@ -172,7 +238,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html" title="Contains the data for the representation of a perspective camera. ">Camera</a> Dtor. </p>
-<p>Deletes the camera </p>
+<p>Removes the camera </p>
 
 </div>
 </div>
@@ -231,6 +297,120 @@ Protected Attributes</h2></td></tr>
 <p>Return the Projection Matrix. </p>
 <dl class="section return"><dt>Returns</dt><dd>The Projection Matrix</dd></dl>
 <p>Returns the Projection Matrix </p>
+
+</div>
+</div>
+<a id="ad3cd942d665b97a64e19b68b5d0fe6fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3cd942d665b97a64e19b68b5d0fe6fb">&#9670;&nbsp;</a></span>getViewportHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CookieEng::Object::Camera::getViewportHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the height of the viewport. </p>
+<dl class="section return"><dt>Returns</dt><dd>The height of the viewport</dd></dl>
+<p>Returns the camera's viewport height </p>
+
+</div>
+</div>
+<a id="ae21ba7bbc237d0ddfac4d9531ba4597e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae21ba7bbc237d0ddfac4d9531ba4597e">&#9670;&nbsp;</a></span>getViewportWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CookieEng::Object::Camera::getViewportWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the width of the viewport. </p>
+<dl class="section return"><dt>Returns</dt><dd>The width of the viewport</dd></dl>
+<p>Returns the camera's viewport width </p>
+
+</div>
+</div>
+<a id="a25657d7f0704523a1fd10dd7e00d9d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25657d7f0704523a1fd10dd7e00d9d61">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::Object::Camera::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialises the camera data after the constructor. </p>
+<p>Initialises the camera data after the constructor </p>
+
+</div>
+</div>
+<a id="aaab2361ba6df40d0aae7952a8e474c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaab2361ba6df40d0aae7952a8e474c08">&#9670;&nbsp;</a></span>setActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::Object::Camera::setActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the active camera. </p>
+<p>Sets the active camera in the engine to this camera </p>
 
 </div>
 </div>
@@ -296,7 +476,7 @@ Protected Attributes</h2></td></tr>
 <p>Sets the Field of View. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_fov</td><td>The desired Field of View</td></tr>
+    <tr><td class="paramname">_fov</td><td>The desired Field of View in Radians</td></tr>
   </table>
   </dd>
 </dl>
@@ -325,6 +505,29 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a552d79d05b0478c0ce92aa1d673ea1a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a552d79d05b0478c0ce92aa1d673ea1a7">&#9670;&nbsp;</a></span>activeCamera</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cookie_eng_1_1_object_1_1_camera.html">Camera</a>* CookieEng::Object::Camera::activeCamera</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The currently active camera </p>
+
+</div>
+</div>
 <a id="a86c6f04a4f39bfa931493b1f6b9c013c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86c6f04a4f39bfa931493b1f6b9c013c">&#9670;&nbsp;</a></span>m_aspect</h2>
 
@@ -348,8 +551,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8ec41f98d646a5c9dd733157ee41f435"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ec41f98d646a5c9dd733157ee41f435">&#9670;&nbsp;</a></span>m_fov</h2>
+<a id="ad9e63b2dc45a36cef1075909c5521d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e63b2dc45a36cef1075909c5521d71">&#9670;&nbsp;</a></span>m_fovRad</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -358,7 +561,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float CookieEng::Object::Camera::m_fov</td>
+          <td class="memname">float CookieEng::Object::Camera::m_fovRad</td>
         </tr>
       </table>
   </td>
@@ -367,7 +570,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The current FoV </p>
+<p>The current FoV in radians </p>
 
 </div>
 </div>
@@ -394,8 +597,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a609beae2a3fb5cfca418fac357ef6d36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a609beae2a3fb5cfca418fac357ef6d36">&#9670;&nbsp;</a></span>m_uniformBuffer</h2>
+<a id="ae7715274f84e9b2e164c32a528989c3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7715274f84e9b2e164c32a528989c3b">&#9670;&nbsp;</a></span>m_uniformBuffer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -404,7 +607,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a>&gt; CookieEng::Object::Camera::m_uniformBuffer</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_graphics_1_1_vertex_buffer.html">Graphics::VertexBuffer</a>&gt; CookieEng::Object::Camera::m_uniformBuffer</td>
         </tr>
       </table>
   </td>
@@ -437,6 +640,52 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The struct containing the matrices for the uniform buffer to use </p>
+
+</div>
+</div>
+<a id="a5a65724cf71fe2ce24e4ee2071a4e068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a65724cf71fe2ce24e4ee2071a4e068">&#9670;&nbsp;</a></span>m_viewportHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CookieEng::Object::Camera::m_viewportHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Height of the viewport in pixels </p>
+
+</div>
+</div>
+<a id="a257e21bd91592e599162cd6bf0d618d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a257e21bd91592e599162cd6bf0d618d6">&#9670;&nbsp;</a></span>m_viewportWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CookieEng::Object::Camera::m_viewportWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Width of the viewport in pixels </p>
 
 </div>
 </div>

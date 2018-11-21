@@ -1,0 +1,73 @@
+\hypertarget{class_cookie_eng_1_1_e_c_s_1_1_component}{}\section{Cookie\+Eng\+:\+:E\+CS\+:\+:Component Class Reference}
+\label{class_cookie_eng_1_1_e_c_s_1_1_component}\index{Cookie\+Eng\+::\+E\+C\+S\+::\+Component@{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}}
+
+
+The component base class.  
+
+
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+
+
+Inherited by \hyperlink{class_cookie_eng_1_1_components_1_1_renderable}{Cookie\+Eng\+::\+Components\+::\+Renderable}, and \hyperlink{class_cookie_eng_1_1_components_1_1_transform}{Cookie\+Eng\+::\+Components\+::\+Transform}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component_a4b02b630558005a9c4723cf15b8b03d6}{on\+Init} ()
+\begin{DoxyCompactList}\small\item\em Called on component initialisation. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component_aaf8523586d57c3e40d4149f228755139}{on\+Start} ()
+\begin{DoxyCompactList}\small\item\em Called on component start. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component_a7c4a11f71e21181bc6f56841565b9a56}{on\+Update} ()
+\begin{DoxyCompactList}\small\item\em Called on component update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_component_a8a0c5a4ee3a87809d3e6d0bdaed3ebbe}\label{class_cookie_eng_1_1_e_c_s_1_1_component_a8a0c5a4ee3a87809d3e6d0bdaed3ebbe}} 
+\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{Entity} $\ast$ {\bfseries parent}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The component base class. 
+
+The base class that all the components of entities must inherit from. Through polymorphism this class provides the virtual methods that can be overriden by components to allow for the correct usage. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_component_a4b02b630558005a9c4723cf15b8b03d6}\label{class_cookie_eng_1_1_e_c_s_1_1_component_a4b02b630558005a9c4723cf15b8b03d6}} 
+\index{Cookie\+Eng\+::\+E\+C\+S\+::\+Component@{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Cookie\+Eng\+::\+E\+C\+S\+::\+Component@{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}}
+\subsubsection{\texorpdfstring{on\+Init()}{onInit()}}
+{\footnotesize\ttfamily virtual void Cookie\+Eng\+::\+E\+C\+S\+::\+Component\+::on\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called on component initialisation. 
+
+Called before start, this method is called when the component is first created by the engine (usually on entity creation) \mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_component_aaf8523586d57c3e40d4149f228755139}\label{class_cookie_eng_1_1_e_c_s_1_1_component_aaf8523586d57c3e40d4149f228755139}} 
+\index{Cookie\+Eng\+::\+E\+C\+S\+::\+Component@{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}!on\+Start@{on\+Start}}
+\index{on\+Start@{on\+Start}!Cookie\+Eng\+::\+E\+C\+S\+::\+Component@{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}}
+\subsubsection{\texorpdfstring{on\+Start()}{onStart()}}
+{\footnotesize\ttfamily virtual void Cookie\+Eng\+::\+E\+C\+S\+::\+Component\+::on\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called on component start. 
+
+Called after on\+Init, this method is called when the engine runs through the first game loop \mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_component_a7c4a11f71e21181bc6f56841565b9a56}\label{class_cookie_eng_1_1_e_c_s_1_1_component_a7c4a11f71e21181bc6f56841565b9a56}} 
+\index{Cookie\+Eng\+::\+E\+C\+S\+::\+Component@{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}!on\+Update@{on\+Update}}
+\index{on\+Update@{on\+Update}!Cookie\+Eng\+::\+E\+C\+S\+::\+Component@{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}}
+\subsubsection{\texorpdfstring{on\+Update()}{onUpdate()}}
+{\footnotesize\ttfamily virtual void Cookie\+Eng\+::\+E\+C\+S\+::\+Component\+::on\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called on component update. 
+
+Called after start and on every frame 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Component.\+h\end{DoxyCompactItemize}

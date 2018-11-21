@@ -86,6 +86,13 @@ namespace Components
 		*	Changes the rotation of the transform by the given vector 3D.
 		*/
 		void rotate(const float _rotation, const glm::vec3 _axis);
+		// get
+		/** @brief Getter for the rotation matrix.
+		*	@return The rotation matrix of the transform
+		*
+		*	Gets the rotation matrix of the transform. Used by BoundingBox.
+		*/
+		glm::mat4 getRotationMatrix() { return m_rotationMatrix; };
 
 		// scale
 		// get

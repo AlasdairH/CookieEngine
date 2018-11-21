@@ -8,8 +8,17 @@ namespace Components
 	{
 		std::shared_ptr<Transform> transform = parent->getComponent<Transform>();
 		BoundingBox adjustedAABB;
+
+		// attempted to do transform...
+		glm::vec3 transformedMinPoint = glm::vec4(m_min.x, m_min.y, m_min.z, 0.0f) * transform->getMatrix();
+		glm::vec3 transformedMaxPoint = glm::vec4(m_max.x, m_max.y, m_max.z, 0.0f) * transform->getMatrix();
+
+		//adjustedAABB.setMinBoundingPoint(transformedMinPoint);
+		//adjustedAABB.setMaxBoundingPoint(transformedMaxPoint);
+
 		adjustedAABB.setMinBoundingPoint((m_min + transform->getPositionVec3()) * transform->getScaleVec3());
 		adjustedAABB.setMaxBoundingPoint((m_max + transform->getPositionVec3()) * transform->getScaleVec3());
+
 		return adjustedAABB;
 	}
 

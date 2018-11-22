@@ -14,6 +14,7 @@
 #include "Entity.h"
 #include "Transform.h"
 #include "Renderable.h"
+#include "PrimativeGenerator.h"
 
 namespace CookieEng
 {
@@ -88,6 +89,9 @@ namespace Components
 	protected:
 		glm::vec3 m_min = glm::vec3(std::numeric_limits<float>::max());		/**< The minimum corner of the bounding box */
 		glm::vec3 m_max = glm::vec3(std::numeric_limits<float>::min());		/**< The maximum corner of the bounding box */
+
+		bool m_renderMesh = false;											/**< Flag wether the mesh should render or not */
+		Resources::Mesh m_mesh;												/**< Renderable mesh for the bounding box */
 	};
 }
 }

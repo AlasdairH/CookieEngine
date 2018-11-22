@@ -22,7 +22,7 @@ int main()
 
 	LOG_MESSAGE("Loading Resources");
 	// load meshs
-	resourceManager.load<Resources::Mesh>("CookieMesh", "resources/models/Cookie.obj");
+	resourceManager.load<Resources::Mesh>("CookieMesh", "resources/models/Cube.obj");
 	resourceManager.load<Resources::Mesh>("MugMesh", "resources/models/CoffeeMug.obj");
 
 	// load textures

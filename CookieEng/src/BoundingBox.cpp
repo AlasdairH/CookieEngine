@@ -32,6 +32,8 @@ namespace Components
 			{
 				m_min = mesh->getMinBoundingPoint();
 				m_max = mesh->getMaxBoundingPoint();
+
+				m_mesh = Data::PrimativeGenerator::generateCube(m_min, m_max);
 				return;
 			}
 			LOG_WARNING("BoundingBox: Unable to pull size data from mesh, renderable found but has no valid mesh");

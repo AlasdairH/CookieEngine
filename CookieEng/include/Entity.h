@@ -133,6 +133,7 @@ namespace ECS
 			for (std::vector<std::shared_ptr<Component> >::iterator it = m_components.begin(); it != m_components.end(); it++)
 			{
 				(*it)->onStart();
+				(*it)->started = true;
 			}
 		}
 
@@ -144,6 +145,12 @@ namespace ECS
 		{
 			for (std::vector<std::shared_ptr<Component> >::iterator it = m_components.begin(); it != m_components.end(); it++)
 			{
+				if (!(*it)->started)
+				{
+					(*it)->onStart();
+					(*it)->started = true;
+				}
+
 				(*it)->onUpdate();
 			}
 		}

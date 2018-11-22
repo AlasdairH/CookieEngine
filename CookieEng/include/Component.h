@@ -40,8 +40,8 @@ namespace ECS
 		*/
 		virtual void onUpdate() { }
 
+		bool started = false;	/**< Flag for wether the component has run is start function */
 	protected:
-
 	};
 }
 }

@@ -6,9 +6,12 @@ namespace Resources
 {
 	void Mesh::load(const std::string & _name, const std::string & _filepath)
 	{
+		Utilities::Timer timer;
 		vertices.clear();
 		indices.clear();
 		layout.reset();
+
+		int parsedLines = 0;
 
 		std::string objFile = Services::ServiceLocator::getFileManager().loadTextFile(_filepath);
 
@@ -59,6 +62,7 @@ namespace Resources
 					m_maxBound.z = z;
 
 				verticesMap[(int)verticesMap.size() + 1] = glm::vec3(x, y, z);
+				++parsedLines;
 			}
 
 			// texture coord line
@@ -72,6 +76,7 @@ namespace Resources
 				std::string yVal = line.substr(secondSpaceIndex + 1, eolIndex - secondSpaceIndex - 1);
 
 				textureCoords[(int)textureCoords.size() + 1] = glm::vec2(std::stof(xVal), std::stof(yVal));
+				++parsedLines;
 			}
 
 			// normal line
@@ -87,6 +92,7 @@ namespace Resources
 				std::string zVal = line.substr(thirdSpaceIndex + 1, eolIndex - thirdSpaceIndex - 1);
 
 				normals[(int)normals.size() + 1] = glm::vec3(std::stof(xVal), std::stof(yVal), std::stof(zVal));
+				++parsedLines;
 			}
 
 
@@ -142,6 +148,7 @@ namespace Resources
 						indices.push_back(vertices.size() - 1);
 					}
 				}
+				++parsedLines;
 			}
 
 			// move the next start point to the end of the last line
@@ -154,6 +161,9 @@ namespace Resources
 		// push 3 floats for the normals (x, y, z)
 		layout.push<float>(3);
 		// return the mesh
+
+		LOG_WARNING("Loaded " << vertices.size() << " vertices | " << parsedLines << " lines parsed in " << timer.getDuration() << "s");
+		m_isLoaded = true;
 
 		if (!m_loadedToGPU)
 		{
@@ -169,7 +179,7 @@ namespace Resources
 			m_loadedToGPU = true;
 		}
 
-		m_isLoaded = true;
+
 	}
 	
 }

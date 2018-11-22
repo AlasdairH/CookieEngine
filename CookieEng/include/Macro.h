@@ -3,8 +3,8 @@
 #include <iostream>
 #include <ctime>
 
-#define DEBUG
-//#define TEST
+//#define DEBUG
+#define TEST
 //#define RELEASE
 
 #define _CRT_SECURE_NO_WARNINGS

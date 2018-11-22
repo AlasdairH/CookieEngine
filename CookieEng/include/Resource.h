@@ -70,7 +70,7 @@ namespace Resources
 
 		std::string		m_filepath;			/**< The resource filepath */
 
-		bool			m_isLoaded;			/**< Flag for the loaded state of the resource */
+		bool			m_isLoaded = false;	/**< Flag for the loaded state of the resource */
 	};
 }
 }

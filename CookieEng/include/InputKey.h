@@ -18,7 +18,7 @@ namespace Keyboard
 #ifdef USE_SDL
 	enum CNG_Keycode
 	{
-		CNG_KEY_W = SDLK_w, CNG_KEY_S = SDLK_s, CNG_KEY_A = SDLK_a, CNG_KEY_D = SDLK_d
+		CNG_KEY_NULL = -1, CNG_KEY_W = SDLK_w, CNG_KEY_S = SDLK_s, CNG_KEY_A = SDLK_a, CNG_KEY_D = SDLK_d
 	};
 #endif
 
@@ -64,9 +64,9 @@ namespace Keyboard
 		inline SDL_Keycode getSDLKeycode() { return m_SDL_Keycode; }
 
 	protected:
-		CNG_Keycode		m_CNG_keycode;			/**< The Engine Keycode */
-		SDL_Keycode		m_SDL_Keycode;			/**< The SDL Keycode */
-		bool			m_isDown = false;		/**< The key up/down state */
+		CNG_Keycode		m_CNG_keycode = CNG_KEY_NULL;	/**< The Engine Keycode */
+		SDL_Keycode		m_SDL_Keycode;					/**< The SDL Keycode */
+		bool			m_isDown = false;				/**< The key up/down state */
 	};
 }
 }

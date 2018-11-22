@@ -109,6 +109,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a061b3b2b5d33c1dda2955e9b2e01d736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_transform.html#a061b3b2b5d33c1dda2955e9b2e01d736">rotate</a> (const float _rotation, const glm::vec3 _axis)</td></tr>
 <tr class="memdesc:a061b3b2b5d33c1dda2955e9b2e01d736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the transform to a new rotation relative to its old rotation.  <a href="#a061b3b2b5d33c1dda2955e9b2e01d736">More...</a><br /></td></tr>
 <tr class="separator:a061b3b2b5d33c1dda2955e9b2e01d736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a069b3948eab396b9f83fa9b983983e09"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_transform.html#a069b3948eab396b9f83fa9b983983e09">getRotationMatrix</a> ()</td></tr>
+<tr class="memdesc:a069b3948eab396b9f83fa9b983983e09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the rotation matrix.  <a href="#a069b3948eab396b9f83fa9b983983e09">More...</a><br /></td></tr>
+<tr class="separator:a069b3948eab396b9f83fa9b983983e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ed85d55bd1084dde196ceb1b16fa736"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_transform.html#a8ed85d55bd1084dde196ceb1b16fa736">getScaleVec3</a> ()</td></tr>
 <tr class="memdesc:a8ed85d55bd1084dde196ceb1b16fa736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the Position.  <a href="#a8ed85d55bd1084dde196ceb1b16fa736">More...</a><br /></td></tr>
 <tr class="separator:a8ed85d55bd1084dde196ceb1b16fa736"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,6 +266,35 @@ Additional Inherited Members</h2></td></tr>
 <p>Gets the Position. </p>
 <dl class="section return"><dt>Returns</dt><dd>The position vector in 3D</dd></dl>
 <p>Returns the position vector </p>
+
+</div>
+</div>
+<a id="a069b3948eab396b9f83fa9b983983e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a069b3948eab396b9f83fa9b983983e09">&#9670;&nbsp;</a></span>getRotationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::mat4 CookieEng::Components::Transform::getRotationMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the rotation matrix. </p>
+<dl class="section return"><dt>Returns</dt><dd>The rotation matrix of the transform</dd></dl>
+<p>Gets the rotation matrix of the transform. Used by <a class="el" href="class_cookie_eng_1_1_components_1_1_bounding_box.html" title="An axis aligned bounding box represented by the two minimum and maximum corners. ">BoundingBox</a>. </p>
 
 </div>
 </div>

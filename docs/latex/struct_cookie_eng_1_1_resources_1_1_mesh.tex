@@ -21,15 +21,17 @@ void \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_ae31053c6edaf0e735d8535
 std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Graphics\+::\+Vertex\+Array} $>$ \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_ab61a5cfe63393488dfb17a905e7721d6}{get\+V\+AO} ()
 \begin{DoxyCompactList}\small\item\em Getter for the V\+AO member variable. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_a322630a222821c217f45b38c25fafc3a}{get\+I\+BO} ()
-\begin{DoxyCompactList}\small\item\em Getter for the I\+BO member variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter for the I\+BO member variable. \end{DoxyCompactList}\item 
+glm\+::vec3 \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_af1231ef8a39e13d5a89b0c51ad9e025c}{get\+Min\+Bounding\+Point} ()
+\begin{DoxyCompactList}\small\item\em Getter for the minimum bounding point of the mesh. \end{DoxyCompactList}\item 
+glm\+::vec3 \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_a350bb13cf073b1367212e95060b0eb64}{get\+Max\+Bounding\+Point} ()
+\begin{DoxyCompactList}\small\item\em Getter for the maximum bounding point of the mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::vector$<$ \hyperlink{struct_cookie_eng_1_1_data_1_1_vertex}{Data\+::\+Vertex} $>$ \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_aa2d9365b3bb9855de51053a1bbde84a1}{vertices}
 \item 
 std\+::vector$<$ unsigned int $>$ \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_a78ad4658bc848293472999b4708b85ab}{indices}
-\item 
-\hyperlink{class_cookie_eng_1_1_data_1_1_bounding_box}{Data\+::\+Bounding\+Box} \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_aafc1b903c0858196d503b72056bd2f10}{bounding\+Box}
 \item 
 \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer_layout}{Graphics\+::\+Vertex\+Buffer\+Layout} \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_a7d60f959cc5a9cadbc59299e207032f2}{layout}
 \end{DoxyCompactItemize}
@@ -43,6 +45,10 @@ std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_ar
 std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_a3420e235a3449e5d8f15378b410d89bd}{m\+\_\+\+V\+BO}
 \item 
 std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_aff20a2371d9413acc57ab5ff9086fa15}{m\+\_\+\+I\+BO}
+\item 
+glm\+::vec3 \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_a15be180ae31ec95a947b3f716a082a99}{m\+\_\+min\+Bound}
+\item 
+glm\+::vec3 \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_a7a4f588b705bf49e406ad66d1165534c}{m\+\_\+max\+Bound}
 \end{DoxyCompactItemize}
 
 
@@ -65,7 +71,33 @@ Getter for the I\+BO member variable.
 \begin{DoxyReturn}{Returns}
 The I\+BO member variable for use by the renderer
 \end{DoxyReturn}
-Getter for the I\+BO member variable (make this friend to Renderer?) \mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_ab61a5cfe63393488dfb17a905e7721d6}\label{struct_cookie_eng_1_1_resources_1_1_mesh_ab61a5cfe63393488dfb17a905e7721d6}} 
+Getter for the I\+BO member variable (make this friend to Renderer?) \mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_a350bb13cf073b1367212e95060b0eb64}\label{struct_cookie_eng_1_1_resources_1_1_mesh_a350bb13cf073b1367212e95060b0eb64}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!get\+Max\+Bounding\+Point@{get\+Max\+Bounding\+Point}}
+\index{get\+Max\+Bounding\+Point@{get\+Max\+Bounding\+Point}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
+\subsubsection{\texorpdfstring{get\+Max\+Bounding\+Point()}{getMaxBoundingPoint()}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Resources\+::\+Mesh\+::get\+Max\+Bounding\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the maximum bounding point of the mesh. 
+
+\begin{DoxyReturn}{Returns}
+The maximum bounding point of the mesh
+\end{DoxyReturn}
+Getter for the maximum bounding point of the mesh \mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_af1231ef8a39e13d5a89b0c51ad9e025c}\label{struct_cookie_eng_1_1_resources_1_1_mesh_af1231ef8a39e13d5a89b0c51ad9e025c}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!get\+Min\+Bounding\+Point@{get\+Min\+Bounding\+Point}}
+\index{get\+Min\+Bounding\+Point@{get\+Min\+Bounding\+Point}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
+\subsubsection{\texorpdfstring{get\+Min\+Bounding\+Point()}{getMinBoundingPoint()}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Resources\+::\+Mesh\+::get\+Min\+Bounding\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the minimum bounding point of the mesh. 
+
+\begin{DoxyReturn}{Returns}
+The minimum bounding point of the mesh
+\end{DoxyReturn}
+Getter for the minimum bounding point of the mesh \mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_ab61a5cfe63393488dfb17a905e7721d6}\label{struct_cookie_eng_1_1_resources_1_1_mesh_ab61a5cfe63393488dfb17a905e7721d6}} 
 \index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!get\+V\+AO@{get\+V\+AO}}
 \index{get\+V\+AO@{get\+V\+AO}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
 \subsubsection{\texorpdfstring{get\+V\+A\+O()}{getVAO()}}
@@ -102,13 +134,7 @@ Reimplemented from \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a75648
 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_aafc1b903c0858196d503b72056bd2f10}\label{struct_cookie_eng_1_1_resources_1_1_mesh_aafc1b903c0858196d503b72056bd2f10}} 
-\index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!bounding\+Box@{bounding\+Box}}
-\index{bounding\+Box@{bounding\+Box}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
-\subsubsection{\texorpdfstring{bounding\+Box}{boundingBox}}
-{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_data_1_1_bounding_box}{Data\+::\+Bounding\+Box} Cookie\+Eng\+::\+Resources\+::\+Mesh\+::bounding\+Box}
-
-The bounding box set by load \mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_a78ad4658bc848293472999b4708b85ab}\label{struct_cookie_eng_1_1_resources_1_1_mesh_a78ad4658bc848293472999b4708b85ab}} 
+\mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_a78ad4658bc848293472999b4708b85ab}\label{struct_cookie_eng_1_1_resources_1_1_mesh_a78ad4658bc848293472999b4708b85ab}} 
 \index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!indices@{indices}}
 \index{indices@{indices}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
 \subsubsection{\texorpdfstring{indices}{indices}}
@@ -132,7 +158,19 @@ The Renderbales Index\+Buffer, set by the load\+Mesh function \mbox{\Hypertarget
 \subsubsection{\texorpdfstring{m\+\_\+loaded\+To\+G\+PU}{m\_loadedToGPU}}
 {\footnotesize\ttfamily bool Cookie\+Eng\+::\+Resources\+::\+Mesh\+::m\+\_\+loaded\+To\+G\+PU = false\hspace{0.3cm}{\ttfamily [protected]}}
 
-State flag for if the mash has been loaded to the G\+PU as a V\+A\+O/\+V\+BO \mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_a2d54038e4b55e1733fcc7e8c64969767}\label{struct_cookie_eng_1_1_resources_1_1_mesh_a2d54038e4b55e1733fcc7e8c64969767}} 
+State flag for if the mash has been loaded to the G\+PU as a V\+A\+O/\+V\+BO \mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_a7a4f588b705bf49e406ad66d1165534c}\label{struct_cookie_eng_1_1_resources_1_1_mesh_a7a4f588b705bf49e406ad66d1165534c}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!m\+\_\+max\+Bound@{m\+\_\+max\+Bound}}
+\index{m\+\_\+max\+Bound@{m\+\_\+max\+Bound}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
+\subsubsection{\texorpdfstring{m\+\_\+max\+Bound}{m\_maxBound}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Resources\+::\+Mesh\+::m\+\_\+max\+Bound\hspace{0.3cm}{\ttfamily [protected]}}
+
+The maximum bounding point of the mesh \mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_a15be180ae31ec95a947b3f716a082a99}\label{struct_cookie_eng_1_1_resources_1_1_mesh_a15be180ae31ec95a947b3f716a082a99}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!m\+\_\+min\+Bound@{m\+\_\+min\+Bound}}
+\index{m\+\_\+min\+Bound@{m\+\_\+min\+Bound}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
+\subsubsection{\texorpdfstring{m\+\_\+min\+Bound}{m\_minBound}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Resources\+::\+Mesh\+::m\+\_\+min\+Bound\hspace{0.3cm}{\ttfamily [protected]}}
+
+The minimum bounding point of the mesh \mbox{\Hypertarget{struct_cookie_eng_1_1_resources_1_1_mesh_a2d54038e4b55e1733fcc7e8c64969767}\label{struct_cookie_eng_1_1_resources_1_1_mesh_a2d54038e4b55e1733fcc7e8c64969767}} 
 \index{Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}!m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}}
 \index{m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}!Cookie\+Eng\+::\+Resources\+::\+Mesh@{Cookie\+Eng\+::\+Resources\+::\+Mesh}}
 \subsubsection{\texorpdfstring{m\+\_\+\+V\+AO}{m\_VAO}}

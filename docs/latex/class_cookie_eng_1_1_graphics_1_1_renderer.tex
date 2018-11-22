@@ -14,6 +14,8 @@ An Open\+GL \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer}{Renderer}.
 \item 
 \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_a255e78964e0d0ff7efd26e60a6612f39}{Renderer} ()
 \begin{DoxyCompactList}\small\item\em Program Ctor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_afd0601318ff6155fbaa9af6a16cff079}{set\+Render\+Mode} (Render\+Mode \+\_\+render\+Mode)
+\begin{DoxyCompactList}\small\item\em Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to render to if one has not been provided. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_a9e8bce3cb731b1f09ca5bc4bc863414b}{set\+Frame\+Buffer} (\hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} $\ast$\+\_\+frame\+Buffer)
 \begin{DoxyCompactList}\small\item\em Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to render to if one has not been provided. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_aa32e62971f191a434ab457f9ac84ac31}{draw\+To\+Frame\+Buffer} (const \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} \&\+\_\+fbo, const \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Vertex\+Array} \&\+\_\+vao, const \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Vertex\+Buffer} \&\+\_\+index\+Buffer, const \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} \&\+\_\+material)
@@ -24,6 +26,8 @@ void \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_a5cadfbd80259f0188e52
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} $\ast$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_a64f992d6d2476fe2ea641f31a46f006e}{m\+\_\+frame\+Buffer}
+\item 
+Render\+Mode \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_af4068b4414967468816ecea24ae30513}{m\+\_\+render\+Mode} = C\+N\+G\+\_\+\+R\+E\+N\+D\+E\+R\+M\+O\+D\+E\+\_\+\+F\+I\+LL
 \end{DoxyCompactItemize}
 
 
@@ -99,6 +103,21 @@ Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Fram
 {\em \+\_\+frame\+Buffer} & A pointer to the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to use\\
 \hline
 \end{DoxyParams}
+Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to render to if one has not been provided. C\+A\+R\+E\+F\+UL OF D\+A\+N\+G\+L\+I\+NG P\+O\+I\+N\+T\+E\+RS H\+E\+RE \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_renderer_afd0601318ff6155fbaa9af6a16cff079}\label{class_cookie_eng_1_1_graphics_1_1_renderer_afd0601318ff6155fbaa9af6a16cff079}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Renderer@{Cookie\+Eng\+::\+Graphics\+::\+Renderer}!set\+Render\+Mode@{set\+Render\+Mode}}
+\index{set\+Render\+Mode@{set\+Render\+Mode}!Cookie\+Eng\+::\+Graphics\+::\+Renderer@{Cookie\+Eng\+::\+Graphics\+::\+Renderer}}
+\subsubsection{\texorpdfstring{set\+Render\+Mode()}{setRenderMode()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Graphics\+::\+Renderer\+::set\+Render\+Mode (\begin{DoxyParamCaption}\item[{Render\+Mode}]{\+\_\+render\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to render to if one has not been provided. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+frame\+Buffer} & A pointer to the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to use\\
+\hline
+\end{DoxyParams}
 Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to render to if one has not been provided. C\+A\+R\+E\+F\+UL OF D\+A\+N\+G\+L\+I\+NG P\+O\+I\+N\+T\+E\+RS H\+E\+RE 
 
 \subsection{Member Data Documentation}
@@ -108,7 +127,13 @@ Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Fram
 \subsubsection{\texorpdfstring{m\+\_\+frame\+Buffer}{m\_frameBuffer}}
 {\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer}$\ast$ Cookie\+Eng\+::\+Graphics\+::\+Renderer\+::m\+\_\+frame\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
 
-The framebuffer to render to by default 
+The framebuffer to render to by default \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_renderer_af4068b4414967468816ecea24ae30513}\label{class_cookie_eng_1_1_graphics_1_1_renderer_af4068b4414967468816ecea24ae30513}} 
+\index{Cookie\+Eng\+::\+Graphics\+::\+Renderer@{Cookie\+Eng\+::\+Graphics\+::\+Renderer}!m\+\_\+render\+Mode@{m\+\_\+render\+Mode}}
+\index{m\+\_\+render\+Mode@{m\+\_\+render\+Mode}!Cookie\+Eng\+::\+Graphics\+::\+Renderer@{Cookie\+Eng\+::\+Graphics\+::\+Renderer}}
+\subsubsection{\texorpdfstring{m\+\_\+render\+Mode}{m\_renderMode}}
+{\footnotesize\ttfamily Render\+Mode Cookie\+Eng\+::\+Graphics\+::\+Renderer\+::m\+\_\+render\+Mode = C\+N\+G\+\_\+\+R\+E\+N\+D\+E\+R\+M\+O\+D\+E\+\_\+\+F\+I\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+The render mode to use when drawing 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

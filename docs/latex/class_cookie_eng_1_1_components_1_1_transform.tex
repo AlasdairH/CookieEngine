@@ -34,6 +34,8 @@ void \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a382a16d437c34d7e3
 \begin{DoxyCompactList}\small\item\em Sets the absolute rotation. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a061b3b2b5d33c1dda2955e9b2e01d736}{rotate} (const float \+\_\+rotation, const glm\+::vec3 \+\_\+axis)
 \begin{DoxyCompactList}\small\item\em Rotates the transform to a new rotation relative to its old rotation. \end{DoxyCompactList}\item 
+glm\+::mat4 \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a069b3948eab396b9f83fa9b983983e09}{get\+Rotation\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Getter for the rotation matrix. \end{DoxyCompactList}\item 
 glm\+::vec3 \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a8ed85d55bd1084dde196ceb1b16fa736}{get\+Scale\+Vec3} ()
 \begin{DoxyCompactList}\small\item\em Gets the Position. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_components_1_1_transform_a6dadfac773418cc71d538c89219af0db}{set\+Scale} (const glm\+::vec3 \&\+\_\+scale)
@@ -117,7 +119,20 @@ Gets the Position.
 \begin{DoxyReturn}{Returns}
 The position vector in 3D
 \end{DoxyReturn}
-Returns the position vector \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a8ed85d55bd1084dde196ceb1b16fa736}\label{class_cookie_eng_1_1_components_1_1_transform_a8ed85d55bd1084dde196ceb1b16fa736}} 
+Returns the position vector \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a069b3948eab396b9f83fa9b983983e09}\label{class_cookie_eng_1_1_components_1_1_transform_a069b3948eab396b9f83fa9b983983e09}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!get\+Rotation\+Matrix@{get\+Rotation\+Matrix}}
+\index{get\+Rotation\+Matrix@{get\+Rotation\+Matrix}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
+\subsubsection{\texorpdfstring{get\+Rotation\+Matrix()}{getRotationMatrix()}}
+{\footnotesize\ttfamily glm\+::mat4 Cookie\+Eng\+::\+Components\+::\+Transform\+::get\+Rotation\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the rotation matrix. 
+
+\begin{DoxyReturn}{Returns}
+The rotation matrix of the transform
+\end{DoxyReturn}
+Gets the rotation matrix of the transform. Used by \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box}{Bounding\+Box}. \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_transform_a8ed85d55bd1084dde196ceb1b16fa736}\label{class_cookie_eng_1_1_components_1_1_transform_a8ed85d55bd1084dde196ceb1b16fa736}} 
 \index{Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}!get\+Scale\+Vec3@{get\+Scale\+Vec3}}
 \index{get\+Scale\+Vec3@{get\+Scale\+Vec3}!Cookie\+Eng\+::\+Components\+::\+Transform@{Cookie\+Eng\+::\+Components\+::\+Transform}}
 \subsubsection{\texorpdfstring{get\+Scale\+Vec3()}{getScaleVec3()}}

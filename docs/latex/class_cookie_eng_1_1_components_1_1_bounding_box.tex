@@ -1,0 +1,196 @@
+\hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box}{}\section{Cookie\+Eng\+:\+:Components\+:\+:Bounding\+Box Class Reference}
+\label{class_cookie_eng_1_1_components_1_1_bounding_box}\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+
+
+An axis aligned bounding box represented by the two minimum and maximum corners.  
+
+
+
+
+{\ttfamily \#include $<$Bounding\+Box.\+h$>$}
+
+
+
+Inherits \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box}{Bounding\+Box} \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_a7eae87eceb357b5b29081e854f0dd790}{get\+Bounding\+Box} ()
+\begin{DoxyCompactList}\small\item\em Gets the \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box}{Bounding\+Box} in reference to the object. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_acad51073f91813d60746832744fe23c3}{pull\+From\+Mesh} ()
+\begin{DoxyCompactList}\small\item\em Pulls size data from an attached mesh component. \end{DoxyCompactList}\item 
+glm\+::vec3 \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_ab524d90c0bf3665bec9f2f2df3d41b89}{get\+Min\+Bounding\+Point} () const
+\begin{DoxyCompactList}\small\item\em Gets the minimum bounding point of the A\+A\+BB. \end{DoxyCompactList}\item 
+glm\+::vec3 \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_a259683b1838bb58a3ca3704bdb4fb268}{get\+Max\+Bounding\+Point} () const
+\begin{DoxyCompactList}\small\item\em Gets the maximum bounding point of the A\+A\+BB. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_a268f31408a9f91765de7f9b052c97c85}{set\+Min\+Bounding\+Point} (const glm\+::vec3 \&\+\_\+min)
+\begin{DoxyCompactList}\small\item\em Sets the minimum bounding point of the A\+A\+BB. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_a5ad6bf701d391f3d5357a6e103e942e2}{set\+Max\+Bounding\+Point} (const glm\+::vec3 \&\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Sets the maximum bounding point of the A\+A\+BB  The new maximum bounding point of the A\+A\+BB. \end{DoxyCompactList}\item 
+bool \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_aa121d65a4271d524fefb153f7388421a}{test\+Collision} (const \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box}{Bounding\+Box} \&\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Tests if the bounding box collides with another bounding box. \end{DoxyCompactList}\item 
+bool \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_aebb0d8b30c7d24d9617b391434205769}{test\+Collision} (const \hyperlink{struct_cookie_eng_1_1_data_1_1_ray}{Data\+::\+Ray} \&\+\_\+ray)
+\begin{DoxyCompactList}\small\item\em Tests if the bounding box collides with a ray. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_ac09de9910abef58938d4c692c6a64855}{m\+\_\+min} = glm\+::vec3(std\+::numeric\+\_\+limits$<$float$>$\+::max())
+\item 
+glm\+::vec3 \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_a2075e00805e700e3b24abe83dd26008c}{m\+\_\+max} = glm\+::vec3(std\+::numeric\+\_\+limits$<$float$>$\+::min())
+\item 
+bool \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_a0378442f8184a6729d44c14a0be2f727}{m\+\_\+render\+Mesh} = false
+\item 
+\hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Resources\+::\+Mesh} \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box_a68294bec52783787ea0d91abfab773a7}{m\+\_\+mesh}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+An axis aligned bounding box represented by the two minimum and maximum corners. 
+
+Contains the positional data for the corners of the box as well as the available intersect tests. The bounding box is not adjusted for the object transform. This must be applied on the getting of the bounding box. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_a7eae87eceb357b5b29081e854f0dd790}\label{class_cookie_eng_1_1_components_1_1_bounding_box_a7eae87eceb357b5b29081e854f0dd790}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!get\+Bounding\+Box@{get\+Bounding\+Box}}
+\index{get\+Bounding\+Box@{get\+Bounding\+Box}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{get\+Bounding\+Box()}{getBoundingBox()}}
+{\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box}{Bounding\+Box} Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::get\+Bounding\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box}{Bounding\+Box} in reference to the object. 
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box}{Bounding\+Box}
+\end{DoxyReturn}
+Takes the transform component of the parent entity and applies it to a new bounding box from this and then returns it. \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_a259683b1838bb58a3ca3704bdb4fb268}\label{class_cookie_eng_1_1_components_1_1_bounding_box_a259683b1838bb58a3ca3704bdb4fb268}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!get\+Max\+Bounding\+Point@{get\+Max\+Bounding\+Point}}
+\index{get\+Max\+Bounding\+Point@{get\+Max\+Bounding\+Point}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{get\+Max\+Bounding\+Point()}{getMaxBoundingPoint()}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::get\+Max\+Bounding\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the maximum bounding point of the A\+A\+BB. 
+
+\begin{DoxyReturn}{Returns}
+The maximum bounding point of the A\+A\+BB
+\end{DoxyReturn}
+Gets the maximum bounding point of the A\+A\+BB \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_ab524d90c0bf3665bec9f2f2df3d41b89}\label{class_cookie_eng_1_1_components_1_1_bounding_box_ab524d90c0bf3665bec9f2f2df3d41b89}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!get\+Min\+Bounding\+Point@{get\+Min\+Bounding\+Point}}
+\index{get\+Min\+Bounding\+Point@{get\+Min\+Bounding\+Point}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{get\+Min\+Bounding\+Point()}{getMinBoundingPoint()}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::get\+Min\+Bounding\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the minimum bounding point of the A\+A\+BB. 
+
+\begin{DoxyReturn}{Returns}
+The minimum bounding point of the A\+A\+BB
+\end{DoxyReturn}
+Gets the minimum bounding point of the A\+A\+BB \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_acad51073f91813d60746832744fe23c3}\label{class_cookie_eng_1_1_components_1_1_bounding_box_acad51073f91813d60746832744fe23c3}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!pull\+From\+Mesh@{pull\+From\+Mesh}}
+\index{pull\+From\+Mesh@{pull\+From\+Mesh}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{pull\+From\+Mesh()}{pullFromMesh()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::pull\+From\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pulls size data from an attached mesh component. 
+
+Looks for a mesh on the parent component and if it has one, pulls the mesh min / max \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_a5ad6bf701d391f3d5357a6e103e942e2}\label{class_cookie_eng_1_1_components_1_1_bounding_box_a5ad6bf701d391f3d5357a6e103e942e2}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!set\+Max\+Bounding\+Point@{set\+Max\+Bounding\+Point}}
+\index{set\+Max\+Bounding\+Point@{set\+Max\+Bounding\+Point}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{set\+Max\+Bounding\+Point()}{setMaxBoundingPoint()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::set\+Max\+Bounding\+Point (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the maximum bounding point of the A\+A\+BB  The new maximum bounding point of the A\+A\+BB. 
+
+Sets the maximum bounding point of the A\+A\+BB \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_a268f31408a9f91765de7f9b052c97c85}\label{class_cookie_eng_1_1_components_1_1_bounding_box_a268f31408a9f91765de7f9b052c97c85}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!set\+Min\+Bounding\+Point@{set\+Min\+Bounding\+Point}}
+\index{set\+Min\+Bounding\+Point@{set\+Min\+Bounding\+Point}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{set\+Min\+Bounding\+Point()}{setMinBoundingPoint()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::set\+Min\+Bounding\+Point (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{\+\_\+min }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the minimum bounding point of the A\+A\+BB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & new minimum bounding point of the A\+A\+BB\\
+\hline
+\end{DoxyParams}
+Sets the minimum bounding point of the A\+A\+BB \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_aa121d65a4271d524fefb153f7388421a}\label{class_cookie_eng_1_1_components_1_1_bounding_box_aa121d65a4271d524fefb153f7388421a}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!test\+Collision@{test\+Collision}}
+\index{test\+Collision@{test\+Collision}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{test\+Collision()}{testCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::test\+Collision (\begin{DoxyParamCaption}\item[{const \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box}{Bounding\+Box} \&}]{\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Tests if the bounding box collides with another bounding box. 
+
+\begin{DoxyReturn}{Returns}
+A boolean flag stating if a collision occured or not 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+other} & The bounding box to test against\\
+\hline
+\end{DoxyParams}
+Tests a collision between \textquotesingle{}this\textquotesingle{} bounding box and another. \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_aebb0d8b30c7d24d9617b391434205769}\label{class_cookie_eng_1_1_components_1_1_bounding_box_aebb0d8b30c7d24d9617b391434205769}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!test\+Collision@{test\+Collision}}
+\index{test\+Collision@{test\+Collision}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{test\+Collision()}{testCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::test\+Collision (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_cookie_eng_1_1_data_1_1_ray}{Data\+::\+Ray} \&}]{\+\_\+ray }\end{DoxyParamCaption})}
+
+
+
+Tests if the bounding box collides with a ray. 
+
+\begin{DoxyReturn}{Returns}
+A boolean flag stating if a collision occured or not 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+other} & The ray to test against\\
+\hline
+\end{DoxyParams}
+Tests a collision between \textquotesingle{}this\textquotesingle{} bounding box and a ray. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_a2075e00805e700e3b24abe83dd26008c}\label{class_cookie_eng_1_1_components_1_1_bounding_box_a2075e00805e700e3b24abe83dd26008c}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!m\+\_\+max@{m\+\_\+max}}
+\index{m\+\_\+max@{m\+\_\+max}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{m\+\_\+max}{m\_max}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::m\+\_\+max = glm\+::vec3(std\+::numeric\+\_\+limits$<$float$>$\+::min())\hspace{0.3cm}{\ttfamily [protected]}}
+
+The maximum corner of the bounding box \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_a68294bec52783787ea0d91abfab773a7}\label{class_cookie_eng_1_1_components_1_1_bounding_box_a68294bec52783787ea0d91abfab773a7}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!m\+\_\+mesh@{m\+\_\+mesh}}
+\index{m\+\_\+mesh@{m\+\_\+mesh}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{m\+\_\+mesh}{m\_mesh}}
+{\footnotesize\ttfamily \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Resources\+::\+Mesh} Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::m\+\_\+mesh\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hyperlink{class_cookie_eng_1_1_components_1_1_renderable}{Renderable} mesh for the bounding box \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_ac09de9910abef58938d4c692c6a64855}\label{class_cookie_eng_1_1_components_1_1_bounding_box_ac09de9910abef58938d4c692c6a64855}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!m\+\_\+min@{m\+\_\+min}}
+\index{m\+\_\+min@{m\+\_\+min}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{m\+\_\+min}{m\_min}}
+{\footnotesize\ttfamily glm\+::vec3 Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::m\+\_\+min = glm\+::vec3(std\+::numeric\+\_\+limits$<$float$>$\+::max())\hspace{0.3cm}{\ttfamily [protected]}}
+
+The minimum corner of the bounding box \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_bounding_box_a0378442f8184a6729d44c14a0be2f727}\label{class_cookie_eng_1_1_components_1_1_bounding_box_a0378442f8184a6729d44c14a0be2f727}} 
+\index{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}!m\+\_\+render\+Mesh@{m\+\_\+render\+Mesh}}
+\index{m\+\_\+render\+Mesh@{m\+\_\+render\+Mesh}!Cookie\+Eng\+::\+Components\+::\+Bounding\+Box@{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}}
+\subsubsection{\texorpdfstring{m\+\_\+render\+Mesh}{m\_renderMesh}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Components\+::\+Bounding\+Box\+::m\+\_\+render\+Mesh = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag wether the mesh should render or not 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Bounding\+Box.\+h\end{DoxyCompactItemize}

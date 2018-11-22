@@ -83,6 +83,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a255e78964e0d0ff7efd26e60a6612f39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#a255e78964e0d0ff7efd26e60a6612f39">Renderer</a> ()</td></tr>
 <tr class="memdesc:a255e78964e0d0ff7efd26e60a6612f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Program Ctor.  <a href="#a255e78964e0d0ff7efd26e60a6612f39">More...</a><br /></td></tr>
 <tr class="separator:a255e78964e0d0ff7efd26e60a6612f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd0601318ff6155fbaa9af6a16cff079"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#afd0601318ff6155fbaa9af6a16cff079">setRenderMode</a> (RenderMode _renderMode)</td></tr>
+<tr class="memdesc:afd0601318ff6155fbaa9af6a16cff079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html" title="Abstraction of an OpenGL FrameBuffer. ">FrameBuffer</a> to render to if one has not been provided.  <a href="#afd0601318ff6155fbaa9af6a16cff079">More...</a><br /></td></tr>
+<tr class="separator:afd0601318ff6155fbaa9af6a16cff079"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e8bce3cb731b1f09ca5bc4bc863414b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#a9e8bce3cb731b1f09ca5bc4bc863414b">setFrameBuffer</a> (<a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html">FrameBuffer</a> *_frameBuffer)</td></tr>
 <tr class="memdesc:a9e8bce3cb731b1f09ca5bc4bc863414b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html" title="Abstraction of an OpenGL FrameBuffer. ">FrameBuffer</a> to render to if one has not been provided.  <a href="#a9e8bce3cb731b1f09ca5bc4bc863414b">More...</a><br /></td></tr>
 <tr class="separator:a9e8bce3cb731b1f09ca5bc4bc863414b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,6 +100,8 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a64f992d6d2476fe2ea641f31a46f006e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html">FrameBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#a64f992d6d2476fe2ea641f31a46f006e">m_frameBuffer</a></td></tr>
 <tr class="separator:a64f992d6d2476fe2ea641f31a46f006e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4068b4414967468816ecea24ae30513"><td class="memItemLeft" align="right" valign="top">RenderMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#af4068b4414967468816ecea24ae30513">m_renderMode</a> = CNG_RENDERMODE_FILL</td></tr>
+<tr class="separator:af4068b4414967468816ecea24ae30513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An OpenGL <a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html" title="An OpenGL Renderer. ">Renderer</a>. </p>
@@ -238,6 +243,41 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="afd0601318ff6155fbaa9af6a16cff079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd0601318ff6155fbaa9af6a16cff079">&#9670;&nbsp;</a></span>setRenderMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::Graphics::Renderer::setRenderMode </td>
+          <td>(</td>
+          <td class="paramtype">RenderMode&#160;</td>
+          <td class="paramname"><em>_renderMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the default <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html" title="Abstraction of an OpenGL FrameBuffer. ">FrameBuffer</a> to render to if one has not been provided. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_frameBuffer</td><td>A pointer to the <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html" title="Abstraction of an OpenGL FrameBuffer. ">FrameBuffer</a> to use</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Sets the default <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html" title="Abstraction of an OpenGL FrameBuffer. ">FrameBuffer</a> to render to if one has not been provided. CAREFUL OF DANGLING POINTERS HERE </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a64f992d6d2476fe2ea641f31a46f006e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64f992d6d2476fe2ea641f31a46f006e">&#9670;&nbsp;</a></span>m_frameBuffer</h2>
@@ -259,6 +299,29 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The framebuffer to render to by default </p>
+
+</div>
+</div>
+<a id="af4068b4414967468816ecea24ae30513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4068b4414967468816ecea24ae30513">&#9670;&nbsp;</a></span>m_renderMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderMode CookieEng::Graphics::Renderer::m_renderMode = CNG_RENDERMODE_FILL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The render mode to use when drawing </p>
 
 </div>
 </div>

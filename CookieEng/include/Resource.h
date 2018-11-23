@@ -66,7 +66,7 @@ namespace Resources
 		ResourceType	m_resourceType;		/**< The resource type */
 
 		std::string		m_name;				/**< The resource name */
-		unsigned int	m_resourceID;		/**< The resource ID */
+		unsigned int	m_resourceID;		/**< The resource ID (UNUSED?)*/
 
 		std::string		m_filepath;			/**< The resource filepath */
 

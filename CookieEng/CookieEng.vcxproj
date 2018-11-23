@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -117,11 +117,15 @@
       <LanguageStandard>
       </LanguageStandard>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)SDKs\Lib86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;OpenGL32.lib;glu32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -166,6 +170,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\AudioSource.cpp" />
     <ClCompile Include="src\BoundingBox.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\CookieCore.cpp" />
@@ -174,6 +179,7 @@
     <ClCompile Include="src\FrameBuffer.cpp" />
     <ClCompile Include="src\IMessageHandler.cpp" />
     <ClCompile Include="src\InputManager.cpp" />
+    <ClCompile Include="src\Gamepad.cpp" />
     <ClCompile Include="src\Keyboard.cpp" />
     <ClCompile Include="src\Material.cpp" />
     <ClCompile Include="src\Mesh.cpp" />
@@ -193,6 +199,7 @@
     <ClCompile Include="src\ServiceContainer.cpp" />
     <ClCompile Include="src\ServiceLocator.cpp" />
     <ClCompile Include="src\Shader.cpp" />
+    <ClCompile Include="src\SoundEffect.cpp" />
     <ClCompile Include="src\TestEntity.cpp" />
     <ClCompile Include="src\Texture.cpp" />
     <ClCompile Include="src\ThreadPool.cpp" />
@@ -212,10 +219,13 @@
     <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\InputKey.h" />
     <ClInclude Include="include\InputManager.h" />
+    <ClInclude Include="include\Gamepad.h" />
     <ClInclude Include="include\Keyboard.h" />
     <ClInclude Include="include\PrimativeGenerator.h" />
     <ClInclude Include="include\Ray.h" />
     <ClInclude Include="include\Scene.h" />
+    <ClInclude Include="include\AudioSource.h" />
+    <ClInclude Include="include\SoundEffect.h" />
     <ClInclude Include="include\Times.h" />
     <ClInclude Include="include\Renderable.h" />
     <ClInclude Include="include\IMessageHandler.h" />
@@ -255,7 +265,6 @@
     <Text Include="resources\shaders\object\vert.glsl" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="diagrams\Diagrams\Test.cd" />
     <None Include="resources\assets\levels\test.lvl" />
     <None Include="resources\DoxygenMain.dox" />
     <None Include="resources\doxygen\home.dox" />

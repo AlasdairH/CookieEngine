@@ -65,13 +65,13 @@ namespace Resources
 		inline glm::vec3 getMaxBoundingPoint() { return m_maxBound; }
 
 	protected:
-		bool										m_loadedToGPU = false;	/**< State flag for if the mash has been loaded to the GPU as a VAO/VBO */
-		std::shared_ptr<Graphics::VertexArray>		m_VAO;					/**< The Renderbales VertexArray, set by the loadMesh function */
-		std::shared_ptr<Graphics::VertexBuffer>		m_VBO;					/**< The Renderbales VertexBuffer, set by the loadMesh function */
-		std::shared_ptr<Graphics::VertexBuffer>		m_IBO;					/**< The Renderbales IndexBuffer, set by the loadMesh function */
+		bool										m_loadedToGPU = false;				/**< State flag for if the mash has been loaded to the GPU as a VAO/VBO */
+		std::shared_ptr<Graphics::VertexArray>		m_VAO;								/**< The Renderbales VertexArray, set by the loadMesh function */
+		std::shared_ptr<Graphics::VertexBuffer>		m_VBO;								/**< The Renderbales VertexBuffer, set by the loadMesh function */
+		std::shared_ptr<Graphics::VertexBuffer>		m_IBO;								/**< The Renderbales IndexBuffer, set by the loadMesh function */
 
-		glm::vec3									m_minBound;				/**< The minimum bounding point of the mesh */
-		glm::vec3									m_maxBound;				/**< The maximum bounding point of the mesh */
+		glm::vec3									m_minBound = glm::vec3(INFINITY);	/**< The minimum bounding point of the mesh */
+		glm::vec3									m_maxBound = glm::vec3(-INFINITY);	/**< The maximum bounding point of the mesh */
 	};
 
 }

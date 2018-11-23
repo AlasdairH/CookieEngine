@@ -56,7 +56,8 @@ namespace CookieEng
 	{
 		CNG_ACTIVE_SCENE->onStart();
 
-		std::shared_ptr<Input::Keyboard::Keyboard> keyboard = Input::InputManager::getInstance().getKeyboard();
+		Input::InputManager &inputManager = Input::InputManager::getInstance();
+		std::shared_ptr<Input::Keyboard::Keyboard> keyboard = inputManager.getKeyboard();
 
 		Uint64 TIME_NOW = SDL_GetPerformanceCounter();
 		Uint64 TIME_LAST = 0;
@@ -73,7 +74,7 @@ namespace CookieEng
 			SDL_Event incomingEvent;
 			while (SDL_PollEvent(&incomingEvent))
 			{
-				keyboard->update(incomingEvent.key);
+				inputManager.onUpdate(incomingEvent);
 
 				if (incomingEvent.type == SDL_QUIT)
 				{

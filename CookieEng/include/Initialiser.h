@@ -6,6 +6,7 @@
 // external libs
 #include "GL\glew.h"
 #include "SDL\SDL.h"
+#include "SDL_Mixer/SDL_mixer.h"
 
 // program
 #include "Macro.h"

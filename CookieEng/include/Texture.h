@@ -24,7 +24,6 @@ namespace Resources
 	{
 	public:
 		/** @brief Texture Ctor
-		*	@param _filepath The path to the image to be loaded
 		*
 		*	Loads an image file using stb_image and loads it into OpenGL
 		*/

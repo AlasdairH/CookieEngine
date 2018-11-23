@@ -7,7 +7,7 @@
 #include "SDL/SDL.h"
 #include "GL/glew.h"
 
-// progra
+// program
 #include "Initialiser.h"
 #include "ServiceContainer.h"
 #include "ServiceLocator.h"
@@ -26,6 +26,9 @@
 #include "Macro.h"
 
 #include "Keyboard.h"
+
+#include "AudioSource.h"
+#include "SoundEffect.h"
 
 #define DEBUG
 

@@ -16,11 +16,14 @@ namespace Crumble
 		boundingBox->pullFromMesh();
 		
 		m_player = CNG_ACTIVE_SCENE->addEntity(player);
+
+		m_audioSource.assign("DunkSound");
 	}
 
 	void GameController::onUpdate()
 	{
-		std::shared_ptr<CookieEng::Input::Keyboard::Keyboard> keyboard = CookieEng::Input::InputManager::getInstance().getKeyboard();
+		CookieEng::Input::InputManager &inputManager = CookieEng::Input::InputManager::getInstance();
+		std::shared_ptr<CookieEng::Input::Keyboard::Keyboard> keyboard = inputManager.getKeyboard();
 
 		if (m_missed >= 10)
 		{
@@ -81,6 +84,13 @@ namespace Crumble
 				indexToRemove.push_back(i);
 				++m_score;
 				LOG_MESSAGE("Score: " << m_score);
+				// play dunk sound
+				m_audioSource.play();
+
+				if (m_score >= 10)
+				{
+					LOG_MESSAGE("WINNER!");
+				}
 			}
 		}
 
@@ -107,13 +117,11 @@ namespace Crumble
 			transform->translate(glm::vec3(6, 0, 0) * CNG_DELTA_TIME);
 		}
 
-		if (keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_W))
+		// if controller 0 is connected
+		if (inputManager.validController(0))
 		{
-			//CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, -10) * CookieEng::Utilities::Times::deltaTime);
-		}
-		if (keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_S))
-		{
-			//CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, 10) * CookieEng::Utilities::Times::deltaTime);
+			LOG_MESSAGE(SDL_GameControllerGetStringForAxis(SDL_CONTROLLER_AXIS_TRIGGERRIGHT));
+			LOG_MESSAGE(inputManager.getGamepad(0)->getAxis("righttrigger"));
 		}
 	}
 }

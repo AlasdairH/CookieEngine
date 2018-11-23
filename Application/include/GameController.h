@@ -39,6 +39,8 @@ namespace Crumble
 
 		std::shared_ptr< CookieEng::ECS::Entity> m_player;
 		std::vector<std::weak_ptr<CookieEng::ECS::Entity>> m_collectables;
+
+		CookieEng::Audio::AudioSource m_audioSource;
 	};
 
 }

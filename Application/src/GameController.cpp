@@ -16,6 +16,8 @@ namespace Crumble
 		boundingBox->pullFromMesh();
 		
 		m_player = CNG_ACTIVE_SCENE->addEntity(player);
+
+		m_audioSource.assign("DunkSound");
 	}
 
 	void GameController::onUpdate()
@@ -81,6 +83,13 @@ namespace Crumble
 				indexToRemove.push_back(i);
 				++m_score;
 				LOG_MESSAGE("Score: " << m_score);
+				// play dunk sound
+				m_audioSource.play();
+
+				if (m_score >= 10)
+				{
+					LOG_MESSAGE("WINNER!");
+				}
 			}
 		}
 
@@ -105,15 +114,6 @@ namespace Crumble
 		if ((keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_D) && transform->getPositionVec3().x < 6))
 		{
 			transform->translate(glm::vec3(6, 0, 0) * CNG_DELTA_TIME);
-		}
-
-		if (keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_W))
-		{
-			//CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, -10) * CookieEng::Utilities::Times::deltaTime);
-		}
-		if (keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_S))
-		{
-			//CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, 10) * CookieEng::Utilities::Times::deltaTime);
 		}
 	}
 }

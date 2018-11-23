@@ -210,6 +210,15 @@
     <ClCompile Include="src\PrimativeGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\AudioSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SoundEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Joystick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ServiceLocator.h">
@@ -335,6 +344,15 @@
     <ClInclude Include="include\PrimativeGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\AudioSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoundEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Joystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\DoxygenRef.txt">
@@ -368,7 +386,6 @@
     <None Include="resources\shaders\BasicPP.cngShader" />
     <None Include="resources\assets\levels\test.lvl" />
     <None Include="resources\materials\BasicMaterial.mat" />
-    <None Include="diagrams\Diagrams\Test.cd" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\Default.png">

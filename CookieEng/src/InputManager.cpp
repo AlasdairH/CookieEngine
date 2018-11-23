@@ -12,6 +12,11 @@ namespace Input
 		m_keyboard->addKey(Input::Keyboard::CNG_Keycode::CNG_KEY_S, SDLK_s);
 		m_keyboard->addKey(Input::Keyboard::CNG_Keycode::CNG_KEY_A, SDLK_a);
 		m_keyboard->addKey(Input::Keyboard::CNG_Keycode::CNG_KEY_D, SDLK_d);
+
+		if (SDL_NumJoysticks() < 1) 
+		{ 
+			LOG_MESSAGE("InputManager: No Joysticks Detected"); 
+		}
 	}
 }
 }

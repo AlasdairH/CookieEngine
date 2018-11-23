@@ -22,7 +22,7 @@ namespace Scene
 			m_height = CNG_ACTIVE_CAMERA->getViewportHeight();
 		}
 
-		m_renderer.setRenderMode(Graphics::CNG_RENDERMODE_WIREFRAME);
+		//m_renderer.setRenderMode(Graphics::CNG_RENDERMODE_WIREFRAME);
 		m_frameBuffer = std::make_shared<Graphics::FrameBuffer>(m_width, m_height);
 	}
 

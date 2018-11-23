@@ -36,6 +36,9 @@ int main()
 	resourceManager.load<Resources::Material>("CookieMaterial", "resources/materials/Cookie.cngMaterial");
 	resourceManager.load<Resources::Material>("GreyMaterial", "resources/materials/Grey.cngMaterial");
 
+	// load sounds
+	resourceManager.load<Resources::SoundEffect>("DunkSound", "resources/sounds/dunk.wav");
+
 	// when the camera is created, it will set itself as the main camera as there are no others
 	CookieEng::Object::Camera camera(WINDOW_WIDTH, WINDOW_HEIGHT);
 	CNG_ACTIVE_CAMERA->setFOV(1.0f);

@@ -38,7 +38,7 @@ namespace Controllers
 			return -1;
 		}
 		float value = SDL_GameControllerGetAxis(m_gameController, axis);
-		return value;
+		return value / 32767.0f;
 	}
 }
 }

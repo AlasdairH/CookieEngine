@@ -36,12 +36,23 @@ namespace Input
 		*/
 		void onUpdate(SDL_Event &_event);
 
-		//TODO: Doxygen
+		/** @brief Gets whether a controller is connected and valid
+		*	@param _id the controller ID to test for validity
+		*
+		*	Takes an ID and tests to see if the controller exists
+		*/
+		inline bool validController(int _id) { if ((unsigned int)_id < m_gamepads.size()) return true; else return false; }
 
-		inline bool validController(int _id) { if (_id < m_gamepads.size()) return true; else return false; }
-
+		/** @brief Returns a pointer to a Gamepad
+		*	@param _id The controller to get
+		*
+		*	Takes a controller ID and returns the controller with that ID if it exists
+		*/
 		std::shared_ptr<Controllers::Gamepad> getGamepad(int _id);
-
+		/** @brief Gets the main keyboard
+		*
+		*	Returns a pointer to the keyboard
+		*/
 		std::shared_ptr<Keyboard::Keyboard> getKeyboard() { return m_keyboard; }
 
 		// ------------------------------------------------

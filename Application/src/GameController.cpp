@@ -120,8 +120,8 @@ namespace Crumble
 		// if controller 0 is connected
 		if (inputManager.validController(0))
 		{
-			LOG_MESSAGE(SDL_GameControllerGetStringForAxis(SDL_CONTROLLER_AXIS_TRIGGERRIGHT));
-			LOG_MESSAGE(inputManager.getGamepad(0)->getAxis("righttrigger"));
+			transform->translate(glm::vec3(-6, 0, 0) * inputManager.getGamepad(0)->getAxis("leftx") *  CNG_DELTA_TIME * -1.0f);
+			//LOG_MESSAGE(inputManager.getGamepad(0)->getAxis("leftx"));
 		}
 	}
 }

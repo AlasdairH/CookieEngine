@@ -44,7 +44,7 @@ namespace Input
 
 	std::shared_ptr<Controllers::Gamepad> InputManager::getGamepad(int _id)
 	{
-		if (_id < m_gamepads.size())
+		if ((unsigned int)_id < m_gamepads.size())
 		{
 			return m_gamepads[_id];
 		}

@@ -216,7 +216,7 @@
     <ClCompile Include="src\SoundEffect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Joystick.cpp">
+    <ClCompile Include="src\Gamepad.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -350,7 +350,7 @@
     <ClInclude Include="include\SoundEffect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Joystick.h">
+    <ClInclude Include="include\Gamepad.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

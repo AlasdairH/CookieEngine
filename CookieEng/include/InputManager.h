@@ -10,6 +10,7 @@
 #include "Macro.h"
 #include "Utils.h"
 #include "Keyboard.h"
+#include "Gamepad.h"
 
 namespace CookieEng
 {
@@ -29,6 +30,17 @@ namespace Input
 			return instance;
 		}
 
+		/** @brief Updates the contained input devices
+		*
+		*	Updates the contained input devices
+		*/
+		void onUpdate(SDL_Event &_event);
+
+		//TODO: Doxygen
+
+		inline bool validController(int _id) { if (_id < m_gamepads.size()) return true; else return false; }
+
+		std::shared_ptr<Controllers::Gamepad> getGamepad(int _id);
 
 		std::shared_ptr<Keyboard::Keyboard> getKeyboard() { return m_keyboard; }
 
@@ -44,7 +56,8 @@ namespace Input
 		InputManager();
 
 
-		std::shared_ptr<Keyboard::Keyboard> m_keyboard;	/**< The Keyboard */
+		std::shared_ptr<Keyboard::Keyboard>							m_keyboard;				/**< The Keyboard */
+		std::vector<std::shared_ptr<Controllers::Gamepad>>			m_gamepads;				/**< Game Controllers */
 	};
 }
 }

@@ -179,7 +179,7 @@
     <ClCompile Include="src\FrameBuffer.cpp" />
     <ClCompile Include="src\IMessageHandler.cpp" />
     <ClCompile Include="src\InputManager.cpp" />
-    <ClCompile Include="src\Joystick.cpp" />
+    <ClCompile Include="src\Gamepad.cpp" />
     <ClCompile Include="src\Keyboard.cpp" />
     <ClCompile Include="src\Material.cpp" />
     <ClCompile Include="src\Mesh.cpp" />
@@ -219,7 +219,7 @@
     <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\InputKey.h" />
     <ClInclude Include="include\InputManager.h" />
-    <ClInclude Include="include\Joystick.h" />
+    <ClInclude Include="include\Gamepad.h" />
     <ClInclude Include="include\Keyboard.h" />
     <ClInclude Include="include\PrimativeGenerator.h" />
     <ClInclude Include="include\Ray.h" />

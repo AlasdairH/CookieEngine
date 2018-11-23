@@ -22,7 +22,8 @@ namespace Crumble
 
 	void GameController::onUpdate()
 	{
-		std::shared_ptr<CookieEng::Input::Keyboard::Keyboard> keyboard = CookieEng::Input::InputManager::getInstance().getKeyboard();
+		CookieEng::Input::InputManager &inputManager = CookieEng::Input::InputManager::getInstance();
+		std::shared_ptr<CookieEng::Input::Keyboard::Keyboard> keyboard = inputManager.getKeyboard();
 
 		if (m_missed >= 10)
 		{
@@ -114,6 +115,13 @@ namespace Crumble
 		if ((keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_D) && transform->getPositionVec3().x < 6))
 		{
 			transform->translate(glm::vec3(6, 0, 0) * CNG_DELTA_TIME);
+		}
+
+		// if controller 0 is connected
+		if (inputManager.validController(0))
+		{
+			LOG_MESSAGE(SDL_GameControllerGetStringForAxis(SDL_CONTROLLER_AXIS_TRIGGERRIGHT));
+			LOG_MESSAGE(inputManager.getGamepad(0)->getAxis("righttrigger"));
 		}
 	}
 }

@@ -12,7 +12,7 @@ namespace Services
 	{
 		LOG_MESSAGE("Initialising SDL");
 		// attempt to initialise opengl
-		if (SDL_Init(SDL_INIT_VIDEO || SDL_INIT_AUDIO || SDL_INIT_JOYSTICK) < 0)
+		if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_JOYSTICK) < 0)
 		{
 			// something went wrong, exit program
 			LOG_ERROR("Unable to Initialise SDL");

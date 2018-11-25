@@ -1,0 +1,4 @@
+FILETYPE shaderprogram
+VERTEX resources/shaders/GUI/uivert.glsl
+FRAGMENT resources/shaders/GUI/uifrag.glsl
+LINK

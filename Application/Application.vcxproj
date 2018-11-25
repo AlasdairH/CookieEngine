@@ -166,6 +166,8 @@
     <None Include="resources\shaders\BasicPP.cngShader" />
     <None Include="resources\shaders\BasicShader.cngShader" />
     <None Include="resources\shaders\frag.glsl" />
+    <None Include="resources\shaders\GUI\uifrag.glsl" />
+    <None Include="resources\shaders\GUI\uivert.glsl" />
     <None Include="resources\shaders\PostProcFrag.glsl" />
     <None Include="resources\shaders\PostProcVert.glsl" />
     <None Include="resources\shaders\vert.glsl" />

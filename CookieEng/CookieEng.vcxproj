@@ -205,6 +205,7 @@
     <ClCompile Include="src\ThreadPool.cpp" />
     <ClCompile Include="src\Times.cpp" />
     <ClCompile Include="src\Transform.cpp" />
+    <ClCompile Include="src\UIButton.cpp" />
     <ClCompile Include="src\Vertex.cpp" />
     <ClCompile Include="src\VertexArray.cpp" />
     <ClCompile Include="src\VertexBuffer.cpp" />
@@ -213,6 +214,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\BoundingBox.h" />
+    <ClInclude Include="include\UIButton.h" />
     <ClInclude Include="include\Camera.h" />
     <ClInclude Include="include\Component.h" />
     <ClInclude Include="include\CookieCore.h" />
@@ -248,6 +250,7 @@
     <ClInclude Include="include\ServiceLocator.h" />
     <ClInclude Include="include\Shader.h" />
     <ClInclude Include="include\Texture.h" />
+    <ClInclude Include="include\UIElement.h" />
     <ClInclude Include="include\Utils.h" />
     <ClInclude Include="include\Vertex.h" />
     <ClInclude Include="include\VertexArray.h" />

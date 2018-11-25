@@ -37,6 +37,8 @@
     <None Include="resources\shaders\vert.glsl" />
     <None Include="resources\materials\Default.cngMaterial" />
     <None Include="resources\assets\levels\test.lvl" />
+    <None Include="resources\shaders\GUI\uifrag.glsl" />
+    <None Include="resources\shaders\GUI\uivert.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\Default.png">

@@ -45,11 +45,18 @@ namespace Object
 		}
 	}
 
+	void Camera::cleanViewMatrix()
+	{
+		m_projectionMatrix = glm::perspective(m_fovRad, m_aspect, 0.1f, 100.0f); 
+		m_orthographicMatrix = glm::ortho(0.0f, (float)m_viewportWidth, 0.0f, (float)m_viewportHeight, -1000.0f, 1000.0f);// *glm::lookAt(transform.getPositionVec3(), glm::vec3(0, 0, 0), glm::vec3(0, 1, 1));;
+	}
+
 	void Camera::updateCameraUniform()
 	{
 		// grab the new matrices
 		m_uniformData.viewMatrix = glm::inverse(transform.getMatrix());
 		m_uniformData.projectionMatrix = getProjectionMatrix();
+		m_uniformData.orthographicMatrix = getOrthographicMatrix();
 
 		// bind the uniform buffer
 		m_uniformBuffer->bind();

@@ -29,7 +29,9 @@ namespace Object
 	struct u_CameraData
 	{
 		glm::mat4 viewMatrix;			/**< Camera View Matrix data */
+		//glm::mat4 lookAtMatrix;			/**< The lookAt  */
 		glm::mat4 projectionMatrix;		/**< Camera Projection Matrix data */
+		glm::mat4 orthographicMatrix;	/**< Camera Projection Matrix data */
 	};
 
 
@@ -73,13 +75,13 @@ namespace Object
 		*
 		*	Sets the FoV and cleans the projection matrix
 		*/
-		inline void setFOV(const float _fov) { m_fovRad = _fov; cleanProjectionMatrix(); }
+		inline void setFOV(const float _fov) { m_fovRad = _fov; cleanViewMatrix(); }
 		/** @brief Sets the Aspect Ratio ( width / height )
 		*	@param _aspect The desired Aspect Ratio
 		*
 		*	Sets the Aspect Ratio and cleans the projection matrix
 		*/
-		inline void setAspectRatio(const float _aspect) { m_aspect = _aspect; cleanProjectionMatrix(); }
+		inline void setAspectRatio(const float _aspect) { m_aspect = _aspect; cleanViewMatrix(); }
 		 
 		/** @brief Return the Projection Matrix
 		*	@return The Projection Matrix
@@ -87,6 +89,13 @@ namespace Object
 		*	Returns the Projection Matrix
 		*/
 		inline glm::mat4 getProjectionMatrix() { return m_projectionMatrix; }
+
+		/** @brief Return the Orthographic Matrix
+		*	@return The Orthographic Matrix
+		*
+		*	Returns the Orthographic Matrix
+		*/
+		inline glm::mat4 getOrthographicMatrix() { return m_orthographicMatrix; }
 
 		/** @brief Updates the OpenGL Camera Data Uniform
 		*
@@ -119,7 +128,7 @@ namespace Object
 		*
 		*	Sets a fresh perspective matrix from the FoV, aspect ratio and near / far planes
 		*/
-		void cleanProjectionMatrix() { m_projectionMatrix = glm::perspective(m_fovRad, m_aspect, 0.1f, 100.0f); }
+		void cleanViewMatrix();
 		
 		float										m_fovRad;				/**< The current FoV in radians */
 		float										m_aspect;				/**< The current Aspect Ratio */
@@ -127,6 +136,7 @@ namespace Object
 		int											m_viewportHeight;		/**< Height of the viewport in pixels */
 
 		glm::mat4									m_projectionMatrix;		/**< The Projection Matrix */
+		glm::mat4									m_orthographicMatrix;	/**< The Orthographic Matrix */
 
 		std::shared_ptr<Graphics::VertexBuffer>		m_uniformBuffer;		/**< The uniform buffer for View and Projection matrices */
 		u_CameraData								m_uniformData;			/**< The struct containing the matrices for the uniform buffer to use */

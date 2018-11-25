@@ -116,6 +116,14 @@ namespace Crumble
 		{
 			transform->translate(glm::vec3(6, 0, 0) * CNG_DELTA_TIME);
 		}
+		if ((keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_W)))
+		{
+			CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, -5) * CNG_DELTA_TIME);
+		}
+		if ((keyboard->isKeyDown(CookieEng::Input::Keyboard::CNG_KEY_S)))
+		{
+			CNG_ACTIVE_CAMERA->transform.translate(glm::vec3(0, 0, 5) * CNG_DELTA_TIME);
+		}
 
 		// if controller 0 is connected
 		if (inputManager.validController(0))

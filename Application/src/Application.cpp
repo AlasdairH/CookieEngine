@@ -24,17 +24,21 @@ int main()
 	// load meshs
 	resourceManager.load<Resources::Mesh>("CookieMesh", "resources/models/Cookie.obj");
 	resourceManager.load<Resources::Mesh>("MugMesh", "resources/models/CoffeeMug.obj");
+	resourceManager.load<Resources::Mesh>("GUIPlane", "resources/models/GUIPlane.obj");
 
 	// load textures
 	resourceManager.load<Resources::Texture>("CookieTexture", "resources/textures/Cookie.png");
 	resourceManager.load<Resources::Texture>("GreyTexture", "resources/textures/Grey.png");
+	resourceManager.load<Resources::Texture>("ButtonTexture", "resources/textures/Button.png");
 
 	// load shaders
 	resourceManager.load<Resources::ShaderProgram>("DefaultShader", "resources/shaders/BasicShader.cngShader");
+	resourceManager.load<Resources::ShaderProgram>("GUIShader", "resources/shaders/GUI/GUIShader.cngShader");
 
 	// load materials
 	resourceManager.load<Resources::Material>("CookieMaterial", "resources/materials/Cookie.cngMaterial");
 	resourceManager.load<Resources::Material>("GreyMaterial", "resources/materials/Grey.cngMaterial");
+	resourceManager.load<Resources::Material>("GUIMaterial", "resources/materials/GUI.cngMaterial");
 
 	// load sounds
 	resourceManager.load<Resources::SoundEffect>("DunkSound", "resources/sounds/dunk.wav");
@@ -53,7 +57,13 @@ int main()
 	gameController.addComponent<Crumble::GameController>();
 	CNG_ACTIVE_SCENE->addEntity(gameController);
 
-
+	CookieEng::ECS::Entity uiPauseButton;
+	uiPauseButton.addComponent<Components::Transform>();
+	uiPauseButton.addComponent<CookieEng::Components::GUI::UIButton>();
+	auto button = uiPauseButton.getComponent<CookieEng::Components::GUI::UIButton>();
+	button->setWidth(150);
+	button->setHeight(100);
+	CNG_ACTIVE_SCENE->addEntity(uiPauseButton);
 
 	engine.start();
 

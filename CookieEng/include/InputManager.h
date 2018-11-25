@@ -16,6 +16,13 @@ namespace CookieEng
 {
 namespace Input
 {
+	//TODO: Add mouse
+
+	/*! @class InputManager
+	*	@brief An Input Manager singleton for getting peripheral input
+	*
+	*	This singleton class gets and handles input from peripherals such as the keyboard and gamepads.
+	*/
 	class InputManager
 	{
 	public:

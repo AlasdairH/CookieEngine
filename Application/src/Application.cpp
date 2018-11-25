@@ -31,6 +31,7 @@ int main()
 	resourceManager.load<Resources::Texture>("GreyTexture", "resources/textures/Grey.png");
 	resourceManager.load<Resources::Texture>("ButtonTexture", "resources/textures/Button.png");
 	resourceManager.load<Resources::Texture>("WinLabelTexture", "resources/textures/Win.png");
+	resourceManager.load<Resources::Texture>("LostLabelTexture", "resources/textures/Lost.png");
 
 	// load shaders
 	resourceManager.load<Resources::ShaderProgram>("DefaultShader", "resources/shaders/BasicShader.cngShader");

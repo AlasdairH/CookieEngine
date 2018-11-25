@@ -74,7 +74,21 @@ namespace Crumble
 
 				++m_missed;
 				LOG_MESSAGE("Missed: " << m_missed);
-				continue;
+				
+				if (m_missed >= 5)
+				{
+					// create the win label
+					CookieEng::ECS::Entity uiLoss;
+					uiLoss.addComponent<CookieEng::Components::Transform>();
+					uiLoss.addComponent<CookieEng::Components::GUI::UIButton>();
+					auto button = uiLoss.getComponent<CookieEng::Components::GUI::UIButton>();
+					button->setWidth(150);
+					button->setHeight(100);
+					button->setPosition(glm::vec2((CNG_ACTIVE_CAMERA->getViewportWidth() / 2) - (button->getWidth() / 2), (CNG_ACTIVE_CAMERA->getViewportHeight() / 2) - (button->getHeight() / 2)));
+					button->setMaterial(resourceManager.get<CookieEng::Resources::Material>("WinLabelMaterial"));
+					button->getMaterial()->setDiffuse("LostLabelTexture");
+					CNG_ACTIVE_SCENE->addEntity(uiLoss);
+				}
 			}
 
 			// test collision between cookie (Collectable) and mug (Player)
@@ -88,7 +102,7 @@ namespace Crumble
 				// play dunk sound
 				m_audioSource.play();
 
-				if (m_score >= 1)
+				if (m_score >= 10)
 				{
 					LOG_MESSAGE("WINNER!");
 
@@ -103,6 +117,7 @@ namespace Crumble
 					button->setMaterial(resourceManager.get<CookieEng::Resources::Material>("WinLabelMaterial"));
 					CNG_ACTIVE_SCENE->addEntity(uiWin);
 
+					// pause the game
 					CNG_ACTIVE_SCENE->togglePause();
 				}
 			}

@@ -80,7 +80,7 @@ namespace Components
 
 		/** @brief Tests if the bounding box collides with a ray
 		*	@return A boolean flag stating if a collision occured or not
-		*	@param _other The ray to test against
+		*	@param _ray The ray to test against
 		*
 		*	Tests a collision between 'this' bounding box and a ray.
 		*/

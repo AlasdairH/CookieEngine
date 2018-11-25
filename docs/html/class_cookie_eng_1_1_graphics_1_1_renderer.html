@@ -84,7 +84,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a255e78964e0d0ff7efd26e60a6612f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Program Ctor.  <a href="#a255e78964e0d0ff7efd26e60a6612f39">More...</a><br /></td></tr>
 <tr class="separator:a255e78964e0d0ff7efd26e60a6612f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd0601318ff6155fbaa9af6a16cff079"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#afd0601318ff6155fbaa9af6a16cff079">setRenderMode</a> (RenderMode _renderMode)</td></tr>
-<tr class="memdesc:afd0601318ff6155fbaa9af6a16cff079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html" title="Abstraction of an OpenGL FrameBuffer. ">FrameBuffer</a> to render to if one has not been provided.  <a href="#afd0601318ff6155fbaa9af6a16cff079">More...</a><br /></td></tr>
+<tr class="memdesc:afd0601318ff6155fbaa9af6a16cff079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the rendermode for the renderer.  <a href="#afd0601318ff6155fbaa9af6a16cff079">More...</a><br /></td></tr>
 <tr class="separator:afd0601318ff6155fbaa9af6a16cff079"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e8bce3cb731b1f09ca5bc4bc863414b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#a9e8bce3cb731b1f09ca5bc4bc863414b">setFrameBuffer</a> (<a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html">FrameBuffer</a> *_frameBuffer)</td></tr>
 <tr class="memdesc:a9e8bce3cb731b1f09ca5bc4bc863414b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html" title="Abstraction of an OpenGL FrameBuffer. ">FrameBuffer</a> to render to if one has not been provided.  <a href="#a9e8bce3cb731b1f09ca5bc4bc863414b">More...</a><br /></td></tr>
@@ -93,7 +93,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa32e62971f191a434ab457f9ac84ac31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw to a framebuffer.  <a href="#aa32e62971f191a434ab457f9ac84ac31">More...</a><br /></td></tr>
 <tr class="separator:aa32e62971f191a434ab457f9ac84ac31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cadfbd80259f0188e52880c47ac7573"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_graphics_1_1_renderer.html#a5cadfbd80259f0188e52880c47ac7573">draw</a> (<a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html">ECS::Entity</a> &amp;_entity)</td></tr>
-<tr class="memdesc:a5cadfbd80259f0188e52880c47ac7573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw to a framebuffer.  <a href="#a5cadfbd80259f0188e52880c47ac7573">More...</a><br /></td></tr>
+<tr class="memdesc:a5cadfbd80259f0188e52880c47ac7573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw to the currently bound framebuffer.  <a href="#a5cadfbd80259f0188e52880c47ac7573">More...</a><br /></td></tr>
 <tr class="separator:a5cadfbd80259f0188e52880c47ac7573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -144,15 +144,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Draw to a framebuffer. </p>
+<p>Draw to the currently bound framebuffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_fbo</td><td>The framebuffer to draw to </td></tr>
     <tr><td class="paramname">_entity</td><td>The Entity to draw</td></tr>
   </table>
   </dd>
 </dl>
-<p>Takes a frame buffer and the required objects for rendering and renders using the provided material to the framebuffer. </p>
+<p>Takes the required objects for rendering and renders using the provided material to the currently bound framebuffer. </p>
 
 </div>
 </div>
@@ -267,14 +266,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the default <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html" title="Abstraction of an OpenGL FrameBuffer. ">FrameBuffer</a> to render to if one has not been provided. </p>
+<p>Sets the rendermode for the renderer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_frameBuffer</td><td>A pointer to the <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html" title="Abstraction of an OpenGL FrameBuffer. ">FrameBuffer</a> to use</td></tr>
+    <tr><td class="paramname">_renderMode</td><td>The rendermode to set</td></tr>
   </table>
   </dd>
 </dl>
-<p>Sets the default <a class="el" href="class_cookie_eng_1_1_graphics_1_1_frame_buffer.html" title="Abstraction of an OpenGL FrameBuffer. ">FrameBuffer</a> to render to if one has not been provided. CAREFUL OF DANGLING POINTERS HERE </p>
+<p>Sets the rendermode </p>
 
 </div>
 </div>

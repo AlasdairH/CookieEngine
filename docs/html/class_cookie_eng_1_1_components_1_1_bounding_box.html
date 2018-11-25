@@ -98,7 +98,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a268f31408a9f91765de7f9b052c97c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the minimum bounding point of the AABB.  <a href="#a268f31408a9f91765de7f9b052c97c85">More...</a><br /></td></tr>
 <tr class="separator:a268f31408a9f91765de7f9b052c97c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ad6bf701d391f3d5357a6e103e942e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_bounding_box.html#a5ad6bf701d391f3d5357a6e103e942e2">setMaxBoundingPoint</a> (const glm::vec3 &amp;_max)</td></tr>
-<tr class="memdesc:a5ad6bf701d391f3d5357a6e103e942e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum bounding point of the AABB  The new maximum bounding point of the AABB.  <a href="#a5ad6bf701d391f3d5357a6e103e942e2">More...</a><br /></td></tr>
+<tr class="memdesc:a5ad6bf701d391f3d5357a6e103e942e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum bounding point of the AABB.  <a href="#a5ad6bf701d391f3d5357a6e103e942e2">More...</a><br /></td></tr>
 <tr class="separator:a5ad6bf701d391f3d5357a6e103e942e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa121d65a4271d524fefb153f7388421a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_components_1_1_bounding_box.html#aa121d65a4271d524fefb153f7388421a">testCollision</a> (const <a class="el" href="class_cookie_eng_1_1_components_1_1_bounding_box.html">BoundingBox</a> &amp;_other)</td></tr>
 <tr class="memdesc:aa121d65a4271d524fefb153f7388421a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if the bounding box collides with another bounding box.  <a href="#aa121d65a4271d524fefb153f7388421a">More...</a><br /></td></tr>
@@ -131,8 +131,7 @@ Protected Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_cookie_eng_1_1_e_c_s_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_cookie_eng_1_1_e_c_s_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html">CookieEng::ECS::Component</a></td></tr>
-<tr class="memitem:a8a0c5a4ee3a87809d3e6d0bdaed3ebbe inherit pub_attribs_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a8a0c5a4ee3a87809d3e6d0bdaed3ebbe"></a>
-<a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b></td></tr>
+<tr class="memitem:a8a0c5a4ee3a87809d3e6d0bdaed3ebbe inherit pub_attribs_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html#a8a0c5a4ee3a87809d3e6d0bdaed3ebbe">parent</a></td></tr>
 <tr class="separator:a8a0c5a4ee3a87809d3e6d0bdaed3ebbe inherit pub_attribs_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7129172e0881ed80dbc6256570ad998 inherit pub_attribs_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_e_c_s_1_1_component.html#aa7129172e0881ed80dbc6256570ad998">started</a> = false</td></tr>
 <tr class="separator:aa7129172e0881ed80dbc6256570ad998 inherit pub_attribs_class_cookie_eng_1_1_e_c_s_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -264,7 +263,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the maximum bounding point of the AABB  The new maximum bounding point of the AABB. </p>
+<p>Sets the maximum bounding point of the AABB. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_max</td><td>The new maximum bounding point of the AABB</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>Sets the maximum bounding point of the AABB </p>
 
 </div>
@@ -296,7 +301,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the minimum bounding point of the AABB. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">The</td><td>new minimum bounding point of the AABB</td></tr>
+    <tr><td class="paramname">_min</td><td>The new minimum bounding point of the AABB</td></tr>
   </table>
   </dd>
 </dl>
@@ -352,7 +357,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A boolean flag stating if a collision occured or not </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_other</td><td>The ray to test against</td></tr>
+    <tr><td class="paramname">_ray</td><td>The ray to test against</td></tr>
   </table>
   </dd>
 </dl>

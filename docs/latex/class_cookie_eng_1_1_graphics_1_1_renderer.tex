@@ -15,13 +15,13 @@ An Open\+GL \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer}{Renderer}.
 \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_a255e78964e0d0ff7efd26e60a6612f39}{Renderer} ()
 \begin{DoxyCompactList}\small\item\em Program Ctor. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_afd0601318ff6155fbaa9af6a16cff079}{set\+Render\+Mode} (Render\+Mode \+\_\+render\+Mode)
-\begin{DoxyCompactList}\small\item\em Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to render to if one has not been provided. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sets the rendermode for the renderer. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_a9e8bce3cb731b1f09ca5bc4bc863414b}{set\+Frame\+Buffer} (\hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} $\ast$\+\_\+frame\+Buffer)
 \begin{DoxyCompactList}\small\item\em Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to render to if one has not been provided. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_aa32e62971f191a434ab457f9ac84ac31}{draw\+To\+Frame\+Buffer} (const \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} \&\+\_\+fbo, const \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Vertex\+Array} \&\+\_\+vao, const \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Vertex\+Buffer} \&\+\_\+index\+Buffer, const \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} \&\+\_\+material)
 \begin{DoxyCompactList}\small\item\em Draw to a framebuffer. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer_a5cadfbd80259f0188e52880c47ac7573}{draw} (\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} \&\+\_\+entity)
-\begin{DoxyCompactList}\small\item\em Draw to a framebuffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Draw to the currently bound framebuffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -58,16 +58,14 @@ Logs a created message
 
 
 
-Draw to a framebuffer. 
+Draw to the currently bound framebuffer. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \+\_\+fbo} & The framebuffer to draw to \\
-\hline
 {\em \+\_\+entity} & The Entity to draw\\
 \hline
 \end{DoxyParams}
-Takes a frame buffer and the required objects for rendering and renders using the provided material to the framebuffer. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_renderer_aa32e62971f191a434ab457f9ac84ac31}\label{class_cookie_eng_1_1_graphics_1_1_renderer_aa32e62971f191a434ab457f9ac84ac31}} 
+Takes the required objects for rendering and renders using the provided material to the currently bound framebuffer. \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_renderer_aa32e62971f191a434ab457f9ac84ac31}\label{class_cookie_eng_1_1_graphics_1_1_renderer_aa32e62971f191a434ab457f9ac84ac31}} 
 \index{Cookie\+Eng\+::\+Graphics\+::\+Renderer@{Cookie\+Eng\+::\+Graphics\+::\+Renderer}!draw\+To\+Frame\+Buffer@{draw\+To\+Frame\+Buffer}}
 \index{draw\+To\+Frame\+Buffer@{draw\+To\+Frame\+Buffer}!Cookie\+Eng\+::\+Graphics\+::\+Renderer@{Cookie\+Eng\+::\+Graphics\+::\+Renderer}}
 \subsubsection{\texorpdfstring{draw\+To\+Frame\+Buffer()}{drawToFrameBuffer()}}
@@ -111,14 +109,14 @@ Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Fram
 
 
 
-Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to render to if one has not been provided. 
+Sets the rendermode for the renderer. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \+\_\+frame\+Buffer} & A pointer to the \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to use\\
+{\em \+\_\+render\+Mode} & The rendermode to set\\
 \hline
 \end{DoxyParams}
-Sets the default \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Frame\+Buffer} to render to if one has not been provided. C\+A\+R\+E\+F\+UL OF D\+A\+N\+G\+L\+I\+NG P\+O\+I\+N\+T\+E\+RS H\+E\+RE 
+Sets the rendermode 
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_cookie_eng_1_1_graphics_1_1_renderer_a64f992d6d2476fe2ea641f31a46f006e}\label{class_cookie_eng_1_1_graphics_1_1_renderer_a64f992d6d2476fe2ea641f31a46f006e}} 

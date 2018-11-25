@@ -1,21 +1,84 @@
 \hypertarget{class_cookie_eng_1_1_audio_1_1_audio_source}{}\section{Cookie\+Eng\+:\+:Audio\+:\+:Audio\+Source Class Reference}
 \label{class_cookie_eng_1_1_audio_1_1_audio_source}\index{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source@{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source}}
+
+
+An audio source.  
+
+
+
+
+{\ttfamily \#include $<$Audio\+Source.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_audio_1_1_audio_source_a077bce5d4bc73b97f261e830558c5350}\label{class_cookie_eng_1_1_audio_1_1_audio_source_a077bce5d4bc73b97f261e830558c5350}} 
-void {\bfseries play} ()
-\item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_audio_1_1_audio_source_a36d0e1b2c5702eeb1fc63236ad19e6d4}\label{class_cookie_eng_1_1_audio_1_1_audio_source_a36d0e1b2c5702eeb1fc63236ad19e6d4}} 
-void {\bfseries assign} (std\+::string \+\_\+string)
-\end{DoxyCompactItemize}
+\hyperlink{class_cookie_eng_1_1_audio_1_1_audio_source_abf91fca0d4acf97b091efae22f3b4be8}{Audio\+Source} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_audio_1_1_audio_source}{Audio\+Source} Ctor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_audio_1_1_audio_source_a077bce5d4bc73b97f261e830558c5350}{play} ()
+\begin{DoxyCompactList}\small\item\em Plays the assigned sound effect. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_audio_1_1_audio_source_a36d0e1b2c5702eeb1fc63236ad19e6d4}{assign} (std\+::string \+\_\+string)
+\begin{DoxyCompactList}\small\item\em Plays the assigned sound effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_audio_1_1_audio_source_af883ecb61be31c5e85f3666934080f4e}\label{class_cookie_eng_1_1_audio_1_1_audio_source_af883ecb61be31c5e85f3666934080f4e}} 
-std\+::weak\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect}{Resources\+::\+Sound\+Effect} $>$ {\bfseries m\+\_\+sound\+Effect}
+std\+::weak\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect}{Resources\+::\+Sound\+Effect} $>$ \hyperlink{class_cookie_eng_1_1_audio_1_1_audio_source_af883ecb61be31c5e85f3666934080f4e}{m\+\_\+sound\+Effect}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+An audio source. 
+
+A source of audio for playing sounds 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_audio_1_1_audio_source_abf91fca0d4acf97b091efae22f3b4be8}\label{class_cookie_eng_1_1_audio_1_1_audio_source_abf91fca0d4acf97b091efae22f3b4be8}} 
+\index{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source@{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source}!Audio\+Source@{Audio\+Source}}
+\index{Audio\+Source@{Audio\+Source}!Cookie\+Eng\+::\+Audio\+::\+Audio\+Source@{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source}}
+\subsubsection{\texorpdfstring{Audio\+Source()}{AudioSource()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Audio\+::\+Audio\+Source\+::\+Audio\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_audio_1_1_audio_source}{Audio\+Source} Ctor. 
+
+Does nothing 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_audio_1_1_audio_source_a36d0e1b2c5702eeb1fc63236ad19e6d4}\label{class_cookie_eng_1_1_audio_1_1_audio_source_a36d0e1b2c5702eeb1fc63236ad19e6d4}} 
+\index{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source@{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source}!assign@{assign}}
+\index{assign@{assign}!Cookie\+Eng\+::\+Audio\+::\+Audio\+Source@{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source}}
+\subsubsection{\texorpdfstring{assign()}{assign()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Audio\+::\+Audio\+Source\+::assign (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Plays the assigned sound effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+string} & The resource string to load from\\
+\hline
+\end{DoxyParams}
+Assigns the sound effect to this source \mbox{\Hypertarget{class_cookie_eng_1_1_audio_1_1_audio_source_a077bce5d4bc73b97f261e830558c5350}\label{class_cookie_eng_1_1_audio_1_1_audio_source_a077bce5d4bc73b97f261e830558c5350}} 
+\index{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source@{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source}!play@{play}}
+\index{play@{play}!Cookie\+Eng\+::\+Audio\+::\+Audio\+Source@{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source}}
+\subsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Audio\+::\+Audio\+Source\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Plays the assigned sound effect. 
+
+Plays the attached sound effect resource 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_audio_1_1_audio_source_af883ecb61be31c5e85f3666934080f4e}\label{class_cookie_eng_1_1_audio_1_1_audio_source_af883ecb61be31c5e85f3666934080f4e}} 
+\index{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source@{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source}!m\+\_\+sound\+Effect@{m\+\_\+sound\+Effect}}
+\index{m\+\_\+sound\+Effect@{m\+\_\+sound\+Effect}!Cookie\+Eng\+::\+Audio\+::\+Audio\+Source@{Cookie\+Eng\+::\+Audio\+::\+Audio\+Source}}
+\subsubsection{\texorpdfstring{m\+\_\+sound\+Effect}{m\_soundEffect}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect}{Resources\+::\+Sound\+Effect}$>$ Cookie\+Eng\+::\+Audio\+::\+Audio\+Source\+::m\+\_\+sound\+Effect\hspace{0.3cm}{\ttfamily [protected]}}
+
+The sound effect resource 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

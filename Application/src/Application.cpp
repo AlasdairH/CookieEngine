@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "CookieCore.h"
+#include "Material.h"
 #include "GameController.h"
 
 #define WINDOW_WIDTH 1280
@@ -36,7 +37,7 @@ int main()
 	// load shaders
 	resourceManager.load<Resources::ShaderProgram>("DefaultShader", "resources/shaders/BasicShader.cngShader");
 	resourceManager.load<Resources::ShaderProgram>("GUIShader", "resources/shaders/GUI/GUIShader.cngShader");
-	CookieEng::Components::
+
 	// load materials
 	resourceManager.load<Resources::Material>("CookieMaterial", "resources/materials/Cookie.cngMaterial");
 	resourceManager.load<Resources::Material>("GreyMaterial", "resources/materials/Grey.cngMaterial");

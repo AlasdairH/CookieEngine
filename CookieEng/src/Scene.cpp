@@ -31,6 +31,28 @@ namespace Scene
 
 	}
 
+	std::shared_ptr<ECS::Entity> Scene::getUIUnderScreenPosition(glm::vec2 _screenPosition)
+	{
+		for (unsigned int i = 0; i < m_entities.size(); ++i)
+		{
+			// if entity has a button to test against
+			if (m_entities[i]->hasComponent<Components::GUI::UIButton>())
+			{
+				auto transform = m_entities[i]->getComponent<Components::Transform>();
+
+				if (_screenPosition.x >= transform->getPositionVec3().x && _screenPosition.x <= transform->getPositionVec3().x + transform->getScaleVec3().x)
+				{
+					if (_screenPosition.y >= transform->getPositionVec3().y && _screenPosition.y <= transform->getPositionVec3().y + transform->getScaleVec3().y)
+					{
+						return m_entities[i];
+					}
+				}
+			}
+		}
+
+		return std::shared_ptr<ECS::Entity>();
+	}
+
 	std::shared_ptr<ECS::Entity> Scene::addEntity(ECS::Entity & _entity)
 	{
 		// if the entity being added does not have a Transform component, add one

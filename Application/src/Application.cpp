@@ -63,6 +63,13 @@ int main()
 	auto button = uiPauseButton.getComponent<CookieEng::Components::GUI::UIButton>();
 	button->setWidth(150);
 	button->setHeight(100);
+	button->setPosition(glm::vec2(50, 50));
+	// set button action
+	button->setAction([]
+	{
+		LOG_MESSAGE("Pause Button Clicked");
+	}
+	);
 	CNG_ACTIVE_SCENE->addEntity(uiPauseButton);
 
 	engine.start();

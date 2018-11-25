@@ -61,7 +61,7 @@ namespace CookieEng
 		
 		/** @brief Starts CookieEngine
 		*
-		*	Runs the start methods of any entitie's components in the scene at the beginning of the program and starts the engine loop.
+		*	Runs the start methods of any entities components in the scene at the beginning of the program and starts the engine loop.
 		*/
 		void start();
 

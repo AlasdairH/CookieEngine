@@ -46,6 +46,13 @@ namespace Scene
 		*/
 		inline void setActive() { activeScene = this; }
 
+		/** @brief Gets UI elements from screen position
+		*	@param the position on the screen in pixels to check under
+		*
+		*	Looks for any UI element under the screen position and returns it
+		*/
+		std::shared_ptr<ECS::Entity> getUIUnderScreenPosition(glm::vec2 _screenPosition);
+
 		/** @brief Adds an entity to the scene
 		*	@return A shared pointer to the newly added entity
 		*	@param _entity The entity to add
@@ -97,6 +104,7 @@ namespace Scene
 		int											m_height;		/**< The height of the scene's resolution */
 
 		std::vector<std::shared_ptr<ECS::Entity>>	m_entities;		/**< The vector of entities in the scene */
+		std::vector<std::weak_ptr<ECS::Entity>>		m_uiEntities;	/**< The vector of entities in the scene that contain UI elements */
 		std::vector<int>							m_deleteQueue;	/**< Stores the indices of entities to be removed at the end of the update */
 		std::map<std::string, ECS::Entity>			m_entityMap;	/**< Not used? */
 

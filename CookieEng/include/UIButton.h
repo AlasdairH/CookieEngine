@@ -41,25 +41,6 @@ namespace GUI
 		*/
 		void onMouseClick() override;
 
-		/** @brief Set the button width
-		*	@param _width The button width in pixels
-		*
-		*	Sets the button width in pixels
-		*/
-		void setWidth(int _width);
-		/** @brief Set the button height
-		*	@param _height The button width in pixels
-		*
-		*	Sets the button height in pixels
-		*/
-		void setHeight(int _height);
-		/** @brief Set the button position
-		*	@param _position The x and y position in pixels
-		*
-		*	Sets the button position in pixels
-		*/
-		void setPosition(glm::vec2 _position);
-
 		/** @brief Returns the VAO
 		*	@return A renderable VAO
 		*
@@ -79,11 +60,18 @@ namespace GUI
 		*/
 		inline std::shared_ptr<Resources::Material> getMaterial() { return m_material; }
 
-	protected:
-		std::function<void(void*)>					m_action = [](void* data) { };		/**< Function pointer to the action to perform on button click */
+		/** @brief Sets the action the button will perform on click
+		*	@param _func A function to run on click. Can be sent a lambda.
+		*
+		*	Assignes the function that will be run when the button is clicked. This can be sent a lambda to run any action.
+		*/
+		void setAction(std::function<void()> _func);
 
-		std::shared_ptr<Resources::Material>		m_material;							/**< The material used for rendering the button */
-		std::shared_ptr<Resources::Mesh>			m_mesh;								/**< The mesh to render the GUI on */
+	protected:
+		std::function<void()>						m_action = []() { };		/**< Function pointer to the action to perform on button click */
+
+		std::shared_ptr<Resources::Material>		m_material;					/**< The material used for rendering the button */
+		std::shared_ptr<Resources::Mesh>			m_mesh;						/**< The mesh to render the GUI on */
 	};
 }
 }

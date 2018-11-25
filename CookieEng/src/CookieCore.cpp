@@ -90,15 +90,27 @@ namespace CookieEng
 						break;
 					}
 				}
-			}
 
-			/*
-			// update message queue on seperate thread
-			testThreadPool.enqueue([]
-			{
-				//Services::ServiceLocator::getMessageQueue().update();
-			});
-			*/
+				if (incomingEvent.type == SDL_MOUSEBUTTONDOWN)
+				{
+					if (CNG_ACTIVE_SCENE != nullptr)
+					{
+						// int x and y for state
+						int x, y;
+						SDL_GetMouseState(&x, &y);
+						// float x and y for viewport correction and UI test
+						float fx, fy;
+						fx = (float)x;
+						fy = CNG_ACTIVE_CAMERA->getViewportHeight() - (float)y;
+						auto entity = CNG_ACTIVE_SCENE->getUIUnderScreenPosition(glm::vec2(fx, fy));
+
+						if (entity != nullptr)
+						{
+							entity->getComponent<Components::GUI::UIButton>()->onMouseClick();
+						}
+					}
+				}
+			}
 
 			// if there is a valid scene to update and render
 			if (Scene::Scene::activeScene != nullptr)

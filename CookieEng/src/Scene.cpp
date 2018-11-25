@@ -110,12 +110,15 @@ namespace Scene
 
 	void Scene::onUpdate()
 	{
-		// update entities
-		for (auto entity : m_entities)
+		if (!m_isPaused)
 		{
-			entity->onUpdate();
+			// update entities
+			for (auto entity : m_entities)
+			{
+				entity->onUpdate();
+			}
 		}
-
+		
 		// update the camera uniform buffer
 		if (Object::Camera::activeCamera != nullptr)
 		{

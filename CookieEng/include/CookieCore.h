@@ -63,11 +63,12 @@ namespace CookieEng
 		*
 		*	Runs the start methods of any entities components in the scene at the beginning of the program and starts the engine loop.
 		*/
-		void start();
+		void start();		
 
 	protected:
 		Window		*m_window;						/**< The window with an OpenGL context to render to */
 
 		bool		m_isInitialised = false;		/**< State flag for the engine initialisation state. Cannot start unless this is true. */
+		bool		m_isPaused		= false;		/**< is updating paused */
 	};
 }

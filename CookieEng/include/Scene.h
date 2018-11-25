@@ -97,6 +97,12 @@ namespace Scene
 		*/
 		void clean();
 
+		/** @brief Toggle pausing scene updates
+		*
+		*	Toggles pausing of game updates
+		*/
+		void togglePause() { if (m_isPaused) m_isPaused = false; else m_isPaused = true; }
+
 		static Scene *activeScene;	/**< The currently active scene */
 
 	protected:
@@ -110,6 +116,8 @@ namespace Scene
 
 		Graphics::Renderer							m_renderer;		/**< The renderer used in the draw method */
 		std::shared_ptr<Graphics::FrameBuffer>		m_frameBuffer;	/**< The framebuffer that will be rendered to */
+
+		bool										m_isPaused;		/**< Paused state flag for entity updates */
 	};
 }
 }

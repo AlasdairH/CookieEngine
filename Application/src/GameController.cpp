@@ -23,6 +23,7 @@ namespace Crumble
 	void GameController::onUpdate()
 	{
 		CookieEng::Input::InputManager &inputManager = CookieEng::Input::InputManager::getInstance();
+		CookieEng::ResMgmt::ResourceManager &resourceManager = CookieEng::ResMgmt::ResourceManager::getInstance();
 		std::shared_ptr<CookieEng::Input::Keyboard::Keyboard> keyboard = inputManager.getKeyboard();
 
 		if (m_missed >= 10)
@@ -87,9 +88,22 @@ namespace Crumble
 				// play dunk sound
 				m_audioSource.play();
 
-				if (m_score >= 10)
+				if (m_score >= 1)
 				{
 					LOG_MESSAGE("WINNER!");
+
+					// create the win label
+					CookieEng::ECS::Entity uiWin;
+					uiWin.addComponent<CookieEng::Components::Transform>();
+					uiWin.addComponent<CookieEng::Components::GUI::UIButton>();
+					auto button = uiWin.getComponent<CookieEng::Components::GUI::UIButton>();
+					button->setWidth(150);
+					button->setHeight(100);
+					button->setPosition(glm::vec2((CNG_ACTIVE_CAMERA->getViewportWidth() / 2) - (button->getWidth() / 2), (CNG_ACTIVE_CAMERA->getViewportHeight() / 2) - (button->getHeight() / 2)));
+					button->setMaterial(resourceManager.get<CookieEng::Resources::Material>("WinLabelMaterial"));
+					CNG_ACTIVE_SCENE->addEntity(uiWin);
+
+					CNG_ACTIVE_SCENE->togglePause();
 				}
 			}
 		}

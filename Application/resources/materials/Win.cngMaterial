@@ -1,0 +1,3 @@
+FILETYPE Material
+SET SHADER GUIShader
+SET DIFFUSE WinLabelTexture

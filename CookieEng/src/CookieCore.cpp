@@ -113,16 +113,19 @@ namespace CookieEng
 			}
 
 			// if there is a valid scene to update and render
-			if (Scene::Scene::activeScene != nullptr)
+			if (CNG_ACTIVE_SCENE != nullptr)
 			{
-				Scene::Scene::activeScene->onUpdate();
+				if (!m_isPaused)
+				{
+					CNG_ACTIVE_SCENE->onUpdate();
+				}
 
 				glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-				Scene::Scene::activeScene->draw();
+				CNG_ACTIVE_SCENE->draw();
 				
-				Scene::Scene::activeScene->clean();
+				CNG_ACTIVE_SCENE->clean();
 			}
 			else
 			{

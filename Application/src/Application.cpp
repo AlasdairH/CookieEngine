@@ -30,6 +30,7 @@ int main()
 	resourceManager.load<Resources::Texture>("CookieTexture", "resources/textures/Cookie.png");
 	resourceManager.load<Resources::Texture>("GreyTexture", "resources/textures/Grey.png");
 	resourceManager.load<Resources::Texture>("ButtonTexture", "resources/textures/Button.png");
+	resourceManager.load<Resources::Texture>("WinLabelTexture", "resources/textures/Win.png");
 
 	// load shaders
 	resourceManager.load<Resources::ShaderProgram>("DefaultShader", "resources/shaders/BasicShader.cngShader");
@@ -39,6 +40,7 @@ int main()
 	resourceManager.load<Resources::Material>("CookieMaterial", "resources/materials/Cookie.cngMaterial");
 	resourceManager.load<Resources::Material>("GreyMaterial", "resources/materials/Grey.cngMaterial");
 	resourceManager.load<Resources::Material>("GUIMaterial", "resources/materials/GUI.cngMaterial");
+	resourceManager.load<Resources::Material>("WinLabelMaterial", "resources/materials/Win.cngMaterial");
 
 	// load sounds
 	resourceManager.load<Resources::SoundEffect>("DunkSound", "resources/sounds/dunk.wav");
@@ -67,7 +69,7 @@ int main()
 	// set button action
 	button->setAction([]
 	{
-		LOG_MESSAGE("Pause Button Clicked");
+		CNG_ACTIVE_SCENE->togglePause();
 	}
 	);
 	CNG_ACTIVE_SCENE->addEntity(uiPauseButton);

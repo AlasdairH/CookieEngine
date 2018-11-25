@@ -11,9 +11,7 @@
 // program
 #include "Macro.h"
 #include "UIElement.h"
-#include "Transform.h"
 #include "Mesh.h"
-#include "Material.h"
 
 namespace CookieEng
 {
@@ -69,9 +67,6 @@ namespace GUI
 
 	protected:
 		std::function<void()>						m_action = []() { };		/**< Function pointer to the action to perform on button click */
-
-		std::shared_ptr<Resources::Material>		m_material;					/**< The material used for rendering the button */
-		std::shared_ptr<Resources::Mesh>			m_mesh;						/**< The mesh to render the GUI on */
 	};
 }
 }

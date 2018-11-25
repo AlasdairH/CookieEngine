@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CookieEng::Components::Transform" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAQCAAACAIAAAUAAQCCIAAAAASAAIAAAEgBIA=</HashCode>
+      <FileName>include\Transform.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookieEng::Components::BoundingBox" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAQAQAgAJAAAACAAAEAARAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>include\BoundingBox.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookieEng::ECS::Entity" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAAAgAAIAAAAECBAAABAAAACAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>include\Entity.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookieEng::ECS::Component" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAABAAAAAAhAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>include\Component.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookieEng::Components::GUI::UIButton" Collapsed="true">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAIQAAAAAAgABAAABAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>include\UIButton.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookieEng::Components::GUI::UIElement" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAAAAAAAAAAAAAAAAEACAAQCQAAEAAAAAAAAAAA=</HashCode>
+      <FileName>include\UIElement.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookieEng::Components::Renderable" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAAAAAAAAAAAARAAAEAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>include\Renderable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

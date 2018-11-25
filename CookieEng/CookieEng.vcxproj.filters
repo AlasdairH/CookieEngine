@@ -398,6 +398,7 @@
     <None Include="resources\shaders\BasicPP.cngShader" />
     <None Include="resources\assets\levels\test.lvl" />
     <None Include="resources\materials\BasicMaterial.mat" />
+    <None Include="Components.cd" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\Default.png">

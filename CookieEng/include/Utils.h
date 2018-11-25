@@ -45,6 +45,11 @@ namespace Utilities
 		}
 	};
 
+	/*! @class UtilsFloat
+	*	@brief Float utilities
+	*
+	*	Various additional methods for generation of floats
+	*/
 	class UtilsFloat
 	{
 	public:

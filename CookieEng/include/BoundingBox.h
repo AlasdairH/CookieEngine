@@ -58,13 +58,13 @@ namespace Components
 		inline glm::vec3 getMaxBoundingPoint() const { return m_max; }
 
 		/** @brief Sets the minimum bounding point of the AABB
-		*	@param The new minimum bounding point of the AABB
+		*	@param _min The new minimum bounding point of the AABB
 		*
 		*	Sets the minimum bounding point of the AABB
 		*/
 		inline void setMinBoundingPoint(const glm::vec3 &_min) { m_min = _min; }
 		/** @brief Sets the maximum bounding point of the AABB
-		*	@paran The new maximum bounding point of the AABB
+		*	@param _max The new maximum bounding point of the AABB
 		*
 		*	Sets the maximum bounding point of the AABB
 		*/

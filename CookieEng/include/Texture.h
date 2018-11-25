@@ -77,7 +77,9 @@ namespace Resources
 		std::string		 m_filepath;			/**< The filepath to the texture */
 		unsigned char	*m_localBuffer;			/**< The local buffer for the loaded image */
 
-		int m_width, m_height, m_BPP;			/**< The width, height and bpp */
+		int m_width;		/**< The width */
+		int m_height;		/**< The height */
+		int m_BPP;			/**< The BPP */
 	};
 }
 }

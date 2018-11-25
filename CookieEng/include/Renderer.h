@@ -40,10 +40,10 @@ namespace Graphics
 		*/
 		Renderer();
 
-		/** @brief Sets the default FrameBuffer to render to if one has not been provided.
-		*	@param _frameBuffer A pointer to the FrameBuffer to use
+		/** @brief Sets the rendermode for the renderer
+		*	@param _renderMode The rendermode to set
 		*
-		*	Sets the default FrameBuffer to render to if one has not been provided. CAREFUL OF DANGLING POINTERS HERE
+		*	Sets the rendermode
 		*/
 		inline void setRenderMode(RenderMode _renderMode) { m_renderMode = _renderMode; }
 
@@ -64,11 +64,10 @@ namespace Graphics
 		*/
 		void drawToFrameBuffer(const FrameBuffer &_fbo, const VertexArray &_vao, const VertexBuffer &_indexBuffer, const Resources::Material &_material);
 
-		/** @brief Draw to a framebuffer
-		*	@param _fbo The framebuffer to draw to
+		/** @brief Draw to the currently bound framebuffer
 		*	@param _entity The Entity to draw
 		*
-		*	Takes a frame buffer and the required objects for rendering and renders using the provided material to the framebuffer.
+		*	Takes the required objects for rendering and renders using the provided material to the currently bound framebuffer.
 		*/
 		void draw(ECS::Entity &_entity);
 

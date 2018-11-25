@@ -22,7 +22,7 @@ namespace ECS
 	class Component
 	{
 	public:
-		Entity *parent;
+		Entity *parent;		/**< The parent entity of the component */
 
 		/** @brief Called on component initialisation
 		*

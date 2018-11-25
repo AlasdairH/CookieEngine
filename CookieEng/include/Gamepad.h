@@ -44,7 +44,7 @@ namespace Controllers
 		void update();
 
 		/** @brief Assigns the controller to an SDL input
-		*	@param _controller The controller to asign to the abstraction
+		*	@param _index The controller to asign to the abstraction
 		*
 		*	Assigns the controller to an SDL Contorller input
 		*/

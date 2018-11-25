@@ -22,6 +22,8 @@ Inherits enable\+\_\+shared\+\_\+from\+\_\+this$<$ Scene $>$.
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_scene_1_1_scene}{Scene} Dtor. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_adca281b1bff287a62391b5bb8bc18f5c}{set\+Active} ()
 \begin{DoxyCompactList}\small\item\em Sets the active scene to this scene. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_af8468e3788c5f9a8696aa4deac8c62a3}{get\+U\+I\+Under\+Screen\+Position} (glm\+::vec2 \+\_\+screen\+Position)
+\begin{DoxyCompactList}\small\item\em Gets UI elements from screen position. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a2cccad4cc0411852e327b249b12b9bc3}{add\+Entity} (\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} \&\+\_\+entity)
 \begin{DoxyCompactList}\small\item\em Adds an entity to the scene. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a4287243abfe6016c8c819aebc090bf4c}{get\+Entity} (const int \+\_\+index)
@@ -35,7 +37,9 @@ void \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a10fa9798a2d0cff5527a4ca160
 void \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a94dbc42f8c5b2f7774d8e0de1f5e45a7}{draw} ()
 \begin{DoxyCompactList}\small\item\em Draws the scene. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a3e1fa17bfd8e0e3af72db05c7a5ae0b3}{clean} ()
-\begin{DoxyCompactList}\small\item\em Cleans the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Cleans the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a8e5afd25964ae88a620d7f5b5f349f43}{toggle\+Pause} ()
+\begin{DoxyCompactList}\small\item\em Toggle pausing scene updates. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,6 +54,8 @@ int \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_aea87f5d089b50a248e01ae28144
 \item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$ $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_ad27cdfdb082498a7b812e054d4b28cb9}{m\+\_\+entities}
 \item 
+std\+::vector$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$ $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a8f1b8723deba48f2d685008cbf1f14a2}{m\+\_\+ui\+Entities}
+\item 
 std\+::vector$<$ int $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a57af2369c4079df376fa6137b6249eaf}{m\+\_\+delete\+Queue}
 \item 
 std\+::map$<$ std\+::string, \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity} $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a3ded68c1652ffebf8a4827c6313ccae0}{m\+\_\+entity\+Map}
@@ -57,6 +63,8 @@ std\+::map$<$ std\+::string, \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E
 \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer}{Graphics\+::\+Renderer} \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_aff47a056f32060d1180ae9bd379e9578}{m\+\_\+renderer}
 \item 
 std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_frame_buffer}{Graphics\+::\+Frame\+Buffer} $>$ \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a44b75b86a2f7ae2ce4dc05c20255e29e}{m\+\_\+frame\+Buffer}
+\item 
+bool \hyperlink{class_cookie_eng_1_1_scene_1_1_scene_a55c454b1a9914d610be2485027f14f31}{m\+\_\+is\+Paused}
 \end{DoxyCompactItemize}
 
 
@@ -145,7 +153,22 @@ A shared pointer to the entity requested by index
 {\em \+\_\+index} & The index of the entity to get.\\
 \hline
 \end{DoxyParams}
-Gets en entity by index. This is pretty useless most of the time as you usually have no idea what you\textquotesingle{}re going to get back. \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_ab66ffdb5475b0045d0ce5a846488590c}\label{class_cookie_eng_1_1_scene_1_1_scene_ab66ffdb5475b0045d0ce5a846488590c}} 
+Gets en entity by index. This is pretty useless most of the time as you usually have no idea what you\textquotesingle{}re going to get back. \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_af8468e3788c5f9a8696aa4deac8c62a3}\label{class_cookie_eng_1_1_scene_1_1_scene_af8468e3788c5f9a8696aa4deac8c62a3}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!get\+U\+I\+Under\+Screen\+Position@{get\+U\+I\+Under\+Screen\+Position}}
+\index{get\+U\+I\+Under\+Screen\+Position@{get\+U\+I\+Under\+Screen\+Position}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{get\+U\+I\+Under\+Screen\+Position()}{getUIUnderScreenPosition()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity}$>$ Cookie\+Eng\+::\+Scene\+::\+Scene\+::get\+U\+I\+Under\+Screen\+Position (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{\+\_\+screen\+Position }\end{DoxyParamCaption})}
+
+
+
+Gets UI elements from screen position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & position on the screen in pixels to check under\\
+\hline
+\end{DoxyParams}
+Looks for any UI element under the screen position and returns it \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_ab66ffdb5475b0045d0ce5a846488590c}\label{class_cookie_eng_1_1_scene_1_1_scene_ab66ffdb5475b0045d0ce5a846488590c}} 
 \index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!on\+Start@{on\+Start}}
 \index{on\+Start@{on\+Start}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
 \subsubsection{\texorpdfstring{on\+Start()}{onStart()}}
@@ -190,7 +213,17 @@ This method will not actually remove an entity. This will simply mark the entity
 
 Sets the active scene to this scene. 
 
-This sets the engine\textquotesingle{}s active scene to this one. The engine will perform the programs requested actions and render the active scene. 
+This sets the engine\textquotesingle{}s active scene to this one. The engine will perform the programs requested actions and render the active scene. \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a8e5afd25964ae88a620d7f5b5f349f43}\label{class_cookie_eng_1_1_scene_1_1_scene_a8e5afd25964ae88a620d7f5b5f349f43}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!toggle\+Pause@{toggle\+Pause}}
+\index{toggle\+Pause@{toggle\+Pause}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{toggle\+Pause()}{togglePause()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Scene\+::\+Scene\+::toggle\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Toggle pausing scene updates. 
+
+Toggles pausing of game updates 
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a367277df49168535200a279da96d11c2}\label{class_cookie_eng_1_1_scene_1_1_scene_a367277df49168535200a279da96d11c2}} 
@@ -229,13 +262,25 @@ The framebuffer that will be rendered to \mbox{\Hypertarget{class_cookie_eng_1_1
 \subsubsection{\texorpdfstring{m\+\_\+height}{m\_height}}
 {\footnotesize\ttfamily int Cookie\+Eng\+::\+Scene\+::\+Scene\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [protected]}}
 
-The height of the scene\textquotesingle{}s resolution \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_aff47a056f32060d1180ae9bd379e9578}\label{class_cookie_eng_1_1_scene_1_1_scene_aff47a056f32060d1180ae9bd379e9578}} 
+The height of the scene\textquotesingle{}s resolution \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a55c454b1a9914d610be2485027f14f31}\label{class_cookie_eng_1_1_scene_1_1_scene_a55c454b1a9914d610be2485027f14f31}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!m\+\_\+is\+Paused@{m\+\_\+is\+Paused}}
+\index{m\+\_\+is\+Paused@{m\+\_\+is\+Paused}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+is\+Paused}{m\_isPaused}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Scene\+::\+Scene\+::m\+\_\+is\+Paused\hspace{0.3cm}{\ttfamily [protected]}}
+
+Paused state flag for entity updates \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_aff47a056f32060d1180ae9bd379e9578}\label{class_cookie_eng_1_1_scene_1_1_scene_aff47a056f32060d1180ae9bd379e9578}} 
 \index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!m\+\_\+renderer@{m\+\_\+renderer}}
 \index{m\+\_\+renderer@{m\+\_\+renderer}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
 \subsubsection{\texorpdfstring{m\+\_\+renderer}{m\_renderer}}
 {\footnotesize\ttfamily \hyperlink{class_cookie_eng_1_1_graphics_1_1_renderer}{Graphics\+::\+Renderer} Cookie\+Eng\+::\+Scene\+::\+Scene\+::m\+\_\+renderer\hspace{0.3cm}{\ttfamily [protected]}}
 
-The renderer used in the draw method \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a1990da3f0d067d2b542aa6b8fc6f0d43}\label{class_cookie_eng_1_1_scene_1_1_scene_a1990da3f0d067d2b542aa6b8fc6f0d43}} 
+The renderer used in the draw method \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a8f1b8723deba48f2d685008cbf1f14a2}\label{class_cookie_eng_1_1_scene_1_1_scene_a8f1b8723deba48f2d685008cbf1f14a2}} 
+\index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!m\+\_\+ui\+Entities@{m\+\_\+ui\+Entities}}
+\index{m\+\_\+ui\+Entities@{m\+\_\+ui\+Entities}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+ui\+Entities}{m\_uiEntities}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::weak\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{E\+C\+S\+::\+Entity}$>$ $>$ Cookie\+Eng\+::\+Scene\+::\+Scene\+::m\+\_\+ui\+Entities\hspace{0.3cm}{\ttfamily [protected]}}
+
+The vector of entities in the scene that contain UI elements \mbox{\Hypertarget{class_cookie_eng_1_1_scene_1_1_scene_a1990da3f0d067d2b542aa6b8fc6f0d43}\label{class_cookie_eng_1_1_scene_1_1_scene_a1990da3f0d067d2b542aa6b8fc6f0d43}} 
 \index{Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}!m\+\_\+width@{m\+\_\+width}}
 \index{m\+\_\+width@{m\+\_\+width}!Cookie\+Eng\+::\+Scene\+::\+Scene@{Cookie\+Eng\+::\+Scene\+::\+Scene}}
 \subsubsection{\texorpdfstring{m\+\_\+width}{m\_width}}

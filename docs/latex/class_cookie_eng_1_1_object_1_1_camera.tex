@@ -30,6 +30,8 @@ void \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a2a86235e64f591e8c812f1d6
 \begin{DoxyCompactList}\small\item\em Sets the Aspect Ratio ( width / height ) \end{DoxyCompactList}\item 
 glm\+::mat4 \hyperlink{class_cookie_eng_1_1_object_1_1_camera_afa69ef269138610423e2dc8707720500}{get\+Projection\+Matrix} ()
 \begin{DoxyCompactList}\small\item\em Return the Projection Matrix. \end{DoxyCompactList}\item 
+glm\+::mat4 \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a97d3643a31849d86ad74137417d229df}{get\+Orthographic\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Return the Orthographic Matrix. \end{DoxyCompactList}\item 
 void \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a0b8a35f92490adf193d36f2906a2c1d8}{update\+Camera\+Uniform} ()
 \begin{DoxyCompactList}\small\item\em Updates the Open\+GL \hyperlink{class_cookie_eng_1_1_object_1_1_camera}{Camera} Data Uniform. \end{DoxyCompactList}\item 
 int \hyperlink{class_cookie_eng_1_1_object_1_1_camera_ae21ba7bbc237d0ddfac4d9531ba4597e}{get\+Viewport\+Width} ()
@@ -51,7 +53,7 @@ static \hyperlink{class_cookie_eng_1_1_object_1_1_camera}{Camera} $\ast$ \hyperl
 \item 
 void \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a25657d7f0704523a1fd10dd7e00d9d61}{init} ()
 \begin{DoxyCompactList}\small\item\em Initialises the camera data after the constructor. \end{DoxyCompactList}\item 
-void \hyperlink{class_cookie_eng_1_1_object_1_1_camera_ab685b627f1a3bc019ae68185d41ee38b}{clean\+Projection\+Matrix} ()
+void \hyperlink{class_cookie_eng_1_1_object_1_1_camera_ab18117758ca6a8d4fab5b9370bc14b96}{clean\+View\+Matrix} ()
 \begin{DoxyCompactList}\small\item\em Sets the updated Projection Matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -65,6 +67,8 @@ int \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a257e21bd91592e599162cd6bf
 int \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a5a65724cf71fe2ce24e4ee2071a4e068}{m\+\_\+viewport\+Height}
 \item 
 glm\+::mat4 \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a6a5152fd8fbd92c4cbcc73d14511e584}{m\+\_\+projection\+Matrix}
+\item 
+glm\+::mat4 \hyperlink{class_cookie_eng_1_1_object_1_1_camera_a555458f718b0b09ba0e8a88fef64bce3}{m\+\_\+orthographic\+Matrix}
 \item 
 std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ \hyperlink{class_cookie_eng_1_1_object_1_1_camera_ae7715274f84e9b2e164c32a528989c3b}{m\+\_\+uniform\+Buffer}
 \item 
@@ -118,17 +122,30 @@ Creates a camera at the world 0, 0, 0 with a standard FoV at the specified resol
 Removes the camera 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_ab685b627f1a3bc019ae68185d41ee38b}\label{class_cookie_eng_1_1_object_1_1_camera_ab685b627f1a3bc019ae68185d41ee38b}} 
-\index{Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}!clean\+Projection\+Matrix@{clean\+Projection\+Matrix}}
-\index{clean\+Projection\+Matrix@{clean\+Projection\+Matrix}!Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}}
-\subsubsection{\texorpdfstring{clean\+Projection\+Matrix()}{cleanProjectionMatrix()}}
-{\footnotesize\ttfamily void Cookie\+Eng\+::\+Object\+::\+Camera\+::clean\+Projection\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+\mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_ab18117758ca6a8d4fab5b9370bc14b96}\label{class_cookie_eng_1_1_object_1_1_camera_ab18117758ca6a8d4fab5b9370bc14b96}} 
+\index{Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}!clean\+View\+Matrix@{clean\+View\+Matrix}}
+\index{clean\+View\+Matrix@{clean\+View\+Matrix}!Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}}
+\subsubsection{\texorpdfstring{clean\+View\+Matrix()}{cleanViewMatrix()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Object\+::\+Camera\+::clean\+View\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 Sets the updated Projection Matrix. 
 
-Sets a fresh perspective matrix from the FoV, aspect ratio and near / far planes \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_afa69ef269138610423e2dc8707720500}\label{class_cookie_eng_1_1_object_1_1_camera_afa69ef269138610423e2dc8707720500}} 
+Sets a fresh perspective matrix from the FoV, aspect ratio and near / far planes \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a97d3643a31849d86ad74137417d229df}\label{class_cookie_eng_1_1_object_1_1_camera_a97d3643a31849d86ad74137417d229df}} 
+\index{Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}!get\+Orthographic\+Matrix@{get\+Orthographic\+Matrix}}
+\index{get\+Orthographic\+Matrix@{get\+Orthographic\+Matrix}!Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}}
+\subsubsection{\texorpdfstring{get\+Orthographic\+Matrix()}{getOrthographicMatrix()}}
+{\footnotesize\ttfamily glm\+::mat4 Cookie\+Eng\+::\+Object\+::\+Camera\+::get\+Orthographic\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the Orthographic Matrix. 
+
+\begin{DoxyReturn}{Returns}
+The Orthographic Matrix
+\end{DoxyReturn}
+Returns the Orthographic Matrix \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_afa69ef269138610423e2dc8707720500}\label{class_cookie_eng_1_1_object_1_1_camera_afa69ef269138610423e2dc8707720500}} 
 \index{Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}!get\+Projection\+Matrix@{get\+Projection\+Matrix}}
 \index{get\+Projection\+Matrix@{get\+Projection\+Matrix}!Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}}
 \subsubsection{\texorpdfstring{get\+Projection\+Matrix()}{getProjectionMatrix()}}
@@ -248,7 +265,13 @@ The current Aspect Ratio \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_came
 \subsubsection{\texorpdfstring{m\+\_\+fov\+Rad}{m\_fovRad}}
 {\footnotesize\ttfamily float Cookie\+Eng\+::\+Object\+::\+Camera\+::m\+\_\+fov\+Rad\hspace{0.3cm}{\ttfamily [protected]}}
 
-The current FoV in radians \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a6a5152fd8fbd92c4cbcc73d14511e584}\label{class_cookie_eng_1_1_object_1_1_camera_a6a5152fd8fbd92c4cbcc73d14511e584}} 
+The current FoV in radians \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a555458f718b0b09ba0e8a88fef64bce3}\label{class_cookie_eng_1_1_object_1_1_camera_a555458f718b0b09ba0e8a88fef64bce3}} 
+\index{Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}!m\+\_\+orthographic\+Matrix@{m\+\_\+orthographic\+Matrix}}
+\index{m\+\_\+orthographic\+Matrix@{m\+\_\+orthographic\+Matrix}!Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}}
+\subsubsection{\texorpdfstring{m\+\_\+orthographic\+Matrix}{m\_orthographicMatrix}}
+{\footnotesize\ttfamily glm\+::mat4 Cookie\+Eng\+::\+Object\+::\+Camera\+::m\+\_\+orthographic\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Orthographic Matrix \mbox{\Hypertarget{class_cookie_eng_1_1_object_1_1_camera_a6a5152fd8fbd92c4cbcc73d14511e584}\label{class_cookie_eng_1_1_object_1_1_camera_a6a5152fd8fbd92c4cbcc73d14511e584}} 
 \index{Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}!m\+\_\+projection\+Matrix@{m\+\_\+projection\+Matrix}}
 \index{m\+\_\+projection\+Matrix@{m\+\_\+projection\+Matrix}!Cookie\+Eng\+::\+Object\+::\+Camera@{Cookie\+Eng\+::\+Object\+::\+Camera}}
 \subsubsection{\texorpdfstring{m\+\_\+projection\+Matrix}{m\_projectionMatrix}}

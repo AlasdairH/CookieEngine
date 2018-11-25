@@ -1,0 +1,110 @@
+\hypertarget{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad}{}\section{Cookie\+Eng\+:\+:Input\+:\+:Controllers\+:\+:Gamepad Class Reference}
+\label{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad}\index{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}}
+
+
+A \hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad}{Gamepad} class that handles the state of a gamepad or joystick.  
+
+
+
+
+{\ttfamily \#include $<$Gamepad.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_add93a6a7e241106275f499411892a193}{Gamepad} ()
+\begin{DoxyCompactList}\small\item\em Joystick Ctor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a9e0bb49c66f1bac8111159e5a39809e2}{update} ()
+\begin{DoxyCompactList}\small\item\em Updates the controller. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a82943bb75408298ac2f80e8f8d4a84b2}{assign} (int \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Assigns the controller to an S\+DL input. \end{DoxyCompactList}\item 
+float \hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a5fde889f1054c3dbd25d5694b26f5c2e}{get\+Axis} (std\+::string \+\_\+axis)
+\begin{DoxyCompactList}\small\item\em Gets the axis value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Game\+Controller $\ast$ \hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_af244565070d0185c005c905a2a7f70ed}{m\+\_\+game\+Controller}
+\item 
+S\+D\+L\+\_\+\+Joystick $\ast$ \hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a99f1f8985a1d1174bb1c48cfe0f5b6e8}{m\+\_\+joystick}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad}{Gamepad} class that handles the state of a gamepad or joystick. 
+
+This \hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad}{Gamepad} class contains the data for buttons and axis on a joystick. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_add93a6a7e241106275f499411892a193}\label{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_add93a6a7e241106275f499411892a193}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}!Gamepad@{Gamepad}}
+\index{Gamepad@{Gamepad}!Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}}
+\subsubsection{\texorpdfstring{Gamepad()}{Gamepad()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad\+::\+Gamepad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Joystick Ctor. 
+
+Does nothing 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a82943bb75408298ac2f80e8f8d4a84b2}\label{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a82943bb75408298ac2f80e8f8d4a84b2}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}!assign@{assign}}
+\index{assign@{assign}!Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}}
+\subsubsection{\texorpdfstring{assign()}{assign()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad\+::assign (\begin{DoxyParamCaption}\item[{int}]{\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Assigns the controller to an S\+DL input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+controller} & The controller to asign to the abstraction\\
+\hline
+\end{DoxyParams}
+Assigns the controller to an S\+DL Contorller input \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a5fde889f1054c3dbd25d5694b26f5c2e}\label{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a5fde889f1054c3dbd25d5694b26f5c2e}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}!get\+Axis@{get\+Axis}}
+\index{get\+Axis@{get\+Axis}!Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}}
+\subsubsection{\texorpdfstring{get\+Axis()}{getAxis()}}
+{\footnotesize\ttfamily float Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad\+::get\+Axis (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+axis }\end{DoxyParamCaption})}
+
+
+
+Gets the axis value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+axis} & The axis to get the value from\\
+\hline
+\end{DoxyParams}
+Gets the value of an axis \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a9e0bb49c66f1bac8111159e5a39809e2}\label{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a9e0bb49c66f1bac8111159e5a39809e2}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}!update@{update}}
+\index{update@{update}!Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the controller. 
+
+Updates the controller axis 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_af244565070d0185c005c905a2a7f70ed}\label{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_af244565070d0185c005c905a2a7f70ed}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}!m\+\_\+game\+Controller@{m\+\_\+game\+Controller}}
+\index{m\+\_\+game\+Controller@{m\+\_\+game\+Controller}!Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}}
+\subsubsection{\texorpdfstring{m\+\_\+game\+Controller}{m\_gameController}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Game\+Controller$\ast$ Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad\+::m\+\_\+game\+Controller\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Game Controller \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a99f1f8985a1d1174bb1c48cfe0f5b6e8}\label{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad_a99f1f8985a1d1174bb1c48cfe0f5b6e8}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}!m\+\_\+joystick@{m\+\_\+joystick}}
+\index{m\+\_\+joystick@{m\+\_\+joystick}!Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad@{Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad}}
+\subsubsection{\texorpdfstring{m\+\_\+joystick}{m\_joystick}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Joystick$\ast$ Cookie\+Eng\+::\+Input\+::\+Controllers\+::\+Gamepad\+::m\+\_\+joystick\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Joystick 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Gamepad.\+h\end{DoxyCompactItemize}

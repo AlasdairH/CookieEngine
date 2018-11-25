@@ -11,7 +11,7 @@ The component base class.
 
 
 
-Inherited by \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box}{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}, \hyperlink{class_cookie_eng_1_1_components_1_1_renderable}{Cookie\+Eng\+::\+Components\+::\+Renderable}, and \hyperlink{class_cookie_eng_1_1_components_1_1_transform}{Cookie\+Eng\+::\+Components\+::\+Transform}.
+Inherited by \hyperlink{class_cookie_eng_1_1_components_1_1_bounding_box}{Cookie\+Eng\+::\+Components\+::\+Bounding\+Box}, \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element}{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}, \hyperlink{class_cookie_eng_1_1_components_1_1_renderable}{Cookie\+Eng\+::\+Components\+::\+Renderable}, and \hyperlink{class_cookie_eng_1_1_components_1_1_transform}{Cookie\+Eng\+::\+Components\+::\+Transform}.
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -27,6 +27,8 @@ virtual void \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component_a7c4a11f71e2118
 \item 
 \mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_component_a8a0c5a4ee3a87809d3e6d0bdaed3ebbe}\label{class_cookie_eng_1_1_e_c_s_1_1_component_a8a0c5a4ee3a87809d3e6d0bdaed3ebbe}} 
 \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_entity}{Entity} $\ast$ {\bfseries parent}
+\item 
+bool \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component_aa7129172e0881ed80dbc6256570ad998}{started} = false
 \end{DoxyCompactItemize}
 
 
@@ -46,7 +48,11 @@ The base class that all the components of entities must inherit from. Through po
 
 Called on component initialisation. 
 
-Called before start, this method is called when the component is first created by the engine (usually on entity creation) \mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_component_aaf8523586d57c3e40d4149f228755139}\label{class_cookie_eng_1_1_e_c_s_1_1_component_aaf8523586d57c3e40d4149f228755139}} 
+Called before start, this method is called when the component is first created by the engine (usually on entity creation) 
+
+Reimplemented in \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_ad045368b7a595ddaa70cc18112f98221}{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}.
+
+\mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_component_aaf8523586d57c3e40d4149f228755139}\label{class_cookie_eng_1_1_e_c_s_1_1_component_aaf8523586d57c3e40d4149f228755139}} 
 \index{Cookie\+Eng\+::\+E\+C\+S\+::\+Component@{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}!on\+Start@{on\+Start}}
 \index{on\+Start@{on\+Start}!Cookie\+Eng\+::\+E\+C\+S\+::\+Component@{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}}
 \subsubsection{\texorpdfstring{on\+Start()}{onStart()}}
@@ -67,6 +73,15 @@ Called after on\+Init, this method is called when the engine runs through the fi
 Called on component update. 
 
 Called after start and on every frame 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_e_c_s_1_1_component_aa7129172e0881ed80dbc6256570ad998}\label{class_cookie_eng_1_1_e_c_s_1_1_component_aa7129172e0881ed80dbc6256570ad998}} 
+\index{Cookie\+Eng\+::\+E\+C\+S\+::\+Component@{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}!started@{started}}
+\index{started@{started}!Cookie\+Eng\+::\+E\+C\+S\+::\+Component@{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}}
+\subsubsection{\texorpdfstring{started}{started}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+E\+C\+S\+::\+Component\+::started = false}
+
+Flag for wether the component has run is start function 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

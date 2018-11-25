@@ -1,0 +1,172 @@
+\hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element}{}\section{Cookie\+Eng\+:\+:Components\+:\+:G\+UI\+:\+:U\+I\+Element Class Reference}
+\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element}\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}}
+
+
+The base class for G\+UI elements.  
+
+
+
+
+{\ttfamily \#include $<$U\+I\+Element.\+h$>$}
+
+
+
+Inherits \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component}{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}.
+
+
+
+Inherited by \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button}{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a4f36d5a491837291d4e948a84dd13831}{on\+Mouse\+Click} ()
+\begin{DoxyCompactList}\small\item\em Called when the mouse clicks the element. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a46bc04453a376a064875588280fa1df9}{set\+Width} (int \+\_\+width)
+\begin{DoxyCompactList}\small\item\em Set the button width. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a80afbcb678173b1ebc1c3eb4e2004af2}{set\+Height} (int \+\_\+height)
+\begin{DoxyCompactList}\small\item\em Set the button height. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_ae491a0874fb7f77a4c1f83341b87f0fa}{set\+Position} (glm\+::vec2 \+\_\+position)
+\begin{DoxyCompactList}\small\item\em Set the button position. \end{DoxyCompactList}\item 
+float \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_acdc4fde6beefd27ba19a41b5260abf79}{get\+Width} ()
+\begin{DoxyCompactList}\small\item\em Gets the element width. \end{DoxyCompactList}\item 
+float \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a99062d7b0db29f366d7b16a63f83db6f}{get\+Height} ()
+\begin{DoxyCompactList}\small\item\em Gets the element height. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_abcac765bc6a76f435ef4a45d2a717097}{set\+Material} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} $>$ \+\_\+material)
+\begin{DoxyCompactList}\small\item\em Set the Material. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a954e279d79501fe6837c3f68c4acfcc0}{m\+\_\+material}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Resources\+::\+Mesh} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_ad6a0a678d69f7fc94de86d4a98af915c}{m\+\_\+mesh}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The base class for G\+UI elements. 
+
+A base class that all G\+UI elements inherit from 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a99062d7b0db29f366d7b16a63f83db6f}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a99062d7b0db29f366d7b16a63f83db6f}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily float Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the element height. 
+
+\begin{DoxyReturn}{Returns}
+The height of the element
+\end{DoxyReturn}
+Takes the height scale from the parents transform component \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_acdc4fde6beefd27ba19a41b5260abf79}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_acdc4fde6beefd27ba19a41b5260abf79}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily float Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the element width. 
+
+\begin{DoxyReturn}{Returns}
+The width of the element
+\end{DoxyReturn}
+Takes the width scale from the parents transform component \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a4f36d5a491837291d4e948a84dd13831}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a4f36d5a491837291d4e948a84dd13831}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}!on\+Mouse\+Click@{on\+Mouse\+Click}}
+\index{on\+Mouse\+Click@{on\+Mouse\+Click}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}}
+\subsubsection{\texorpdfstring{on\+Mouse\+Click()}{onMouseClick()}}
+{\footnotesize\ttfamily virtual void Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element\+::on\+Mouse\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called when the mouse clicks the element. 
+
+Called on mouse click of the G\+UI element 
+
+Reimplemented in \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a236c38fd81450e39f138f06a8b2003b0}{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}.
+
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a80afbcb678173b1ebc1c3eb4e2004af2}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a80afbcb678173b1ebc1c3eb4e2004af2}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}!set\+Height@{set\+Height}}
+\index{set\+Height@{set\+Height}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}}
+\subsubsection{\texorpdfstring{set\+Height()}{setHeight()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element\+::set\+Height (\begin{DoxyParamCaption}\item[{int}]{\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Set the button height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+height} & The button width in pixels\\
+\hline
+\end{DoxyParams}
+Sets the button height in pixels \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_abcac765bc6a76f435ef4a45d2a717097}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_abcac765bc6a76f435ef4a45d2a717097}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}!set\+Material@{set\+Material}}
+\index{set\+Material@{set\+Material}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}}
+\subsubsection{\texorpdfstring{set\+Material()}{setMaterial()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element\+::set\+Material (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} $>$}]{\+\_\+material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+material} & The Material to use on the UI Element\\
+\hline
+\end{DoxyParams}
+Sets the material of the UI element \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_ae491a0874fb7f77a4c1f83341b87f0fa}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_ae491a0874fb7f77a4c1f83341b87f0fa}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element\+::set\+Position (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Set the button position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+position} & The x and y position in pixels\\
+\hline
+\end{DoxyParams}
+Sets the button position in pixels \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a46bc04453a376a064875588280fa1df9}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a46bc04453a376a064875588280fa1df9}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}!set\+Width@{set\+Width}}
+\index{set\+Width@{set\+Width}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}}
+\subsubsection{\texorpdfstring{set\+Width()}{setWidth()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element\+::set\+Width (\begin{DoxyParamCaption}\item[{int}]{\+\_\+width }\end{DoxyParamCaption})}
+
+
+
+Set the button width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+width} & The button width in pixels\\
+\hline
+\end{DoxyParams}
+Sets the button width in pixels 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a954e279d79501fe6837c3f68c4acfcc0}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a954e279d79501fe6837c3f68c4acfcc0}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}!m\+\_\+material@{m\+\_\+material}}
+\index{m\+\_\+material@{m\+\_\+material}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}}
+\subsubsection{\texorpdfstring{m\+\_\+material}{m\_material}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material}$>$ Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element\+::m\+\_\+material\hspace{0.3cm}{\ttfamily [protected]}}
+
+The material used for rendering the button \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_ad6a0a678d69f7fc94de86d4a98af915c}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_ad6a0a678d69f7fc94de86d4a98af915c}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}!m\+\_\+mesh@{m\+\_\+mesh}}
+\index{m\+\_\+mesh@{m\+\_\+mesh}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}}
+\subsubsection{\texorpdfstring{m\+\_\+mesh}{m\_mesh}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Resources\+::\+Mesh}$>$ Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element\+::m\+\_\+mesh\hspace{0.3cm}{\ttfamily [protected]}}
+
+The mesh to render the G\+UI on 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/U\+I\+Element.\+h\end{DoxyCompactItemize}

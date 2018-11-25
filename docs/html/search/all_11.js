@@ -6,7 +6,8 @@ var searchData=
   ['threadpool',['ThreadPool',['../class_cookie_eng_1_1_threads_1_1_thread_pool.html',1,'CookieEng::Threads']]],
   ['timer',['Timer',['../class_cookie_eng_1_1_utilities_1_1_timer.html',1,'CookieEng::Utilities::Timer'],['../class_cookie_eng_1_1_utilities_1_1_timer.html#a28cc053b28408f6ea3b0a2321a601ba2',1,'CookieEng::Utilities::Timer::Timer()']]],
   ['times',['Times',['../struct_cookie_eng_1_1_utilities_1_1_times.html',1,'CookieEng::Utilities']]],
-  ['transform',['Transform',['../class_cookie_eng_1_1_components_1_1_transform.html',1,'CookieEng::Components::Transform'],['../class_cookie_eng_1_1_components_1_1_transform.html#a477bc2eb1d09fecdcb7399d5124ccd0d',1,'CookieEng::Components::Transform::Transform()'],['../class_cookie_eng_1_1_object_1_1_camera.html#aa996e685c79a71bd30e88341b68ed197',1,'CookieEng::Object::Camera::transform()']]],
+  ['togglepause',['togglePause',['../class_cookie_eng_1_1_scene_1_1_scene.html#a8e5afd25964ae88a620d7f5b5f349f43',1,'CookieEng::Scene::Scene']]],
+  ['transform',['Transform',['../class_cookie_eng_1_1_components_1_1_transform.html',1,'CookieEng::Components::Transform'],['../class_cookie_eng_1_1_object_1_1_camera.html#aa996e685c79a71bd30e88341b68ed197',1,'CookieEng::Object::Camera::transform()'],['../class_cookie_eng_1_1_components_1_1_transform.html#a477bc2eb1d09fecdcb7399d5124ccd0d',1,'CookieEng::Components::Transform::Transform()']]],
   ['translate',['translate',['../class_cookie_eng_1_1_components_1_1_transform.html#afe2e00e8126fd92eab8c2e1a5725b2c5',1,'CookieEng::Components::Transform']]],
   ['type',['type',['../class_cookie_eng_1_1_messaging_1_1_message.html#a84ceed50d5b23841c9ab49aa623207c1',1,'CookieEng::Messaging::Message::type()'],['../struct_cookie_eng_1_1_graphics_1_1_vertex_buffer_element.html#abba091f340c618809735781f80ccee6b',1,'CookieEng::Graphics::VertexBufferElement::type()']]]
 ];

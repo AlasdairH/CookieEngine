@@ -78,7 +78,7 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_resource_8h_source.html">Resource.h</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html">CookieEng::Resources::Material</a>, <a class="el" href="struct_cookie_eng_1_1_resources_1_1_mesh.html">CookieEng::Resources::Mesh</a>, <a class="el" href="class_cookie_eng_1_1_resources_1_1_shader_program.html">CookieEng::Resources::ShaderProgram</a>, and <a class="el" href="class_cookie_eng_1_1_resources_1_1_texture.html">CookieEng::Resources::Texture</a>.</p>
+<p>Inherited by <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html">CookieEng::Resources::Material</a>, <a class="el" href="struct_cookie_eng_1_1_resources_1_1_mesh.html">CookieEng::Resources::Mesh</a>, <a class="el" href="class_cookie_eng_1_1_resources_1_1_shader_program.html">CookieEng::Resources::ShaderProgram</a>, <a class="el" href="class_cookie_eng_1_1_resources_1_1_sound_effect.html">CookieEng::Resources::SoundEffect</a>, and <a class="el" href="class_cookie_eng_1_1_resources_1_1_texture.html">CookieEng::Resources::Texture</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -111,7 +111,7 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a03ca114563713cc8e9965e71fa895da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7b58e5677b621033ac46b8577b8f48e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_resources_1_1_resource.html#aa7b58e5677b621033ac46b8577b8f48e">m_filepath</a></td></tr>
 <tr class="separator:aa7b58e5677b621033ac46b8577b8f48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96c5a11b55f0e497ea0b38e2a1dbf175"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_resources_1_1_resource.html#a96c5a11b55f0e497ea0b38e2a1dbf175">m_isLoaded</a></td></tr>
+<tr class="memitem:a96c5a11b55f0e497ea0b38e2a1dbf175"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_resources_1_1_resource.html#a96c5a11b55f0e497ea0b38e2a1dbf175">m_isLoaded</a> = false</td></tr>
 <tr class="separator:a96c5a11b55f0e497ea0b38e2a1dbf175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -190,7 +190,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <p>This method is called by the resource manager when the resource is loaded. This should be overridden by each resource as they all most likely require their own loading instructions. </p>
 
-<p>Reimplemented in <a class="el" href="class_cookie_eng_1_1_resources_1_1_shader_program.html#aef29916bad667d1f820053fd891d9e58">CookieEng::Resources::ShaderProgram</a>, <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html#a5d14ee55b9ce265cd557b85efd0e5722">CookieEng::Resources::Material</a>, <a class="el" href="class_cookie_eng_1_1_resources_1_1_texture.html#a1f2d72c781dba6262ac5ca6e8898fc8d">CookieEng::Resources::Texture</a>, and <a class="el" href="struct_cookie_eng_1_1_resources_1_1_mesh.html#ae31053c6edaf0e735d85350bfa6093fb">CookieEng::Resources::Mesh</a>.</p>
+<p>Reimplemented in <a class="el" href="class_cookie_eng_1_1_resources_1_1_shader_program.html#aef29916bad667d1f820053fd891d9e58">CookieEng::Resources::ShaderProgram</a>, <a class="el" href="class_cookie_eng_1_1_resources_1_1_material.html#a5d14ee55b9ce265cd557b85efd0e5722">CookieEng::Resources::Material</a>, <a class="el" href="class_cookie_eng_1_1_resources_1_1_sound_effect.html#a702862c8bf0f69c19ef5e680f0e18ca0">CookieEng::Resources::SoundEffect</a>, <a class="el" href="class_cookie_eng_1_1_resources_1_1_texture.html#a1f2d72c781dba6262ac5ca6e8898fc8d">CookieEng::Resources::Texture</a>, and <a class="el" href="struct_cookie_eng_1_1_resources_1_1_mesh.html#ae31053c6edaf0e735d85350bfa6093fb">CookieEng::Resources::Mesh</a>.</p>
 
 </div>
 </div>
@@ -361,7 +361,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool CookieEng::Resources::Resource::m_isLoaded</td>
+          <td class="memname">bool CookieEng::Resources::Resource::m_isLoaded = false</td>
         </tr>
       </table>
   </td>
@@ -416,7 +416,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The resource ID </p>
+<p>The resource ID (UNUSED?) </p>
 
 </div>
 </div>

@@ -1,0 +1,118 @@
+\hypertarget{class_cookie_eng_1_1_resources_1_1_sound_effect}{}\section{Cookie\+Eng\+:\+:Resources\+:\+:Sound\+Effect Class Reference}
+\label{class_cookie_eng_1_1_resources_1_1_sound_effect}\index{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect@{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}}
+
+
+A sound effect that can be played through an Audio\+Source.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+Effect.\+h$>$}
+
+
+
+Inherits \hyperlink{class_cookie_eng_1_1_resources_1_1_resource}{Cookie\+Eng\+::\+Resources\+::\+Resource}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect_a7764233aa4404ea4991961ecf48bfde4}{Sound\+Effect} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect}{Sound\+Effect} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect_a57ef9e03fcedaa554b17132ead52153d}{Sound\+Effect} (const std\+::string \&\+\_\+name, const std\+::string \&\+\_\+filepath)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect}{Sound\+Effect} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect_a5bae1940555d6e731693a74bc1737f4a}{$\sim$\+Sound\+Effect} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect}{Sound\+Effect} Dtor. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect_a702862c8bf0f69c19ef5e680f0e18ca0}{load} (const std\+::string \&\+\_\+name, const std\+::string \&\+\_\+filepath) override
+\begin{DoxyCompactList}\small\item\em Load Sound Effect. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect_a9f4e738f2cbc849e7fab8549bf09fb02}{play} ()
+\begin{DoxyCompactList}\small\item\em Plays sound effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_sound_effect_a32daaf5db5cfdfe15d08a9964e0da682}\label{class_cookie_eng_1_1_resources_1_1_sound_effect_a32daaf5db5cfdfe15d08a9964e0da682}} 
+Mix\+\_\+\+Chunk $\ast$ {\bfseries m\+\_\+sound} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A sound effect that can be played through an Audio\+Source. 
+
+A sound effect can be loaded and assigned to an Audio\+Source to be played to an Audio\+Listener 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_sound_effect_a7764233aa4404ea4991961ecf48bfde4}\label{class_cookie_eng_1_1_resources_1_1_sound_effect_a7764233aa4404ea4991961ecf48bfde4}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect@{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}!Sound\+Effect@{Sound\+Effect}}
+\index{Sound\+Effect@{Sound\+Effect}!Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect@{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}}
+\subsubsection{\texorpdfstring{Sound\+Effect()}{SoundEffect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect\+::\+Sound\+Effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect}{Sound\+Effect} Ctor. 
+
+Instantiates a sound effect but does not load a sound \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_sound_effect_a57ef9e03fcedaa554b17132ead52153d}\label{class_cookie_eng_1_1_resources_1_1_sound_effect_a57ef9e03fcedaa554b17132ead52153d}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect@{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}!Sound\+Effect@{Sound\+Effect}}
+\index{Sound\+Effect@{Sound\+Effect}!Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect@{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}}
+\subsubsection{\texorpdfstring{Sound\+Effect()}{SoundEffect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect\+::\+Sound\+Effect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const std\+::string \&}]{\+\_\+filepath }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect}{Sound\+Effect} Ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name to give the \hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect}{Sound\+Effect} resource \\
+\hline
+{\em \+\_\+filepath} & The path to the image to be loaded\\
+\hline
+\end{DoxyParams}
+Instantiates a sound effect and loads the sound from a file \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_sound_effect_a5bae1940555d6e731693a74bc1737f4a}\label{class_cookie_eng_1_1_resources_1_1_sound_effect_a5bae1940555d6e731693a74bc1737f4a}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect@{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}!````~Sound\+Effect@{$\sim$\+Sound\+Effect}}
+\index{````~Sound\+Effect@{$\sim$\+Sound\+Effect}!Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect@{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}}
+\subsubsection{\texorpdfstring{$\sim$\+Sound\+Effect()}{~SoundEffect()}}
+{\footnotesize\ttfamily Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect\+::$\sim$\+Sound\+Effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect}{Sound\+Effect} Dtor. 
+
+Frees the sound effect 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_sound_effect_a702862c8bf0f69c19ef5e680f0e18ca0}\label{class_cookie_eng_1_1_resources_1_1_sound_effect_a702862c8bf0f69c19ef5e680f0e18ca0}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect@{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}!load@{load}}
+\index{load@{load}!Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect@{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{const std\+::string \&}]{\+\_\+filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Load Sound Effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name to assign the loaded resource \\
+\hline
+{\em \+\_\+filepath} & The path to the .wav to be loaded\\
+\hline
+\end{DoxyParams}
+Loads a .wav file to a sound chunk 
+
+Reimplemented from \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a75648b8f2e442bebc90d6eb4ea3a2f6e}{Cookie\+Eng\+::\+Resources\+::\+Resource}.
+
+\mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_sound_effect_a9f4e738f2cbc849e7fab8549bf09fb02}\label{class_cookie_eng_1_1_resources_1_1_sound_effect_a9f4e738f2cbc849e7fab8549bf09fb02}} 
+\index{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect@{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}!play@{play}}
+\index{play@{play}!Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect@{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}}
+\subsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Plays sound effect. 
+
+Plays the sound effect 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/Sound\+Effect.\+h\end{DoxyCompactItemize}

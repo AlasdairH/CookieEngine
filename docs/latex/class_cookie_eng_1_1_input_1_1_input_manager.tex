@@ -3,9 +3,14 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_input_manager_afc8c29f4a07a98ea6599e5f421115361}\label{class_cookie_eng_1_1_input_1_1_input_manager_afc8c29f4a07a98ea6599e5f421115361}} 
-std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard}{Keyboard\+::\+Keyboard} $>$ {\bfseries get\+Keyboard} ()
-\item 
+void \hyperlink{class_cookie_eng_1_1_input_1_1_input_manager_ab76d5635bce758f681129ea0cd4afb36}{on\+Update} (S\+D\+L\+\_\+\+Event \&\+\_\+event)
+\begin{DoxyCompactList}\small\item\em Updates the contained input devices. \end{DoxyCompactList}\item 
+bool \hyperlink{class_cookie_eng_1_1_input_1_1_input_manager_aec78aafcc64f05a3e4eb094e7bb690a6}{valid\+Controller} (int \+\_\+id)
+\begin{DoxyCompactList}\small\item\em Gets whether a controller is connected and valid. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad}{Controllers\+::\+Gamepad} $>$ \hyperlink{class_cookie_eng_1_1_input_1_1_input_manager_a0a5ffdaf3c5293f4c18f3808e46f5369}{get\+Gamepad} (int \+\_\+id)
+\begin{DoxyCompactList}\small\item\em Returns a pointer to a Gamepad. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard}{Keyboard\+::\+Keyboard} $>$ \hyperlink{class_cookie_eng_1_1_input_1_1_input_manager_afc8c29f4a07a98ea6599e5f421115361}{get\+Keyboard} ()
+\begin{DoxyCompactList}\small\item\em Gets the main keyboard. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_input_manager_acd6ce668320f6c5b26e49dee84124ef3}\label{class_cookie_eng_1_1_input_1_1_input_manager_acd6ce668320f6c5b26e49dee84124ef3}} 
 {\bfseries Input\+Manager} (\hyperlink{class_cookie_eng_1_1_input_1_1_input_manager}{Input\+Manager} const \&)=delete
 \item 
@@ -26,6 +31,8 @@ static \hyperlink{class_cookie_eng_1_1_input_1_1_input_manager}{Input\+Manager} 
 \begin{DoxyCompactItemize}
 \item 
 std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard}{Keyboard\+::\+Keyboard} $>$ \hyperlink{class_cookie_eng_1_1_input_1_1_input_manager_aa8137e98a8515c6da82cd3ca4f2f04bf}{m\+\_\+keyboard}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad}{Controllers\+::\+Gamepad} $>$ $>$ \hyperlink{class_cookie_eng_1_1_input_1_1_input_manager_ae0b4f61fc7337f58498b9d6eda637384}{m\+\_\+gamepads}
 \end{DoxyCompactItemize}
 
 
@@ -43,7 +50,22 @@ std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1
 This is called on the first time the \hyperlink{class_cookie_eng_1_1_input_1_1_input_manager}{Input\+Manager} instance is grabbed. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_input_manager_a0ae972a3fda8747b2b9cc6bb9417dfa8}\label{class_cookie_eng_1_1_input_1_1_input_manager_a0ae972a3fda8747b2b9cc6bb9417dfa8}} 
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_input_manager_a0a5ffdaf3c5293f4c18f3808e46f5369}\label{class_cookie_eng_1_1_input_1_1_input_manager_a0a5ffdaf3c5293f4c18f3808e46f5369}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}!get\+Gamepad@{get\+Gamepad}}
+\index{get\+Gamepad@{get\+Gamepad}!Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}}
+\subsubsection{\texorpdfstring{get\+Gamepad()}{getGamepad()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad}{Controllers\+::\+Gamepad}$>$ Cookie\+Eng\+::\+Input\+::\+Input\+Manager\+::get\+Gamepad (\begin{DoxyParamCaption}\item[{int}]{\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Returns a pointer to a Gamepad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & The controller to get\\
+\hline
+\end{DoxyParams}
+Takes a controller ID and returns the controller with that ID if it exists \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_input_manager_a0ae972a3fda8747b2b9cc6bb9417dfa8}\label{class_cookie_eng_1_1_input_1_1_input_manager_a0ae972a3fda8747b2b9cc6bb9417dfa8}} 
 \index{Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}!get\+Instance@{get\+Instance}}
 \index{get\+Instance@{get\+Instance}!Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}}
 \subsubsection{\texorpdfstring{get\+Instance()}{getInstance()}}
@@ -53,10 +75,51 @@ This is called on the first time the \hyperlink{class_cookie_eng_1_1_input_1_1_i
 
 Gets the static instance of the \hyperlink{class_cookie_eng_1_1_input_1_1_input_manager}{Input\+Manager}. 
 
-Gets the static instance of the \hyperlink{class_cookie_eng_1_1_input_1_1_input_manager}{Input\+Manager}. 
+Gets the static instance of the \hyperlink{class_cookie_eng_1_1_input_1_1_input_manager}{Input\+Manager}. \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_input_manager_afc8c29f4a07a98ea6599e5f421115361}\label{class_cookie_eng_1_1_input_1_1_input_manager_afc8c29f4a07a98ea6599e5f421115361}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}!get\+Keyboard@{get\+Keyboard}}
+\index{get\+Keyboard@{get\+Keyboard}!Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}}
+\subsubsection{\texorpdfstring{get\+Keyboard()}{getKeyboard()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard}{Keyboard\+::\+Keyboard}$>$ Cookie\+Eng\+::\+Input\+::\+Input\+Manager\+::get\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the main keyboard. 
+
+Returns a pointer to the keyboard \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_input_manager_ab76d5635bce758f681129ea0cd4afb36}\label{class_cookie_eng_1_1_input_1_1_input_manager_ab76d5635bce758f681129ea0cd4afb36}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}!on\+Update@{on\+Update}}
+\index{on\+Update@{on\+Update}!Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}}
+\subsubsection{\texorpdfstring{on\+Update()}{onUpdate()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Input\+::\+Input\+Manager\+::on\+Update (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event \&}]{\+\_\+event }\end{DoxyParamCaption})}
+
+
+
+Updates the contained input devices. 
+
+Updates the contained input devices \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_input_manager_aec78aafcc64f05a3e4eb094e7bb690a6}\label{class_cookie_eng_1_1_input_1_1_input_manager_aec78aafcc64f05a3e4eb094e7bb690a6}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}!valid\+Controller@{valid\+Controller}}
+\index{valid\+Controller@{valid\+Controller}!Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}}
+\subsubsection{\texorpdfstring{valid\+Controller()}{validController()}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Input\+::\+Input\+Manager\+::valid\+Controller (\begin{DoxyParamCaption}\item[{int}]{\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets whether a controller is connected and valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & the controller ID to test for validity\\
+\hline
+\end{DoxyParams}
+Takes an ID and tests to see if the controller exists 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_input_manager_aa8137e98a8515c6da82cd3ca4f2f04bf}\label{class_cookie_eng_1_1_input_1_1_input_manager_aa8137e98a8515c6da82cd3ca4f2f04bf}} 
+\mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_input_manager_ae0b4f61fc7337f58498b9d6eda637384}\label{class_cookie_eng_1_1_input_1_1_input_manager_ae0b4f61fc7337f58498b9d6eda637384}} 
+\index{Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}!m\+\_\+gamepads@{m\+\_\+gamepads}}
+\index{m\+\_\+gamepads@{m\+\_\+gamepads}!Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}}
+\subsubsection{\texorpdfstring{m\+\_\+gamepads}{m\_gamepads}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad}{Controllers\+::\+Gamepad}$>$ $>$ Cookie\+Eng\+::\+Input\+::\+Input\+Manager\+::m\+\_\+gamepads\hspace{0.3cm}{\ttfamily [protected]}}
+
+Game Controllers \mbox{\Hypertarget{class_cookie_eng_1_1_input_1_1_input_manager_aa8137e98a8515c6da82cd3ca4f2f04bf}\label{class_cookie_eng_1_1_input_1_1_input_manager_aa8137e98a8515c6da82cd3ca4f2f04bf}} 
 \index{Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}!m\+\_\+keyboard@{m\+\_\+keyboard}}
 \index{m\+\_\+keyboard@{m\+\_\+keyboard}!Cookie\+Eng\+::\+Input\+::\+Input\+Manager@{Cookie\+Eng\+::\+Input\+::\+Input\+Manager}}
 \subsubsection{\texorpdfstring{m\+\_\+keyboard}{m\_keyboard}}

@@ -14,7 +14,10 @@
 #include "Macro.h"
 #include "Utils.h"
 
-// TODO: Doxygen
+//---------------------------------------------------------------------------------------------
+// THIS IS NOT AN INCLUDE OF THIS PROJECT, NOT TO BE MARKED FOR THIS!!!!!!!!!!
+// TO BE USED FOR LEIGHS PROJECT
+//---------------------------------------------------------------------------------------------
 
 namespace CookieEng
 {

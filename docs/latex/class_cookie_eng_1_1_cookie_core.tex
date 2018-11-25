@@ -24,6 +24,8 @@ void \hyperlink{class_cookie_eng_1_1_cookie_core_a30f6d3ab2c753095de7d61c69dddbd
 \hyperlink{class_cookie_eng_1_1_window}{Window} $\ast$ \hyperlink{class_cookie_eng_1_1_cookie_core_ab95ee714d9d00c4a43859d0e427ea577}{m\+\_\+window}
 \item 
 bool \hyperlink{class_cookie_eng_1_1_cookie_core_a56072701bf07b2f787081cf41f5ae254}{m\+\_\+is\+Initialised} = false
+\item 
+bool \hyperlink{class_cookie_eng_1_1_cookie_core_ab2ee013f3abf0fae40a416aac7b942d0}{m\+\_\+is\+Paused} = false
 \end{DoxyCompactItemize}
 
 
@@ -73,7 +75,7 @@ Does the essential engine initialisation such as starting services and running t
 
 Starts Cookie\+Engine. 
 
-Runs the start methods of any entitie\textquotesingle{}s components in the scene at the beginning of the program and starts the engine loop. 
+Runs the start methods of any entities components in the scene at the beginning of the program and starts the engine loop. 
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_cookie_eng_1_1_cookie_core_a56072701bf07b2f787081cf41f5ae254}\label{class_cookie_eng_1_1_cookie_core_a56072701bf07b2f787081cf41f5ae254}} 
@@ -82,7 +84,13 @@ Runs the start methods of any entitie\textquotesingle{}s components in the scene
 \subsubsection{\texorpdfstring{m\+\_\+is\+Initialised}{m\_isInitialised}}
 {\footnotesize\ttfamily bool Cookie\+Eng\+::\+Cookie\+Core\+::m\+\_\+is\+Initialised = false\hspace{0.3cm}{\ttfamily [protected]}}
 
-State flag for the engine initialisation state. Cannot start unless this is true. \mbox{\Hypertarget{class_cookie_eng_1_1_cookie_core_ab95ee714d9d00c4a43859d0e427ea577}\label{class_cookie_eng_1_1_cookie_core_ab95ee714d9d00c4a43859d0e427ea577}} 
+State flag for the engine initialisation state. Cannot start unless this is true. \mbox{\Hypertarget{class_cookie_eng_1_1_cookie_core_ab2ee013f3abf0fae40a416aac7b942d0}\label{class_cookie_eng_1_1_cookie_core_ab2ee013f3abf0fae40a416aac7b942d0}} 
+\index{Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}!m\+\_\+is\+Paused@{m\+\_\+is\+Paused}}
+\index{m\+\_\+is\+Paused@{m\+\_\+is\+Paused}!Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}}
+\subsubsection{\texorpdfstring{m\+\_\+is\+Paused}{m\_isPaused}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Cookie\+Core\+::m\+\_\+is\+Paused = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+is updating paused \mbox{\Hypertarget{class_cookie_eng_1_1_cookie_core_ab95ee714d9d00c4a43859d0e427ea577}\label{class_cookie_eng_1_1_cookie_core_ab95ee714d9d00c4a43859d0e427ea577}} 
 \index{Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}!m\+\_\+window@{m\+\_\+window}}
 \index{m\+\_\+window@{m\+\_\+window}!Cookie\+Eng\+::\+Cookie\+Core@{Cookie\+Eng\+::\+Cookie\+Core}}
 \subsubsection{\texorpdfstring{m\+\_\+window}{m\_window}}

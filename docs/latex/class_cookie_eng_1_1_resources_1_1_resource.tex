@@ -11,7 +11,7 @@ A base class for any engine resources (stuff that can be loaded)
 
 
 
-Inherited by \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Cookie\+Eng\+::\+Resources\+::\+Material}, \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Cookie\+Eng\+::\+Resources\+::\+Mesh}, \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program}{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}, and \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Cookie\+Eng\+::\+Resources\+::\+Texture}.
+Inherited by \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Cookie\+Eng\+::\+Resources\+::\+Material}, \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh}{Cookie\+Eng\+::\+Resources\+::\+Mesh}, \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program}{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}, \hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect}{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}, and \hyperlink{class_cookie_eng_1_1_resources_1_1_texture}{Cookie\+Eng\+::\+Resources\+::\+Texture}.
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -39,7 +39,7 @@ unsigned int \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a03ca1145637
 \item 
 std\+::string \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_aa7b58e5677b621033ac46b8577b8f48e}{m\+\_\+filepath}
 \item 
-bool \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a96c5a11b55f0e497ea0b38e2a1dbf175}{m\+\_\+is\+Loaded}
+bool \hyperlink{class_cookie_eng_1_1_resources_1_1_resource_a96c5a11b55f0e497ea0b38e2a1dbf175}{m\+\_\+is\+Loaded} = false
 \end{DoxyCompactItemize}
 
 
@@ -78,7 +78,7 @@ Asynchronous loading of text files.
 \end{DoxyParams}
 This method is called by the resource manager when the resource is loaded. This should be overridden by each resource as they all most likely require their own loading instructions. 
 
-Reimplemented in \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_aef29916bad667d1f820053fd891d9e58}{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}, \hyperlink{class_cookie_eng_1_1_resources_1_1_material_a5d14ee55b9ce265cd557b85efd0e5722}{Cookie\+Eng\+::\+Resources\+::\+Material}, \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_a1f2d72c781dba6262ac5ca6e8898fc8d}{Cookie\+Eng\+::\+Resources\+::\+Texture}, and \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_ae31053c6edaf0e735d85350bfa6093fb}{Cookie\+Eng\+::\+Resources\+::\+Mesh}.
+Reimplemented in \hyperlink{class_cookie_eng_1_1_resources_1_1_shader_program_aef29916bad667d1f820053fd891d9e58}{Cookie\+Eng\+::\+Resources\+::\+Shader\+Program}, \hyperlink{class_cookie_eng_1_1_resources_1_1_material_a5d14ee55b9ce265cd557b85efd0e5722}{Cookie\+Eng\+::\+Resources\+::\+Material}, \hyperlink{class_cookie_eng_1_1_resources_1_1_sound_effect_a702862c8bf0f69c19ef5e680f0e18ca0}{Cookie\+Eng\+::\+Resources\+::\+Sound\+Effect}, \hyperlink{class_cookie_eng_1_1_resources_1_1_texture_a1f2d72c781dba6262ac5ca6e8898fc8d}{Cookie\+Eng\+::\+Resources\+::\+Texture}, and \hyperlink{struct_cookie_eng_1_1_resources_1_1_mesh_ae31053c6edaf0e735d85350bfa6093fb}{Cookie\+Eng\+::\+Resources\+::\+Mesh}.
 
 \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_a9ad88ddeec633dbb1df1b6f1f8ff4c47}\label{class_cookie_eng_1_1_resources_1_1_resource_a9ad88ddeec633dbb1df1b6f1f8ff4c47}} 
 \index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!set\+Filepath@{set\+Filepath}}
@@ -148,7 +148,7 @@ The resource filepath \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_reso
 \index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!m\+\_\+is\+Loaded@{m\+\_\+is\+Loaded}}
 \index{m\+\_\+is\+Loaded@{m\+\_\+is\+Loaded}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
 \subsubsection{\texorpdfstring{m\+\_\+is\+Loaded}{m\_isLoaded}}
-{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Resources\+::\+Resource\+::m\+\_\+is\+Loaded\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily bool Cookie\+Eng\+::\+Resources\+::\+Resource\+::m\+\_\+is\+Loaded = false\hspace{0.3cm}{\ttfamily [protected]}}
 
 Flag for the loaded state of the resource \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_ae00a6a02ffb92b14dd72801c5df4d98f}\label{class_cookie_eng_1_1_resources_1_1_resource_ae00a6a02ffb92b14dd72801c5df4d98f}} 
 \index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!m\+\_\+name@{m\+\_\+name}}
@@ -162,7 +162,7 @@ The resource name \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource
 \subsubsection{\texorpdfstring{m\+\_\+resource\+ID}{m\_resourceID}}
 {\footnotesize\ttfamily unsigned int Cookie\+Eng\+::\+Resources\+::\+Resource\+::m\+\_\+resource\+ID\hspace{0.3cm}{\ttfamily [protected]}}
 
-The resource ID \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_a3740fe0571f4d65ddf71c36df0d8490c}\label{class_cookie_eng_1_1_resources_1_1_resource_a3740fe0571f4d65ddf71c36df0d8490c}} 
+The resource ID (U\+N\+U\+S\+ED?) \mbox{\Hypertarget{class_cookie_eng_1_1_resources_1_1_resource_a3740fe0571f4d65ddf71c36df0d8490c}\label{class_cookie_eng_1_1_resources_1_1_resource_a3740fe0571f4d65ddf71c36df0d8490c}} 
 \index{Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}!m\+\_\+resource\+Type@{m\+\_\+resource\+Type}}
 \index{m\+\_\+resource\+Type@{m\+\_\+resource\+Type}!Cookie\+Eng\+::\+Resources\+::\+Resource@{Cookie\+Eng\+::\+Resources\+::\+Resource}}
 \subsubsection{\texorpdfstring{m\+\_\+resource\+Type}{m\_resourceType}}

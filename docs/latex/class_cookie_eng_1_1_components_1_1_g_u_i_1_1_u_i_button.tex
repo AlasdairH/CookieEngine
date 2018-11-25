@@ -1,0 +1,140 @@
+\hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button}{}\section{Cookie\+Eng\+:\+:Components\+:\+:G\+UI\+:\+:U\+I\+Button Class Reference}
+\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button}\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}}
+
+
+A button UI element.  
+
+
+
+
+{\ttfamily \#include $<$U\+I\+Button.\+h$>$}
+
+
+
+Inherits \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element}{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_ad045368b7a595ddaa70cc18112f98221}{on\+Init} () override
+\begin{DoxyCompactList}\small\item\em Called on button initialisation. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a236c38fd81450e39f138f06a8b2003b0}{on\+Mouse\+Click} () override
+\begin{DoxyCompactList}\small\item\em Called when the mouse clicks the button. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Graphics\+::\+Vertex\+Array} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a78dc9404b74f95f9ceb48f9f92655493}{get\+V\+AO} ()
+\begin{DoxyCompactList}\small\item\em Returns the V\+AO. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a4ba5f52cb1775770b24e2ec0e9207ed4}{get\+I\+BO} ()
+\begin{DoxyCompactList}\small\item\em Returns the I\+BO. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material} $>$ \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a7f77d231424f159a9ce6e5f77a594045}{get\+Material} ()
+\begin{DoxyCompactList}\small\item\em Returns the Material. \end{DoxyCompactList}\item 
+void \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a94a07549ec192e4f0632a540cafc8365}{set\+Action} (std\+::function$<$ void()$>$ \+\_\+func)
+\begin{DoxyCompactList}\small\item\em Sets the action the button will perform on click. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void()$>$ \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a3ced1fe752313f5ae05c82e67c621bf4}{m\+\_\+action} = \mbox{[}$\,$\mbox{]}() \{ \}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A button UI element. 
+
+A button component which 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a4ba5f52cb1775770b24e2ec0e9207ed4}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a4ba5f52cb1775770b24e2ec0e9207ed4}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}!get\+I\+BO@{get\+I\+BO}}
+\index{get\+I\+BO@{get\+I\+BO}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}}
+\subsubsection{\texorpdfstring{get\+I\+B\+O()}{getIBO()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_buffer}{Graphics\+::\+Vertex\+Buffer}$>$ Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button\+::get\+I\+BO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the I\+BO. 
+
+\begin{DoxyReturn}{Returns}
+An I\+BO indexing the member V\+BO
+\end{DoxyReturn}
+Return the I\+BO which indexes the objects V\+BO \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a7f77d231424f159a9ce6e5f77a594045}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a7f77d231424f159a9ce6e5f77a594045}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}!get\+Material@{get\+Material}}
+\index{get\+Material@{get\+Material}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}}
+\subsubsection{\texorpdfstring{get\+Material()}{getMaterial()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_resources_1_1_material}{Resources\+::\+Material}$>$ Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button\+::get\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Material. 
+
+\begin{DoxyReturn}{Returns}
+The material used to render the G\+UI
+\end{DoxyReturn}
+Returns the material used to render the G\+UI \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a78dc9404b74f95f9ceb48f9f92655493}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a78dc9404b74f95f9ceb48f9f92655493}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}!get\+V\+AO@{get\+V\+AO}}
+\index{get\+V\+AO@{get\+V\+AO}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}}
+\subsubsection{\texorpdfstring{get\+V\+A\+O()}{getVAO()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{class_cookie_eng_1_1_graphics_1_1_vertex_array}{Graphics\+::\+Vertex\+Array}$>$ Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button\+::get\+V\+AO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the V\+AO. 
+
+\begin{DoxyReturn}{Returns}
+A renderable V\+AO
+\end{DoxyReturn}
+Returns a V\+AO which can be used by a renderer to render the material \mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_ad045368b7a595ddaa70cc18112f98221}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_ad045368b7a595ddaa70cc18112f98221}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}}
+\subsubsection{\texorpdfstring{on\+Init()}{onInit()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button\+::on\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called on button initialisation. 
+
+Called on button initialisation in order to create the vertex array 
+
+Reimplemented from \hyperlink{class_cookie_eng_1_1_e_c_s_1_1_component_a4b02b630558005a9c4723cf15b8b03d6}{Cookie\+Eng\+::\+E\+C\+S\+::\+Component}.
+
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a236c38fd81450e39f138f06a8b2003b0}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a236c38fd81450e39f138f06a8b2003b0}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}!on\+Mouse\+Click@{on\+Mouse\+Click}}
+\index{on\+Mouse\+Click@{on\+Mouse\+Click}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}}
+\subsubsection{\texorpdfstring{on\+Mouse\+Click()}{onMouseClick()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button\+::on\+Mouse\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the mouse clicks the button. 
+
+Called on mouse click of the button 
+
+Reimplemented from \hyperlink{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_element_a4f36d5a491837291d4e948a84dd13831}{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Element}.
+
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a94a07549ec192e4f0632a540cafc8365}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a94a07549ec192e4f0632a540cafc8365}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}!set\+Action@{set\+Action}}
+\index{set\+Action@{set\+Action}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}}
+\subsubsection{\texorpdfstring{set\+Action()}{setAction()}}
+{\footnotesize\ttfamily void Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button\+::set\+Action (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{\+\_\+func }\end{DoxyParamCaption})}
+
+
+
+Sets the action the button will perform on click. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+func} & A function to run on click. Can be sent a lambda.\\
+\hline
+\end{DoxyParams}
+Assignes the function that will be run when the button is clicked. This can be sent a lambda to run any action. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a3ced1fe752313f5ae05c82e67c621bf4}\label{class_cookie_eng_1_1_components_1_1_g_u_i_1_1_u_i_button_a3ced1fe752313f5ae05c82e67c621bf4}} 
+\index{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}!m\+\_\+action@{m\+\_\+action}}
+\index{m\+\_\+action@{m\+\_\+action}!Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button@{Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button}}
+\subsubsection{\texorpdfstring{m\+\_\+action}{m\_action}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ Cookie\+Eng\+::\+Components\+::\+G\+U\+I\+::\+U\+I\+Button\+::m\+\_\+action = \mbox{[}$\,$\mbox{]}() \{ \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function pointer to the action to perform on button click 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Engine Development/\+Cookie\+Eng/\+Cookie\+Eng/include/U\+I\+Button.\+h\end{DoxyCompactItemize}

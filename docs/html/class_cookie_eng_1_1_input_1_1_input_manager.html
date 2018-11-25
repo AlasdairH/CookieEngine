@@ -77,8 +77,17 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afc8c29f4a07a98ea6599e5f421115361"><td class="memItemLeft" align="right" valign="top"><a id="afc8c29f4a07a98ea6599e5f421115361"></a>
-std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard.html">Keyboard::Keyboard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyboard</b> ()</td></tr>
+<tr class="memitem:ab76d5635bce758f681129ea0cd4afb36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_input_1_1_input_manager.html#ab76d5635bce758f681129ea0cd4afb36">onUpdate</a> (SDL_Event &amp;_event)</td></tr>
+<tr class="memdesc:ab76d5635bce758f681129ea0cd4afb36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the contained input devices.  <a href="#ab76d5635bce758f681129ea0cd4afb36">More...</a><br /></td></tr>
+<tr class="separator:ab76d5635bce758f681129ea0cd4afb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec78aafcc64f05a3e4eb094e7bb690a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_input_1_1_input_manager.html#aec78aafcc64f05a3e4eb094e7bb690a6">validController</a> (int _id)</td></tr>
+<tr class="memdesc:aec78aafcc64f05a3e4eb094e7bb690a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether a controller is connected and valid.  <a href="#aec78aafcc64f05a3e4eb094e7bb690a6">More...</a><br /></td></tr>
+<tr class="separator:aec78aafcc64f05a3e4eb094e7bb690a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a5ffdaf3c5293f4c18f3808e46f5369"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad.html">Controllers::Gamepad</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_input_1_1_input_manager.html#a0a5ffdaf3c5293f4c18f3808e46f5369">getGamepad</a> (int _id)</td></tr>
+<tr class="memdesc:a0a5ffdaf3c5293f4c18f3808e46f5369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to a Gamepad.  <a href="#a0a5ffdaf3c5293f4c18f3808e46f5369">More...</a><br /></td></tr>
+<tr class="separator:a0a5ffdaf3c5293f4c18f3808e46f5369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc8c29f4a07a98ea6599e5f421115361"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard.html">Keyboard::Keyboard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_input_1_1_input_manager.html#afc8c29f4a07a98ea6599e5f421115361">getKeyboard</a> ()</td></tr>
+<tr class="memdesc:afc8c29f4a07a98ea6599e5f421115361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the main keyboard.  <a href="#afc8c29f4a07a98ea6599e5f421115361">More...</a><br /></td></tr>
 <tr class="separator:afc8c29f4a07a98ea6599e5f421115361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd6ce668320f6c5b26e49dee84124ef3"><td class="memItemLeft" align="right" valign="top"><a id="acd6ce668320f6c5b26e49dee84124ef3"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>InputManager</b> (<a class="el" href="class_cookie_eng_1_1_input_1_1_input_manager.html">InputManager</a> const &amp;)=delete</td></tr>
@@ -103,6 +112,8 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aa8137e98a8515c6da82cd3ca4f2f04bf"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard.html">Keyboard::Keyboard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_input_1_1_input_manager.html#aa8137e98a8515c6da82cd3ca4f2f04bf">m_keyboard</a></td></tr>
 <tr class="separator:aa8137e98a8515c6da82cd3ca4f2f04bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b4f61fc7337f58498b9d6eda637384"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad.html">Controllers::Gamepad</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cookie_eng_1_1_input_1_1_input_manager.html#ae0b4f61fc7337f58498b9d6eda637384">m_gamepads</a></td></tr>
+<tr class="separator:ae0b4f61fc7337f58498b9d6eda637384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6464eabb341068379430b90ec922047a"></a>
@@ -134,6 +145,33 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0a5ffdaf3c5293f4c18f3808e46f5369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a5ffdaf3c5293f4c18f3808e46f5369">&#9670;&nbsp;</a></span>getGamepad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad.html">Controllers::Gamepad</a>&gt; CookieEng::Input::InputManager::getGamepad </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to a Gamepad. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_id</td><td>The controller to get</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Takes a controller ID and returns the controller with that ID if it exists </p>
+
+</div>
+</div>
 <a id="a0ae972a3fda8747b2b9cc6bb9417dfa8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ae972a3fda8747b2b9cc6bb9417dfa8">&#9670;&nbsp;</a></span>getInstance()</h2>
 
@@ -162,7 +200,114 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="afc8c29f4a07a98ea6599e5f421115361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8c29f4a07a98ea6599e5f421115361">&#9670;&nbsp;</a></span>getKeyboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_input_1_1_keyboard_1_1_keyboard.html">Keyboard::Keyboard</a>&gt; CookieEng::Input::InputManager::getKeyboard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the main keyboard. </p>
+<p>Returns a pointer to the keyboard </p>
+
+</div>
+</div>
+<a id="ab76d5635bce758f681129ea0cd4afb36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab76d5635bce758f681129ea0cd4afb36">&#9670;&nbsp;</a></span>onUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CookieEng::Input::InputManager::onUpdate </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Event &amp;&#160;</td>
+          <td class="paramname"><em>_event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the contained input devices. </p>
+<p>Updates the contained input devices </p>
+
+</div>
+</div>
+<a id="aec78aafcc64f05a3e4eb094e7bb690a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec78aafcc64f05a3e4eb094e7bb690a6">&#9670;&nbsp;</a></span>validController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CookieEng::Input::InputManager::validController </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets whether a controller is connected and valid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_id</td><td>the controller ID to test for validity</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Takes an ID and tests to see if the controller exists </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae0b4f61fc7337f58498b9d6eda637384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0b4f61fc7337f58498b9d6eda637384">&#9670;&nbsp;</a></span>m_gamepads</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_cookie_eng_1_1_input_1_1_controllers_1_1_gamepad.html">Controllers::Gamepad</a>&gt; &gt; CookieEng::Input::InputManager::m_gamepads</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Game Controllers </p>
+
+</div>
+</div>
 <a id="aa8137e98a8515c6da82cd3ca4f2f04bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8137e98a8515c6da82cd3ca4f2f04bf">&#9670;&nbsp;</a></span>m_keyboard</h2>
 
